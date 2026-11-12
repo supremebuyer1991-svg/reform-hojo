@@ -1,0 +1,211 @@
+{
+  "pref": "兵庫県",
+  "prefSlug": "hyogo",
+  "cities": [
+    {
+      "name": "神戸市",
+      "slug": "kobe",
+      "status": "done"
+    },
+    {
+      "name": "姫路市",
+      "slug": "himeji",
+      "status": "done"
+    },
+    {
+      "name": "尼崎市",
+      "slug": "amagasaki",
+      "status": "done"
+    },
+    {
+      "name": "明石市",
+      "slug": "akashi",
+      "status": "done"
+    },
+    {
+      "name": "西宮市",
+      "slug": "nishinomiya",
+      "status": "done"
+    },
+    {
+      "name": "洲本市",
+      "slug": "sumoto",
+      "status": "done"
+    },
+    {
+      "name": "芦屋市",
+      "slug": "ashiya",
+      "status": "done"
+    },
+    {
+      "name": "伊丹市",
+      "slug": "itami",
+      "status": "todo"
+    },
+    {
+      "name": "相生市",
+      "slug": "aioi",
+      "status": "todo"
+    },
+    {
+      "name": "豊岡市",
+      "slug": "toyooka",
+      "status": "todo"
+    },
+    {
+      "name": "加古川市",
+      "slug": "kakogawa",
+      "status": "todo"
+    },
+    {
+      "name": "赤穂市",
+      "slug": "ako",
+      "status": "todo"
+    },
+    {
+      "name": "西脇市",
+      "slug": "nishiwaki",
+      "status": "todo"
+    },
+    {
+      "name": "宝塚市",
+      "slug": "takarazuka",
+      "status": "todo"
+    },
+    {
+      "name": "三木市",
+      "slug": "miki",
+      "status": "todo"
+    },
+    {
+      "name": "高砂市",
+      "slug": "takasago",
+      "status": "todo"
+    },
+    {
+      "name": "川西市",
+      "slug": "kawanishi",
+      "status": "todo"
+    },
+    {
+      "name": "小野市",
+      "slug": "ono",
+      "status": "todo"
+    },
+    {
+      "name": "三田市",
+      "slug": "sanda",
+      "status": "todo"
+    },
+    {
+      "name": "加西市",
+      "slug": "kasai",
+      "status": "todo"
+    },
+    {
+      "name": "丹波篠山市",
+      "slug": "tambasasayama",
+      "status": "todo"
+    },
+    {
+      "name": "養父市",
+      "slug": "yabu",
+      "status": "todo"
+    },
+    {
+      "name": "丹波市",
+      "slug": "tamba",
+      "status": "todo"
+    },
+    {
+      "name": "南あわじ市",
+      "slug": "minamiawaji",
+      "status": "todo"
+    },
+    {
+      "name": "朝来市",
+      "slug": "asago",
+      "status": "todo"
+    },
+    {
+      "name": "淡路市",
+      "slug": "awaji",
+      "status": "todo"
+    },
+    {
+      "name": "宍粟市",
+      "slug": "shiso",
+      "status": "todo"
+    },
+    {
+      "name": "加東市",
+      "slug": "kato",
+      "status": "todo"
+    },
+    {
+      "name": "たつの市",
+      "slug": "tatsuno",
+      "status": "todo"
+    },
+    {
+      "name": "猪名川町",
+      "slug": "inagawa",
+      "status": "todo"
+    },
+    {
+      "name": "多可町",
+      "slug": "taka",
+      "status": "todo"
+    },
+    {
+      "name": "稲美町",
+      "slug": "inami",
+      "status": "todo"
+    },
+    {
+      "name": "播磨町",
+      "slug": "harima",
+      "status": "todo"
+    },
+    {
+      "name": "市川町",
+      "slug": "ichikawa",
+      "status": "todo"
+    },
+    {
+      "name": "福崎町",
+      "slug": "fukusaki",
+      "status": "todo"
+    },
+    {
+      "name": "神河町",
+      "slug": "kamikawa",
+      "status": "todo"
+    },
+    {
+      "name": "太子町",
+      "slug": "taishi",
+      "status": "todo"
+    },
+    {
+      "name": "上郡町",
+      "slug": "kamigori",
+      "status": "todo"
+    },
+    {
+      "name": "佐用町",
+      "slug": "sayo",
+      "status": "todo"
+    },
+    {
+      "name": "香美町",
+      "slug": "kami",
+      "status": "todo"
+    },
+    {
+      "name": "新温泉町",
+      "slug": "shinonsen",
+      "status": "todo"
+    }
+  ]
+}

@@ -205,17 +205,17 @@
     {
       "name": "太子町",
       "slug": "taishi",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "河南町",
       "slug": "kanan",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "千早赤阪村",
       "slug": "chihayaakasaka",
-      "status": "todo"
+      "status": "done"
     }
   ]
 }
