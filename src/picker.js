@@ -1,37 +1,33 @@
-// 「やりたい工事から探す」の切り替え
+// 「工事から探す」の切り替え。結果はHTMLに最初から書いてあり、ここでは表示を切り替えるだけ。
 (function () {
-  var data = window.PICK || [];
-  var title = document.getElementById('pick-title');
-  var cityBox = document.getElementById('pick-city');
-  var kuniBox = document.getElementById('pick-kuni');
-  if (!title || !data.length) return;
-
-  function esc(s) {
-    return String(s).replace(/[&<>"']/g, function (c) {
-      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
-    });
-  }
-  function rows(list, none) {
-    if (!list.length) return '<p class="none">' + esc(none) + '</p>';
-    return '<ul class="rows">' + list.map(function (r) {
-      return '<li><span class="top"><b>' + esc(r.name) + '</b><span class="amt">' + esc(r.amt) + '</span></span>' +
-        '<span class="note">' + esc(r.note) + '</span><a href="' + esc(r.href) + '">くわしく見る →</a></li>';
-    }).join('') + '</ul>';
-  }
+  var box = document.getElementById('panels');
+  if (!box) return;
+  var cats = [].slice.call(document.querySelectorAll('.cat'));
+  var panels = [].slice.call(box.querySelectorAll('.result'));
   function show(id) {
-    var d = data.filter(function (x) { return x.id === id; })[0] || data[0];
-    title.textContent = '「' + d.name + '」に使える制度';
-    cityBox.innerHTML = rows(d.city, d.cityNone);
-    kuniBox.innerHTML = rows(d.kuni, d.kuniNone);
-    document.querySelectorAll('.cat').forEach(function (b) {
-      b.setAttribute('aria-pressed', b.getAttribute('data-cat') === d.id ? 'true' : 'false');
+    if (!panels.some(function (p) { return p.id === id; })) return false;
+    panels.forEach(function (p) { p.classList.toggle('on', p.id === id); });
+    cats.forEach(function (b) {
+      var on = b.getAttribute('data-cat') === id;
+      b.classList.toggle('on', on);
+      if (on) b.setAttribute('aria-current', 'true'); else b.removeAttribute('aria-current');
     });
-    document.querySelectorAll('.prog').forEach(function (p) {
-      p.classList.toggle('on', (' ' + p.getAttribute('data-cats') + ' ').indexOf(' ' + d.id + ' ') >= 0);
+    [].forEach.call(document.querySelectorAll('.prog'), function (p) {
+      p.classList.toggle('on', (' ' + p.getAttribute('data-cats') + ' ').indexOf(' ' + id + ' ') >= 0);
     });
+    return true;
   }
-  document.querySelectorAll('.cat').forEach(function (b) {
-    b.addEventListener('click', function () { show(b.getAttribute('data-cat')); });
+  box.classList.add('js');
+  cats.forEach(function (b) {
+    b.addEventListener('click', function (e) {
+      e.preventDefault();
+      var id = b.getAttribute('data-cat');
+      show(id);
+      if (history.replaceState) history.replaceState(null, '', '#' + id);
+    });
   });
-  show(data[0].id);
+  function fromHash() { return show(location.hash.slice(1)); }
+  if (!fromHash()) show(box.getAttribute('data-first'));
+  window.addEventListener('hashchange', fromHash);
+  document.addEventListener('DOMContentLoaded', function () { show(box.querySelector('.result.on').id); });
 })();
