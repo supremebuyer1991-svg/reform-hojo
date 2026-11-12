@@ -9,7 +9,7 @@
 - `data/national.json` … 国の補助金の一覧
 - `data/progress.json`・`data/progress/` … 調査の進み具合
 - `src/kuni/<slug>.html` … 国の補助金ページの本文（無くても、`data/national.json` に説明と出典があれば自動で作られる）
-- `src/guide/<slug>.html` … 「補助金の基礎知識」の記事。1行目のコメントにタイトル・更新日・関係する工事（cats）などを書く。書き方は `build.js` の「ガイド記事」のところにある
+- `src/guide/<slug>.html` … 「補助金の基礎知識」の記事。1行目のコメントにタイトル・更新日・関係する工事（cats）、アイコンとテーマ色（icon・tone）、一覧に出す1行の説明（lead）、先頭の「この記事でわかること」（points）などを書く。目次・見出しの目印・番号つきの手順・途中の案内は自動でつく。書き方は `build.js` の「ガイド記事」のところにある
 - `src/pages/<slug>.html` … 運営者情報・編集方針・免責事項・プライバシーポリシー・お問い合わせの本文
 - `src/style.css` / `src/picker.js` / `src/search.js` … デザインと、工事の切り替え・市区町村の検索の動き（ページに直接埋め込まれる）
 - `src/static/ogp.png` … SNSで共有されたときの画像（1200×630。置けば自動で使われる）
