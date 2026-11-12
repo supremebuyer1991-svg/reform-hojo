@@ -192,3 +192,18 @@ p{margin:0}
 .foot-nav{display:flex;flex-wrap:wrap;gap:4px 22px;margin-top:10px}
 .foot-nav a{display:inline-flex;align-items:center;min-height:40px}
 .site-foot b{font-family:var(--serif);font-weight:800;font-size:19px;color:#fff;letter-spacing:.04em}
+/* guide links / notices */
+.result-guide{display:flex;flex-wrap:wrap;align-items:center;gap:0 20px;padding:4px 22px 8px;border-top:1px solid var(--line);font-size:15px}
+.result-guide a{display:inline-flex;align-items:center;min-height:44px;font-weight:700}
+.prose ul.nat{padding:0;gap:0}
+.prose ul.nat li{gap:6px 28px}
+.prose .links{margin-top:2px}
+.prose table{width:100%;border-collapse:collapse;font-size:16px;background:#fff;border:1px solid var(--line)}
+.prose th,.prose td{padding:10px 12px;border-top:1px solid var(--line);text-align:left;vertical-align:top}
+.prose thead th{background:var(--tint);border-top:0}
+.prose .tbl table{border:0}
+.more{background:#fff;border:1px solid var(--line);border-radius:6px;padding:0 16px}
+.more summary{display:flex;align-items:center;min-height:52px;font-weight:700;cursor:pointer}
+.more[open]{padding-bottom:16px}
+.warn a{color:var(--shu-d)}
+.prose .tbl table{min-width:460px}

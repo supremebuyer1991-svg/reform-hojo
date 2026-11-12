@@ -10,7 +10,11 @@
       "maxNumber": 100,
       "cats": [
         "mado"
-      ]
+      ],
+      "status": "open",
+      "period": {
+        "end": "2026-12-31"
+      }
     },
     {
       "id": "kyuto",
@@ -21,7 +25,11 @@
       "maxNumber": 17,
       "cats": [
         "kyuto"
-      ]
+      ],
+      "status": "open",
+      "period": {
+        "end": "2026-12-31"
+      }
     },
     {
       "id": "mirai",
@@ -33,7 +41,18 @@
       "cats": [
         "mado",
         "mizu"
-      ]
+      ],
+      "status": "open",
+      "period": {
+        "end": "2026-12-31"
+      },
+      "extraCats": {
+        "yane": {
+          "label": "国の省エネリフォーム補助",
+          "amt": "断熱と一緒なら",
+          "note": "断熱の工事と一緒に行う場合に、対象になることがあります。くわしい条件は各制度のページへ。"
+        }
+      }
     }
   ]
 }

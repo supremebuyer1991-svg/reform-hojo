@@ -8,10 +8,11 @@
 - `data/prefs/<都道府県>.json` … 都道府県が直接出している補助金（あれば）
 - `data/national.json` … 国の補助金の一覧
 - `data/progress.json`・`data/progress/` … 調査の進み具合
-- `src/kuni/<slug>.html` … 国の補助金ページの本文
+- `src/kuni/<slug>.html` … 国の補助金ページの本文（無くても、`data/national.json` に説明と出典があれば自動で作られる）
+- `src/guide/<slug>.html` … 「補助金の基礎知識」の記事。1行目のコメントにタイトル・更新日・関係する工事（cats）などを書く。書き方は `build.js` の「ガイド記事」のところにある
 - `src/pages/<slug>.html` … 運営者情報・編集方針・免責事項・プライバシーポリシー・お問い合わせの本文
 - `src/style.css` / `src/picker.js` / `src/search.js` … デザインと、工事の切り替え・市区町村の検索の動き（ページに直接埋め込まれる）
-- `src/static/ogp.png` … SNSで共有されたときの画像（1200×630。置けば自動で使われる。まだ無い）
+- `src/static/ogp.png` … SNSで共有されたときの画像（1200×630。置けば自動で使われる）
 - `config.json` … サイト名・URL・年度・運営者名・お問い合わせフォームのURL・アフィリエイトリンク
 - `build.js` … 上のデータから `dist/` にページを書き出す（外部パッケージなし）
 - `RESEARCH.md` … 定期タスクがデータを集めるときの手順書
@@ -25,14 +26,31 @@
 | `/<都道府県>/<市区町村>/` | 市区町村の補助金（工事別・制度別・出典） | 制度が1件以上あれば出す。0件は noindex＋サイトマップ除外 |
 | `/<都道府県>/<工事>/` | その工事の補助金を市区町村ごとに見比べる一覧 | 3市区町村以上に制度があるときだけ作る |
 | `/kuni/`・`/kuni/<slug>/` | 国の補助金 | 出す |
-| `/koushin/` | 更新履歴 | 出す |
+| `/guide/`・`/guide/<slug>/` | 補助金の基礎知識（記事） | 出す |
+| `/koushin/`・`/feed.xml` | 更新履歴と、そのフィード（Atom） | 出す |
 | `/about/` `/policy/` `/disclaimer/` `/privacy/` `/contact/` | 信頼性のためのページ | 出す |
 
 `sitemap.xml`（更新日つき）・`robots.txt`・`404.html`・`favicon.svg`・`_headers` も自動で作られる。
 
+## 自動で保たれること（手作業は要らない）
+
+- **年度**：`config.json` の `fiscalYear` が `"auto"` なら、市区町村ページの「◯年度」は確かめた日（`checked`）から決まる。4月になると、まだ確かめ直していないページには「前の年度の情報です」と出て、制度は「受付中」と表示されなくなる。一覧やトップの年度は、新年度の最初の1件を確かめた時点で切り替わる。
+- **受付終了**：制度の `period.end` を過ぎるか `status` が `ended` になると、「受付は終了」の表示・タイトル・説明文・件数・記事の例が自動で変わる。国の制度も同じ（終了のお知らせが国の制度ページと関係する記事の先頭に出る）。
+- **内部リンク**：市区町村ページの各工事の欄 → その工事の記事と都道府県×工事の一覧、記事 → 市区町村の例・都道府県×工事の一覧・国の制度・関連記事、トップ／都道府県／国の制度 → 記事。すべてデータと記事の1行目の設定から作られ、作られていないページへのリンクは出ない。ビルドの最後にサイト内リンクを全部点検し、行き先が無いリンクがあればエラーで止まる。
+- **サイトマップ**：4万件を超えたら自動で分割され、`/sitemap.xml` が目次（sitemap index）になる。Search Console の登録はそのままでよい。
+- **`*.pages.dev`**（Cloudflare Pages の予備のアドレス）は検索に出ないようにしてある。
+
+## IndexNow（Bing などへの更新通知）
+
+- `config.json` の `indexNowKey` がキー。ビルドすると `/<キー>.txt` が公開される（公開してよいファイル。IndexNow の決まり）。
+- Cloudflare Pages が main をビルドしたときだけ、公開中の `sitemap.xml` と見比べて、**新しいページ・更新日が変わったページだけ**を `api.indexnow.org` に知らせる。Bing・Yandex などに伝わる（Google は IndexNow を使っていない。Google はサイトマップの更新日で伝わる）。
+- 手元や定期タスクの `node build.js` では何も送らない。通信に失敗してもビルドは止まらない。Cloudflare Pages のビルドの記録に「IndexNow: ◯件を通知しました」と出る。
+- やめたいときは `indexNowKey` を空にする。
+
 ## config.json の設定
 
-- `fiscalYear` … 表示する年度（4月に変える）
+- `fiscalYear` … `"auto"`（日付から自動。ふつうはこのまま）。4けたの数字を書くとその年度に固定される
+- `indexNowKey` … IndexNow のキー（下の「IndexNow」）
 - `operator.name` / `operator.profile` … 運営者名と紹介文（空だと「[要設定]」と表示される）
 - `contactUrl` … お問い合わせフォーム（Googleフォームなど）のURL
 - `googleSiteVerification` … Search Console の確認コード（HTMLタグ方式を使う場合）
