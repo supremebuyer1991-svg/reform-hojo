@@ -190,22 +190,22 @@
     {
       "name": "上郡町",
       "slug": "kamigori",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "佐用町",
       "slug": "sayo",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "香美町",
       "slug": "kami",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "新温泉町",
       "slug": "shinonsen",
-      "status": "todo"
+      "status": "done"
     }
   ]
 }

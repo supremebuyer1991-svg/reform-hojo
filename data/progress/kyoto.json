@@ -1,0 +1,136 @@
+{
+  "pref": "京都府",
+  "prefSlug": "kyoto",
+  "cities": [
+    {
+      "name": "京都市",
+      "slug": "kyoto-shi",
+      "status": "done"
+    },
+    {
+      "name": "福知山市",
+      "slug": "fukuchiyama",
+      "status": "done"
+    },
+    {
+      "name": "舞鶴市",
+      "slug": "maizuru",
+      "status": "done"
+    },
+    {
+      "name": "綾部市",
+      "slug": "ayabe",
+      "status": "done"
+    },
+    {
+      "name": "宇治市",
+      "slug": "uji",
+      "status": "done"
+    },
+    {
+      "name": "宮津市",
+      "slug": "miyazu",
+      "status": "done"
+    },
+    {
+      "name": "亀岡市",
+      "slug": "kameoka",
+      "status": "todo"
+    },
+    {
+      "name": "城陽市",
+      "slug": "joyo",
+      "status": "todo"
+    },
+    {
+      "name": "向日市",
+      "slug": "muko",
+      "status": "todo"
+    },
+    {
+      "name": "長岡京市",
+      "slug": "nagaokakyo",
+      "status": "todo"
+    },
+    {
+      "name": "八幡市",
+      "slug": "yawata",
+      "status": "todo"
+    },
+    {
+      "name": "京田辺市",
+      "slug": "kyotanabe",
+      "status": "todo"
+    },
+    {
+      "name": "京丹後市",
+      "slug": "kyotango",
+      "status": "todo"
+    },
+    {
+      "name": "南丹市",
+      "slug": "nantan",
+      "status": "todo"
+    },
+    {
+      "name": "木津川市",
+      "slug": "kizugawa",
+      "status": "todo"
+    },
+    {
+      "name": "大山崎町",
+      "slug": "oyamazaki",
+      "status": "todo"
+    },
+    {
+      "name": "久御山町",
+      "slug": "kumiyama",
+      "status": "todo"
+    },
+    {
+      "name": "井手町",
+      "slug": "ide",
+      "status": "todo"
+    },
+    {
+      "name": "宇治田原町",
+      "slug": "ujitawara",
+      "status": "todo"
+    },
+    {
+      "name": "笠置町",
+      "slug": "kasagi",
+      "status": "todo"
+    },
+    {
+      "name": "和束町",
+      "slug": "wazuka",
+      "status": "todo"
+    },
+    {
+      "name": "精華町",
+      "slug": "seika",
+      "status": "todo"
+    },
+    {
+      "name": "南山城村",
+      "slug": "minamiyamashiro",
+      "status": "todo"
+    },
+    {
+      "name": "京丹波町",
+      "slug": "kyotamba",
+      "status": "todo"
+    },
+    {
+      "name": "伊根町",
+      "slug": "ine",
+      "status": "todo"
+    },
+    {
+      "name": "与謝野町",
+      "slug": "yosano",
+      "status": "todo"
+    }
+  ]
+}
