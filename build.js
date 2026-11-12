@@ -134,7 +134,7 @@ ${body}
 <b>${esc(config.siteName)}</b>
 <p>金額・期間は変わることがあるため、申請前に必ず公式情報をご確認ください。</p>
 <p>当サイトはアフィリエイト広告（PR）を利用しています。</p>
-<nav class="foot-nav" aria-label="サイトの案内"><a href="/">トップ</a><a href="/#h-pref">都道府県から探す</a><a href="/kuni/">国の補助金</a><a href="/koushin/">更新履歴</a><a href="/about/">運営者情報</a><a href="/policy/">編集方針・情報の調べ方</a><a href="/disclaimer/">免責事項・広告について</a><a href="/privacy/">プライバシーポリシー</a><a href="/contact/">お問い合わせ</a></nav>
+<nav class="foot-nav" aria-label="サイトの案内"><a href="/">トップ</a><a href="/#h-pref">都道府県から探す</a><a href="/kuni/">国の補助金</a><a href="/guide/">補助金の基礎知識</a><a href="/koushin/">更新履歴</a><a href="/about/">運営者情報</a><a href="/policy/">編集方針・情報の調べ方</a><a href="/disclaimer/">免責事項・広告について</a><a href="/privacy/">プライバシーポリシー</a><a href="/contact/">お問い合わせ</a></nav>
 </div></footer>
 </body>
 </html>`;
@@ -549,8 +549,9 @@ function logPage(ctx) {
 }
 
 // ---- 運営者情報などの固定ページ（本文は src/pages/<slug>.html。1行目のコメントにタイトルなど） ----
-function staticPages() {
-  const dir = path.join(ROOT, 'src', 'pages');
+function staticPages(sub = 'pages', prefix = '', parent = null) {
+  const dir = path.join(ROOT, 'src', sub);
+  if (!fs.existsSync(dir)) return [];
   const out = [];
   const op = config.operator || {};
   const vars = {
@@ -562,17 +563,17 @@ function staticPages() {
     const slug = f.replace(/\.html$/, '');
     const raw = fs.readFileSync(path.join(dir, f), 'utf8');
     const m = raw.match(/^<!--\s*(\{[\s\S]*?\})\s*-->/);
-    if (!m) { errors.push(`src/pages/${f}: 1行目に <!-- {"title":...} --> がありません`); continue; }
+    if (!m) { errors.push(`src/${sub}/${f}: 1行目に <!-- {"title":...} --> がありません`); continue; }
     const meta = JSON.parse(m[1]);
-    const url = `/${slug}/`;
-    const crumbs = [[meta.title, url]];
+    const url = `${prefix}/${slug}/`;
+    const crumbs = parent ? [parent, [meta.title, url]] : [[meta.title, url]];
     const content = raw.slice(m[0].length).replace(/\{\{(\w+)\}\}/g, (all, k) => (k in vars ? vars[k] : all));
     const body = `<div class="hero"><div class="wrap"><div class="crumbs">${crumbHtml(crumbs)}</div><h1>${esc(meta.title)}</h1>
 <p class="small muted">最終更新：${timeTag(meta.updated)}</p></div></div>
 <main class="wrap"><div class="prose">${content}</div></main>`;
     const title = `${meta.title}｜${config.siteName}`;
-    write(`${slug}/index.html`, layout({ title, description: meta.description, canonical: url, body, graph: [pageLd({ type: meta.type || 'WebPage', url, title, description: meta.description, modified: meta.updated }), crumbLd(crumbs)] }));
-    out.push({ url, lastmod: meta.updated });
+    write(`${url.slice(1)}index.html`, layout({ title, description: meta.description, canonical: url, body, graph: [pageLd({ type: meta.type || 'WebPage', url, title, description: meta.description, modified: meta.updated }), crumbLd(crumbs)] }));
+    out.push({ url, lastmod: meta.updated, title: meta.title, description: meta.description });
   }
   return out;
 }
@@ -675,6 +676,19 @@ add(kuniIndex());
 for (const p of national.programs) add(kuniPage(p, ctx));
 add(logPage(ctx));
 staticPages().forEach(add);
+const guides = staticPages('guide', '/guide', ['補助金の基礎知識', '/guide/']);
+guides.forEach(add);
+if (guides.length) {
+  const gUrl = '/guide/';
+  const gTitle = 'リフォーム補助金の基礎知識';
+  const gDesc = 'リフォームの補助金を使う前に知っておきたいことを、やさしく整理しました。';
+  const gCrumbs = [['補助金の基礎知識', gUrl]];
+  const gLast = guides.map((g) => g.lastmod).sort().pop();
+  const gBody = `<div class="hero"><div class="wrap"><div class="crumbs">${crumbHtml(gCrumbs)}</div><h1>${esc(gTitle)}</h1><p style="color:var(--ink2)">${esc(gDesc)}</p></div></div>
+<main class="wrap"><section><ul class="grid">${guides.map((g) => `<li class="card"><a class="t" href="${g.url}">${esc(g.title)}</a><span style="color:var(--ink2)">${esc(g.description)}</span></li>`).join('')}</ul></section></main>`;
+  write('guide/index.html', layout({ title: `${gTitle}｜${config.siteName}`, description: gDesc, canonical: gUrl, body: gBody, graph: [pageLd({ url: gUrl, title: gTitle, description: gDesc, modified: gLast }), crumbLd(gCrumbs)] }));
+  add({ url: gUrl, lastmod: gLast });
+}
 
 if (errors.length) { console.error(`- ${errors.join('\n- ')}`); process.exit(1); }
 
