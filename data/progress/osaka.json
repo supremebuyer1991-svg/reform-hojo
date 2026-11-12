@@ -1,0 +1,221 @@
+{
+  "pref": "大阪府",
+  "prefSlug": "osaka",
+  "cities": [
+    {
+      "name": "大阪市",
+      "slug": "osaka-shi",
+      "status": "done"
+    },
+    {
+      "name": "堺市",
+      "slug": "sakai",
+      "status": "done"
+    },
+    {
+      "name": "岸和田市",
+      "slug": "kishiwada",
+      "status": "done"
+    },
+    {
+      "name": "豊中市",
+      "slug": "toyonaka",
+      "status": "done"
+    },
+    {
+      "name": "池田市",
+      "slug": "ikeda",
+      "status": "done"
+    },
+    {
+      "name": "吹田市",
+      "slug": "suita",
+      "status": "done"
+    },
+    {
+      "name": "泉大津市",
+      "slug": "izumiotsu",
+      "status": "recheck"
+    },
+    {
+      "name": "高槻市",
+      "slug": "takatsuki",
+      "status": "done"
+    },
+    {
+      "name": "貝塚市",
+      "slug": "kaizuka",
+      "status": "done"
+    },
+    {
+      "name": "守口市",
+      "slug": "moriguchi",
+      "status": "done"
+    },
+    {
+      "name": "枚方市",
+      "slug": "hirakata",
+      "status": "done"
+    },
+    {
+      "name": "茨木市",
+      "slug": "ibaraki",
+      "status": "todo"
+    },
+    {
+      "name": "八尾市",
+      "slug": "yao",
+      "status": "todo"
+    },
+    {
+      "name": "泉佐野市",
+      "slug": "izumisano",
+      "status": "todo"
+    },
+    {
+      "name": "富田林市",
+      "slug": "tondabayashi",
+      "status": "todo"
+    },
+    {
+      "name": "寝屋川市",
+      "slug": "neyagawa",
+      "status": "todo"
+    },
+    {
+      "name": "河内長野市",
+      "slug": "kawachinagano",
+      "status": "todo"
+    },
+    {
+      "name": "松原市",
+      "slug": "matsubara",
+      "status": "todo"
+    },
+    {
+      "name": "大東市",
+      "slug": "daito",
+      "status": "todo"
+    },
+    {
+      "name": "和泉市",
+      "slug": "izumi",
+      "status": "todo"
+    },
+    {
+      "name": "箕面市",
+      "slug": "minoh",
+      "status": "todo"
+    },
+    {
+      "name": "柏原市",
+      "slug": "kashiwara",
+      "status": "todo"
+    },
+    {
+      "name": "羽曳野市",
+      "slug": "habikino",
+      "status": "todo"
+    },
+    {
+      "name": "門真市",
+      "slug": "kadoma",
+      "status": "todo"
+    },
+    {
+      "name": "摂津市",
+      "slug": "settsu",
+      "status": "todo"
+    },
+    {
+      "name": "高石市",
+      "slug": "takaishi",
+      "status": "todo"
+    },
+    {
+      "name": "藤井寺市",
+      "slug": "fujiidera",
+      "status": "todo"
+    },
+    {
+      "name": "東大阪市",
+      "slug": "higashiosaka",
+      "status": "todo"
+    },
+    {
+      "name": "泉南市",
+      "slug": "sennan",
+      "status": "todo"
+    },
+    {
+      "name": "四條畷市",
+      "slug": "shijonawate",
+      "status": "todo"
+    },
+    {
+      "name": "交野市",
+      "slug": "katano",
+      "status": "todo"
+    },
+    {
+      "name": "大阪狭山市",
+      "slug": "osakasayama",
+      "status": "todo"
+    },
+    {
+      "name": "阪南市",
+      "slug": "hannan",
+      "status": "todo"
+    },
+    {
+      "name": "島本町",
+      "slug": "shimamoto",
+      "status": "todo"
+    },
+    {
+      "name": "豊能町",
+      "slug": "toyono",
+      "status": "todo"
+    },
+    {
+      "name": "能勢町",
+      "slug": "nose",
+      "status": "todo"
+    },
+    {
+      "name": "忠岡町",
+      "slug": "tadaoka",
+      "status": "todo"
+    },
+    {
+      "name": "熊取町",
+      "slug": "kumatori",
+      "status": "todo"
+    },
+    {
+      "name": "田尻町",
+      "slug": "tajiri",
+      "status": "todo"
+    },
+    {
+      "name": "岬町",
+      "slug": "misaki",
+      "status": "todo"
+    },
+    {
+      "name": "太子町",
+      "slug": "taishi",
+      "status": "todo"
+    },
+    {
+      "name": "河南町",
+      "slug": "kanan",
+      "status": "todo"
+    },
+    {
+      "name": "千早赤阪村",
+      "slug": "chihayaakasaka",
+      "status": "todo"
+    }
+  ]
+}
