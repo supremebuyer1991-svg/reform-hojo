@@ -116,6 +116,50 @@ const CSS = minCss(fs.readFileSync(path.join(ROOT, 'src', 'style.css'), 'utf8'))
 const minJs = (s) => s.split('\n').map((l) => l.trim()).filter((l) => l && !l.startsWith('//')).join('\n');
 const PICKER_JS = minJs(fs.readFileSync(path.join(ROOT, 'src', 'picker.js'), 'utf8'));
 const SEARCH_JS = minJs(fs.readFileSync(path.join(ROOT, 'src', 'search.js'), 'utf8'));
+const PREFMAP_JS = minJs(fs.readFileSync(path.join(ROOT, 'src', 'prefmap.js'), 'utf8'));
+
+// ---- 都道府県の地図（data/geo/<prefSlug>.json：国土数値情報の行政区域を簡略化した輪郭） ----
+function prefMapHtml(pref, ctx) {
+  const file = path.join(ROOT, 'data', 'geo', `${pref.slug}.json`);
+  if (!fs.existsSync(file)) return '';
+  const geo = readJson(file);
+  const done = new Map(pref.cities.map((c) => [c.name, c]));
+  const prog = ctx.progress.get(pref.slug);
+  const kana = new Map(((prog && prog.cities) || []).map((c) => [c.name, c.kana || '']));
+  const st = (name) => { const c = done.get(name); return !c ? 'todo' : indexable(c) ? 'live' : 'none'; };
+  const info = (name) => {
+    const c = done.get(name); const s = st(name);
+    const o = { n: name, s };
+    if (kana.get(name) || (c && c.kana)) o.k = (c && c.kana) || kana.get(name);
+    if (s === 'live') { o.u = cityUrl(c); o.t = `制度${liveProgs(c).length}件${cityMax(c) ? `・最大${cityMax(c)}万円` : ''}`; }
+    return o;
+  };
+  const names = [...geo.cities.map((g) => g.name), ...(geo.offMap || [])];
+  const data = names.filter((n, i) => names.indexOf(n) === i).map(info);
+  const shapes = geo.cities.map((g) => {
+    const s = st(g.name);
+    const label = s === 'live' ? `${g.name}のリフォーム補助金（${info(g.name).t}）` : s === 'none' ? `${g.name}（独自の制度は見つかっていません）` : `${g.name}（調査中）`;
+    const inner = `<path d="${g.d}"/>`;
+    return s === 'live'
+      ? `<a class="pm-city is-live" data-n="${esc(g.name)}" href="${cityUrl(done.get(g.name))}" aria-label="${esc(label)}">${inner}</a>`
+      : `<g class="pm-city is-${s}" data-n="${esc(g.name)}" tabindex="0" role="button" aria-label="${esc(label)}">${inner}</g>`;
+  }).join('');
+  const liveN = data.filter((c) => c.s === 'live').length;
+  return `<div id="pm" class="pm">
+<div class="pm-search"><label for="pm-q" class="pm-label">市区町村の名前で探す</label>
+<input id="pm-q" class="pm-input" type="search" inputmode="search" autocomplete="off" placeholder="例：${esc(geo.cities[0] ? geo.cities[Math.min(3, geo.cities.length - 1)].name : '')}" aria-describedby="pm-hint">
+<p id="pm-hint" class="small muted">${esc(pref.name)}の${data.length}市区町村から探せます</p>
+<div id="pm-out" class="pm-out" aria-live="polite"></div></div>
+<div class="pm-map"><p class="pm-label">地図から選ぶ</p>
+<svg viewBox="0 0 ${geo.w} ${geo.h}" role="group" aria-label="${esc(pref.name)}の地図。色のついた市区町村を押すと補助金のページを開きます">${shapes}</svg>
+<div id="pm-info" class="pm-info" aria-live="polite"><p class="small muted">地図の市区町村を押すと、ここに案内が出ます。もう一度押すとページを開きます。</p></div>
+<ul class="pm-legend"><li><i class="is-live"></i>補助金のページあり（${liveN}）</li><li><i class="is-none"></i>独自の制度なし</li><li><i class="is-todo"></i>調査中</li></ul>
+${(geo.offMap || []).length ? `<p class="small muted">島の市町村（${geo.offMap.map(esc).join('、')}）は地図に入れていません。上の検索から探せます。</p>` : ''}
+<p class="pm-credit">地図：${esc(geo.source)}</p></div>
+<script type="application/json" id="pm-data">${JSON.stringify(data).replace(/</g, '\\u003c')}</script>
+<script>${PREFMAP_JS}</script>
+</div>`;
+}
 const OG_IMAGE = fs.existsSync(path.join(ROOT, 'src', 'static', 'ogp.png')) ? `${SITE}/ogp.png` : '';
 const FONT_URL = 'https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@800&family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap';
 
@@ -458,6 +502,7 @@ function prefPage(pref, ctx) {
 <p style="color:var(--ink2);max-width:680px">${esc(pref.name)}の市区町村が行っているリフォーム向けの補助金を、市区町村ごとにまとめています。${total ? `${esc(pref.name)}の${total}市区町村のうち、${pref.cities.length}市区町村を調べ終わり、` : ''}制度が見つかった${live.length}市区町村・${progCount}制度を掲載中です（${timeTag(lastmod)}更新）。</p></div></div>
 <main class="wrap">
 <section aria-labelledby="h-list">${secHead('h-list', `${esc(pref.name)}の市区町村から探す`, '市区町村を選ぶと、使える補助金がわかります')}
+${prefMapHtml(pref, ctx)}
 ${live.length ? `<ul class="nat">${live.map((c) => `<li><span style="flex:1 1 300px;min-width:0;display:flex;flex-direction:column;gap:2px"><a class="serif" style="font-size:22px;line-height:1.5" href="${cityUrl(c)}">${esc(c.name)}のリフォーム補助金</a><span style="font-size:16px;color:var(--ink2)">${esc(cityCats(c).map((x) => x.name.replace(/（.*）/, '')).join('、'))}　／　${timeTag(c.checked)}確認${fyOf(c.checked) < FY ? `（${fyLabel(fyOf(c.checked))}の情報）` : ''}</span></span><span class="mid">${c.programs.length}<small>件</small>${cityMax(c) ? `　最大${cityMax(c)}<small>万円</small>` : ''}</span></li>`).join('')}</ul>` : '<p>掲載の準備中です。</p>'}
 ${none.length ? `<p class="small muted">調べたものの、市区町村独自のリフォーム向け制度が見つからなかった地域：${none.map((c) => esc(c.name)).join('、')}（国の制度は使えます）</p>` : ''}
 </section>
