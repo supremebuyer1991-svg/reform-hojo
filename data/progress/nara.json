@@ -1,0 +1,201 @@
+{
+  "pref": "奈良県",
+  "prefSlug": "nara",
+  "cities": [
+    {
+      "name": "奈良市",
+      "slug": "nara-shi",
+      "status": "done"
+    },
+    {
+      "name": "大和高田市",
+      "slug": "yamatotakada",
+      "status": "done"
+    },
+    {
+      "name": "大和郡山市",
+      "slug": "yamatokoriyama",
+      "status": "done"
+    },
+    {
+      "name": "天理市",
+      "slug": "tenri",
+      "status": "done"
+    },
+    {
+      "name": "橿原市",
+      "slug": "kashihara",
+      "status": "done"
+    },
+    {
+      "name": "桜井市",
+      "slug": "sakurai",
+      "status": "done"
+    },
+    {
+      "name": "五條市",
+      "slug": "gojo",
+      "status": "done"
+    },
+    {
+      "name": "御所市",
+      "slug": "gose",
+      "status": "done"
+    },
+    {
+      "name": "生駒市",
+      "slug": "ikoma",
+      "status": "done"
+    },
+    {
+      "name": "香芝市",
+      "slug": "kashiba",
+      "status": "done"
+    },
+    {
+      "name": "葛城市",
+      "slug": "katsuragi",
+      "status": "todo"
+    },
+    {
+      "name": "宇陀市",
+      "slug": "uda",
+      "status": "todo"
+    },
+    {
+      "name": "山添村",
+      "slug": "yamazoe",
+      "status": "todo"
+    },
+    {
+      "name": "平群町",
+      "slug": "heguri",
+      "status": "todo"
+    },
+    {
+      "name": "三郷町",
+      "slug": "sango",
+      "status": "todo"
+    },
+    {
+      "name": "斑鳩町",
+      "slug": "ikaruga",
+      "status": "todo"
+    },
+    {
+      "name": "安堵町",
+      "slug": "ando",
+      "status": "todo"
+    },
+    {
+      "name": "川西町",
+      "slug": "kawanishi",
+      "status": "todo"
+    },
+    {
+      "name": "三宅町",
+      "slug": "miyake",
+      "status": "todo"
+    },
+    {
+      "name": "田原本町",
+      "slug": "tawaramoto",
+      "status": "todo"
+    },
+    {
+      "name": "曽爾村",
+      "slug": "soni",
+      "status": "todo"
+    },
+    {
+      "name": "御杖村",
+      "slug": "mitsue",
+      "status": "todo"
+    },
+    {
+      "name": "高取町",
+      "slug": "takatori",
+      "status": "todo"
+    },
+    {
+      "name": "明日香村",
+      "slug": "asuka",
+      "status": "todo"
+    },
+    {
+      "name": "上牧町",
+      "slug": "kanmaki",
+      "status": "todo"
+    },
+    {
+      "name": "王寺町",
+      "slug": "oji",
+      "status": "todo"
+    },
+    {
+      "name": "広陵町",
+      "slug": "koryo",
+      "status": "todo"
+    },
+    {
+      "name": "河合町",
+      "slug": "kawai",
+      "status": "todo"
+    },
+    {
+      "name": "吉野町",
+      "slug": "yoshino",
+      "status": "todo"
+    },
+    {
+      "name": "大淀町",
+      "slug": "oyodo",
+      "status": "todo"
+    },
+    {
+      "name": "下市町",
+      "slug": "shimoichi",
+      "status": "todo"
+    },
+    {
+      "name": "黒滝村",
+      "slug": "kurotaki",
+      "status": "todo"
+    },
+    {
+      "name": "天川村",
+      "slug": "tenkawa",
+      "status": "todo"
+    },
+    {
+      "name": "野迫川村",
+      "slug": "nosegawa",
+      "status": "todo"
+    },
+    {
+      "name": "十津川村",
+      "slug": "totsukawa",
+      "status": "todo"
+    },
+    {
+      "name": "下北山村",
+      "slug": "shimokitayama",
+      "status": "todo"
+    },
+    {
+      "name": "上北山村",
+      "slug": "kamikitayama",
+      "status": "todo"
+    },
+    {
+      "name": "川上村",
+      "slug": "kawakami",
+      "status": "todo"
+    },
+    {
+      "name": "東吉野村",
+      "slug": "higashiyoshino",
+      "status": "todo"
+    }
+  ]
+}
