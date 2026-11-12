@@ -85,52 +85,52 @@
     {
       "name": "久御山町",
       "slug": "kumiyama",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "井手町",
       "slug": "ide",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "宇治田原町",
       "slug": "ujitawara",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "笠置町",
       "slug": "kasagi",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "和束町",
       "slug": "wazuka",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "精華町",
       "slug": "seika",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "南山城村",
       "slug": "minamiyamashiro",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "京丹波町",
       "slug": "kyotamba",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "伊根町",
       "slug": "ine",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "与謝野町",
       "slug": "yosano",
-      "status": "todo"
+      "status": "done"
     }
   ]
 }
