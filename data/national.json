@@ -8,25 +8,32 @@
       "target": "内窓・外窓・ガラス・玄関ドア",
       "maxLabel": "最大100万円",
       "maxNumber": 100,
-      "cats": ["mado"]
+      "cats": [
+        "mado"
+      ]
     },
     {
       "id": "kyuto",
       "slug": "kyuto-shoene-2026",
       "name": "給湯省エネ2026",
-      "target": "エコキュートなど高効率給湯器",
+      "target": "エコキュート・ハイブリッド給湯機・エネファーム（1台あたり）",
       "maxLabel": "最大17万円",
       "maxNumber": 17,
-      "cats": ["kyuto"]
+      "cats": [
+        "kyuto"
+      ]
     },
     {
       "id": "mirai",
       "slug": "mirai-eco-2026",
       "name": "みらいエコ住宅2026",
-      "target": "省エネリフォーム（浴室・トイレ・断熱など）",
+      "target": "断熱を中心にした省エネリフォーム（トイレ・浴槽・給湯器なども組み合わせ可）",
       "maxLabel": "最大100万円",
       "maxNumber": 100,
-      "cats": ["mado", "mizu"]
+      "cats": [
+        "mado",
+        "mizu"
+      ]
     }
   ]
 }
