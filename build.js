@@ -37,7 +37,7 @@ const svgWarn = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" str
 const stamp = (date) => `<svg class="stamp" viewBox="0 0 104 104" width="100" height="100" role="img" aria-label="${jdate(date)} 確認済み"><circle cx="52" cy="52" r="48" fill="#fff" fill-opacity=".9" stroke="#BF3324" stroke-width="2.6"/><path d="M5.6 40h92.8M5.6 64h92.8" stroke="#BF3324" stroke-width="1.6"/><text x="52" y="32" text-anchor="middle" font-family="Shippori Mincho, serif" font-weight="800" font-size="15" letter-spacing="2" fill="#BF3324">確認済</text><text x="52" y="57.5" text-anchor="middle" font-family="Shippori Mincho, serif" font-weight="800" font-size="15.5" fill="#BF3324">${ymd(date)}</text><text x="52" y="81" text-anchor="middle" font-family="sans-serif" font-weight="700" font-size="10.5" fill="#BF3324">補助金ナビ</text></svg>`;
 
 // ---- 共通の外枠 ----
-function layout({ title, description, canonical, body, jsonld }) {
+function layout({ title, description, canonical, body, jsonld, noindex }) {
   return `<!doctype html>
 <html lang="ja">
 <head>
@@ -45,6 +45,7 @@ function layout({ title, description, canonical, body, jsonld }) {
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(description)}">
+${noindex ? '<meta name="robots" content="noindex">' : ''}
 <link rel="canonical" href="${config.siteUrl}${canonical}">
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(description)}">
@@ -125,6 +126,7 @@ ${p.tiers ? `<ol class="tiers">${p.tiers.map((t, i) => `<li${t.highlight ? ' cla
 ${p.details ? `<dl class="kv">${p.details.map((d) => `<div><dt>${esc(d.k)}</dt><dd>${esc(d.v)}</dd></div>`).join('')}</dl>` : ''}
 <div class="flow"><span class="small muted" style="font-weight:700">申請のタイミング</span>${flow}</div>
 ${p.warning ? `<div class="warn">${svgWarn}<span>${esc(p.warning)}</span></div>` : ''}
+${p.source ? `<p class="small muted">出典：<a href="${esc(p.source)}" rel="nofollow noopener">${esc(p.sourceName || '公式情報')}</a></p>` : ''}
 </article>`;
   }).join('\n');
 
@@ -179,7 +181,7 @@ ${programs}
 ${ctaBlock(`<span class="ib">${esc(city.name)}対応のリフォーム会社に</span><span class="ib">まとめて無料で見積もり</span>`, '無料で見積もりをとる')}
 
 <section aria-labelledby="h-area">${secHead('h-area', `対応エリア（${esc(city.name)}）`, '町名の一覧')}
-<ul class="towns">${city.towns.map((t) => `<li>${esc(t)}</li>`).join('')}</ul>
+${(city.towns || []).length ? `<ul class="towns">${city.towns.map((t) => `<li>${esc(t)}</li>`).join('')}</ul>` : ''}
 ${neighbors ? `<div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px"><span class="muted" style="font-size:15px">となりの市・町の補助金：</span>${neighbors}</div>` : ''}
 </section>
 
@@ -200,8 +202,9 @@ ${neighbors ? `<div style="display:flex;flex-wrap:wrap;align-items:center;gap:10
       { '@type': 'ListItem', position: 3, name: city.name, item: config.siteUrl + url }
     ]
   };
-  write(`${city.prefSlug}/${city.slug}/index.html`, layout({ title, description, canonical: url, body, jsonld }));
-  return url;
+  const thin = !city.programs.length;
+  write(`${city.prefSlug}/${city.slug}/index.html`, layout({ title, description, canonical: url, body, jsonld, noindex: thin }));
+  return thin ? null : url;
 }
 
 // ---- 都道府県ページ ----
@@ -255,7 +258,8 @@ for (const pref of fs.readdirSync(citiesDir)) {
 const urls = ['/'];
 const prefMap = new Map();
 for (const c of allCities) {
-  urls.push(cityPage(c, allCities));
+  const u = cityPage(c, allCities);
+  if (u) urls.push(u);
   if (!prefMap.has(c.prefSlug)) prefMap.set(c.prefSlug, { slug: c.prefSlug, name: c.pref, cities: [] });
   prefMap.get(c.prefSlug).cities.push(c);
 }
