@@ -70,12 +70,12 @@
     {
       "name": "羽生市",
       "slug": "hanyu",
-      "status": "recheck"
+      "status": "done"
     },
     {
       "name": "鴻巣市",
       "slug": "konosu",
-      "status": "recheck"
+      "status": "done"
     },
     {
       "name": "深谷市",
@@ -120,42 +120,42 @@
     {
       "name": "志木市",
       "slug": "shiki",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "和光市",
       "slug": "wako",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "新座市",
       "slug": "niiza",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "桶川市",
       "slug": "okegawa",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "久喜市",
       "slug": "kuki",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "北本市",
       "slug": "kitamoto",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "八潮市",
       "slug": "yashio",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "富士見市",
       "slug": "fujimi",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "三郷市",
