@@ -1,0 +1,316 @@
+{
+  "pref": "東京都",
+  "prefSlug": "tokyo",
+  "cities": [
+    {
+      "name": "千代田区",
+      "slug": "chiyoda",
+      "status": "done"
+    },
+    {
+      "name": "中央区",
+      "slug": "chuo",
+      "status": "done"
+    },
+    {
+      "name": "港区",
+      "slug": "minato",
+      "status": "done"
+    },
+    {
+      "name": "新宿区",
+      "slug": "shinjuku",
+      "status": "done"
+    },
+    {
+      "name": "文京区",
+      "slug": "bunkyo",
+      "status": "done"
+    },
+    {
+      "name": "台東区",
+      "slug": "taito",
+      "status": "done"
+    },
+    {
+      "name": "墨田区",
+      "slug": "sumida",
+      "status": "done"
+    },
+    {
+      "name": "江東区",
+      "slug": "koto",
+      "status": "done"
+    },
+    {
+      "name": "品川区",
+      "slug": "shinagawa",
+      "status": "done"
+    },
+    {
+      "name": "目黒区",
+      "slug": "meguro",
+      "status": "todo"
+    },
+    {
+      "name": "大田区",
+      "slug": "ota",
+      "status": "todo"
+    },
+    {
+      "name": "世田谷区",
+      "slug": "setagaya",
+      "status": "todo"
+    },
+    {
+      "name": "渋谷区",
+      "slug": "shibuya",
+      "status": "todo"
+    },
+    {
+      "name": "中野区",
+      "slug": "nakano",
+      "status": "todo"
+    },
+    {
+      "name": "杉並区",
+      "slug": "suginami",
+      "status": "todo"
+    },
+    {
+      "name": "豊島区",
+      "slug": "toshima",
+      "status": "todo"
+    },
+    {
+      "name": "北区",
+      "slug": "kita",
+      "status": "todo"
+    },
+    {
+      "name": "荒川区",
+      "slug": "arakawa",
+      "status": "todo"
+    },
+    {
+      "name": "板橋区",
+      "slug": "itabashi",
+      "status": "todo"
+    },
+    {
+      "name": "練馬区",
+      "slug": "nerima",
+      "status": "todo"
+    },
+    {
+      "name": "足立区",
+      "slug": "adachi",
+      "status": "todo"
+    },
+    {
+      "name": "葛飾区",
+      "slug": "katsushika",
+      "status": "todo"
+    },
+    {
+      "name": "江戸川区",
+      "slug": "edogawa",
+      "status": "todo"
+    },
+    {
+      "name": "八王子市",
+      "slug": "hachioji",
+      "status": "todo"
+    },
+    {
+      "name": "立川市",
+      "slug": "tachikawa",
+      "status": "todo"
+    },
+    {
+      "name": "武蔵野市",
+      "slug": "musashino",
+      "status": "todo"
+    },
+    {
+      "name": "三鷹市",
+      "slug": "mitaka",
+      "status": "todo"
+    },
+    {
+      "name": "青梅市",
+      "slug": "ome",
+      "status": "todo"
+    },
+    {
+      "name": "府中市",
+      "slug": "fuchu",
+      "status": "todo"
+    },
+    {
+      "name": "昭島市",
+      "slug": "akishima",
+      "status": "todo"
+    },
+    {
+      "name": "調布市",
+      "slug": "chofu",
+      "status": "todo"
+    },
+    {
+      "name": "町田市",
+      "slug": "machida",
+      "status": "todo"
+    },
+    {
+      "name": "小金井市",
+      "slug": "koganei",
+      "status": "todo"
+    },
+    {
+      "name": "小平市",
+      "slug": "kodaira",
+      "status": "todo"
+    },
+    {
+      "name": "日野市",
+      "slug": "hino",
+      "status": "todo"
+    },
+    {
+      "name": "東村山市",
+      "slug": "higashimurayama",
+      "status": "todo"
+    },
+    {
+      "name": "国分寺市",
+      "slug": "kokubunji",
+      "status": "todo"
+    },
+    {
+      "name": "国立市",
+      "slug": "kunitachi",
+      "status": "todo"
+    },
+    {
+      "name": "福生市",
+      "slug": "fussa",
+      "status": "todo"
+    },
+    {
+      "name": "狛江市",
+      "slug": "komae",
+      "status": "todo"
+    },
+    {
+      "name": "東大和市",
+      "slug": "higashiyamato",
+      "status": "todo"
+    },
+    {
+      "name": "清瀬市",
+      "slug": "kiyose",
+      "status": "todo"
+    },
+    {
+      "name": "東久留米市",
+      "slug": "higashikurume",
+      "status": "todo"
+    },
+    {
+      "name": "武蔵村山市",
+      "slug": "musashimurayama",
+      "status": "todo"
+    },
+    {
+      "name": "多摩市",
+      "slug": "tama",
+      "status": "todo"
+    },
+    {
+      "name": "稲城市",
+      "slug": "inagi",
+      "status": "todo"
+    },
+    {
+      "name": "羽村市",
+      "slug": "hamura",
+      "status": "todo"
+    },
+    {
+      "name": "あきる野市",
+      "slug": "akiruno",
+      "status": "todo"
+    },
+    {
+      "name": "西東京市",
+      "slug": "nishitokyo",
+      "status": "todo"
+    },
+    {
+      "name": "瑞穂町",
+      "slug": "mizuho",
+      "status": "todo"
+    },
+    {
+      "name": "日の出町",
+      "slug": "hinode",
+      "status": "todo"
+    },
+    {
+      "name": "檜原村",
+      "slug": "hinohara",
+      "status": "todo"
+    },
+    {
+      "name": "奥多摩町",
+      "slug": "okutama",
+      "status": "todo"
+    },
+    {
+      "name": "大島町",
+      "slug": "oshima",
+      "status": "todo"
+    },
+    {
+      "name": "利島村",
+      "slug": "toshima-mura",
+      "status": "todo"
+    },
+    {
+      "name": "新島村",
+      "slug": "niijima",
+      "status": "todo"
+    },
+    {
+      "name": "神津島村",
+      "slug": "kozushima",
+      "status": "todo"
+    },
+    {
+      "name": "三宅村",
+      "slug": "miyake",
+      "status": "todo"
+    },
+    {
+      "name": "御蔵島村",
+      "slug": "mikurajima",
+      "status": "todo"
+    },
+    {
+      "name": "八丈町",
+      "slug": "hachijo",
+      "status": "todo"
+    },
+    {
+      "name": "青ヶ島村",
+      "slug": "aogashima",
+      "status": "todo"
+    },
+    {
+      "name": "小笠原村",
+      "slug": "ogasawara",
+      "status": "todo"
+    }
+  ]
+}
