@@ -70,52 +70,52 @@
     {
       "name": "羽生市",
       "slug": "hanyu",
-      "status": "todo"
+      "status": "recheck"
     },
     {
       "name": "鴻巣市",
       "slug": "konosu",
-      "status": "todo"
+      "status": "recheck"
     },
     {
       "name": "深谷市",
       "slug": "fukaya",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "上尾市",
       "slug": "ageo",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "草加市",
       "slug": "soka",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "越谷市",
       "slug": "koshigaya",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "蕨市",
       "slug": "warabi",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "戸田市",
       "slug": "toda",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "入間市",
       "slug": "iruma",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "朝霞市",
       "slug": "asaka",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "志木市",
