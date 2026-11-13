@@ -55,7 +55,7 @@
     {
       "name": "葛城市",
       "slug": "katsuragi",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "宇陀市",
@@ -65,42 +65,42 @@
     {
       "name": "山添村",
       "slug": "yamazoe",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "平群町",
       "slug": "heguri",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "三郷町",
       "slug": "sango",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "斑鳩町",
       "slug": "ikaruga",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "安堵町",
       "slug": "ando",
-      "status": "todo"
+      "status": "recheck"
     },
     {
       "name": "川西町",
       "slug": "kawanishi",
-      "status": "todo"
+      "status": "recheck"
     },
     {
       "name": "三宅町",
       "slug": "miyake",
-      "status": "todo"
+      "status": "recheck"
     },
     {
       "name": "田原本町",
       "slug": "tawaramoto",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "曽爾村",
