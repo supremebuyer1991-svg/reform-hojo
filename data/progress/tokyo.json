@@ -295,22 +295,22 @@
     {
       "name": "御蔵島村",
       "slug": "mikurajima",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "八丈町",
       "slug": "hachijo",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "青ヶ島村",
       "slug": "aogashima",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "小笠原村",
       "slug": "ogasawara",
-      "status": "todo"
+      "status": "done"
     }
   ]
 }

@@ -1,0 +1,171 @@
+{
+  "pref": "神奈川県",
+  "prefSlug": "kanagawa",
+  "cities": [
+    {
+      "name": "横浜市",
+      "slug": "yokohama",
+      "status": "done"
+    },
+    {
+      "name": "川崎市",
+      "slug": "kawasaki",
+      "status": "done"
+    },
+    {
+      "name": "相模原市",
+      "slug": "sagamihara",
+      "status": "done"
+    },
+    {
+      "name": "横須賀市",
+      "slug": "yokosuka",
+      "status": "done"
+    },
+    {
+      "name": "平塚市",
+      "slug": "hiratsuka",
+      "status": "done"
+    },
+    {
+      "name": "鎌倉市",
+      "slug": "kamakura",
+      "status": "done"
+    },
+    {
+      "name": "藤沢市",
+      "slug": "fujisawa",
+      "status": "todo"
+    },
+    {
+      "name": "小田原市",
+      "slug": "odawara",
+      "status": "todo"
+    },
+    {
+      "name": "茅ヶ崎市",
+      "slug": "chigasaki",
+      "status": "todo"
+    },
+    {
+      "name": "逗子市",
+      "slug": "zushi",
+      "status": "todo"
+    },
+    {
+      "name": "三浦市",
+      "slug": "miura",
+      "status": "todo"
+    },
+    {
+      "name": "秦野市",
+      "slug": "hadano",
+      "status": "todo"
+    },
+    {
+      "name": "厚木市",
+      "slug": "atsugi",
+      "status": "todo"
+    },
+    {
+      "name": "大和市",
+      "slug": "yamato",
+      "status": "todo"
+    },
+    {
+      "name": "伊勢原市",
+      "slug": "isehara",
+      "status": "todo"
+    },
+    {
+      "name": "海老名市",
+      "slug": "ebina",
+      "status": "todo"
+    },
+    {
+      "name": "座間市",
+      "slug": "zama",
+      "status": "todo"
+    },
+    {
+      "name": "南足柄市",
+      "slug": "minamiashigara",
+      "status": "todo"
+    },
+    {
+      "name": "綾瀬市",
+      "slug": "ayase",
+      "status": "todo"
+    },
+    {
+      "name": "葉山町",
+      "slug": "hayama",
+      "status": "todo"
+    },
+    {
+      "name": "寒川町",
+      "slug": "samukawa",
+      "status": "todo"
+    },
+    {
+      "name": "大磯町",
+      "slug": "oiso",
+      "status": "todo"
+    },
+    {
+      "name": "二宮町",
+      "slug": "ninomiya",
+      "status": "todo"
+    },
+    {
+      "name": "中井町",
+      "slug": "nakai",
+      "status": "todo"
+    },
+    {
+      "name": "大井町",
+      "slug": "oi",
+      "status": "todo"
+    },
+    {
+      "name": "松田町",
+      "slug": "matsuda",
+      "status": "todo"
+    },
+    {
+      "name": "山北町",
+      "slug": "yamakita",
+      "status": "todo"
+    },
+    {
+      "name": "開成町",
+      "slug": "kaisei",
+      "status": "todo"
+    },
+    {
+      "name": "箱根町",
+      "slug": "hakone",
+      "status": "todo"
+    },
+    {
+      "name": "真鶴町",
+      "slug": "manazuru",
+      "status": "todo"
+    },
+    {
+      "name": "湯河原町",
+      "slug": "yugawara",
+      "status": "todo"
+    },
+    {
+      "name": "愛川町",
+      "slug": "aikawa",
+      "status": "todo"
+    },
+    {
+      "name": "清川村",
+      "slug": "kiyokawa",
+      "status": "todo"
+    }
+  ]
+}
