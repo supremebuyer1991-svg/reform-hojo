@@ -95,7 +95,7 @@
     {
       "name": "綾瀬市",
       "slug": "ayase",
-      "status": "recheck"
+      "status": "done"
     },
     {
       "name": "葉山町",
@@ -135,7 +135,7 @@
     {
       "name": "山北町",
       "slug": "yamakita",
-      "status": "recheck"
+      "status": "done"
     },
     {
       "name": "開成町",
@@ -145,27 +145,27 @@
     {
       "name": "箱根町",
       "slug": "hakone",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "真鶴町",
       "slug": "manazuru",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "湯河原町",
       "slug": "yugawara",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "愛川町",
       "slug": "aikawa",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "清川村",
       "slug": "kiyokawa",
-      "status": "todo"
+      "status": "done"
     }
   ]
 }

@@ -1,0 +1,321 @@
+{
+  "pref": "埼玉県",
+  "prefSlug": "saitama",
+  "cities": [
+    {
+      "name": "さいたま市",
+      "slug": "saitama-shi",
+      "status": "done"
+    },
+    {
+      "name": "川越市",
+      "slug": "kawagoe",
+      "status": "done"
+    },
+    {
+      "name": "熊谷市",
+      "slug": "kumagaya",
+      "status": "done"
+    },
+    {
+      "name": "川口市",
+      "slug": "kawaguchi",
+      "status": "todo"
+    },
+    {
+      "name": "行田市",
+      "slug": "gyoda",
+      "status": "todo"
+    },
+    {
+      "name": "秩父市",
+      "slug": "chichibu",
+      "status": "todo"
+    },
+    {
+      "name": "所沢市",
+      "slug": "tokorozawa",
+      "status": "todo"
+    },
+    {
+      "name": "飯能市",
+      "slug": "hanno",
+      "status": "todo"
+    },
+    {
+      "name": "加須市",
+      "slug": "kazo",
+      "status": "todo"
+    },
+    {
+      "name": "本庄市",
+      "slug": "honjo",
+      "status": "todo"
+    },
+    {
+      "name": "東松山市",
+      "slug": "higashimatsuyama",
+      "status": "todo"
+    },
+    {
+      "name": "春日部市",
+      "slug": "kasukabe",
+      "status": "todo"
+    },
+    {
+      "name": "狭山市",
+      "slug": "sayama",
+      "status": "todo"
+    },
+    {
+      "name": "羽生市",
+      "slug": "hanyu",
+      "status": "todo"
+    },
+    {
+      "name": "鴻巣市",
+      "slug": "konosu",
+      "status": "todo"
+    },
+    {
+      "name": "深谷市",
+      "slug": "fukaya",
+      "status": "todo"
+    },
+    {
+      "name": "上尾市",
+      "slug": "ageo",
+      "status": "todo"
+    },
+    {
+      "name": "草加市",
+      "slug": "soka",
+      "status": "todo"
+    },
+    {
+      "name": "越谷市",
+      "slug": "koshigaya",
+      "status": "todo"
+    },
+    {
+      "name": "蕨市",
+      "slug": "warabi",
+      "status": "todo"
+    },
+    {
+      "name": "戸田市",
+      "slug": "toda",
+      "status": "todo"
+    },
+    {
+      "name": "入間市",
+      "slug": "iruma",
+      "status": "todo"
+    },
+    {
+      "name": "朝霞市",
+      "slug": "asaka",
+      "status": "todo"
+    },
+    {
+      "name": "志木市",
+      "slug": "shiki",
+      "status": "todo"
+    },
+    {
+      "name": "和光市",
+      "slug": "wako",
+      "status": "todo"
+    },
+    {
+      "name": "新座市",
+      "slug": "niiza",
+      "status": "todo"
+    },
+    {
+      "name": "桶川市",
+      "slug": "okegawa",
+      "status": "todo"
+    },
+    {
+      "name": "久喜市",
+      "slug": "kuki",
+      "status": "todo"
+    },
+    {
+      "name": "北本市",
+      "slug": "kitamoto",
+      "status": "todo"
+    },
+    {
+      "name": "八潮市",
+      "slug": "yashio",
+      "status": "todo"
+    },
+    {
+      "name": "富士見市",
+      "slug": "fujimi",
+      "status": "todo"
+    },
+    {
+      "name": "三郷市",
+      "slug": "misato",
+      "status": "todo"
+    },
+    {
+      "name": "蓮田市",
+      "slug": "hasuda",
+      "status": "todo"
+    },
+    {
+      "name": "坂戸市",
+      "slug": "sakado",
+      "status": "todo"
+    },
+    {
+      "name": "幸手市",
+      "slug": "satte",
+      "status": "todo"
+    },
+    {
+      "name": "鶴ヶ島市",
+      "slug": "tsurugashima",
+      "status": "todo"
+    },
+    {
+      "name": "日高市",
+      "slug": "hidaka",
+      "status": "todo"
+    },
+    {
+      "name": "吉川市",
+      "slug": "yoshikawa",
+      "status": "todo"
+    },
+    {
+      "name": "ふじみ野市",
+      "slug": "fujimino",
+      "status": "todo"
+    },
+    {
+      "name": "白岡市",
+      "slug": "shiraoka",
+      "status": "todo"
+    },
+    {
+      "name": "伊奈町",
+      "slug": "ina",
+      "status": "todo"
+    },
+    {
+      "name": "三芳町",
+      "slug": "miyoshi",
+      "status": "todo"
+    },
+    {
+      "name": "毛呂山町",
+      "slug": "moroyama",
+      "status": "todo"
+    },
+    {
+      "name": "越生町",
+      "slug": "ogose",
+      "status": "todo"
+    },
+    {
+      "name": "滑川町",
+      "slug": "namegawa",
+      "status": "todo"
+    },
+    {
+      "name": "嵐山町",
+      "slug": "ranzan",
+      "status": "todo"
+    },
+    {
+      "name": "小川町",
+      "slug": "ogawa",
+      "status": "todo"
+    },
+    {
+      "name": "川島町",
+      "slug": "kawajima",
+      "status": "todo"
+    },
+    {
+      "name": "吉見町",
+      "slug": "yoshimi",
+      "status": "todo"
+    },
+    {
+      "name": "鳩山町",
+      "slug": "hatoyama",
+      "status": "todo"
+    },
+    {
+      "name": "ときがわ町",
+      "slug": "tokigawa",
+      "status": "todo"
+    },
+    {
+      "name": "横瀬町",
+      "slug": "yokoze",
+      "status": "todo"
+    },
+    {
+      "name": "皆野町",
+      "slug": "minano",
+      "status": "todo"
+    },
+    {
+      "name": "長瀞町",
+      "slug": "nagatoro",
+      "status": "todo"
+    },
+    {
+      "name": "小鹿野町",
+      "slug": "ogano",
+      "status": "todo"
+    },
+    {
+      "name": "東秩父村",
+      "slug": "higashichichibu",
+      "status": "todo"
+    },
+    {
+      "name": "美里町",
+      "slug": "misato-machi",
+      "status": "todo"
+    },
+    {
+      "name": "神川町",
+      "slug": "kamikawa",
+      "status": "todo"
+    },
+    {
+      "name": "上里町",
+      "slug": "kamisato",
+      "status": "todo"
+    },
+    {
+      "name": "寄居町",
+      "slug": "yorii",
+      "status": "todo"
+    },
+    {
+      "name": "宮代町",
+      "slug": "miyashiro",
+      "status": "todo"
+    },
+    {
+      "name": "杉戸町",
+      "slug": "sugito",
+      "status": "todo"
+    },
+    {
+      "name": "松伏町",
+      "slug": "matsubushi",
+      "status": "todo"
+    }
+  ]
+}
