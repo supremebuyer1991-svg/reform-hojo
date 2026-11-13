@@ -1,0 +1,156 @@
+{
+  "pref": "和歌山県",
+  "prefSlug": "wakayama",
+  "cities": [
+    {
+      "name": "和歌山市",
+      "slug": "wakayama",
+      "status": "done"
+    },
+    {
+      "name": "海南市",
+      "slug": "kainan",
+      "status": "done"
+    },
+    {
+      "name": "橋本市",
+      "slug": "hashimoto",
+      "status": "done"
+    },
+    {
+      "name": "有田市",
+      "slug": "arida",
+      "status": "done"
+    },
+    {
+      "name": "御坊市",
+      "slug": "gobo",
+      "status": "done"
+    },
+    {
+      "name": "田辺市",
+      "slug": "tanabe",
+      "status": "done"
+    },
+    {
+      "name": "新宮市",
+      "slug": "shingu",
+      "status": "done"
+    },
+    {
+      "name": "紀の川市",
+      "slug": "kinokawa",
+      "status": "done"
+    },
+    {
+      "name": "岩出市",
+      "slug": "iwade",
+      "status": "done"
+    },
+    {
+      "name": "紀美野町",
+      "slug": "kimino",
+      "status": "todo"
+    },
+    {
+      "name": "かつらぎ町",
+      "slug": "katsuragi",
+      "status": "todo"
+    },
+    {
+      "name": "九度山町",
+      "slug": "kudoyama",
+      "status": "todo"
+    },
+    {
+      "name": "高野町",
+      "slug": "koya",
+      "status": "todo"
+    },
+    {
+      "name": "湯浅町",
+      "slug": "yuasa",
+      "status": "todo"
+    },
+    {
+      "name": "広川町",
+      "slug": "hirogawa",
+      "status": "todo"
+    },
+    {
+      "name": "有田川町",
+      "slug": "aridagawa",
+      "status": "todo"
+    },
+    {
+      "name": "美浜町",
+      "slug": "mihama",
+      "status": "todo"
+    },
+    {
+      "name": "日高町",
+      "slug": "hidaka",
+      "status": "todo"
+    },
+    {
+      "name": "由良町",
+      "slug": "yura",
+      "status": "todo"
+    },
+    {
+      "name": "印南町",
+      "slug": "inami",
+      "status": "todo"
+    },
+    {
+      "name": "みなべ町",
+      "slug": "minabe",
+      "status": "todo"
+    },
+    {
+      "name": "日高川町",
+      "slug": "hidakagawa",
+      "status": "todo"
+    },
+    {
+      "name": "白浜町",
+      "slug": "shirahama",
+      "status": "todo"
+    },
+    {
+      "name": "上富田町",
+      "slug": "kamitonda",
+      "status": "todo"
+    },
+    {
+      "name": "すさみ町",
+      "slug": "susami",
+      "status": "todo"
+    },
+    {
+      "name": "那智勝浦町",
+      "slug": "nachikatsuura",
+      "status": "todo"
+    },
+    {
+      "name": "太地町",
+      "slug": "taiji",
+      "status": "todo"
+    },
+    {
+      "name": "古座川町",
+      "slug": "kozagawa",
+      "status": "todo"
+    },
+    {
+      "name": "北山村",
+      "slug": "kitayama",
+      "status": "todo"
+    },
+    {
+      "name": "串本町",
+      "slug": "kushimoto",
+      "status": "todo"
+    }
+  ]
+}
