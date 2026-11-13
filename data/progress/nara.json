@@ -85,12 +85,12 @@
     {
       "name": "安堵町",
       "slug": "ando",
-      "status": "recheck"
+      "status": "done"
     },
     {
       "name": "川西町",
       "slug": "kawanishi",
-      "status": "recheck"
+      "status": "done"
     },
     {
       "name": "三宅町",
@@ -180,7 +180,7 @@
     {
       "name": "下北山村",
       "slug": "shimokitayama",
-      "status": "recheck"
+      "status": "done"
     },
     {
       "name": "上北山村",
