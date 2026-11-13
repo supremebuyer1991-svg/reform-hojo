@@ -90,57 +90,57 @@
     {
       "name": "南足柄市",
       "slug": "minamiashigara",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "綾瀬市",
       "slug": "ayase",
-      "status": "todo"
+      "status": "recheck"
     },
     {
       "name": "葉山町",
       "slug": "hayama",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "寒川町",
       "slug": "samukawa",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "大磯町",
       "slug": "oiso",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "二宮町",
       "slug": "ninomiya",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "中井町",
       "slug": "nakai",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "大井町",
       "slug": "oi",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "松田町",
       "slug": "matsuda",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "山北町",
       "slug": "yamakita",
-      "status": "todo"
+      "status": "recheck"
     },
     {
       "name": "開成町",
       "slug": "kaisei",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "箱根町",
