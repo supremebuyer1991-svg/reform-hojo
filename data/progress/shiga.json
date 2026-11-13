@@ -1,0 +1,101 @@
+{
+  "pref": "滋賀県",
+  "prefSlug": "shiga",
+  "cities": [
+    {
+      "name": "大津市",
+      "slug": "otsu",
+      "status": "done"
+    },
+    {
+      "name": "彦根市",
+      "slug": "hikone",
+      "status": "todo"
+    },
+    {
+      "name": "長浜市",
+      "slug": "nagahama",
+      "status": "todo"
+    },
+    {
+      "name": "近江八幡市",
+      "slug": "omihachiman",
+      "status": "todo"
+    },
+    {
+      "name": "草津市",
+      "slug": "kusatsu",
+      "status": "todo"
+    },
+    {
+      "name": "守山市",
+      "slug": "moriyama",
+      "status": "todo"
+    },
+    {
+      "name": "栗東市",
+      "slug": "ritto",
+      "status": "todo"
+    },
+    {
+      "name": "甲賀市",
+      "slug": "koka",
+      "status": "todo"
+    },
+    {
+      "name": "野洲市",
+      "slug": "yasu",
+      "status": "todo"
+    },
+    {
+      "name": "湖南市",
+      "slug": "konan",
+      "status": "todo"
+    },
+    {
+      "name": "高島市",
+      "slug": "takashima",
+      "status": "todo"
+    },
+    {
+      "name": "東近江市",
+      "slug": "higashiomi",
+      "status": "todo"
+    },
+    {
+      "name": "米原市",
+      "slug": "maibara",
+      "status": "todo"
+    },
+    {
+      "name": "日野町",
+      "slug": "hino",
+      "status": "todo"
+    },
+    {
+      "name": "竜王町",
+      "slug": "ryuo",
+      "status": "todo"
+    },
+    {
+      "name": "愛荘町",
+      "slug": "aisho",
+      "status": "todo"
+    },
+    {
+      "name": "豊郷町",
+      "slug": "toyosato",
+      "status": "todo"
+    },
+    {
+      "name": "甲良町",
+      "slug": "kora",
+      "status": "todo"
+    },
+    {
+      "name": "多賀町",
+      "slug": "taga",
+      "status": "todo"
+    }
+  ]
+}

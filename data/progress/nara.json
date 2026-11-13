@@ -150,7 +150,7 @@
     {
       "name": "大淀町",
       "slug": "oyodo",
-      "status": "recheck"
+      "status": "done"
     },
     {
       "name": "下市町",
@@ -170,32 +170,32 @@
     {
       "name": "野迫川村",
       "slug": "nosegawa",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "十津川村",
       "slug": "totsukawa",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "下北山村",
       "slug": "shimokitayama",
-      "status": "todo"
+      "status": "recheck"
     },
     {
       "name": "上北山村",
       "slug": "kamikitayama",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "川上村",
       "slug": "kawakami",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "東吉野村",
       "slug": "higashiyoshino",
-      "status": "todo"
+      "status": "done"
     }
   ]
 }
