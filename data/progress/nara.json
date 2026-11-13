@@ -95,7 +95,7 @@
     {
       "name": "三宅町",
       "slug": "miyake",
-      "status": "recheck"
+      "status": "done"
     },
     {
       "name": "田原本町",
@@ -135,37 +135,37 @@
     {
       "name": "広陵町",
       "slug": "koryo",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "河合町",
       "slug": "kawai",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "吉野町",
       "slug": "yoshino",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "大淀町",
       "slug": "oyodo",
-      "status": "todo"
+      "status": "recheck"
     },
     {
       "name": "下市町",
       "slug": "shimoichi",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "黒滝村",
       "slug": "kurotaki",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "天川村",
       "slug": "tenkawa",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "野迫川村",
