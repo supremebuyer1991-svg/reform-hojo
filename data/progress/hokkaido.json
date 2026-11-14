@@ -1,0 +1,901 @@
+{
+  "pref": "北海道",
+  "prefSlug": "hokkaido",
+  "cities": [
+    {
+      "name": "札幌市",
+      "slug": "sapporo",
+      "status": "done"
+    },
+    {
+      "name": "函館市",
+      "slug": "hakodate",
+      "status": "done"
+    },
+    {
+      "name": "小樽市",
+      "slug": "otaru",
+      "status": "done"
+    },
+    {
+      "name": "旭川市",
+      "slug": "asahikawa",
+      "status": "done"
+    },
+    {
+      "name": "室蘭市",
+      "slug": "muroran",
+      "status": "done"
+    },
+    {
+      "name": "釧路市",
+      "slug": "kushiro",
+      "status": "done"
+    },
+    {
+      "name": "帯広市",
+      "slug": "obihiro",
+      "status": "done"
+    },
+    {
+      "name": "北見市",
+      "slug": "kitami",
+      "status": "done"
+    },
+    {
+      "name": "夕張市",
+      "slug": "yubari",
+      "status": "done"
+    },
+    {
+      "name": "岩見沢市",
+      "slug": "iwamizawa",
+      "status": "done"
+    },
+    {
+      "name": "網走市",
+      "slug": "abashiri",
+      "status": "todo"
+    },
+    {
+      "name": "留萌市",
+      "slug": "rumoi",
+      "status": "todo"
+    },
+    {
+      "name": "苫小牧市",
+      "slug": "tomakomai",
+      "status": "todo"
+    },
+    {
+      "name": "稚内市",
+      "slug": "wakkanai",
+      "status": "todo"
+    },
+    {
+      "name": "美唄市",
+      "slug": "bibai",
+      "status": "todo"
+    },
+    {
+      "name": "芦別市",
+      "slug": "ashibetsu",
+      "status": "todo"
+    },
+    {
+      "name": "江別市",
+      "slug": "ebetsu",
+      "status": "todo"
+    },
+    {
+      "name": "赤平市",
+      "slug": "akabira",
+      "status": "todo"
+    },
+    {
+      "name": "紋別市",
+      "slug": "mombetsu",
+      "status": "todo"
+    },
+    {
+      "name": "士別市",
+      "slug": "shibetsu",
+      "status": "todo"
+    },
+    {
+      "name": "名寄市",
+      "slug": "nayoro",
+      "status": "todo"
+    },
+    {
+      "name": "三笠市",
+      "slug": "mikasa",
+      "status": "todo"
+    },
+    {
+      "name": "根室市",
+      "slug": "nemuro",
+      "status": "todo"
+    },
+    {
+      "name": "千歳市",
+      "slug": "chitose",
+      "status": "todo"
+    },
+    {
+      "name": "滝川市",
+      "slug": "takikawa",
+      "status": "todo"
+    },
+    {
+      "name": "砂川市",
+      "slug": "sunagawa",
+      "status": "todo"
+    },
+    {
+      "name": "歌志内市",
+      "slug": "utashinai",
+      "status": "todo"
+    },
+    {
+      "name": "深川市",
+      "slug": "fukagawa",
+      "status": "todo"
+    },
+    {
+      "name": "富良野市",
+      "slug": "furano",
+      "status": "todo"
+    },
+    {
+      "name": "登別市",
+      "slug": "noboribetsu",
+      "status": "todo"
+    },
+    {
+      "name": "恵庭市",
+      "slug": "eniwa",
+      "status": "todo"
+    },
+    {
+      "name": "伊達市",
+      "slug": "date",
+      "status": "todo"
+    },
+    {
+      "name": "北広島市",
+      "slug": "kitahiroshima",
+      "status": "todo"
+    },
+    {
+      "name": "石狩市",
+      "slug": "ishikari",
+      "status": "todo"
+    },
+    {
+      "name": "北斗市",
+      "slug": "hokuto",
+      "status": "todo"
+    },
+    {
+      "name": "愛別町",
+      "slug": "aibetsu",
+      "status": "todo"
+    },
+    {
+      "name": "赤井川村",
+      "slug": "akaigawa",
+      "status": "todo"
+    },
+    {
+      "name": "足寄町",
+      "slug": "ashoro",
+      "status": "todo"
+    },
+    {
+      "name": "厚岸町",
+      "slug": "akkeshi",
+      "status": "todo"
+    },
+    {
+      "name": "厚沢部町",
+      "slug": "assabu",
+      "status": "todo"
+    },
+    {
+      "name": "厚真町",
+      "slug": "atsuma",
+      "status": "todo"
+    },
+    {
+      "name": "安平町",
+      "slug": "abira",
+      "status": "todo"
+    },
+    {
+      "name": "池田町",
+      "slug": "ikeda",
+      "status": "todo"
+    },
+    {
+      "name": "今金町",
+      "slug": "imakane",
+      "status": "todo"
+    },
+    {
+      "name": "岩内町",
+      "slug": "iwanai",
+      "status": "todo"
+    },
+    {
+      "name": "浦臼町",
+      "slug": "urausu",
+      "status": "todo"
+    },
+    {
+      "name": "浦河町",
+      "slug": "urakawa",
+      "status": "todo"
+    },
+    {
+      "name": "浦幌町",
+      "slug": "urahoro",
+      "status": "todo"
+    },
+    {
+      "name": "雨竜町",
+      "slug": "uryu",
+      "status": "todo"
+    },
+    {
+      "name": "江差町",
+      "slug": "esashi-hiyama",
+      "status": "todo"
+    },
+    {
+      "name": "枝幸町",
+      "slug": "esashi-soya",
+      "status": "todo"
+    },
+    {
+      "name": "えりも町",
+      "slug": "erimo",
+      "status": "todo"
+    },
+    {
+      "name": "遠軽町",
+      "slug": "engaru",
+      "status": "todo"
+    },
+    {
+      "name": "遠別町",
+      "slug": "embetsu",
+      "status": "todo"
+    },
+    {
+      "name": "雄武町",
+      "slug": "oumu",
+      "status": "todo"
+    },
+    {
+      "name": "大空町",
+      "slug": "ozora",
+      "status": "todo"
+    },
+    {
+      "name": "奥尻町",
+      "slug": "okushiri",
+      "status": "todo"
+    },
+    {
+      "name": "置戸町",
+      "slug": "oketo",
+      "status": "todo"
+    },
+    {
+      "name": "興部町",
+      "slug": "okoppe",
+      "status": "todo"
+    },
+    {
+      "name": "長万部町",
+      "slug": "oshamambe",
+      "status": "todo"
+    },
+    {
+      "name": "音威子府村",
+      "slug": "otoineppu",
+      "status": "todo"
+    },
+    {
+      "name": "音更町",
+      "slug": "otofuke",
+      "status": "todo"
+    },
+    {
+      "name": "乙部町",
+      "slug": "otobe",
+      "status": "todo"
+    },
+    {
+      "name": "小平町",
+      "slug": "obira",
+      "status": "todo"
+    },
+    {
+      "name": "上川町",
+      "slug": "kamikawa",
+      "status": "todo"
+    },
+    {
+      "name": "上士幌町",
+      "slug": "kamishihoro",
+      "status": "todo"
+    },
+    {
+      "name": "上砂川町",
+      "slug": "kamisunagawa",
+      "status": "todo"
+    },
+    {
+      "name": "上ノ国町",
+      "slug": "kaminokuni",
+      "status": "todo"
+    },
+    {
+      "name": "上富良野町",
+      "slug": "kamifurano",
+      "status": "todo"
+    },
+    {
+      "name": "神恵内村",
+      "slug": "kamoenai",
+      "status": "todo"
+    },
+    {
+      "name": "木古内町",
+      "slug": "kikonai",
+      "status": "todo"
+    },
+    {
+      "name": "喜茂別町",
+      "slug": "kimobetsu",
+      "status": "todo"
+    },
+    {
+      "name": "京極町",
+      "slug": "kyogoku",
+      "status": "todo"
+    },
+    {
+      "name": "共和町",
+      "slug": "kyowa",
+      "status": "todo"
+    },
+    {
+      "name": "清里町",
+      "slug": "kiyosato",
+      "status": "todo"
+    },
+    {
+      "name": "釧路町",
+      "slug": "kushiro-cho",
+      "status": "todo"
+    },
+    {
+      "name": "倶知安町",
+      "slug": "kutchan",
+      "status": "todo"
+    },
+    {
+      "name": "栗山町",
+      "slug": "kuriyama",
+      "status": "todo"
+    },
+    {
+      "name": "黒松内町",
+      "slug": "kuromatsunai",
+      "status": "todo"
+    },
+    {
+      "name": "訓子府町",
+      "slug": "kunneppu",
+      "status": "todo"
+    },
+    {
+      "name": "剣淵町",
+      "slug": "kembuchi",
+      "status": "todo"
+    },
+    {
+      "name": "小清水町",
+      "slug": "koshimizu",
+      "status": "todo"
+    },
+    {
+      "name": "更別村",
+      "slug": "sarabetsu",
+      "status": "todo"
+    },
+    {
+      "name": "様似町",
+      "slug": "samani",
+      "status": "todo"
+    },
+    {
+      "name": "猿払村",
+      "slug": "sarufutsu",
+      "status": "todo"
+    },
+    {
+      "name": "佐呂間町",
+      "slug": "saroma",
+      "status": "todo"
+    },
+    {
+      "name": "鹿追町",
+      "slug": "shikaoi",
+      "status": "todo"
+    },
+    {
+      "name": "鹿部町",
+      "slug": "shikabe",
+      "status": "todo"
+    },
+    {
+      "name": "標茶町",
+      "slug": "shibecha",
+      "status": "todo"
+    },
+    {
+      "name": "標津町",
+      "slug": "shibetsu-cho",
+      "status": "todo"
+    },
+    {
+      "name": "士幌町",
+      "slug": "shihoro",
+      "status": "todo"
+    },
+    {
+      "name": "島牧村",
+      "slug": "shimamaki",
+      "status": "todo"
+    },
+    {
+      "name": "清水町",
+      "slug": "shimizu",
+      "status": "todo"
+    },
+    {
+      "name": "占冠村",
+      "slug": "shimukappu",
+      "status": "todo"
+    },
+    {
+      "name": "下川町",
+      "slug": "shimokawa",
+      "status": "todo"
+    },
+    {
+      "name": "積丹町",
+      "slug": "shakotan",
+      "status": "todo"
+    },
+    {
+      "name": "斜里町",
+      "slug": "shari",
+      "status": "todo"
+    },
+    {
+      "name": "初山別村",
+      "slug": "shosanbetsu",
+      "status": "todo"
+    },
+    {
+      "name": "白老町",
+      "slug": "shiraoi",
+      "status": "todo"
+    },
+    {
+      "name": "白糠町",
+      "slug": "shiranuka",
+      "status": "todo"
+    },
+    {
+      "name": "知内町",
+      "slug": "shiriuchi",
+      "status": "todo"
+    },
+    {
+      "name": "新篠津村",
+      "slug": "shinshinotsu",
+      "status": "todo"
+    },
+    {
+      "name": "新得町",
+      "slug": "shintoku",
+      "status": "todo"
+    },
+    {
+      "name": "新十津川町",
+      "slug": "shintotsukawa",
+      "status": "todo"
+    },
+    {
+      "name": "新ひだか町",
+      "slug": "shinhidaka",
+      "status": "todo"
+    },
+    {
+      "name": "寿都町",
+      "slug": "suttsu",
+      "status": "todo"
+    },
+    {
+      "name": "せたな町",
+      "slug": "setana",
+      "status": "todo"
+    },
+    {
+      "name": "壮瞥町",
+      "slug": "sobetsu",
+      "status": "todo"
+    },
+    {
+      "name": "大樹町",
+      "slug": "taiki",
+      "status": "todo"
+    },
+    {
+      "name": "鷹栖町",
+      "slug": "takasu",
+      "status": "todo"
+    },
+    {
+      "name": "滝上町",
+      "slug": "takinoue",
+      "status": "todo"
+    },
+    {
+      "name": "秩父別町",
+      "slug": "chippubetsu",
+      "status": "todo"
+    },
+    {
+      "name": "月形町",
+      "slug": "tsukigata",
+      "status": "todo"
+    },
+    {
+      "name": "津別町",
+      "slug": "tsubetsu",
+      "status": "todo"
+    },
+    {
+      "name": "鶴居村",
+      "slug": "tsurui",
+      "status": "todo"
+    },
+    {
+      "name": "天塩町",
+      "slug": "teshio",
+      "status": "todo"
+    },
+    {
+      "name": "弟子屈町",
+      "slug": "teshikaga",
+      "status": "todo"
+    },
+    {
+      "name": "当別町",
+      "slug": "tobetsu",
+      "status": "todo"
+    },
+    {
+      "name": "当麻町",
+      "slug": "toma",
+      "status": "todo"
+    },
+    {
+      "name": "洞爺湖町",
+      "slug": "toyako",
+      "status": "todo"
+    },
+    {
+      "name": "苫前町",
+      "slug": "tomamae",
+      "status": "todo"
+    },
+    {
+      "name": "泊村",
+      "slug": "tomari",
+      "status": "todo"
+    },
+    {
+      "name": "豊浦町",
+      "slug": "toyoura",
+      "status": "todo"
+    },
+    {
+      "name": "豊頃町",
+      "slug": "toyokoro",
+      "status": "todo"
+    },
+    {
+      "name": "豊富町",
+      "slug": "toyotomi",
+      "status": "todo"
+    },
+    {
+      "name": "奈井江町",
+      "slug": "naie",
+      "status": "todo"
+    },
+    {
+      "name": "中川町",
+      "slug": "nakagawa",
+      "status": "todo"
+    },
+    {
+      "name": "中札内村",
+      "slug": "nakasatsunai",
+      "status": "todo"
+    },
+    {
+      "name": "中標津町",
+      "slug": "nakashibetsu",
+      "status": "todo"
+    },
+    {
+      "name": "中頓別町",
+      "slug": "nakatombetsu",
+      "status": "todo"
+    },
+    {
+      "name": "長沼町",
+      "slug": "naganuma",
+      "status": "todo"
+    },
+    {
+      "name": "中富良野町",
+      "slug": "nakafurano",
+      "status": "todo"
+    },
+    {
+      "name": "七飯町",
+      "slug": "nanae",
+      "status": "todo"
+    },
+    {
+      "name": "南幌町",
+      "slug": "nanporo",
+      "status": "todo"
+    },
+    {
+      "name": "新冠町",
+      "slug": "niikappu",
+      "status": "todo"
+    },
+    {
+      "name": "仁木町",
+      "slug": "niki",
+      "status": "todo"
+    },
+    {
+      "name": "西興部村",
+      "slug": "nishiokoppe",
+      "status": "todo"
+    },
+    {
+      "name": "ニセコ町",
+      "slug": "niseko",
+      "status": "todo"
+    },
+    {
+      "name": "沼田町",
+      "slug": "numata",
+      "status": "todo"
+    },
+    {
+      "name": "羽幌町",
+      "slug": "haboro",
+      "status": "todo"
+    },
+    {
+      "name": "浜頓別町",
+      "slug": "hamatombetsu",
+      "status": "todo"
+    },
+    {
+      "name": "浜中町",
+      "slug": "hamanaka",
+      "status": "todo"
+    },
+    {
+      "name": "美瑛町",
+      "slug": "biei",
+      "status": "todo"
+    },
+    {
+      "name": "東神楽町",
+      "slug": "higashikagura",
+      "status": "todo"
+    },
+    {
+      "name": "東川町",
+      "slug": "higashikawa",
+      "status": "todo"
+    },
+    {
+      "name": "日高町",
+      "slug": "hidaka",
+      "status": "todo"
+    },
+    {
+      "name": "比布町",
+      "slug": "pippu",
+      "status": "todo"
+    },
+    {
+      "name": "美深町",
+      "slug": "bifuka",
+      "status": "todo"
+    },
+    {
+      "name": "美幌町",
+      "slug": "bihoro",
+      "status": "todo"
+    },
+    {
+      "name": "平取町",
+      "slug": "biratori",
+      "status": "todo"
+    },
+    {
+      "name": "広尾町",
+      "slug": "hiroo",
+      "status": "todo"
+    },
+    {
+      "name": "福島町",
+      "slug": "fukushima",
+      "status": "todo"
+    },
+    {
+      "name": "古平町",
+      "slug": "furubira",
+      "status": "todo"
+    },
+    {
+      "name": "別海町",
+      "slug": "betsukai",
+      "status": "todo"
+    },
+    {
+      "name": "北竜町",
+      "slug": "hokuryu",
+      "status": "todo"
+    },
+    {
+      "name": "幌加内町",
+      "slug": "horokanai",
+      "status": "todo"
+    },
+    {
+      "name": "幌延町",
+      "slug": "horonobe",
+      "status": "todo"
+    },
+    {
+      "name": "本別町",
+      "slug": "hombetsu",
+      "status": "todo"
+    },
+    {
+      "name": "幕別町",
+      "slug": "makubetsu",
+      "status": "todo"
+    },
+    {
+      "name": "増毛町",
+      "slug": "mashike",
+      "status": "todo"
+    },
+    {
+      "name": "真狩村",
+      "slug": "makkari",
+      "status": "todo"
+    },
+    {
+      "name": "松前町",
+      "slug": "matsumae",
+      "status": "todo"
+    },
+    {
+      "name": "南富良野町",
+      "slug": "minamifurano",
+      "status": "todo"
+    },
+    {
+      "name": "むかわ町",
+      "slug": "mukawa",
+      "status": "todo"
+    },
+    {
+      "name": "芽室町",
+      "slug": "memuro",
+      "status": "todo"
+    },
+    {
+      "name": "妹背牛町",
+      "slug": "moseushi",
+      "status": "todo"
+    },
+    {
+      "name": "森町",
+      "slug": "mori",
+      "status": "todo"
+    },
+    {
+      "name": "八雲町",
+      "slug": "yakumo",
+      "status": "todo"
+    },
+    {
+      "name": "湧別町",
+      "slug": "yubetsu",
+      "status": "todo"
+    },
+    {
+      "name": "由仁町",
+      "slug": "yuni",
+      "status": "todo"
+    },
+    {
+      "name": "余市町",
+      "slug": "yoichi",
+      "status": "todo"
+    },
+    {
+      "name": "羅臼町",
+      "slug": "rausu",
+      "status": "todo"
+    },
+    {
+      "name": "蘭越町",
+      "slug": "rankoshi",
+      "status": "todo"
+    },
+    {
+      "name": "陸別町",
+      "slug": "rikubetsu",
+      "status": "todo"
+    },
+    {
+      "name": "利尻町",
+      "slug": "rishiri",
+      "status": "todo"
+    },
+    {
+      "name": "利尻富士町",
+      "slug": "rishirifuji",
+      "status": "todo"
+    },
+    {
+      "name": "留寿都村",
+      "slug": "rusutsu",
+      "status": "todo"
+    },
+    {
+      "name": "礼文町",
+      "slug": "rebun",
+      "status": "todo"
+    },
+    {
+      "name": "和寒町",
+      "slug": "wassamu",
+      "status": "todo"
+    }
+  ]
+}
