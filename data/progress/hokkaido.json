@@ -710,22 +710,22 @@
     {
       "name": "浜中町",
       "slug": "hamanaka",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "美瑛町",
       "slug": "biei",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "東神楽町",
       "slug": "higashikagura",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "東川町",
       "slug": "higashikawa",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "日高町",
@@ -760,12 +760,12 @@
     {
       "name": "福島町",
       "slug": "fukushima",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "古平町",
       "slug": "furubira",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "別海町",
@@ -795,42 +795,42 @@
     {
       "name": "幕別町",
       "slug": "makubetsu",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "増毛町",
       "slug": "mashike",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "真狩村",
       "slug": "makkari",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "松前町",
       "slug": "matsumae",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "南富良野町",
       "slug": "minamifurano",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "むかわ町",
       "slug": "mukawa",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "芽室町",
       "slug": "memuro",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "妹背牛町",
       "slug": "moseushi",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "森町",
@@ -840,7 +840,7 @@
     {
       "name": "八雲町",
       "slug": "yakumo",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "湧別町",
@@ -885,17 +885,17 @@
     {
       "name": "留寿都村",
       "slug": "rusutsu",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "礼文町",
       "slug": "rebun",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "和寒町",
       "slug": "wassamu",
-      "status": "todo"
+      "status": "done"
     }
   ]
 }

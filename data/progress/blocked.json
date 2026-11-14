@@ -630,6 +630,48 @@
       "what": "リフォーム補助の概要PDF（古い資料）",
       "url": "https://town.iwanai.hokkaido.jp/wp-content/uploads/2017/07/補助概要（リフォーム）.pdf",
       "date": "2026-11-14"
+    },
+    {
+      "pref": "hokkaido",
+      "city": "本別町",
+      "what": "町公式サイトのトップ（robotsで拒否）",
+      "url": "https://www.town.hombetsu.hokkaido.jp/",
+      "date": "2026-11-14"
+    },
+    {
+      "pref": "hokkaido",
+      "city": "陸別町",
+      "what": "町公式サイトのトップ（robotsで拒否）",
+      "url": "https://www.town.rikubetsu.hokkaido.jp/",
+      "date": "2026-11-14"
+    },
+    {
+      "pref": "hokkaido",
+      "city": "利尻町",
+      "what": "町公式サイトのトップ（robotsで拒否）",
+      "url": "https://www.town.rishiri.hokkaido.jp/",
+      "date": "2026-11-14"
+    },
+    {
+      "pref": "hokkaido",
+      "city": "利尻富士町",
+      "what": "町公式サイトのトップ（リダイレクトだけで行き先不明）",
+      "url": "https://www.town.rishirifuji.hokkaido.jp/",
+      "date": "2026-11-14"
+    },
+    {
+      "pref": "hokkaido",
+      "city": "浜頓別町",
+      "what": "町公式サイトのトップ（リンクが読み取れない）",
+      "url": "https://www.town.hamatonbetsu.hokkaido.jp/",
+      "date": "2026-11-14"
+    },
+    {
+      "pref": "hokkaido",
+      "city": "南富良野町",
+      "what": "住宅リフォーム及び危険廃屋解体撤去助成事業",
+      "url": "https://www.town.minamifurano.hokkaido.jp/kurashi-info/%e4%bd%8f%e5%ae%85-2/%e4%bd%8f%e5%ae%85%e3%83%aa%e3%83%95%e3%82%a9%e3%83%bc%e3%83%a0%e5%8a%a9%e6%88%90%e9%87%91%e4%ba%8b%e6%a5%ad/",
+      "date": "2026-11-14"
     }
   ]
 }
