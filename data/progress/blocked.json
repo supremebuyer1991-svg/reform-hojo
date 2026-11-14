@@ -455,6 +455,97 @@
       "what": "持ち家定住奨励事業のページ",
       "url": "https://www.town.uryu.hokkaido.jp/soshiki/kikakuzaisei/teiju-mochiie.html",
       "date": "2026-11-14"
+    },
+    {
+      "pref": "hokkaido",
+      "city": "島牧村",
+      "what": "村の公式サイト全体（一時停止中）",
+      "url": "https://www.vill.shimamaki.lg.jp/",
+      "date": "2026-11-14"
+    },
+    {
+      "pref": "hokkaido",
+      "city": "新ひだか町",
+      "what": "公式サイトのトップ（robotsで拒否）",
+      "url": "https://www.town.shinhidaka.hokkaido.jp/",
+      "date": "2026-11-14"
+    },
+    {
+      "pref": "hokkaido",
+      "city": "寿都町",
+      "what": "くらしの一覧（robotsで拒否）",
+      "url": "https://www.town.suttu.lg.jp/kurashi/",
+      "date": "2026-11-14"
+    },
+    {
+      "pref": "hokkaido",
+      "city": "秩父別町",
+      "what": "サイトマップ（robotsで拒否）",
+      "url": "https://www.town.chippubetsu.hokkaido.jp/sitemap/",
+      "date": "2026-11-14"
+    },
+    {
+      "pref": "hokkaido",
+      "city": "奈井江町",
+      "what": "住宅リフォーム助成事業チラシPDF（文字化け）",
+      "url": "https://www.town.naie.hokkaido.jp/file/contents/626/25109/rifomu.pdf",
+      "date": "2026-11-14"
+    },
+    {
+      "pref": "hokkaido",
+      "city": "標茶町",
+      "what": "町の公式サイトのトップ（robotsで拒否）",
+      "url": "https://www.town.shibecha.hokkaido.jp/",
+      "date": "2026-11-14"
+    },
+    {
+      "pref": "hokkaido",
+      "city": "標津町",
+      "what": "住宅取得・リフォーム支援案内PDF（robotsで拒否）",
+      "url": "https://www.shibetsutown.jp/assets/images/content/content_20260216_115100.pdf",
+      "date": "2026-11-14"
+    },
+    {
+      "pref": "hokkaido",
+      "city": "標津町",
+      "what": "住宅補助制度のご案内PDF（robotsで拒否）",
+      "url": "https://www.shibetsutown.jp/assets/images/content/content_20260216_111038.pdf",
+      "date": "2026-11-14"
+    },
+    {
+      "pref": "hokkaido",
+      "city": "新得町",
+      "what": "各種支援制度ハンドブックPDF（robotsで拒否）",
+      "url": "https://www.shintoku-town.jp/output/contents/file/release/371/3010/shintoku_shienhandbook202604.pdf",
+      "date": "2026-11-14"
+    },
+    {
+      "pref": "hokkaido",
+      "city": "初山別村",
+      "what": "定住促進住環境整備助成 区分・内容PDF（画像で読めず）",
+      "url": "https://www.vill.shosanbetsu.lg.jp/files/00000800/00000894/20250616092302.pdf",
+      "date": "2026-11-14"
+    },
+    {
+      "pref": "hokkaido",
+      "city": "当麻町",
+      "what": "町の公式サイトのトップ（robotsで拒否）",
+      "url": "https://www.town.toma.hokkaido.jp/",
+      "date": "2026-11-14"
+    },
+    {
+      "pref": "hokkaido",
+      "city": "洞爺湖町",
+      "what": "町の公式サイトのトップ（robotsで拒否）",
+      "url": "https://www.town.toyako.hokkaido.jp/",
+      "date": "2026-11-14"
+    },
+    {
+      "pref": "hokkaido",
+      "city": "苫前町",
+      "what": "町の公式サイトのトップ（robotsで拒否）",
+      "url": "https://www.town.tomamae.lg.jp/",
+      "date": "2026-11-14"
     }
   ]
 }
