@@ -235,72 +235,72 @@
     {
       "name": "大木町",
       "slug": "oki",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "広川町",
       "slug": "hirokawa",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "香春町",
       "slug": "kawara",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "添田町",
       "slug": "soeda",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "糸田町",
       "slug": "itoda",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "川崎町",
       "slug": "kawasaki",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "大任町",
       "slug": "oto",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "赤村",
       "slug": "aka",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "福智町",
       "slug": "fukuchi",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "苅田町",
       "slug": "kanda",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "みやこ町",
       "slug": "miyako",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "吉富町",
       "slug": "yoshitomi",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "上毛町",
       "slug": "koge",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "築上町",
       "slug": "chikujo",
-      "status": "todo"
+      "status": "done"
     }
   ]
 }
