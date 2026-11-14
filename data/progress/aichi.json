@@ -1,0 +1,276 @@
+{
+  "pref": "愛知県",
+  "prefSlug": "aichi",
+  "cities": [
+    {
+      "name": "名古屋市",
+      "slug": "nagoya",
+      "status": "done"
+    },
+    {
+      "name": "豊橋市",
+      "slug": "toyohashi",
+      "status": "done"
+    },
+    {
+      "name": "岡崎市",
+      "slug": "okazaki",
+      "status": "done"
+    },
+    {
+      "name": "一宮市",
+      "slug": "ichinomiya",
+      "status": "done"
+    },
+    {
+      "name": "瀬戸市",
+      "slug": "seto",
+      "status": "done"
+    },
+    {
+      "name": "半田市",
+      "slug": "handa",
+      "status": "done"
+    },
+    {
+      "name": "春日井市",
+      "slug": "kasugai",
+      "status": "done"
+    },
+    {
+      "name": "豊川市",
+      "slug": "toyokawa",
+      "status": "todo"
+    },
+    {
+      "name": "津島市",
+      "slug": "tsushima",
+      "status": "todo"
+    },
+    {
+      "name": "碧南市",
+      "slug": "hekinan",
+      "status": "todo"
+    },
+    {
+      "name": "刈谷市",
+      "slug": "kariya",
+      "status": "todo"
+    },
+    {
+      "name": "豊田市",
+      "slug": "toyota",
+      "status": "todo"
+    },
+    {
+      "name": "安城市",
+      "slug": "anjo",
+      "status": "todo"
+    },
+    {
+      "name": "西尾市",
+      "slug": "nishio",
+      "status": "todo"
+    },
+    {
+      "name": "蒲郡市",
+      "slug": "gamagori",
+      "status": "todo"
+    },
+    {
+      "name": "犬山市",
+      "slug": "inuyama",
+      "status": "todo"
+    },
+    {
+      "name": "常滑市",
+      "slug": "tokoname",
+      "status": "todo"
+    },
+    {
+      "name": "江南市",
+      "slug": "konan",
+      "status": "todo"
+    },
+    {
+      "name": "小牧市",
+      "slug": "komaki",
+      "status": "todo"
+    },
+    {
+      "name": "稲沢市",
+      "slug": "inazawa",
+      "status": "todo"
+    },
+    {
+      "name": "新城市",
+      "slug": "shinshiro",
+      "status": "todo"
+    },
+    {
+      "name": "東海市",
+      "slug": "tokai",
+      "status": "todo"
+    },
+    {
+      "name": "大府市",
+      "slug": "obu",
+      "status": "todo"
+    },
+    {
+      "name": "知多市",
+      "slug": "chita",
+      "status": "todo"
+    },
+    {
+      "name": "知立市",
+      "slug": "chiryu",
+      "status": "todo"
+    },
+    {
+      "name": "尾張旭市",
+      "slug": "owariasahi",
+      "status": "todo"
+    },
+    {
+      "name": "高浜市",
+      "slug": "takahama",
+      "status": "todo"
+    },
+    {
+      "name": "岩倉市",
+      "slug": "iwakura",
+      "status": "todo"
+    },
+    {
+      "name": "豊明市",
+      "slug": "toyoake",
+      "status": "todo"
+    },
+    {
+      "name": "日進市",
+      "slug": "nisshin",
+      "status": "todo"
+    },
+    {
+      "name": "田原市",
+      "slug": "tahara",
+      "status": "todo"
+    },
+    {
+      "name": "愛西市",
+      "slug": "aisai",
+      "status": "todo"
+    },
+    {
+      "name": "清須市",
+      "slug": "kiyosu",
+      "status": "todo"
+    },
+    {
+      "name": "北名古屋市",
+      "slug": "kitanagoya",
+      "status": "todo"
+    },
+    {
+      "name": "弥富市",
+      "slug": "yatomi",
+      "status": "todo"
+    },
+    {
+      "name": "みよし市",
+      "slug": "miyoshi",
+      "status": "todo"
+    },
+    {
+      "name": "あま市",
+      "slug": "ama",
+      "status": "todo"
+    },
+    {
+      "name": "長久手市",
+      "slug": "nagakute",
+      "status": "todo"
+    },
+    {
+      "name": "東郷町",
+      "slug": "togo",
+      "status": "todo"
+    },
+    {
+      "name": "豊山町",
+      "slug": "toyoyama",
+      "status": "todo"
+    },
+    {
+      "name": "大口町",
+      "slug": "oguchi",
+      "status": "todo"
+    },
+    {
+      "name": "扶桑町",
+      "slug": "fuso",
+      "status": "todo"
+    },
+    {
+      "name": "大治町",
+      "slug": "oharu",
+      "status": "todo"
+    },
+    {
+      "name": "蟹江町",
+      "slug": "kanie",
+      "status": "todo"
+    },
+    {
+      "name": "飛島村",
+      "slug": "tobishima",
+      "status": "todo"
+    },
+    {
+      "name": "阿久比町",
+      "slug": "agui",
+      "status": "todo"
+    },
+    {
+      "name": "東浦町",
+      "slug": "higashiura",
+      "status": "todo"
+    },
+    {
+      "name": "南知多町",
+      "slug": "minamichita",
+      "status": "todo"
+    },
+    {
+      "name": "美浜町",
+      "slug": "mihama",
+      "status": "todo"
+    },
+    {
+      "name": "武豊町",
+      "slug": "taketoyo",
+      "status": "todo"
+    },
+    {
+      "name": "幸田町",
+      "slug": "kota",
+      "status": "todo"
+    },
+    {
+      "name": "設楽町",
+      "slug": "shitara",
+      "status": "todo"
+    },
+    {
+      "name": "東栄町",
+      "slug": "toei",
+      "status": "todo"
+    },
+    {
+      "name": "豊根村",
+      "slug": "toyone",
+      "status": "todo"
+    }
+  ]
+}
