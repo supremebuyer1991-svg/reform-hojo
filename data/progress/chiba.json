@@ -1,0 +1,276 @@
+{
+  "pref": "千葉県",
+  "prefSlug": "chiba",
+  "cities": [
+    {
+      "name": "千葉市",
+      "slug": "chiba-shi",
+      "status": "done"
+    },
+    {
+      "name": "銚子市",
+      "slug": "choshi",
+      "status": "done"
+    },
+    {
+      "name": "市川市",
+      "slug": "ichikawa",
+      "status": "done"
+    },
+    {
+      "name": "船橋市",
+      "slug": "funabashi",
+      "status": "done"
+    },
+    {
+      "name": "館山市",
+      "slug": "tateyama",
+      "status": "done"
+    },
+    {
+      "name": "木更津市",
+      "slug": "kisarazu",
+      "status": "done"
+    },
+    {
+      "name": "松戸市",
+      "slug": "matsudo",
+      "status": "done"
+    },
+    {
+      "name": "野田市",
+      "slug": "noda",
+      "status": "done"
+    },
+    {
+      "name": "茂原市",
+      "slug": "mobara",
+      "status": "todo"
+    },
+    {
+      "name": "成田市",
+      "slug": "narita",
+      "status": "todo"
+    },
+    {
+      "name": "佐倉市",
+      "slug": "sakura",
+      "status": "todo"
+    },
+    {
+      "name": "東金市",
+      "slug": "togane",
+      "status": "todo"
+    },
+    {
+      "name": "旭市",
+      "slug": "asahi",
+      "status": "todo"
+    },
+    {
+      "name": "習志野市",
+      "slug": "narashino",
+      "status": "todo"
+    },
+    {
+      "name": "柏市",
+      "slug": "kashiwa",
+      "status": "todo"
+    },
+    {
+      "name": "勝浦市",
+      "slug": "katsuura",
+      "status": "todo"
+    },
+    {
+      "name": "市原市",
+      "slug": "ichihara",
+      "status": "todo"
+    },
+    {
+      "name": "流山市",
+      "slug": "nagareyama",
+      "status": "todo"
+    },
+    {
+      "name": "八千代市",
+      "slug": "yachiyo",
+      "status": "todo"
+    },
+    {
+      "name": "我孫子市",
+      "slug": "abiko",
+      "status": "todo"
+    },
+    {
+      "name": "鴨川市",
+      "slug": "kamogawa",
+      "status": "todo"
+    },
+    {
+      "name": "鎌ケ谷市",
+      "slug": "kamagaya",
+      "status": "todo"
+    },
+    {
+      "name": "君津市",
+      "slug": "kimitsu",
+      "status": "todo"
+    },
+    {
+      "name": "富津市",
+      "slug": "futtsu",
+      "status": "todo"
+    },
+    {
+      "name": "浦安市",
+      "slug": "urayasu",
+      "status": "todo"
+    },
+    {
+      "name": "四街道市",
+      "slug": "yotsukaido",
+      "status": "todo"
+    },
+    {
+      "name": "袖ケ浦市",
+      "slug": "sodegaura",
+      "status": "todo"
+    },
+    {
+      "name": "八街市",
+      "slug": "yachimata",
+      "status": "todo"
+    },
+    {
+      "name": "印西市",
+      "slug": "inzai",
+      "status": "todo"
+    },
+    {
+      "name": "白井市",
+      "slug": "shiroi",
+      "status": "todo"
+    },
+    {
+      "name": "富里市",
+      "slug": "tomisato",
+      "status": "todo"
+    },
+    {
+      "name": "南房総市",
+      "slug": "minamiboso",
+      "status": "todo"
+    },
+    {
+      "name": "匝瑳市",
+      "slug": "sosa",
+      "status": "todo"
+    },
+    {
+      "name": "香取市",
+      "slug": "katori",
+      "status": "todo"
+    },
+    {
+      "name": "山武市",
+      "slug": "sammu",
+      "status": "todo"
+    },
+    {
+      "name": "いすみ市",
+      "slug": "isumi",
+      "status": "todo"
+    },
+    {
+      "name": "大網白里市",
+      "slug": "oamishirasato",
+      "status": "todo"
+    },
+    {
+      "name": "酒々井町",
+      "slug": "shisui",
+      "status": "todo"
+    },
+    {
+      "name": "栄町",
+      "slug": "sakae",
+      "status": "todo"
+    },
+    {
+      "name": "神崎町",
+      "slug": "kozaki",
+      "status": "todo"
+    },
+    {
+      "name": "多古町",
+      "slug": "tako",
+      "status": "todo"
+    },
+    {
+      "name": "東庄町",
+      "slug": "tonosho",
+      "status": "todo"
+    },
+    {
+      "name": "九十九里町",
+      "slug": "kujukuri",
+      "status": "todo"
+    },
+    {
+      "name": "芝山町",
+      "slug": "shibayama",
+      "status": "todo"
+    },
+    {
+      "name": "横芝光町",
+      "slug": "yokoshibahikari",
+      "status": "todo"
+    },
+    {
+      "name": "一宮町",
+      "slug": "ichinomiya",
+      "status": "todo"
+    },
+    {
+      "name": "睦沢町",
+      "slug": "mutsuzawa",
+      "status": "todo"
+    },
+    {
+      "name": "白子町",
+      "slug": "shirako",
+      "status": "todo"
+    },
+    {
+      "name": "長柄町",
+      "slug": "nagara",
+      "status": "todo"
+    },
+    {
+      "name": "長南町",
+      "slug": "chonan",
+      "status": "todo"
+    },
+    {
+      "name": "大多喜町",
+      "slug": "otaki",
+      "status": "todo"
+    },
+    {
+      "name": "御宿町",
+      "slug": "onjuku",
+      "status": "todo"
+    },
+    {
+      "name": "鋸南町",
+      "slug": "kyonan",
+      "status": "todo"
+    },
+    {
+      "name": "長生村",
+      "slug": "chosei",
+      "status": "todo"
+    }
+  ]
+}
