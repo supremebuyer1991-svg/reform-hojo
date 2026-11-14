@@ -1,0 +1,306 @@
+{
+  "pref": "福岡県",
+  "prefSlug": "fukuoka",
+  "cities": [
+    {
+      "name": "北九州市",
+      "slug": "kitakyushu",
+      "status": "done"
+    },
+    {
+      "name": "福岡市",
+      "slug": "fukuoka-shi",
+      "status": "done"
+    },
+    {
+      "name": "大牟田市",
+      "slug": "omuta",
+      "status": "done"
+    },
+    {
+      "name": "久留米市",
+      "slug": "kurume",
+      "status": "done"
+    },
+    {
+      "name": "直方市",
+      "slug": "nogata",
+      "status": "done"
+    },
+    {
+      "name": "飯塚市",
+      "slug": "iizuka",
+      "status": "done"
+    },
+    {
+      "name": "田川市",
+      "slug": "tagawa",
+      "status": "done"
+    },
+    {
+      "name": "柳川市",
+      "slug": "yanagawa",
+      "status": "done"
+    },
+    {
+      "name": "八女市",
+      "slug": "yame",
+      "status": "done"
+    },
+    {
+      "name": "筑後市",
+      "slug": "chikugo",
+      "status": "done"
+    },
+    {
+      "name": "大川市",
+      "slug": "okawa",
+      "status": "todo"
+    },
+    {
+      "name": "行橋市",
+      "slug": "yukuhashi",
+      "status": "todo"
+    },
+    {
+      "name": "豊前市",
+      "slug": "buzen",
+      "status": "todo"
+    },
+    {
+      "name": "中間市",
+      "slug": "nakama",
+      "status": "todo"
+    },
+    {
+      "name": "小郡市",
+      "slug": "ogori",
+      "status": "todo"
+    },
+    {
+      "name": "筑紫野市",
+      "slug": "chikushino",
+      "status": "todo"
+    },
+    {
+      "name": "春日市",
+      "slug": "kasuga",
+      "status": "todo"
+    },
+    {
+      "name": "大野城市",
+      "slug": "onojo",
+      "status": "todo"
+    },
+    {
+      "name": "宗像市",
+      "slug": "munakata",
+      "status": "todo"
+    },
+    {
+      "name": "太宰府市",
+      "slug": "dazaifu",
+      "status": "todo"
+    },
+    {
+      "name": "古賀市",
+      "slug": "koga",
+      "status": "todo"
+    },
+    {
+      "name": "福津市",
+      "slug": "fukutsu",
+      "status": "todo"
+    },
+    {
+      "name": "うきは市",
+      "slug": "ukiha",
+      "status": "todo"
+    },
+    {
+      "name": "宮若市",
+      "slug": "miyawaka",
+      "status": "todo"
+    },
+    {
+      "name": "嘉麻市",
+      "slug": "kama",
+      "status": "todo"
+    },
+    {
+      "name": "朝倉市",
+      "slug": "asakura",
+      "status": "todo"
+    },
+    {
+      "name": "みやま市",
+      "slug": "miyama",
+      "status": "todo"
+    },
+    {
+      "name": "糸島市",
+      "slug": "itoshima",
+      "status": "todo"
+    },
+    {
+      "name": "那珂川市",
+      "slug": "nakagawa",
+      "status": "todo"
+    },
+    {
+      "name": "宇美町",
+      "slug": "umi",
+      "status": "todo"
+    },
+    {
+      "name": "篠栗町",
+      "slug": "sasaguri",
+      "status": "todo"
+    },
+    {
+      "name": "志免町",
+      "slug": "shime",
+      "status": "todo"
+    },
+    {
+      "name": "須恵町",
+      "slug": "sue",
+      "status": "todo"
+    },
+    {
+      "name": "新宮町",
+      "slug": "shingu",
+      "status": "todo"
+    },
+    {
+      "name": "久山町",
+      "slug": "hisayama",
+      "status": "todo"
+    },
+    {
+      "name": "粕屋町",
+      "slug": "kasuya",
+      "status": "todo"
+    },
+    {
+      "name": "芦屋町",
+      "slug": "ashiya",
+      "status": "todo"
+    },
+    {
+      "name": "水巻町",
+      "slug": "mizumaki",
+      "status": "todo"
+    },
+    {
+      "name": "岡垣町",
+      "slug": "okagaki",
+      "status": "todo"
+    },
+    {
+      "name": "遠賀町",
+      "slug": "onga",
+      "status": "todo"
+    },
+    {
+      "name": "小竹町",
+      "slug": "kotake",
+      "status": "todo"
+    },
+    {
+      "name": "鞍手町",
+      "slug": "kurate",
+      "status": "todo"
+    },
+    {
+      "name": "桂川町",
+      "slug": "keisen",
+      "status": "todo"
+    },
+    {
+      "name": "筑前町",
+      "slug": "chikuzen",
+      "status": "todo"
+    },
+    {
+      "name": "東峰村",
+      "slug": "toho",
+      "status": "todo"
+    },
+    {
+      "name": "大刀洗町",
+      "slug": "tachiarai",
+      "status": "todo"
+    },
+    {
+      "name": "大木町",
+      "slug": "oki",
+      "status": "todo"
+    },
+    {
+      "name": "広川町",
+      "slug": "hirokawa",
+      "status": "todo"
+    },
+    {
+      "name": "香春町",
+      "slug": "kawara",
+      "status": "todo"
+    },
+    {
+      "name": "添田町",
+      "slug": "soeda",
+      "status": "todo"
+    },
+    {
+      "name": "糸田町",
+      "slug": "itoda",
+      "status": "todo"
+    },
+    {
+      "name": "川崎町",
+      "slug": "kawasaki",
+      "status": "todo"
+    },
+    {
+      "name": "大任町",
+      "slug": "oto",
+      "status": "todo"
+    },
+    {
+      "name": "赤村",
+      "slug": "aka",
+      "status": "todo"
+    },
+    {
+      "name": "福智町",
+      "slug": "fukuchi",
+      "status": "todo"
+    },
+    {
+      "name": "苅田町",
+      "slug": "kanda",
+      "status": "todo"
+    },
+    {
+      "name": "みやこ町",
+      "slug": "miyako",
+      "status": "todo"
+    },
+    {
+      "name": "吉富町",
+      "slug": "yoshitomi",
+      "status": "todo"
+    },
+    {
+      "name": "上毛町",
+      "slug": "koge",
+      "status": "todo"
+    },
+    {
+      "name": "築上町",
+      "slug": "chikujo",
+      "status": "todo"
+    }
+  ]
+}
