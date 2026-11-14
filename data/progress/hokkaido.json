@@ -600,12 +600,12 @@
     {
       "name": "洞爺湖町",
       "slug": "toyako",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "苫前町",
       "slug": "tomamae",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "泊村",
@@ -705,7 +705,7 @@
     {
       "name": "浜頓別町",
       "slug": "hamatombetsu",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "浜中町",
@@ -790,7 +790,7 @@
     {
       "name": "本別町",
       "slug": "hombetsu",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "幕別町",
@@ -870,17 +870,17 @@
     {
       "name": "陸別町",
       "slug": "rikubetsu",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "利尻町",
       "slug": "rishiri",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "利尻富士町",
       "slug": "rishirifuji",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "留寿都村",
