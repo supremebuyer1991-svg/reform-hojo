@@ -40,12 +40,12 @@
     {
       "name": "下妻市",
       "slug": "shimotsuma",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "常総市",
       "slug": "joso",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "常陸太田市",
@@ -125,102 +125,102 @@
     {
       "name": "稲敷市",
       "slug": "inashiki",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "かすみがうら市",
       "slug": "kasumigaura",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "桜川市",
       "slug": "sakuragawa",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "神栖市",
       "slug": "kamisu",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "行方市",
       "slug": "namegata",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "鉾田市",
       "slug": "hokota",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "つくばみらい市",
       "slug": "tsukubamirai",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "小美玉市",
       "slug": "omitama",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "茨城町",
       "slug": "ibaraki-machi",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "大洗町",
       "slug": "oarai",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "城里町",
       "slug": "shirosato",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "東海村",
       "slug": "tokai",
-      "status": "todo"
+      "status": "recheck"
     },
     {
       "name": "大子町",
       "slug": "daigo",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "美浦村",
       "slug": "miho",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "阿見町",
       "slug": "ami",
-      "status": "todo"
+      "status": "recheck"
     },
     {
       "name": "河内町",
       "slug": "kawachi",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "八千代町",
       "slug": "yachiyo",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "五霞町",
       "slug": "goka",
-      "status": "todo"
+      "status": "recheck"
     },
     {
       "name": "境町",
       "slug": "sakai",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "利根町",
       "slug": "tone",
-      "status": "todo"
+      "status": "done"
     }
   ]
 }
