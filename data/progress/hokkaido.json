@@ -105,7 +105,7 @@
     {
       "name": "名寄市",
       "slug": "nayoro",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "三笠市",
@@ -215,7 +215,7 @@
     {
       "name": "池田町",
       "slug": "ikeda",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "今金町",
@@ -235,7 +235,7 @@
     {
       "name": "浦河町",
       "slug": "urakawa",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "浦幌町",
@@ -420,12 +420,12 @@
     {
       "name": "様似町",
       "slug": "samani",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "猿払村",
       "slug": "sarufutsu",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "佐呂間町",
@@ -445,7 +445,7 @@
     {
       "name": "標茶町",
       "slug": "shibecha",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "標津町",
@@ -460,7 +460,7 @@
     {
       "name": "島牧村",
       "slug": "shimamaki",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "清水町",
@@ -525,12 +525,12 @@
     {
       "name": "新ひだか町",
       "slug": "shinhidaka",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "寿都町",
       "slug": "suttsu",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "せたな町",
@@ -595,7 +595,7 @@
     {
       "name": "当麻町",
       "slug": "toma",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "洞爺湖町",
