@@ -180,37 +180,37 @@
     {
       "name": "愛別町",
       "slug": "aibetsu",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "赤井川村",
       "slug": "akaigawa",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "足寄町",
       "slug": "ashoro",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "厚岸町",
       "slug": "akkeshi",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "厚沢部町",
       "slug": "assabu",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "厚真町",
       "slug": "atsuma",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "安平町",
       "slug": "abira",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "池田町",
@@ -220,7 +220,7 @@
     {
       "name": "今金町",
       "slug": "imakane",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "岩内町",
@@ -230,7 +230,7 @@
     {
       "name": "浦臼町",
       "slug": "urausu",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "浦河町",
@@ -240,17 +240,17 @@
     {
       "name": "浦幌町",
       "slug": "urahoro",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "雨竜町",
       "slug": "uryu",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "江差町",
       "slug": "esashi-hiyama",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "枝幸町",
@@ -260,67 +260,67 @@
     {
       "name": "えりも町",
       "slug": "erimo",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "遠軽町",
       "slug": "engaru",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "遠別町",
       "slug": "embetsu",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "雄武町",
       "slug": "oumu",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "大空町",
       "slug": "ozora",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "奥尻町",
       "slug": "okushiri",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "置戸町",
       "slug": "oketo",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "興部町",
       "slug": "okoppe",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "長万部町",
       "slug": "oshamambe",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "音威子府村",
       "slug": "otoineppu",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "音更町",
       "slug": "otofuke",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "乙部町",
       "slug": "otobe",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "小平町",
       "slug": "obira",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "上川町",
@@ -330,42 +330,42 @@
     {
       "name": "上士幌町",
       "slug": "kamishihoro",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "上砂川町",
       "slug": "kamisunagawa",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "上ノ国町",
       "slug": "kaminokuni",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "上富良野町",
       "slug": "kamifurano",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "神恵内村",
       "slug": "kamoenai",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "木古内町",
       "slug": "kikonai",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "喜茂別町",
       "slug": "kimobetsu",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "京極町",
       "slug": "kyogoku",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "共和町",
@@ -375,7 +375,7 @@
     {
       "name": "清里町",
       "slug": "kiyosato",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "釧路町",
@@ -385,12 +385,12 @@
     {
       "name": "倶知安町",
       "slug": "kutchan",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "栗山町",
       "slug": "kuriyama",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "黒松内町",
@@ -400,22 +400,22 @@
     {
       "name": "訓子府町",
       "slug": "kunneppu",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "剣淵町",
       "slug": "kembuchi",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "小清水町",
       "slug": "koshimizu",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "更別村",
       "slug": "sarabetsu",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "様似町",
