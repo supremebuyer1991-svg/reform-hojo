@@ -155,27 +155,27 @@
     {
       "name": "加美町",
       "slug": "kami",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "涌谷町",
       "slug": "wakuya",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "美里町",
       "slug": "misato",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "女川町",
       "slug": "onagawa",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "南三陸町",
       "slug": "minamisanriku",
-      "status": "todo"
+      "status": "done"
     }
   ]
 }
