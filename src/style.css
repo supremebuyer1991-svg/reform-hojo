@@ -385,3 +385,12 @@ a.pm-go:hover{background:#fff}
 .pm-legend i{display:inline-block;width:18px;height:14px;border-radius:3px;border:1px solid var(--line2)}
 .pm-legend i.is-live{background:#7FA6BC}.pm-legend i.is-none{background:#CDD2D7}.pm-legend i.is-todo{background:#EEF0F2}
 .pm-credit{margin:8px 0 0;font-size:12px;color:var(--muted)}
+
+/* ---- 市区町村ページ：要点・締切の一覧・となりの市との見比べ ---- */
+.sum{margin:0;padding:18px 22px 18px 2.6em;background:#fff;border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:6px;display:flex;flex-direction:column;gap:8px}
+.result-sum{margin:0;padding:12px 22px 0;font-size:15px;color:var(--ink2)}
+.tbl td,.tbl th{vertical-align:top;text-align:left}
+.tbl td.r,.tbl th.r{text-align:right}
+.tbl tr.me{background:var(--paper)}
+.tbl tr.me th{font-weight:900}
+.tbl .st-open,.tbl .st-check,.tbl .st-end{white-space:nowrap}

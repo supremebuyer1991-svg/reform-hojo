@@ -39,6 +39,17 @@ const CATS = [
   { id: 'mizu', name: 'お風呂・トイレ・キッチン', short: '水まわり', h: 'お風呂・トイレ・キッチン', icon: 'M4 12h16v3a5 5 0 01-5 5H9a5 5 0 01-5-5z M6 12V5a2 2 0 014 0 M7 20l-1 2 M17 20l1 2' },
   { id: 'yane', name: '屋根・外壁・雨漏り', short: '外壁', h: '屋根・外壁塗装', icon: 'M7 15a4 4 0 01-.5-8 5 5 0 019.6-1A4 4 0 0117 15 M9 18l-1 2 M13 18l-1 2 M17 18l-1 2' }
 ];
+// 検索で使われる言葉。制度の tags・catNotes にこの言葉が実際に出てくるときだけ、見出しやタイトルに使う（データに無い言葉は出さない）。
+// kw: その工事に当たる tags を拾うための言葉 / t: 都道府県×工事ページのタイトル用の名前
+const CAT_WORDS = {
+  mado: { t: '窓・断熱リフォーム', kw: ['内窓', '二重窓', '窓', '断熱', 'ガラス', 'サッシ', '開口部', '遮熱'] },
+  kyuto: { t: '給湯器・エコキュート', kw: ['エコキュート', 'エコジョーズ', 'エネファーム', 'エコフィール', '給湯', '燃料電池', 'ヒートポンプ', '太陽熱'] },
+  taiyo: { t: '太陽光発電・蓄電池', kw: ['太陽光', '蓄電', 'V2H', 'HEMS', 'ZEH', '電気自動車'] },
+  taishin: { t: '耐震診断・耐震改修', kw: ['耐震', 'シェルター', '防災ベッド', '屋根の軽量化', '屋根軽量化', 'ブロック塀', '感震'] },
+  mizu: { t: 'バリアフリー・お風呂・トイレ', kw: ['バリアフリー', '手すり', '段差', '浴室', '浴槽', '風呂', 'トイレ', '便器', '便所', '台所', 'キッチン', '洗面', '住宅改造', '引き戸', '階段昇降機', '介護'] },
+  yane: { t: '外壁塗装・屋根', kw: ['外壁', '屋根', '塗装', '雨漏り', '防水', '遮熱'] }
+};
+for (const c of CATS) Object.assign(c, CAT_WORDS[c.id]);
 const CAT_IDS = CATS.map((c) => c.id);
 const REGIONS = [
   ['北海道・東北', ['hokkaido', 'aomori', 'iwate', 'miyagi', 'akita', 'yamagata', 'fukushima']],
@@ -265,10 +276,16 @@ function progCard(p, levelLabel, checked) {
   if (!has('期間') && (isDate(per.start) || isDate(per.end))) rows.push({ k: '申請期間', v: `${isDate(per.start) ? timeTag(per.start) : ''}〜${isDate(per.end) ? timeTag(per.end) : ''}` });
   const c = p.contact || {};
   if (!has('窓口') && (c.dept || c.place)) rows.push({ k: '窓口', v: esc([c.place, c.dept].filter(Boolean).join(' ') + (c.method ? `（${c.method}）` : '')) });
+  if (c.method && !rows.some((r) => r.v.includes(esc(c.method)))) rows.push({ k: '申請方法', v: esc(c.method) });
   if (c.tel) rows.push({ k: '電話', v: `<a href="tel:${esc(c.tel.replace(/[^0-9+]/g, ''))}">${esc(c.tel)}</a>` });
   if (p.contractor) rows.push({ k: '業者の条件', v: esc(p.contractor) });
   if (p.combo && COMBO[p.combo.kuni]) rows.push({ k: '国の補助と', v: esc(COMBO[p.combo.kuni] + (p.combo.note ? `。${p.combo.note}` : '')) });
   if (p.lastYear) rows.push({ k: '前年度', v: esc(p.lastYear) });
+  if (p.budget) rows.push({ k: '予算', v: esc(p.budget) });
+  if (SELECTION[p.selection]) rows.push({ k: '決め方', v: SELECTION[p.selection] });
+  // 2つ以上の工事にまたがる制度は、工事ごとの金額・条件をカードの中にも書く
+  const byCat = p.cats.length > 1 && p.catNotes ? CATS.filter((x) => p.cats.includes(x.id) && p.catNotes[x.id]) : [];
+  const more = (p.sources || []).filter((x) => x && x.name && /^https?:\/\//.test(x.url || ''));
   const list = (label, items) => (items && items.length ? `<div class="sub"><span class="small muted" style="font-weight:700">${label}</span><ul class="dots-list">${items.map((t) => `<li>${esc(t)}</li>`).join('')}</ul></div>` : '');
   const off = isOfficial(p);
   return `<article id="p-${esc(p.id)}" class="prog" data-cats="${p.cats.join(' ')}">
@@ -277,10 +294,12 @@ function progCard(p, levelLabel, checked) {
 ${p.tags && p.tags.length ? `<div class="sub"><span class="small muted" style="font-weight:700">対象になる設備・工事</span><ul class="pills">${p.tags.map((t) => `<li class="pill">${esc(t)}</li>`).join('')}</ul></div>` : ''}
 ${p.tiers ? `<ol class="tiers">${p.tiers.map((t, i) => `<li${t.highlight ? ' class="hl"' : ''}><b>${i + 1}. ${esc(t.label)}</b><span class="n">${esc(t.amount)}<small>${esc(t.unit)}</small></span><span style="font-size:15px" class="muted">${esc(t.note)}</span></li>`).join('')}</ol>` : ''}
 ${rows.length ? `<dl class="kv">${rows.map((d) => `<div><dt>${esc(d.k)}</dt><dd>${d.v}</dd></div>`).join('')}</dl>` : ''}
-${list('主な条件', p.conditions)}${list('必要な書類', p.docs)}
+${byCat.length ? `<div class="sub"><span class="small muted" style="font-weight:700">工事ごとの金額と条件</span><ul class="dots-list">${byCat.map((x) => `<li><b>${esc(x.name)}</b>：${esc(p.catNotes[x.id])}</li>`).join('')}</ul></div>` : ''}
+${list('主な条件（対象になる人・住宅・工事）', p.conditions)}${list('申請に必要な書類', p.docs)}
 ${flow ? `<div class="flow"><span class="small muted" style="font-weight:700">申請のタイミング</span>${flow}</div>` : ''}
 ${p.warning ? `<div class="warn">${svgWarn}<span>${esc(p.warning)}</span></div>` : ''}
-${p.source ? `<p class="small muted">${off ? '出典（公式）' : '参考にした情報'}：<a href="${esc(p.source)}" rel="${off ? 'noopener' : 'nofollow noopener'}">${esc(p.sourceName || (off ? '公式ページ' : new URL(p.source).hostname))}</a>${off ? '' : '　※公式ページでの確認がまだの情報です。申請前に市の窓口でお確かめください。'}</p>` : ''}
+${p.source ? `<p class="small muted">${off ? '出典（公式）' : '参考にした情報'}：<a href="${esc(p.source)}" rel="${off ? 'noopener' : 'nofollow noopener'}">${esc(p.sourceName || (off ? '公式ページ' : new URL(p.source).hostname))}</a>${isDate(checked) ? `（${timeTag(checked)}に確認${isDate(p.sourceUpdated) ? `。公式ページの更新日は${timeTag(p.sourceUpdated)}` : ''}）` : ''}${off ? '' : '　※公式ページでの確認がまだの情報です。申請前に市の窓口でお確かめください。'}</p>` : ''}
+${more.length ? `<p class="small muted">あわせて確かめた資料：${more.map((x) => `<a href="${esc(x.url)}" rel="${isOfficialUrl(x.url) ? 'noopener' : 'nofollow noopener'}">${esc(x.name)}</a>`).join('、')}</p>` : ''}
 </article>`;
 }
 
@@ -306,6 +325,43 @@ const cityCats = (c) => CATS.filter((cat) => c.programs.some((p) => p.cats.inclu
 const liveProgs = (c) => c.programs.filter((p) => statusOf(p, c.checked).key !== 'ended');
 const cityMax = (c) => Math.max(0, ...liveProgs(c).map((p) => p.maxNumber || 0));
 const indexable = (c) => c.programs.length > 0;
+// 「補助金」「助成金」の言い方：その市区町村の制度名に多いほうを先に書く（東京23区などは「助成」が多い）
+const termOf = (progs) => {
+  const jo = progs.filter((p) => /助成/.test(p.name)).length;
+  const ho = progs.filter((p) => /補助/.test(p.name)).length;
+  return jo > ho ? '助成金・補助金' : '補助金・助成金';
+};
+// その制度の、その工事に当たる tags（1つの工事だけの制度なら全部）
+const catTags = (p, cat) => {
+  const tags = p.tags || [];
+  return p.cats.length === 1 ? tags : tags.filter((t) => cat.kw.some((w) => t.includes(w)));
+};
+// その市区町村の、その工事の制度に実際に出てくる言葉
+const catText = (progs, cat) => progs.filter((p) => p.cats.includes(cat.id)).map((p) => [catTags(p, cat).join(' '), (p.catNotes && p.catNotes[cat.id]) || '', p.name].join(' ')).join(' ');
+// タイトルに使う短い名前（データに出てくる言葉に合わせる）
+const catShort = (progs, cat) => {
+  const t = catText(progs, cat);
+  if (cat.id === 'kyuto') return /エコキュート/.test(t) ? 'エコキュート' : '給湯器';
+  if (cat.id === 'mizu') return /バリアフリー|手すり|段差|住宅改造/.test(t) ? 'バリアフリー' : '水まわり';
+  if (cat.id === 'yane') return /塗装/.test(t) ? '外壁塗装' : /外壁/.test(t) ? '外壁' : '屋根';
+  if (cat.id === 'mado') return /内窓|二重窓|二重サッシ/.test(t) ? '内窓' : '窓';
+  return cat.short;
+};
+// 見出しに使う名前
+const catHead = (progs, cat) => (cat.id === 'mizu' && /バリアフリー|手すり|段差|住宅改造/.test(catText(progs, cat)) ? 'お風呂・トイレ・バリアフリー改修' : cat.h);
+// 申請期間の表示（period があればそれ。無ければ details の「申請期間」などの行）
+const periodText = (p) => {
+  const per = p.period || {};
+  if (isDate(per.start) || isDate(per.end)) return `${isDate(per.start) ? jdate(per.start) : ''}〜${isDate(per.end) ? jdate(per.end) : ''}`;
+  const row = (p.details || []).find((d) => /^(申請|受付|申込|申し込み|募集)(の)?(期間|期限|締切)$/.test(d.k));
+  return row ? row.v : '';
+};
+// 先着・抽選・予算（selection / budget が書かれていればそれ。無ければ注意書きなどの文から読む）
+const progAllText = (p) => [p.warning, p.budget, ...(p.details || []).map((d) => d.v)].filter(Boolean).join(' ');
+const isFirstCome = (p) => (p.selection ? p.selection === 'first' : /先着|予算.{0,14}(達し|なくな|無くな|上限|範囲|終了)/.test(progAllText(p)));
+const isLottery = (p) => (p.selection ? p.selection === 'lottery' : /抽選/.test(progAllText(p)));
+const SELECTION = { first: '先着順（予算がなくなると終了）', lottery: '抽選', review: '審査あり' };
+const joinNames = (list, max) => list.slice(0, max).join('・') + (list.length > max ? 'など' : '');
 
 // ---- 市区町村ページ ----
 function cityPage(city, ctx) {
@@ -323,6 +379,20 @@ function cityPage(city, ctx) {
   const nEnded = n - liveProgs(city).length;
   const stText = (p) => statusOf(p, city.checked);
   const crumbs = [[city.pref, `/${city.prefSlug}/`], [city.name, url]];
+  const kind = /[市区町村]$/.test(city.name) ? city.name.slice(-1) : '市'; // 「市の制度」「区の制度」のように呼び分ける
+  const term = termOf(city.programs);         // 「補助金・助成金」か「助成金・補助金」
+  const [term1, term2] = term.split('・');
+  const era = fyEra(cfy);
+  const live = liveProgs(city);
+  const tName = ctx.nameCount.get(city.name) > 1 ? `${city.pref}${city.name}` : city.name; // 同じ名前の市区町村があるときは都道府県名をつける
+  const qn = (p) => `「${p.name}」`;
+  // となりの市区町村（Googleに出しているページだけ）
+  const nbLinks = (city.neighbors || []).map((nb) => {
+    const name = typeof nb === 'string' ? nb : nb.name;
+    const pool = ctx.cities.filter((c) => c.name === name && indexable(c) && (typeof nb === 'string' || !nb.prefSlug || c.prefSlug === nb.prefSlug));
+    return pool.find((c) => c.prefSlug === city.prefSlug) || (pool.length === 1 ? pool[0] : null);
+  }).filter((c, i, a) => c && c !== city && a.indexOf(c) === i);
+  const nbWith = (catId) => nbLinks.filter((c) => liveProgs(c).some((p) => p.cats.includes(catId)));
 
   // 工事カテゴリごとの結果（HTMLに最初から書き出す。JSは表示の切り替えだけ）
   const row = (r) => `<li><span class="top"><b>${esc(r.name)}</b><span class="amt">${esc(r.amt)}</span></span><span class="note">${esc(r.note)}</span>${r.href ? `<a href="${r.href}">くわしく見る →</a>` : ''}</li>`;
@@ -333,14 +403,23 @@ function cityPage(city, ctx) {
     const kuniRows = national.programs.filter((p) => p.cats.includes(c.id)).map((p) => ({ name: p.name, amt: natEnded(p) ? '受付終了' : p.maxLabel, note: (natEnded(p) ? '【受付は終了しました】' : '') + p.target, href: kuniHref(p) }));
     // その工事そのものの制度ではないが、条件つきで対象になることがある国の制度（national.json の extraCats）
     for (const m of natActive()) { const x = m.extraCats && m.extraCats[c.id]; if (x) kuniRows.push({ name: x.label || m.name, amt: x.amt || '', note: x.note || '', href: kuniHref(m) }); }
-    const sum = [cityRows.length ? '市 あり' : '', prefRows.length ? `${city.pref.slice(-1)} あり` : '', kuniRows.length ? '国 あり' : ''].filter(Boolean).join(' ／ ') || '掲載中の制度なし';
-    const cityNone = (city.noCityNote && city.noCityNote[c.id]) || 'このページに掲載している市の制度には、該当するものがありません。';
-    return { c, cityRows, prefRows, kuniRows, sum, cityNone };
+    const sum = [cityRows.length ? `${kind} あり` : '', prefRows.length ? `${city.pref.slice(-1)} あり` : '', kuniRows.length ? '国 あり' : ''].filter(Boolean).join(' ／ ') || '掲載中の制度なし';
+    const nbHave = cityRows.length ? [] : nbWith(c.id);
+    const cityNone = ((city.noCityNote && city.noCityNote[c.id]) || `このページに掲載している${kind}の制度には、該当するものがありません。`) + (nbHave.length ? `となりの${joinNames(nbHave.map((x) => x.name), 3)}には制度がありますが、使えるのは工事をする住宅がある市区町村の制度だけです。` : '');
+    // この工事の制度に実際に書かれている設備・工事の名前と、受付の状況（データから）
+    const inCat = city.programs.filter((p) => p.cats.includes(c.id));
+    const words = inCat.flatMap((p) => catTags(p, c)).filter(uniq).slice(0, 8);
+    const nOpenCat = inCat.filter((p) => stText(p).key === 'open').length;
+    const nEndCat = inCat.filter((p) => stText(p).key === 'ended').length;
+    const head = catHead(city.programs, c);
+    const note = inCat.length ? `${city.name}の制度は${inCat.length}件${nOpenCat ? `（受付中${nOpenCat}件）` : nEndCat === inCat.length ? '（受付は終了）' : ''}。${words.length ? `対象に書かれている設備・工事：${words.join('、')}` : ''}` : '';
+    return { c, cityRows, prefRows, kuniRows, sum, cityNone, head, note };
   });
   const first = (panels.find((x) => x.cityRows.length) || panels[0]).c.id;
   const catButtons = panels.map((x) => `<a class="cat" href="#${x.c.id}" data-cat="${x.c.id}"><span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="${x.c.icon}"/></svg></span><span class="tx"><b>${esc(x.c.name)}</b><small>${esc(x.sum)}</small></span><svg class="ck" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></a>`).join('');
-  const panelHtml = panels.map((x) => `<div class="result" id="${x.c.id}"><div class="result-head"><h3>${esc(city.name)}の${esc(x.c.h)}の補助金</h3></div>
-<div class="result-body"><div class="result-col"><div class="col-head"><span class="badge-city">市</span>${esc(city.name)}の制度</div>${rowsHtml(x.cityRows, x.cityNone)}</div>
+  const panelHtml = panels.map((x) => `<div class="result" id="${x.c.id}"><div class="result-head"><h3>${esc(city.name)}の${esc(x.head)}の補助金</h3></div>
+${x.note ? `<p class="result-sum">${esc(x.note)}</p>` : ''}
+<div class="result-body"><div class="result-col"><div class="col-head"><span class="badge-city">${kind}</span>${esc(city.name)}の制度</div>${rowsHtml(x.cityRows, x.cityNone)}</div>
 ${x.prefRows.length ? `<div class="result-col"><div class="col-head"><span class="badge-city">${esc(city.pref.slice(-1))}</span>${esc(city.pref)}の制度</div>${rowsHtml(x.prefRows, '')}</div>` : ''}
 <div class="result-col"><div class="col-head"><span class="badge-kuni">国</span>国の制度（全国共通）</div>${rowsHtml(x.kuniRows, 'このページに掲載している国の制度には、該当するものがありません。')}</div></div>
 ${(() => { const g = guidesFor(ctx, x.c.id, 2); const pc = ctx.prefCatPages.has(`${city.prefSlug}/${x.c.id}`); return g.length || pc ? `<div class="result-guide"><span class="small muted" style="font-weight:700">あわせて見る</span>${g.map((y) => `<a href="${y.url}">${guideLabel(y)}</a>`).join('')}${pc ? `<a href="/${city.prefSlug}/${x.c.id}/">${esc(city.pref)}の市区町村で${esc(x.c.short)}の補助金を見比べる</a>` : ''}</div>` : ''; })()}
@@ -348,11 +427,6 @@ ${(() => { const g = guidesFor(ctx, x.c.id, 2); const pc = ctx.prefCatPages.has(
 
   // となりの市・同じ都道府県の市（Googleに出しているページだけにリンクする）
   const samePref = ctx.cities.filter((c) => c.prefSlug === city.prefSlug && indexable(c));
-  const nbLinks = (city.neighbors || []).map((nb) => {
-    const name = typeof nb === 'string' ? nb : nb.name;
-    const pool = ctx.cities.filter((c) => c.name === name && indexable(c) && (typeof nb === 'string' || !nb.prefSlug || c.prefSlug === nb.prefSlug));
-    return pool.find((c) => c.prefSlug === city.prefSlug) || (pool.length === 1 ? pool[0] : null);
-  }).filter(Boolean);
   const idx = samePref.findIndex((c) => c.slug === city.slug);
   const others = [];
   for (let i = 1; i < samePref.length && others.length < 8; i++) {
@@ -364,15 +438,25 @@ ${(() => { const g = guidesFor(ctx, x.c.id, 2); const pc = ctx.prefCatPages.has(
 
   // よくある質問（この市のデータから作る）
   const faq = [];
+  const dated = live.filter((p) => periodText(p));
+  if (dated.length) faq.push({ q: `${city.name}のリフォーム${term1}は、いつまで申請できますか？`, a: `制度ごとにちがいます。${dated.slice(0, 4).map((p) => `${qn(p)}の申請期間は${periodText(p).replace(/。$/, '')}`).join('。')}。${live.some(isFirstCome) ? '予算がなくなると、期限の前でも受付が終わる制度があります。' : ''}（${jdate(city.checked)}確認）` });
   for (const p of city.programs.slice(0, 3)) {
     const row = (word) => (p.details || []).find((d) => d.k.includes(word));
     const amount = row('補助額') ? row('補助額').v : p.tiers ? p.tiers.map((t) => `${t.label} ${t.amount}${t.unit}`).join('、') : p.amountLabel;
     const per = p.period || {};
-    const period = row('期間') ? row('期間').v : isDate(per.end) ? `${isDate(per.start) ? jdate(per.start) : ''}〜${jdate(per.end)}` : '';
-    faq.push({ q: `${city.name}の「${p.name}」は、いくら補助されますか？`, a: `補助額は、${amount}です。${period ? `申請期間は${period}。` : ''}${timingText(p) ? `${timingText(p)}します。` : ''}（${jdate(city.checked)}確認・${statusOf(p, city.checked).text}）` });
+    const period = periodText(p).replace(/。$/, '');
+    faq.push({ q: `${city.name}の「${p.name}」は、いくら補助されますか？`, a: `補助額は次のとおりです。${amount.replace(/。$/, '')}。${period ? `申請期間は${period}。` : ''}${timingText(p) ? `${timingText(p)}します。` : ''}（${jdate(city.checked)}確認・${statusOf(p, city.checked).text}）` });
   }
+  const howTo = live.find((p) => p.contact && p.contact.dept && (p.contact.method || (p.docs || []).length));
+  if (howTo) {
+    const c = howTo.contact; const docs = howTo.docs || [];
+    faq.push({ q: `${city.name}の${qn(howTo)}は、どこに、どうやって申請しますか？`, a: `申請先は${c.dept}${c.place ? `（${c.place}）` : ''}です。${c.method ? `申請の方法は、${c.method.replace(/。$/, '')}。` : ''}${timingText(howTo) ? `${timingText(howTo)}します。` : ''}${docs.length ? `必要な書類は、${docs.slice(0, 5).join('、')}${docs.length > 5 ? 'など' : ''}です。` : ''}${c.tel ? `問い合わせは ${c.tel} へ。` : ''}` });
+  }
+  const withCon = live.filter((p) => p.contractor);
+  if (withCon.length) faq.push({ q: `${city.name}の${term1}は、どの業者に工事を頼んでも対象になりますか？`, a: `制度によって、業者に条件があります。${withCon.slice(0, 2).map((p) => `${qn(p)}：${p.contractor.replace(/。$/, '')}`).join('。')}。見積もりを頼む前に確かめてください。` });
+  let nNo = 0;
   for (const x of panels) {
-    if (!x.cityRows.length && city.noCityNote && city.noCityNote[x.c.id]) {
+    if (!x.cityRows.length && city.noCityNote && city.noCityNote[x.c.id] && nNo++ < 2) {
       faq.push({ q: `${city.name}に${x.c.h}の補助金はありますか？`, a: `${city.noCityNote[x.c.id]}${x.kuniRows.length ? '国の制度が使える場合があります。' : ''}` });
     }
   }
@@ -382,16 +466,61 @@ ${(() => { const g = guidesFor(ctx, x.c.id, 2); const pc = ctx.prefCatPages.has(
   faq.push({ q: `${city.name}の補助金と国の補助金は一緒に使えますか？`, a: combos.length ? `${combos.map((p) => `「${p.name}」は国の補助金と${COMBO[p.combo.kuni]}${p.combo.note ? `（${p.combo.note}）` : ''}`).join('、')}。` : '同じ工事に二重で出ない決まりのものもあります。工事ごとに分ければ使える場合があるので、申請の前に市の窓口や、見積もりをとる業者に確認しましょう。' });
 
   const catNames = myCats.map((c) => c.name.replace(/（.*）/, ''));
+  // タイトルの工事名は、制度の多い工事から順に、その市のデータに出てくる言葉で（入るだけ）
+  const titleWords = [];
+  const titleBase = `${tName}のリフォーム${term}【${CFY}】`;
+  const TITLE_ORDER = ['yane', 'kyuto', 'taishin', 'taiyo', 'mizu', 'mado'];
+  const liveCat = (c) => (live.some((p) => p.cats.includes(c.id)) ? 0 : 1);
+  for (const c of myCats.slice().sort((a, b) => liveCat(a) - liveCat(b) || TITLE_ORDER.indexOf(a.id) - TITLE_ORDER.indexOf(b.id))) {
+    const w = catShort(city.programs, c);
+    if ([...(titleBase + [...titleWords, w].join('・'))].length <= 40) titleWords.push(w);
+  }
   const title = (() => {
-    const t = `${city.name}のリフォーム補助金【${CFY}】${myCats.slice(0, 4).map((c) => c.short).join('・')}`;
-    return t.length <= 34 ? `${t}｜${config.siteName}` : t;
+    const t = titleBase + titleWords.join('・');
+    return [...t].length <= 26 ? `${t}｜${config.siteName}` : t;
   })();
+  const nOpen = live.filter((p) => stText(p).key === 'open').length;
   const description = n
-    ? `${city.pref}${city.name}の${CFY}（${fyEra(cfy)}）のリフォーム補助金の一覧。市の制度${n}件${nEnded ? `（うち${nEnded}件は受付終了）` : cMax ? `（最大${cMax}万円）` : ''}と国の制度を、${catNames.join('、')}など工事別に整理。申請の時期・窓口・出典つき。${jdate(city.checked)}確認。`
-    : `${city.pref}${city.name}で使えるリフォーム補助金。${jdate(city.checked)}の時点で市独自の制度は見つかっていませんが、国の制度は使えます。`;
+    ? `${city.pref}${city.name}のリフォーム${term}（${era}・${CFY}）。${kind}の制度${n}件${nOpen ? `・受付中${nOpen}件` : ''}${nEnded ? `・受付終了${nEnded}件` : ''}${cMax ? `、最大${cMax}万円` : ''}。${titleWords.length ? `${titleWords.join('・')}など` : ''}工事別に、申請期間と締切・条件・申請方法・国の補助金との併用を、公式の出典つきで整理。${jdate(city.checked)}確認。`
+    : `${city.pref}${city.name}で使えるリフォーム補助金。${jdate(city.checked)}の時点で${kind}独自の制度は見つかっていませんが、国の制度は使えます。`;
   const lead = n
     ? `${city.name}のリフォーム向け補助金は、確認できた範囲で${n}件（${catNames.join('、')}）${nEnded ? `。うち${nEnded}件は${CFY}の受付を終えています` : ''}。国の制度とあわせて、工事ごとに申請の時期と窓口を整理しました。`
     : `${city.name}が独自に行っているリフォーム向けの補助金は、${jdate(city.checked)}の時点では見つかっていません。国の制度は${city.name}でも使えます。`;
+  // このページの要点（すべてこの市区町村のデータから作る。データが無い項目は出さない）
+  const points = [];
+  if (n) {
+    const cnt = { open: 0, soon: 0, check: 0, ended: 0 };
+    for (const p of city.programs) cnt[stText(p).key]++;
+    points.push(`${city.name}が行っているリフォーム向けの制度は${n}件。${[cnt.open ? `受付中が${cnt.open}件` : '', cnt.soon ? `これから受付が始まるものが${cnt.soon}件` : '', cnt.check ? `受付状況を確認中のものが${cnt.check}件` : '', cnt.ended ? `${CFY}の受付を終えたものが${cnt.ended}件` : ''].filter(Boolean).join('、')}です。`);
+    const top = live.filter((p) => p.maxNumber).sort((a, b) => b.maxNumber - a.maxNumber)[0];
+    if (top) points.push(`金額がいちばん大きいのは${qn(top)}（${top.amountLabel}）。`);
+    const ends = live.filter((p) => p.period && isDate(p.period.end) && p.period.end >= TODAY).sort((a, b) => (a.period.end < b.period.end ? -1 : 1));
+    if (ends.length) points.push(`申請の締切がいちばん近いのは${qn(ends[0])}の${jdate(ends[0].period.end)}${ends[1] && ends[1].period.end !== ends[0].period.end ? `、次が${qn(ends[1])}の${jdate(ends[1].period.end)}` : ''}。`);
+    const bef = live.filter((p) => p.timing === 'before'); const aft = live.filter((p) => p.timing === 'after');
+    if (bef.length || aft.length) points.push(`${bef.length ? `工事の前に申請が必要な制度が${bef.length}件` : ''}${bef.length && aft.length ? '、' : ''}${aft.length ? `工事（設置）が終わってから申請する制度が${aft.length}件` : ''}。${bef.length ? '工事の前に申請する制度は、先に契約や着工をすると対象外になります。' : ''}`);
+    if (withCon.length) points.push(`業者に条件がある制度が${withCon.length}件（${joinNames(withCon.map(qn), 2)}）。見積もりを頼む前に確かめてください。`);
+    const fc = live.filter(isFirstCome).length; const lot = live.filter(isLottery).length;
+    if (fc || lot) points.push(`${fc ? `先着順、または予算がなくなりしだい終了と書かれている制度が${fc}件` : ''}${fc && lot ? '、' : ''}${lot ? `抽選と書かれている制度が${lot}件` : ''}。`);
+    const ok = live.filter((p) => p.combo && p.combo.kuni === 'ok').length; const ng = live.filter((p) => p.combo && p.combo.kuni === 'ng').length;
+    if (ok || ng) points.push(`国の補助金と${ok ? `一緒に使えると確認できた制度が${ok}件` : ''}${ok && ng ? '、' : ''}${ng ? `一緒には使えない制度が${ng}件` : ''}。`);
+    const noCats = CATS.filter((c) => !myCats.includes(c));
+    if (noCats.length && noCats.length < CATS.length) points.push(`${noCats.map((c) => c.name.replace(/（.*）/, '')).join('、')}は、${city.name}独自の制度が見つかっていません。`);
+  }
+  // 申請期間と締切の一覧（受付中のものを先に、締切の近い順）
+  const stRank = { open: 0, soon: 1, check: 2, ended: 3 };
+  const sched = city.programs.slice().sort((a, b) => stRank[stText(a).key] - stRank[stText(b).key] || (((a.period || {}).end || '9') < ((b.period || {}).end || '9') ? -1 : ((a.period || {}).end || '9') > ((b.period || {}).end || '9') ? 1 : 0));
+  const hasPeriod = city.programs.some((p) => periodText(p));
+  // となりの市区町村との見比べ（どちらも当サイトが調べたデータ）
+  const cmpRows = nbLinks.length ? [city, ...nbLinks.slice(0, 6)] : [];
+  const cmpNotes = [];
+  if (cmpRows.length) {
+    for (const c of CATS) {
+      const have = nbWith(c.id);
+      const mine = live.some((p) => p.cats.includes(c.id));
+      if (!mine && have.length) cmpNotes.push(`${c.name.replace(/（.*）/, '')}の制度は、${city.name}には見つかっていませんが、${joinNames(have.map((x) => x.name), 4)}にあります。`);
+      else if (mine && !have.length) cmpNotes.push(`${c.name.replace(/（.*）/, '')}の制度は、となりの市区町村（掲載分）には見つかっておらず、${city.name}にあります。`);
+    }
+  }
   const stale = (new Date(TODAY) - new Date(city.checked)) / 86400000 > 150;
   const history = (city.history || []).slice().sort((a, b) => (a.date < b.date ? 1 : -1));
 
@@ -399,21 +528,25 @@ ${(() => { const g = guidesFor(ctx, x.c.id, 2); const pc = ctx.prefCatPages.has(
 <div class="crumbs">${crumbHtml(crumbs)}${PR_NOTE}</div>
 <div class="hero-row"><div class="hero-main">
 <div class="hero-title"><div class="plate" aria-hidden="true"><div><i></i><span class="p">${esc(city.pref)}</span><span class="c">${esc(city.name)}</span><i></i></div></div>
-<div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:16px;padding-top:4px"><span class="small muted" style="font-weight:700;letter-spacing:.08em">${CFY}（${fyEra(cfy)}）版 ／ 市と国の制度を1ページに</span>
-<h1><span style="display:block">${esc(city.name)}の</span><span class="ib">リフォーム補助金</span><span class="ib">まとめ<span class="yr">${CFY}</span></span></h1>
+<div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:16px;padding-top:4px"><span class="small muted" style="font-weight:700;letter-spacing:.08em">${CFY}（${fyEra(cfy)}）版 ／ ${kind}と国の制度を1ページに</span>
+<h1><span style="display:block">${esc(city.name)}の</span><span class="ib">リフォーム${term1}・</span><span class="ib">${term2}まとめ<span class="yr">${CFY}</span></span></h1>
 <p style="color:var(--ink2);max-width:520px">${city.kana ? `${esc(city.name)}（${esc(city.kana)}）。` : ''}${esc(lead)}${city.lead ? esc(city.lead) : ''}</p></div></div>
 <div class="btn-row"><a class="btn-ink" href="#sagasu">やりたい工事から調べる</a><a class="btn-line" href="#mitsumori">補助金が使えるか無料で見積もり ${svgArrow}</a></div>
 </div>
 <div class="ledger">${stamp(city.checked)}<p class="small muted" style="font-weight:700;margin:0 96px 14px 0;letter-spacing:.06em">${esc(city.name)}のあらまし</p>
-<dl><div><dt>市の制度</dt><span class="dots" aria-hidden="true"></span><dd>${n}<small>件</small></dd></div>
-${cMax ? `<div><dt>市の補助 <span class="small muted">最大</span></dt><span class="dots" aria-hidden="true"></span><dd>${cMax}<small>万円</small></dd></div>` : ''}
+<dl><div><dt>${kind}の制度</dt><span class="dots" aria-hidden="true"></span><dd>${n}<small>件</small></dd></div>
+${cMax ? `<div><dt>${kind}の補助 <span class="small muted">最大</span></dt><span class="dots" aria-hidden="true"></span><dd>${cMax}<small>万円</small></dd></div>` : ''}
 ${natMax ? `<div><dt>国の補助 <span class="small muted">最大</span></dt><span class="dots" aria-hidden="true"></span><dd>${natMax}<small>万円</small></dd></div>` : ''}</dl>
 <p class="small muted" style="margin-top:14px">情報の確認日：${timeTag(city.checked)}（<a href="#shutten">出典を見る</a>）</p>
-${oldFy ? `<p class="small" style="color:var(--shu-d);font-weight:700">このページは${CFY}（${fyEra(cfy)}）の情報です。${fyLabel(NOW_FY)}の内容は、市の発表を確認でき次第、更新します。</p>` : stale ? '<p class="small" style="color:var(--shu-d);font-weight:700">確認から時間がたっています。最新の状況は市の公式ページでお確かめください。</p>' : ''}</div>
+${oldFy ? `<p class="small" style="color:var(--shu-d);font-weight:700">このページは${CFY}（${fyEra(cfy)}）の情報です。${fyLabel(NOW_FY)}の内容は、${kind}の発表を確認でき次第、更新します。</p>` : stale ? '<p class="small" style="color:var(--shu-d);font-weight:700">確認から時間がたっています。最新の状況は市の公式ページでお確かめください。</p>' : ''}</div>
 </div></div></div>
 
 <main class="wrap">
-<section id="sagasu" aria-labelledby="h-sagasu">${secHead('h-sagasu', `${esc(city.name)}の補助金を工事から探す`, '工事を押すと、使える制度が下に出ます')}
+${points.length ? `<section id="youten" aria-labelledby="h-youten">${secHead('h-youten', `${esc(city.name)}のリフォーム${term}の要点`, `${era}・${timeTag(city.checked)}時点`)}
+<ul class="sum">${points.map((t) => `<li>${esc(t)}</li>`).join('')}</ul>
+</section>` : ''}
+
+<section id="sagasu" aria-labelledby="h-sagasu">${secHead('h-sagasu', `${esc(city.name)}の${term1}を工事から探す`, '工事を押すと、使える制度が下に出ます')}
 <div class="cats" role="group" aria-label="工事の種類">${catButtons}</div>
 <div class="panels" id="panels" data-first="${first}">
 ${panelHtml}
@@ -421,8 +554,14 @@ ${panelHtml}
 <script>${PICKER_JS}</script>
 </section>
 
-<section id="city" aria-labelledby="h-city">${secHead('h-city', `${esc(city.name)}の補助金`, `市が独自に行っている制度（${n}件）`)}
-${n ? city.programs.map((p) => progCard(p, '市の制度', city.checked)).join('\n') : `<p>${esc(city.name)}が独自に行っている、個人の住宅のリフォーム向けの補助金は、${timeTag(city.checked)}の時点では見つかっていません。年度の途中で始まることもあるため、最新の情報は市の公式ページでお確かめください。</p>`}
+${n ? `<section id="shimekiri" aria-labelledby="h-shimekiri">${secHead('h-shimekiri', hasPeriod ? `${esc(city.name)}の${term1}はいつまで？ 申請期間と締切` : `${esc(city.name)}の制度と受付状況`, `${timeTag(city.checked)}時点`)}
+<div class="tbl"><table><thead><tr><th scope="col">制度</th><th scope="col">受付状況</th><th scope="col">申請期間（締切）</th><th scope="col">申請の時期</th><th scope="col" class="r">金額</th></tr></thead>
+<tbody>${sched.map((p) => `<tr><th scope="row" style="font-weight:700"><a href="#p-${esc(p.id)}">${esc(p.name)}</a></th><td>${stText(p).html}</td><td>${esc(periodText(p)) || (stText(p).key === 'ended' ? '—' : '<span class="muted">公式ページでご確認ください</span>')}</td><td>${p.timing === 'before' ? '工事の前' : p.timing === 'after' ? '工事のあと' : '—'}</td><td class="r">${esc(p.amountLabel)}</td></tr>`).join('')}</tbody></table></div>
+${live.some(isFirstCome) ? '<p class="small muted">先着順の制度や、予算がなくなりしだい終わる制度は、上の締切より前に受付が終わることがあります。</p>' : ''}
+</section>` : ''}
+
+<section id="city" aria-labelledby="h-city">${secHead('h-city', `${esc(city.name)}の${term}一覧（${era}）`, `${kind}が独自に行っている制度（${n}件）`)}
+${n ? city.programs.map((p) => progCard(p, `${kind}の制度`, city.checked)).join('\n') : `<p>${esc(city.name)}が独自に行っている、個人の住宅のリフォーム向けの補助金は、${timeTag(city.checked)}の時点では見つかっていません。年度の途中で始まることもあるため、最新の情報は市の公式ページでお確かめください。</p>`}
 </section>
 
 ${prefProgs.length ? `<section id="ken" aria-labelledby="h-ken">${secHead('h-ken', `${esc(city.name)}でも使える${esc(city.pref)}の補助金`, `${esc(city.pref)}が行っている制度`)}
@@ -430,7 +569,7 @@ ${prefProgs.length ? `<section id="ken" aria-labelledby="h-ken">${secHead('h-ken
 </section>` : ''}
 
 <section id="kuni" aria-labelledby="h-kuni">${secHead('h-kuni', `${esc(city.name)}でも使える国の補助金`, '全国共通の制度')}
-<p style="color:var(--ink2)">国の制度は全国共通です。市の補助金と組み合わせられる場合もあります。金額や条件は、各制度のページにまとめています。</p>
+<p style="color:var(--ink2)">国の制度は全国共通です。${kind}の補助金と組み合わせられる場合もあります。金額や条件は、各制度のページにまとめています。</p>
 ${natList()}
 </section>
 
@@ -446,12 +585,19 @@ ${ctaBlock(`<span class="ib">${esc(city.name)}対応のリフォーム会社に<
 ${faqHtml(faq)}
 </section>
 
-<section id="shutten" aria-labelledby="h-shutten">${secHead('h-shutten', '出典と確認日', `${timeTag(city.checked)}に確認`)}
+<section id="shutten" aria-labelledby="h-shutten">${secHead('h-shutten', '出典と確認日', `${timeTag(city.checked)}に確認${city.programs.filter(isOfficial).length ? `・公式の出典${city.programs.filter(isOfficial).length}件` : ''}`)}
 <ul class="dots-list">${city.programs.filter((p) => p.source).map((p) => `<li>${esc(p.name)}：<a href="${esc(p.source)}" rel="${isOfficial(p) ? 'noopener' : 'nofollow noopener'}">${esc(p.sourceName || new URL(p.source).hostname)}</a>${isOfficial(p) ? '（公式）' : '（公式ページでの確認がまだの情報）'}</li>`).join('')}
 <li>国の制度：各制度のページに出典を載せています。</li></ul>
 ${history.length ? `<div class="sub"><span class="small muted" style="font-weight:700">このページの更新履歴</span><ul class="dots-list">${history.map((h) => `<li>${timeTag(h.date)}　${esc(h.note)}</li>`).join('')}</ul></div>` : ''}
 <p class="small muted">情報の調べ方は<a href="/policy/">編集方針・情報の調べ方</a>にまとめています。まちがいに気づいた方は<a href="/contact/">お問い合わせ</a>からお知らせください。</p>
 </section>
+
+${cmpRows.length ? `<section id="hikaku" aria-labelledby="h-hikaku">${secHead('h-hikaku', `${esc(city.name)}と、となりの市区町村の${term1}を見比べる`, '当サイトが調べた制度の数と金額')}
+<div class="tbl"><table><thead><tr><th scope="col">市区町村</th><th scope="col">制度の数</th><th scope="col">いちばん大きい金額</th><th scope="col">制度のある工事</th><th scope="col">確認日</th></tr></thead>
+<tbody>${cmpRows.map((c) => { const lp = liveProgs(c); const op = lp.filter((p) => statusOf(p, c.checked).key === 'open').length; return `<tr${c === city ? ' class="me"' : ''}><th scope="row">${c === city ? esc(c.name) : `<a href="${cityUrl(c)}">${esc(c.name)}</a>`}</th><td>${c.programs.length}件${op ? `（受付中${op}件）` : ''}</td><td>${cityMax(c) ? `最大${cityMax(c)}万円` : '—'}</td><td>${esc(cityCats(c).map((x) => x.name.replace(/（.*）/, '')).join('、'))}</td><td>${timeTag(c.checked)}</td></tr>`; }).join('')}</tbody></table></div>
+${cmpNotes.length ? `<ul class="dots-list">${cmpNotes.slice(0, 5).map((t) => `<li>${esc(t)}</li>`).join('')}</ul>` : ''}
+<p class="small muted">市区町村の${term1}は、工事をする住宅がある市区町村の制度だけが使えます。金額は、受付が終わっていない制度の最大額です。</p>
+</section>` : ''}
 
 <section aria-labelledby="h-area">${secHead('h-area', `${esc(city.pref)}のほかの市区町村`, 'となりの市・町の補助金')}
 ${nbLinks.length ? `<div class="links"><span class="muted" style="font-size:15px">となりの市・町：</span>${nbLinks.map(nb).join('')}</div>` : ''}
@@ -464,6 +610,7 @@ ${others.length ? `<div class="links">${others.map(nb).join('')}</div>` : ''}
     pageLd({
       url, title, description, modified: city.checked,
       extra: {
+        lastReviewed: city.checked,
         breadcrumb: { '@id': `${SITE}${url}#crumbs` },
         about: { '@type': 'City', name: city.name, containedInPlace: { '@type': 'AdministrativeArea', name: city.pref } },
         mainEntity: n ? {
@@ -495,10 +642,11 @@ function prefPage(pref, ctx) {
   const crumbs = [[pref.name, url]];
   const cats = CATS.filter((c) => ctx.prefCatPages.has(`${pref.slug}/${c.id}`));
   const progCount = live.reduce((s, c) => s + c.programs.length, 0);
-  const title = `${pref.name}のリフォーム補助金｜市区町村別の一覧【${FY_LABEL}】`;
-  const description = `${pref.name}の市区町村ごとに、リフォームに使える補助金（耐震・給湯器・太陽光・窓の断熱など）を整理。${live.length}市区町村・${progCount}制度を掲載${prefProgs.length ? `、${pref.name}の制度${prefProgs.length}件も` : ''}。${jdate(lastmod)}更新。`;
+  const term = termOf(live.flatMap((c) => c.programs));
+  const title = `${pref.name}のリフォーム${term}｜市区町村別の一覧【${FY_LABEL}】`;
+  const description = `${pref.name}の市区町村ごとに、リフォームに使える${term}（耐震・エコキュートなどの給湯器・太陽光・外壁・バリアフリー・窓の断熱）を${fyEra(FY)}の内容で整理。${live.length}市区町村・${progCount}制度を掲載${prefProgs.length ? `、${pref.name}の制度${prefProgs.length}件も` : ''}。${jdate(lastmod)}更新。`;
   const body = `<div class="hero"><div class="wrap"><div class="crumbs">${crumbHtml(crumbs)}${PR_NOTE}</div>
-<h1>${esc(pref.name)}のリフォーム補助金<span class="yr">${FY_LABEL}</span></h1>
+<h1>${esc(pref.name)}の<span class="ib">リフォーム${term}</span><span class="yr">${FY_LABEL}</span></h1>
 <p style="color:var(--ink2);max-width:680px">${esc(pref.name)}の市区町村が行っているリフォーム向けの補助金を、市区町村ごとにまとめています。${total ? `${esc(pref.name)}の${total}市区町村のうち、${pref.cities.length}市区町村を調べ終わり、` : ''}制度が見つかった${live.length}市区町村・${progCount}制度を掲載中です（${timeTag(lastmod)}更新）。</p></div></div>
 <main class="wrap">
 <section aria-labelledby="h-list">${secHead('h-list', `${esc(pref.name)}の市区町村から探す`, '市区町村を選ぶと、使える補助金がわかります')}
@@ -507,7 +655,7 @@ ${live.length ? `<ul class="nat">${live.map((c) => `<li><span style="flex:1 1 30
 ${none.length ? `<p class="small muted">調べたものの、市区町村独自のリフォーム向け制度が見つからなかった地域：${none.map((c) => esc(c.name)).join('、')}（国の制度は使えます）</p>` : ''}
 </section>
 ${cats.length ? `<section aria-labelledby="h-cat">${secHead('h-cat', `${esc(pref.name)}の補助金を工事から探す`, '市区町村ごとの金額を見比べられます')}
-<div class="links">${cats.map((c) => `<a class="nb" href="/${pref.slug}/${c.id}/"><i aria-hidden="true"></i>${esc(c.h)}の補助金 →</a>`).join('')}</div></section>` : ''}
+<div class="links">${cats.map((c) => `<a class="nb" href="/${pref.slug}/${c.id}/"><i aria-hidden="true"></i>${esc(c.t)}の補助金 →</a>`).join('')}</div></section>` : ''}
 ${prefProgs.length ? `<section id="ken" aria-labelledby="h-ken">${secHead('h-ken', `${esc(pref.name)}の補助金`, `${esc(pref.name)}が行っている制度（${prefProgs.length}件）`)}
 ${prefProgs.map((p) => progCard(p, `${pref.name}の制度`, prefData.checked)).join('\n')}
 <p class="small muted">情報の確認日：${timeTag(prefData.checked)}</p></section>` : ''}
@@ -542,14 +690,43 @@ function prefCatPage(pref, cat, ctx) {
   const lastmod = maxDate(d.rows.map((r) => contentDate(r.c)));
   const kuni = natActive().filter((p) => p.cats.includes(cat.id));
   const catGuides = guidesFor(ctx, cat.id, 4);
-  const title = `${pref.name}の${cat.h}補助金｜市区町村別の一覧【${FY_LABEL}】`;
-  const description = `${pref.name}で${cat.h}に使える補助金を、市区町村ごとに金額・申請の時期・受付状況で見比べられる一覧。${d.cityCount}市区町村・${d.rows.length}制度を掲載。${jdate(lastmod)}更新。`;
+  const term = termOf(d.rows.map((r) => r.p));
+  const [term1] = term.split('・');
+  const st = (r) => statusOf(r.p, r.c.checked).key;
+  const liveRows = d.rows.filter((r) => st(r) !== 'ended');
+  const nOpen = d.rows.filter((r) => st(r) === 'open').length;
+  const nEnd = d.rows.length - liveRows.length;
+  const citiesWith = pref.cities.filter((c) => c.programs.some((p) => p.cats.includes(cat.id)));
+  // 金額の大きい順（この工事だけを対象にした、受付が終わっていない制度で比べる）
+  const tops = liveRows.filter((r) => r.p.cats.length === 1 && r.p.maxNumber && cat.kw.some((w) => (r.p.name + (r.p.tags || []).join(' ')).includes(w))).sort((a, b) => b.p.maxNumber - a.p.maxNumber).filter((r, i, a) => a.findIndex((x) => x.c === r.c) === i).slice(0, 3);
+  const bef = liveRows.filter((r) => r.p.timing === 'before').length; const aft = liveRows.filter((r) => r.p.timing === 'after').length;
+  const ends = liveRows.filter((r) => r.p.period && isDate(r.p.period.end) && r.p.period.end >= TODAY).sort((a, b) => (a.p.period.end < b.p.period.end ? -1 : 1));
+  const words = d.rows.flatMap((r) => catTags(r.p, cat)).reduce((m, t) => m.set(t, (m.get(t) || 0) + 1), new Map());
+  const topWords = [...words].sort((a, b) => b[1] - a[1]).slice(0, 8).map((x) => x[0]);
+  const points = [
+    `${pref.name}では、当サイトが調べた${pref.cities.length}市区町村のうち${d.cityCount}市区町村に、${cat.t}に使える制度が${d.rows.length}件あります。受付中と確認できたものが${nOpen}件${nEnd ? `、${FY_LABEL}の受付を終えたものが${nEnd}件` : ''}です。`,
+    tops.length ? `金額が大きいのは、${tops.map((r) => `${r.c.name}「${r.p.name}」（${r.p.amountLabel}）`).join('、')}。` : '',
+    bef || aft ? `工事の前に申請する制度が${bef}件、工事（設置）が終わってから申請する制度が${aft}件。` : '',
+    ends.length ? `締切がいちばん近いのは、${ends[0].c.name}「${ends[0].p.name}」の${jdate(ends[0].p.period.end)}。` : '',
+    topWords.length ? `対象としてよく書かれている設備・工事：${topWords.join('、')}。` : ''
+  ].filter(Boolean);
+  const faq = [
+    { q: `${pref.name}で、${cat.t}の${term1}がある市区町村はどこですか？`, a: `当サイトが調べた${pref.cities.length}市区町村のうち、${d.cityCount}市区町村で確認しています（${jdate(lastmod)}時点）。${citiesWith.map((c) => c.name).join('、')}です。` },
+    tops.length ? { q: `${pref.name}の${cat.t}の${term1}は、いくらですか？`, a: `市区町村によってちがいます。たとえば、${tops.map((r) => `${r.c.name}の「${r.p.name}」は${r.p.amountLabel}`).join('、')}です。金額は、工事の内容や世帯の条件で変わります。` } : null,
+    bef || aft ? { q: `${pref.name}の${cat.t}の${term1}は、工事のあとでも申請できますか？`, a: `制度によってちがいます。受付が終わっていない制度のうち、工事の前に申請するものが${bef}件、工事（設置）が終わってから申請するものが${aft}件です。工事の前に申請する制度は、先に契約や着工をすると対象外になります。` } : null
+  ].filter(Boolean);
+  const title = `${pref.name}の${cat.t}の${term}【${FY_LABEL}】市区町村別`;
+  const description = `${pref.name}で${cat.t}に使える${term}を、市区町村ごとに金額・締切・申請の時期・受付状況で見比べられる一覧（${fyEra(FY)}）。${d.cityCount}市区町村・${d.rows.length}制度、受付中${nOpen}件。公式の出典つき。${jdate(lastmod)}更新。`;
   const body = `<div class="hero"><div class="wrap"><div class="crumbs">${crumbHtml(crumbs)}${PR_NOTE}</div>
-<h1>${esc(pref.name)}の<span class="ib">${esc(cat.h)}の補助金</span><span class="yr">${FY_LABEL}</span></h1>
+<h1>${esc(pref.name)}の<span class="ib">${esc(cat.t)}の</span><span class="ib">${term}</span><span class="yr">${FY_LABEL}</span></h1>
 <p style="color:var(--ink2);max-width:680px">${esc(pref.name)}の市区町村が行っている、${esc(cat.h)}に使える補助金の一覧です。当サイトが調べた${pref.cities.length}市区町村のうち、${d.cityCount}市区町村で${d.rows.length}件の制度を確認しています（${timeTag(lastmod)}更新）。</p></div></div>
 <main class="wrap">
-<section aria-labelledby="h-list">${secHead('h-list', `市区町村ごとの${esc(cat.h)}補助金`, '市区町村名を押すと、くわしい条件が見られます')}
-<ul class="nat">${d.rows.map(({ c, p }) => `<li><span style="flex:1 1 300px;min-width:0;display:flex;flex-direction:column;gap:2px"><a class="serif" style="font-size:22px;line-height:1.5" href="${cityUrl(c)}#${cat.id}">${esc(c.name)}</a><span style="font-size:16px;color:var(--ink2)">${esc(p.name)}</span><span class="small muted">${esc([statusOf(p, c.checked).text, timingText(p), `${jdate(c.checked)}確認`].filter(Boolean).join('　／　'))}</span></span><span class="mid">${esc(p.amountLabel)}</span></li>`).join('')}</ul>
+<section id="youten" aria-labelledby="h-youten">${secHead('h-youten', `${esc(pref.name)}の${esc(cat.t)}の${term1}の要点`, `${fyEra(FY)}・${timeTag(lastmod)}時点`)}
+<ul class="sum">${points.map((t) => `<li>${esc(t)}</li>`).join('')}</ul>
+<div class="links"><span class="muted" style="font-size:15px">制度がある市区町村：</span>${citiesWith.map((c) => `<a class="nb" href="${cityUrl(c)}#${cat.id}"><i aria-hidden="true"></i>${esc(c.name)}</a>`).join('')}</div>
+</section>
+<section aria-labelledby="h-list">${secHead('h-list', `市区町村ごとの${esc(cat.t)}の${term1}`, '市区町村名を押すと、くわしい条件が見られます')}
+<ul class="nat">${d.rows.map(({ c, p }) => `<li><span style="flex:1 1 300px;min-width:0;display:flex;flex-direction:column;gap:2px"><a class="serif" style="font-size:22px;line-height:1.5" href="${cityUrl(c)}#${cat.id}">${esc(c.name)}</a><span style="font-size:16px;color:var(--ink2)">${esc(p.name)}</span><span class="small muted">${esc([statusOf(p, c.checked).text, timingText(p), p.period && isDate(p.period.end) && statusOf(p, c.checked).key !== 'ended' ? `締切 ${jdate(p.period.end)}` : '', `${jdate(c.checked)}確認`].filter(Boolean).join('　／　'))}</span></span><span class="mid">${esc(p.amountLabel)}</span></li>`).join('')}</ul>
 ${without.length ? `<p class="small muted">${esc(cat.h)}向けの市区町村独自の制度が見つかっていない地域：${without.map((c) => esc(c.name)).join('、')}</p>` : ''}
 </section>
 ${d.prefProgs.length ? `<section aria-labelledby="h-ken">${secHead('h-ken', `${esc(pref.name)}の制度`)}
@@ -559,10 +736,14 @@ ${kuni.length ? `<section aria-labelledby="h-kuni">${secHead('h-kuni', `${esc(ca
 ${catGuides.length ? `<section aria-labelledby="h-guide">${secHead('h-guide', `${esc(cat.h)}の補助金の基礎知識`)}
 <ul class="grid">${catGuides.map((g) => `<li class="card"><a class="t" href="${g.url}">${esc(g.meta.title)}</a><span style="color:var(--ink2);font-size:16px">${esc(g.meta.description)}</span></li>`).join('')}</ul></section>` : ''}
 ${ctaBlock(`<span class="ib">${esc(pref.name)}対応のリフォーム会社に</span><span class="ib">まとめて無料で見積もり</span>`, '無料で見積もりをとる')}
+<section aria-labelledby="h-faq">${secHead('h-faq', `${esc(pref.name)}の${esc(cat.t)}の${term1}でよくある質問`)}
+${faqHtml(faq)}
+</section>
 <section aria-labelledby="h-more">${secHead('h-more', `${esc(pref.name)}のほかの工事の補助金`)}
 <div class="links">${CATS.filter((c) => c.id !== cat.id && ctx.prefCatPages.has(`${pref.slug}/${c.id}`)).map((c) => `<a class="nb" href="/${pref.slug}/${c.id}/"><i aria-hidden="true"></i>${esc(c.h)} →</a>`).join('')}<a class="nb" href="/${pref.slug}/"><i aria-hidden="true"></i>${esc(pref.name)}の市区町村一覧 →</a></div></section>
 </main>`;
-  const graph = [pageLd({ type: 'CollectionPage', url, title, description, modified: lastmod, extra: { breadcrumb: { '@id': `${SITE}${url}#crumbs` } } }), Object.assign(crumbLd(crumbs), { '@id': `${SITE}${url}#crumbs` })];
+  const graph = [pageLd({ type: 'CollectionPage', url, title, description, modified: lastmod, extra: { breadcrumb: { '@id': `${SITE}${url}#crumbs` } } }), Object.assign(crumbLd(crumbs), { '@id': `${SITE}${url}#crumbs` }),
+    { '@type': 'FAQPage', '@id': `${SITE}${url}#faq`, url: SITE + url, inLanguage: 'ja', isPartOf: { '@id': `${SITE}${url}#page` }, mainEntity: faq.map((x) => ({ '@type': 'Question', name: x.q, acceptedAnswer: { '@type': 'Answer', text: x.a } })) }];
   write(`${pref.slug}/${cat.id}/index.html`, layout({ title, description, canonical: url, body, graph, hasCta: true }));
   return { url, lastmod };
 }
@@ -650,8 +831,8 @@ function topPage(ctx) {
   const liveSlugs = new Set(ctx.livePrefs.map((p) => p.slug));
   const prefName = new Map(progress.prefOrder.map((p) => [p.slug, p.name]));
   const recent = live.slice().sort((a, b) => (a.checked < b.checked ? 1 : -1)).slice(0, 12);
-  const title = `${config.siteName}｜市区町村別のリフォーム補助金一覧【${FY_LABEL}】`;
-  const description = `市区町村と国のリフォーム補助金を、窓・給湯器・太陽光・耐震など工事ごとに整理。お住まいの市区町村を選ぶと、使える補助金と申請の時期がわかります。${live.length}市区町村・${progCount}制度を掲載（${jdate(lastmod)}更新）。`;
+  const title = `${config.siteName}｜市区町村別のリフォーム補助金・助成金一覧【${FY_LABEL}】`;
+  const description = `市区町村と国のリフォーム補助金・助成金（${fyEra(FY)}）を、耐震・給湯器・太陽光・外壁・バリアフリー・窓など工事ごとに整理。お住まいの市区町村を選ぶと、使える補助金と申請の時期がわかります。${live.length}市区町村・${progCount}制度を掲載（${jdate(lastmod)}更新）。`;
   const body = `<div class="hero"><div class="wrap">
 <div class="crumbs"><span></span>${PR_NOTE}</div>
 <h1>リフォーム補助金を、<span class="ib">住んでいる市から探す</span></h1>
@@ -776,6 +957,7 @@ function staticPages() {
 //   {{MATCH:正規表現|見出し}} … 制度名が合うものの例（例：空き家|空家）
 //   {{FIELD:項目名|見出し}} … その項目（contractor / docs / combo / lastYear）が書かれている制度の例
 //   {{TIMING:工事ID}} … 「工事の前に申請」「あとに申請」の件数（工事IDを省くと全体）
+//   {{NAMECOUNT}} … 制度の正式名に「補助」「助成」などの言葉が使われている件数の表
 function loadGuides() {
   const dir = path.join(ROOT, 'src', 'guide');
   if (!fs.existsSync(dir)) return [];
@@ -885,6 +1067,14 @@ ${exList(ex.items, fn)}`)}`;
     const pct = (n) => (n ? Math.max(2, Math.round((n / Math.max(before, after)) * 100)) : 0);
     return `<div class="tm"><p>当サイトに掲載している${cat ? `${esc(cat.h)}の` : ''}制度のうち、申請の時期が分かっている${before + after}件を数えると、<strong>「工事の前に申請」が${before}件、「工事（設置）が終わってから申請」が${after}件</strong>でした（${jdate(maxDate(ctx.cities.map((c) => c.checked)))}時点）。</p>
 <div class="tm-fig" aria-hidden="true"><div class="tm-row"><span class="tm-l">工事の前に申請</span><span class="tm-track"><i style="width:${pct(before)}%"></i></span><span class="tm-n">${before}件</span></div><div class="tm-row after"><span class="tm-l">終わってから申請</span><span class="tm-track"><i style="width:${pct(after)}%"></i></span><span class="tm-n">${after}件</span></div></div></div>`;
+  }
+  if (kind === 'NAMECOUNT') {
+    // 制度の正式名に「補助」「助成」などの言葉がいくつ使われているか（当サイトのデータを数える）
+    const all = ctx.cities.filter(indexable).flatMap((c) => c.programs);
+    if (all.length < 20) return '';
+    const cnt = (re) => all.filter((p) => re.test(p.name)).length;
+    const rows = [['「補助」がつく制度', cnt(/補助/)], ['「助成」がつく制度', cnt(/助成/)], ['「支援」がつく制度（補助・助成がつかないもの）', all.filter((p) => /支援/.test(p.name) && !/補助|助成/.test(p.name)).length], ['「給付」「奨励」がつく制度', all.filter((p) => /給付|奨励/.test(p.name) && !/補助|助成/.test(p.name)).length]].filter((r) => r[1]);
+    return `<div class="tbl tight"><table><caption>当サイトに掲載している${all.length}件の制度の、正式名に使われている言葉（${jdate(maxDate(ctx.cities.map((c) => c.checked)))}時点）</caption><thead><tr><th>正式名の言葉</th><th class="r">件数</th></tr></thead><tbody>${rows.map((r) => `<tr><td>${r[0]}</td><td class="r">${r[1]}件</td></tr>`).join('')}</tbody></table></div>`;
   }
   errors.push(`${at}: 知らない差し込み {{${kind}}} があります`);
   return '';
@@ -1036,6 +1226,12 @@ function checkPlace(c, rel) {
     else if (!/^https?:\/\//.test(p.source)) errors.push(`${at}: source はURLで書いてください`);
     else if (!isOfficial(p)) warnings.push(`${at}: 出典が公式サイトではありません（${p.source}）。公式ページで確かめ直してください`);
     if (!p.timing) warnings.push(`${at}: timing（before / after）がありません`);
+    // あとから足した項目（無くてもよい。書くなら形を守る）
+    if (p.selection != null && !SELECTION[p.selection]) errors.push(`${at}: selection は first（先着順）/ lottery（抽選）/ review（審査）のどれかにしてください`);
+    if (p.sourceUpdated != null && (!isDate(p.sourceUpdated) || p.sourceUpdated > TODAY)) errors.push(`${at}: sourceUpdated は、公式ページに書かれた更新日を YYYY-MM-DD の形で書いてください（未来の日付は不可）`);
+    if (p.budget != null && typeof p.budget !== 'string') errors.push(`${at}: budget は文で書いてください（例：「令和8年度の予算は500万円」）`);
+    if (p.sources != null && (!Array.isArray(p.sources) || p.sources.some((x) => !x || !x.name || !/^https?:\/\//.test(x.url || '')))) errors.push(`${at}: sources は [{ "name": "資料の名前", "url": "https://..." }] の形で書いてください`);
+    for (const x of Array.isArray(p.sources) ? p.sources : []) if (x && x.url && !isOfficialUrl(x.url)) warnings.push(`${at}: sources に公式サイトではないURLがあります（${x.url}）`);
   }
   for (const h of c.history || []) if (!isDate(h.date) || !h.note) errors.push(`${rel}: history は { "date": "YYYY-MM-DD", "note": "..." } の形で書いてください`);
 }
@@ -1110,6 +1306,8 @@ for (const p of prefs) {
   for (const cat of CATS) if (prefCatData(p, cat, ctx).ok) ctx.prefCatPages.add(`${p.slug}/${cat.id}`);
   if (p.cities.some(indexable) || ((prefData.get(p.slug) || {}).programs || []).length) ctx.livePrefs.push(p);
 }
+ctx.nameCount = new Map();
+for (const c of ctx.cities) ctx.nameCount.set(c.name, (ctx.nameCount.get(c.name) || 0) + 1);
 ctx.events = buildEvents(ctx);
 
 const pages = [];
