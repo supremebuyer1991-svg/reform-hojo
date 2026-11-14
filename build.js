@@ -214,7 +214,9 @@ ${OG_IMAGE ? `<meta property="og:image" content="${OG_IMAGE}">\n<meta property="
 <meta name="twitter:card" content="${OG_IMAGE ? 'summary_large_image' : 'summary'}">
 ${config.googleSiteVerification ? `<meta name="google-site-verification" content="${esc(config.googleSiteVerification)}">` : ''}
 <meta name="theme-color" content="#1C4E6B">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="alternate" type="application/atom+xml" title="${esc(config.siteName)} 更新情報" href="/feed.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1339,8 +1341,9 @@ else {
 write('robots.txt', `User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`);
 write('favicon.svg', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><rect width="48" height="48" rx="8" fill="#1C4E6B"/><path d="M10 23l14-11 14 11M14 21.5V37h20V21.5" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/></svg>\n');
 // *.pages.dev（Cloudflare Pages の予備のアドレス）は検索に出さない。同じ内容が2つのアドレスで出るのを防ぐ。
-write('_headers', '/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\nhttps://:project.pages.dev/*\n  X-Robots-Tag: noindex\nhttps://:version.:project.pages.dev/*\n  X-Robots-Tag: noindex\n/cities.json\n  X-Robots-Tag: noindex\n/favicon.svg\n  Cache-Control: public, max-age=604800\n/ogp.png\n  Cache-Control: public, max-age=604800\n');
+write('_headers', '/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\nhttps://:project.pages.dev/*\n  X-Robots-Tag: noindex\nhttps://:version.:project.pages.dev/*\n  X-Robots-Tag: noindex\n/cities.json\n  X-Robots-Tag: noindex\n/favicon.svg\n  Cache-Control: public, max-age=604800\n/favicon.ico\n  Cache-Control: public, max-age=604800\n/apple-touch-icon.png\n  Cache-Control: public, max-age=604800\n/ogp.png\n  Cache-Control: public, max-age=604800\n');
 if (OG_IMAGE) fs.copyFileSync(path.join(ROOT, 'src', 'static', 'ogp.png'), path.join(DIST, 'ogp.png'));
+['favicon.ico', 'apple-touch-icon.png', 'icon-192.png'].forEach((f) => { const src = path.join(ROOT, 'src', 'static', f); if (fs.existsSync(src)) fs.copyFileSync(src, path.join(DIST, f)); });
 write('404.html', layout({ title: `ページが見つかりません｜${config.siteName}`, description: 'ページが見つかりません', noindex: true, body: `<main class="wrap"><section><h1>ページが見つかりません</h1><p>お探しのページは、移動したか、なくなった可能性があります。</p><div class="links"><a class="nb" href="/"><i aria-hidden="true"></i>トップへ戻る →</a><a class="nb" href="/#h-pref"><i aria-hidden="true"></i>都道府県から探す →</a><a class="nb" href="/kuni/"><i aria-hidden="true"></i>国の補助金 →</a>${guides.length ? '<a class="nb" href="/guide/"><i aria-hidden="true"></i>補助金の基礎知識 →</a>' : ''}</div></section></main>` }));
 const INDEXNOW_KEY = /^[a-f0-9]{8,128}$/.test(config.indexNowKey || '') ? config.indexNowKey : '';
 if (INDEXNOW_KEY) write(`${INDEXNOW_KEY}.txt`, INDEXNOW_KEY);
