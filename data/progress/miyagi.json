@@ -1,0 +1,181 @@
+{
+  "pref": "宮城県",
+  "prefSlug": "miyagi",
+  "cities": [
+    {
+      "name": "仙台市",
+      "slug": "sendai",
+      "status": "done"
+    },
+    {
+      "name": "石巻市",
+      "slug": "ishinomaki",
+      "status": "done"
+    },
+    {
+      "name": "塩竈市",
+      "slug": "shiogama",
+      "status": "done"
+    },
+    {
+      "name": "気仙沼市",
+      "slug": "kesennuma",
+      "status": "done"
+    },
+    {
+      "name": "白石市",
+      "slug": "shiroishi",
+      "status": "done"
+    },
+    {
+      "name": "名取市",
+      "slug": "natori",
+      "status": "done"
+    },
+    {
+      "name": "角田市",
+      "slug": "kakuda",
+      "status": "done"
+    },
+    {
+      "name": "多賀城市",
+      "slug": "tagajo",
+      "status": "done"
+    },
+    {
+      "name": "岩沼市",
+      "slug": "iwanuma",
+      "status": "done"
+    },
+    {
+      "name": "登米市",
+      "slug": "tome",
+      "status": "done"
+    },
+    {
+      "name": "栗原市",
+      "slug": "kurihara",
+      "status": "todo"
+    },
+    {
+      "name": "東松島市",
+      "slug": "higashimatsushima",
+      "status": "todo"
+    },
+    {
+      "name": "大崎市",
+      "slug": "osaki",
+      "status": "todo"
+    },
+    {
+      "name": "富谷市",
+      "slug": "tomiya",
+      "status": "todo"
+    },
+    {
+      "name": "蔵王町",
+      "slug": "zao",
+      "status": "todo"
+    },
+    {
+      "name": "七ヶ宿町",
+      "slug": "shichikashuku",
+      "status": "todo"
+    },
+    {
+      "name": "大河原町",
+      "slug": "ogawara",
+      "status": "todo"
+    },
+    {
+      "name": "村田町",
+      "slug": "murata",
+      "status": "todo"
+    },
+    {
+      "name": "柴田町",
+      "slug": "shibata",
+      "status": "todo"
+    },
+    {
+      "name": "川崎町",
+      "slug": "kawasaki",
+      "status": "todo"
+    },
+    {
+      "name": "丸森町",
+      "slug": "marumori",
+      "status": "todo"
+    },
+    {
+      "name": "亘理町",
+      "slug": "watari",
+      "status": "todo"
+    },
+    {
+      "name": "山元町",
+      "slug": "yamamoto",
+      "status": "todo"
+    },
+    {
+      "name": "松島町",
+      "slug": "matsushima",
+      "status": "todo"
+    },
+    {
+      "name": "七ヶ浜町",
+      "slug": "shichigahama",
+      "status": "todo"
+    },
+    {
+      "name": "利府町",
+      "slug": "rifu",
+      "status": "todo"
+    },
+    {
+      "name": "大和町",
+      "slug": "taiwa",
+      "status": "todo"
+    },
+    {
+      "name": "大郷町",
+      "slug": "osato",
+      "status": "todo"
+    },
+    {
+      "name": "大衡村",
+      "slug": "ohira",
+      "status": "todo"
+    },
+    {
+      "name": "色麻町",
+      "slug": "shikama",
+      "status": "todo"
+    },
+    {
+      "name": "加美町",
+      "slug": "kami",
+      "status": "todo"
+    },
+    {
+      "name": "涌谷町",
+      "slug": "wakuya",
+      "status": "todo"
+    },
+    {
+      "name": "美里町",
+      "slug": "misato",
+      "status": "todo"
+    },
+    {
+      "name": "女川町",
+      "slug": "onagawa",
+      "status": "todo"
+    },
+    {
+      "name": "南三陸町",
+      "slug": "minamisanriku",
+      "status": "todo"
+    }
+  ]
+}
