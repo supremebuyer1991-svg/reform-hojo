@@ -1,0 +1,15 @@
+{
+  "note": "調査中に開けなかった公式ページ。全国を一巡したあと、まとめて報告する。開けて確かめたものは消す。",
+  "items": [
+    { "pref": "aichi", "city": "瀬戸市", "what": "住宅用地球温暖化対策設備の補助 案内PDF", "url": "https://www.city.seto.aichi.jp/docs/2023/03/27/00113/files/hozyoannairrr.pdf", "date": "2026-11-14" },
+    { "pref": "aichi", "city": "瀬戸市", "what": "住宅用地球温暖化対策設備の補助 要綱PDF", "url": "https://www.city.seto.aichi.jp/docs/2023/03/27/00113/files/youkour8.pdf", "date": "2026-11-14" },
+    { "pref": "aichi", "city": "瀬戸市", "what": "土砂災害対策改修費補助金", "url": "https://www.city.seto.aichi.jp/docs/2023/03/15/00101/", "date": "2026-11-14" },
+    { "pref": "aichi", "city": "名古屋市", "what": "新耐震基準の木造住宅無料耐震診断", "url": "https://www.city.nagoya.jp/kurashi/juutaku/1014710/1014649/1034739/1046669.html", "date": "2026-11-14" },
+    { "pref": "aichi", "city": "豊橋市", "what": "木造住宅耐震改修 交付要綱PDF", "url": "https://www.city.toyohashi.lg.jp/secure/37444/R08_mokukaisyuu_youkou2.pdf", "date": "2026-11-14" },
+    { "pref": "aichi", "city": "豊橋市", "what": "無料耐震診断", "url": "https://www.city.toyohashi.lg.jp/25521.htm", "date": "2026-11-14" },
+    { "pref": "aichi", "city": "豊橋市", "what": "補助金一覧PDF", "url": "https://www.city.toyohashi.lg.jp/secure/101261/hojyokintouitiran2026.pdf", "date": "2026-11-14" },
+    { "pref": "aichi", "city": "一宮市", "what": "住宅用地球温暖化対策設備設置補助金の制度ページと要綱PDF（URLは一部のみ記録：…/1043984/1074943.html、…/2026youkou2.pdf）", "url": "", "date": "2026-11-14" },
+    { "pref": "aichi", "city": "春日井市", "what": "住宅用地球温暖化対策機器設置費補助金の手引きPDF（R8tebiki.pdf）", "url": "", "date": "2026-11-14" },
+    { "pref": "aichi", "city": "半田市", "what": "市報2026年4月号（耐震補助の受付期間）と景観づくり事業補助金のページ", "url": "", "date": "2026-11-14" }
+  ]
+}
