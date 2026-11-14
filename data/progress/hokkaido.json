@@ -675,7 +675,7 @@
     {
       "name": "新冠町",
       "slug": "niikappu",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "仁木町",
@@ -700,7 +700,7 @@
     {
       "name": "羽幌町",
       "slug": "haboro",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "浜頓別町",
@@ -730,22 +730,22 @@
     {
       "name": "日高町",
       "slug": "hidaka",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "比布町",
       "slug": "pippu",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "美深町",
       "slug": "bifuka",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "美幌町",
       "slug": "bihoro",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "平取町",
@@ -755,7 +755,7 @@
     {
       "name": "広尾町",
       "slug": "hiroo",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "福島町",
