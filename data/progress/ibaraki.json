@@ -1,0 +1,226 @@
+{
+  "pref": "茨城県",
+  "prefSlug": "ibaraki",
+  "cities": [
+    {
+      "name": "水戸市",
+      "slug": "mito",
+      "status": "done"
+    },
+    {
+      "name": "日立市",
+      "slug": "hitachi",
+      "status": "done"
+    },
+    {
+      "name": "土浦市",
+      "slug": "tsuchiura",
+      "status": "done"
+    },
+    {
+      "name": "古河市",
+      "slug": "koga",
+      "status": "done"
+    },
+    {
+      "name": "石岡市",
+      "slug": "ishioka",
+      "status": "done"
+    },
+    {
+      "name": "結城市",
+      "slug": "yuki",
+      "status": "done"
+    },
+    {
+      "name": "龍ケ崎市",
+      "slug": "ryugasaki",
+      "status": "done"
+    },
+    {
+      "name": "下妻市",
+      "slug": "shimotsuma",
+      "status": "todo"
+    },
+    {
+      "name": "常総市",
+      "slug": "joso",
+      "status": "todo"
+    },
+    {
+      "name": "常陸太田市",
+      "slug": "hitachiota",
+      "status": "done"
+    },
+    {
+      "name": "高萩市",
+      "slug": "takahagi",
+      "status": "done"
+    },
+    {
+      "name": "北茨城市",
+      "slug": "kitaibaraki",
+      "status": "done"
+    },
+    {
+      "name": "笠間市",
+      "slug": "kasama",
+      "status": "done"
+    },
+    {
+      "name": "取手市",
+      "slug": "toride",
+      "status": "done"
+    },
+    {
+      "name": "牛久市",
+      "slug": "ushiku",
+      "status": "done"
+    },
+    {
+      "name": "つくば市",
+      "slug": "tsukuba",
+      "status": "done"
+    },
+    {
+      "name": "ひたちなか市",
+      "slug": "hitachinaka",
+      "status": "done"
+    },
+    {
+      "name": "鹿嶋市",
+      "slug": "kashima",
+      "status": "done"
+    },
+    {
+      "name": "潮来市",
+      "slug": "itako",
+      "status": "done"
+    },
+    {
+      "name": "守谷市",
+      "slug": "moriya",
+      "status": "done"
+    },
+    {
+      "name": "常陸大宮市",
+      "slug": "hitachiomiya",
+      "status": "done"
+    },
+    {
+      "name": "那珂市",
+      "slug": "naka",
+      "status": "done"
+    },
+    {
+      "name": "筑西市",
+      "slug": "chikusei",
+      "status": "done"
+    },
+    {
+      "name": "坂東市",
+      "slug": "bando",
+      "status": "done"
+    },
+    {
+      "name": "稲敷市",
+      "slug": "inashiki",
+      "status": "todo"
+    },
+    {
+      "name": "かすみがうら市",
+      "slug": "kasumigaura",
+      "status": "todo"
+    },
+    {
+      "name": "桜川市",
+      "slug": "sakuragawa",
+      "status": "todo"
+    },
+    {
+      "name": "神栖市",
+      "slug": "kamisu",
+      "status": "todo"
+    },
+    {
+      "name": "行方市",
+      "slug": "namegata",
+      "status": "todo"
+    },
+    {
+      "name": "鉾田市",
+      "slug": "hokota",
+      "status": "todo"
+    },
+    {
+      "name": "つくばみらい市",
+      "slug": "tsukubamirai",
+      "status": "todo"
+    },
+    {
+      "name": "小美玉市",
+      "slug": "omitama",
+      "status": "todo"
+    },
+    {
+      "name": "茨城町",
+      "slug": "ibaraki-machi",
+      "status": "todo"
+    },
+    {
+      "name": "大洗町",
+      "slug": "oarai",
+      "status": "todo"
+    },
+    {
+      "name": "城里町",
+      "slug": "shirosato",
+      "status": "todo"
+    },
+    {
+      "name": "東海村",
+      "slug": "tokai",
+      "status": "todo"
+    },
+    {
+      "name": "大子町",
+      "slug": "daigo",
+      "status": "todo"
+    },
+    {
+      "name": "美浦村",
+      "slug": "miho",
+      "status": "todo"
+    },
+    {
+      "name": "阿見町",
+      "slug": "ami",
+      "status": "todo"
+    },
+    {
+      "name": "河内町",
+      "slug": "kawachi",
+      "status": "todo"
+    },
+    {
+      "name": "八千代町",
+      "slug": "yachiyo",
+      "status": "todo"
+    },
+    {
+      "name": "五霞町",
+      "slug": "goka",
+      "status": "todo"
+    },
+    {
+      "name": "境町",
+      "slug": "sakai",
+      "status": "todo"
+    },
+    {
+      "name": "利根町",
+      "slug": "tone",
+      "status": "todo"
+    }
+  ]
+}
