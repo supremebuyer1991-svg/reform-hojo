@@ -1,0 +1,21 @@
+{
+  "pref": "長野県",
+  "prefSlug": "nagano",
+  "name": "宮田村",
+  "slug": "miyada",
+  "kana": "みやだむら",
+  "checked": "2026-11-14",
+  "programs": [],
+  "neighbors": [
+    "伊那市",
+    "駒ヶ根市",
+    "上松町",
+    "木曽町"
+  ],
+  "history": [
+    {
+      "date": "2026-11-14",
+      "note": "ページを公開しました。"
+    }
+  ]
+}

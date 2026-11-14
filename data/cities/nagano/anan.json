@@ -1,0 +1,21 @@
+{
+  "pref": "長野県",
+  "prefSlug": "nagano",
+  "name": "阿南町",
+  "slug": "anan",
+  "kana": "あなんちょう",
+  "checked": "2026-11-14",
+  "programs": [],
+  "neighbors": [
+    "阿智村",
+    "平谷村",
+    "下條村",
+    "売木村",
+    "天龍村",
+    "泰阜村",
+    { "name": "豊根村", "prefSlug": "aichi" }
+  ],
+  "history": [
+    { "date": "2026-11-14", "note": "ページを公開しました。" }
+  ]
+}
