@@ -1,0 +1,156 @@
+{
+  "pref": "新潟県",
+  "prefSlug": "niigata",
+  "cities": [
+    {
+      "name": "新潟市",
+      "slug": "niigata",
+      "status": "done"
+    },
+    {
+      "name": "長岡市",
+      "slug": "nagaoka",
+      "status": "done"
+    },
+    {
+      "name": "三条市",
+      "slug": "sanjo",
+      "status": "done"
+    },
+    {
+      "name": "柏崎市",
+      "slug": "kashiwazaki",
+      "status": "done"
+    },
+    {
+      "name": "新発田市",
+      "slug": "shibata",
+      "status": "done"
+    },
+    {
+      "name": "小千谷市",
+      "slug": "ojiya",
+      "status": "todo"
+    },
+    {
+      "name": "加茂市",
+      "slug": "kamo",
+      "status": "todo"
+    },
+    {
+      "name": "十日町市",
+      "slug": "tokamachi",
+      "status": "todo"
+    },
+    {
+      "name": "見附市",
+      "slug": "mitsuke",
+      "status": "todo"
+    },
+    {
+      "name": "村上市",
+      "slug": "murakami",
+      "status": "todo"
+    },
+    {
+      "name": "燕市",
+      "slug": "tsubame",
+      "status": "todo"
+    },
+    {
+      "name": "糸魚川市",
+      "slug": "itoigawa",
+      "status": "todo"
+    },
+    {
+      "name": "妙高市",
+      "slug": "myoko",
+      "status": "todo"
+    },
+    {
+      "name": "五泉市",
+      "slug": "gosen",
+      "status": "todo"
+    },
+    {
+      "name": "上越市",
+      "slug": "joetsu",
+      "status": "todo"
+    },
+    {
+      "name": "阿賀野市",
+      "slug": "agano",
+      "status": "todo"
+    },
+    {
+      "name": "佐渡市",
+      "slug": "sado",
+      "status": "todo"
+    },
+    {
+      "name": "魚沼市",
+      "slug": "uonuma",
+      "status": "todo"
+    },
+    {
+      "name": "南魚沼市",
+      "slug": "minamiuonuma",
+      "status": "todo"
+    },
+    {
+      "name": "胎内市",
+      "slug": "tainai",
+      "status": "todo"
+    },
+    {
+      "name": "聖籠町",
+      "slug": "seiro",
+      "status": "todo"
+    },
+    {
+      "name": "弥彦村",
+      "slug": "yahiko",
+      "status": "todo"
+    },
+    {
+      "name": "田上町",
+      "slug": "tagami",
+      "status": "todo"
+    },
+    {
+      "name": "阿賀町",
+      "slug": "aga",
+      "status": "todo"
+    },
+    {
+      "name": "出雲崎町",
+      "slug": "izumozaki",
+      "status": "todo"
+    },
+    {
+      "name": "湯沢町",
+      "slug": "yuzawa",
+      "status": "todo"
+    },
+    {
+      "name": "津南町",
+      "slug": "tsunan",
+      "status": "todo"
+    },
+    {
+      "name": "刈羽村",
+      "slug": "kariwa",
+      "status": "todo"
+    },
+    {
+      "name": "関川村",
+      "slug": "sekikawa",
+      "status": "todo"
+    },
+    {
+      "name": "粟島浦村",
+      "slug": "awashimaura",
+      "status": "todo"
+    }
+  ]
+}
