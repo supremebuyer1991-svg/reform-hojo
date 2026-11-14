@@ -130,27 +130,27 @@
     {
       "name": "湯沢町",
       "slug": "yuzawa",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "津南町",
       "slug": "tsunan",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "刈羽村",
       "slug": "kariwa",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "関川村",
       "slug": "sekikawa",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "粟島浦村",
       "slug": "awashimaura",
-      "status": "todo"
+      "status": "done"
     }
   ]
 }

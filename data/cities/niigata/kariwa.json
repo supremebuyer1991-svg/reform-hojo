@@ -1,0 +1,19 @@
+{
+  "pref": "新潟県",
+  "prefSlug": "niigata",
+  "name": "刈羽村",
+  "slug": "kariwa",
+  "kana": "かりわむら",
+  "checked": "2026-11-14",
+  "programs": [],
+  "neighbors": [
+    "柏崎市",
+    "長岡市"
+  ],
+  "history": [
+    {
+      "date": "2026-11-14",
+      "note": "ページを公開しました。"
+    }
+  ]
+}
