@@ -1,0 +1,121 @@
+{
+  "pref": "広島県",
+  "prefSlug": "hiroshima",
+  "cities": [
+    {
+      "name": "広島市",
+      "slug": "hiroshima-shi",
+      "status": "done"
+    },
+    {
+      "name": "呉市",
+      "slug": "kure",
+      "status": "done"
+    },
+    {
+      "name": "竹原市",
+      "slug": "takehara",
+      "status": "done"
+    },
+    {
+      "name": "三原市",
+      "slug": "mihara",
+      "status": "done"
+    },
+    {
+      "name": "尾道市",
+      "slug": "onomichi",
+      "status": "done"
+    },
+    {
+      "name": "福山市",
+      "slug": "fukuyama",
+      "status": "done"
+    },
+    {
+      "name": "府中市",
+      "slug": "fuchu-shi",
+      "status": "done"
+    },
+    {
+      "name": "三次市",
+      "slug": "miyoshi",
+      "status": "todo"
+    },
+    {
+      "name": "庄原市",
+      "slug": "shobara",
+      "status": "todo"
+    },
+    {
+      "name": "大竹市",
+      "slug": "otake",
+      "status": "todo"
+    },
+    {
+      "name": "東広島市",
+      "slug": "higashihiroshima",
+      "status": "todo"
+    },
+    {
+      "name": "廿日市市",
+      "slug": "hatsukaichi",
+      "status": "todo"
+    },
+    {
+      "name": "安芸高田市",
+      "slug": "akitakata",
+      "status": "todo"
+    },
+    {
+      "name": "江田島市",
+      "slug": "etajima",
+      "status": "todo"
+    },
+    {
+      "name": "府中町",
+      "slug": "fuchu-cho",
+      "status": "todo"
+    },
+    {
+      "name": "海田町",
+      "slug": "kaita",
+      "status": "todo"
+    },
+    {
+      "name": "熊野町",
+      "slug": "kumano",
+      "status": "todo"
+    },
+    {
+      "name": "坂町",
+      "slug": "saka",
+      "status": "todo"
+    },
+    {
+      "name": "安芸太田町",
+      "slug": "akiota",
+      "status": "todo"
+    },
+    {
+      "name": "北広島町",
+      "slug": "kitahiroshima",
+      "status": "todo"
+    },
+    {
+      "name": "大崎上島町",
+      "slug": "osakikamijima",
+      "status": "todo"
+    },
+    {
+      "name": "世羅町",
+      "slug": "sera",
+      "status": "todo"
+    },
+    {
+      "name": "神石高原町",
+      "slug": "jinsekikogen",
+      "status": "todo"
+    }
+  ]
+}

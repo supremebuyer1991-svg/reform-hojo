@@ -180,7 +180,7 @@
     {
       "name": "東海村",
       "slug": "tokai",
-      "status": "recheck"
+      "status": "done"
     },
     {
       "name": "大子町",
@@ -195,7 +195,7 @@
     {
       "name": "阿見町",
       "slug": "ami",
-      "status": "recheck"
+      "status": "done"
     },
     {
       "name": "河内町",
@@ -210,7 +210,7 @@
     {
       "name": "五霞町",
       "slug": "goka",
-      "status": "recheck"
+      "status": "done"
     },
     {
       "name": "境町",
