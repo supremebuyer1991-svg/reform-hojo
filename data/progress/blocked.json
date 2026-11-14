@@ -546,6 +546,90 @@
       "what": "町の公式サイトのトップ（robotsで拒否）",
       "url": "https://www.town.tomamae.lg.jp/",
       "date": "2026-11-14"
+    },
+    {
+      "pref": "hokkaido",
+      "city": "名寄市",
+      "what": "名寄市ずっと住まいる応援事業（httpsからhttpへの転送で開けない）",
+      "url": "http://www.city.nayoro.lg.jp/section/eigyou/prkeql0000038ox3.html",
+      "date": "2026-11-14"
+    },
+    {
+      "pref": "hokkaido",
+      "city": "名寄市",
+      "what": "ずっと住まいる応援事業 申請の手引きPDF",
+      "url": "http://www.city.nayoro.lg.jp/section/eigyou/prkeql0000038ox3-att/prkeql0000038p9j.pdf",
+      "date": "2026-11-14"
+    },
+    {
+      "pref": "hokkaido",
+      "city": "名寄市",
+      "what": "無料耐震診断の実施",
+      "url": "http://www.city.nayoro.lg.jp/section/kenchiku/vdh2d10000009s7p.html",
+      "date": "2026-11-14"
+    },
+    {
+      "pref": "hokkaido",
+      "city": "池田町",
+      "what": "町の公式サイト全体（robotsで拒否）",
+      "url": "https://www.town.ikeda.hokkaido.jp/",
+      "date": "2026-11-14"
+    },
+    {
+      "pref": "hokkaido",
+      "city": "浦河町",
+      "what": "住宅新築リフォーム等支援補助事業（町のサイトが2026-10-22から一時停止）",
+      "url": "https://www.town.urakawa.hokkaido.jp/gyosei/life/?content=86",
+      "date": "2026-11-14"
+    },
+    {
+      "pref": "hokkaido",
+      "city": "釧路町",
+      "what": "住宅リフォーム・耐震化等に係る助成（httpsからhttpへの転送で開けない）",
+      "url": "http://www.town.kushiro.lg.jp/living-guide/41103/00016/260526590311.html",
+      "date": "2026-11-14"
+    },
+    {
+      "pref": "hokkaido",
+      "city": "釧路町",
+      "what": "住宅リフォーム・耐震化等助成金交付要綱（例規集）",
+      "url": "https://www1.g-reiki.net/town.kushiro/reiki_honbun/a203RG00000698.html",
+      "date": "2026-11-14"
+    },
+    {
+      "pref": "hokkaido",
+      "city": "黒松内町",
+      "what": "太陽光発電システム導入補助金のご案内（お知らせブログ）",
+      "url": "http://kuromatsunai-news.sblo.jp/article/188785771.html",
+      "date": "2026-11-14"
+    },
+    {
+      "pref": "hokkaido",
+      "city": "枝幸町",
+      "what": "住まいの省エネ等リフォーム支援事業 制度ページ",
+      "url": "https://www.esashi.jp/life/house/support/jyuutakusien.html",
+      "date": "2026-11-14"
+    },
+    {
+      "pref": "hokkaido",
+      "city": "共和町",
+      "what": "定住促進住宅取得等補助金（今の制度）",
+      "url": "https://www.town.kyowa.hokkaido.jp/life/?content=1716",
+      "date": "2026-11-14"
+    },
+    {
+      "pref": "hokkaido",
+      "city": "上川町",
+      "what": "住宅リフォーム等補助金 案内PDF（表の文字が崩れて読めない）",
+      "url": "https://www.town.hokkaido-kamikawa.lg.jp/section/kensetsusuidou/d57c9r0000000wah.html",
+      "date": "2026-11-14"
+    },
+    {
+      "pref": "hokkaido",
+      "city": "岩内町",
+      "what": "リフォーム補助の概要PDF（古い資料）",
+      "url": "https://town.iwanai.hokkaido.jp/wp-content/uploads/2017/07/補助概要（リフォーム）.pdf",
+      "date": "2026-11-14"
     }
   ]
 }
