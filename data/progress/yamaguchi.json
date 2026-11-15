@@ -1,0 +1,101 @@
+{
+  "pref": "山口県",
+  "prefSlug": "yamaguchi",
+  "cities": [
+    {
+      "name": "下関市",
+      "slug": "shimonoseki",
+      "status": "done"
+    },
+    {
+      "name": "宇部市",
+      "slug": "ube",
+      "status": "done"
+    },
+    {
+      "name": "山口市",
+      "slug": "yamaguchi-shi",
+      "status": "done"
+    },
+    {
+      "name": "萩市",
+      "slug": "hagi",
+      "status": "done"
+    },
+    {
+      "name": "防府市",
+      "slug": "hofu",
+      "status": "done"
+    },
+    {
+      "name": "下松市",
+      "slug": "kudamatsu",
+      "status": "done"
+    },
+    {
+      "name": "岩国市",
+      "slug": "iwakuni",
+      "status": "done"
+    },
+    {
+      "name": "光市",
+      "slug": "hikari",
+      "status": "done"
+    },
+    {
+      "name": "長門市",
+      "slug": "nagato",
+      "status": "done"
+    },
+    {
+      "name": "柳井市",
+      "slug": "yanai",
+      "status": "done"
+    },
+    {
+      "name": "美祢市",
+      "slug": "mine",
+      "status": "done"
+    },
+    {
+      "name": "周南市",
+      "slug": "shunan",
+      "status": "done"
+    },
+    {
+      "name": "山陽小野田市",
+      "slug": "sanyoonoda",
+      "status": "done"
+    },
+    {
+      "name": "周防大島町",
+      "slug": "suooshima",
+      "status": "done"
+    },
+    {
+      "name": "和木町",
+      "slug": "waki",
+      "status": "done"
+    },
+    {
+      "name": "上関町",
+      "slug": "kaminoseki",
+      "status": "done"
+    },
+    {
+      "name": "田布施町",
+      "slug": "tabuse",
+      "status": "done"
+    },
+    {
+      "name": "平生町",
+      "slug": "hirao",
+      "status": "done"
+    },
+    {
+      "name": "阿武町",
+      "slug": "abu",
+      "status": "done"
+    }
+  ]
+}
