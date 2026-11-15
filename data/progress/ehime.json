@@ -1,0 +1,106 @@
+{
+  "pref": "愛媛県",
+  "prefSlug": "ehime",
+  "cities": [
+    {
+      "name": "松山市",
+      "slug": "matsuyama",
+      "status": "todo"
+    },
+    {
+      "name": "今治市",
+      "slug": "imabari",
+      "status": "todo"
+    },
+    {
+      "name": "宇和島市",
+      "slug": "uwajima",
+      "status": "todo"
+    },
+    {
+      "name": "八幡浜市",
+      "slug": "yawatahama",
+      "status": "todo"
+    },
+    {
+      "name": "新居浜市",
+      "slug": "niihama",
+      "status": "todo"
+    },
+    {
+      "name": "西条市",
+      "slug": "saijo",
+      "status": "todo"
+    },
+    {
+      "name": "大洲市",
+      "slug": "ozu",
+      "status": "todo"
+    },
+    {
+      "name": "伊予市",
+      "slug": "iyo",
+      "status": "todo"
+    },
+    {
+      "name": "四国中央市",
+      "slug": "shikokuchuo",
+      "status": "todo"
+    },
+    {
+      "name": "西予市",
+      "slug": "seiyo",
+      "status": "todo"
+    },
+    {
+      "name": "東温市",
+      "slug": "toon",
+      "status": "todo"
+    },
+    {
+      "name": "上島町",
+      "slug": "kamijima",
+      "status": "todo"
+    },
+    {
+      "name": "久万高原町",
+      "slug": "kumakogen",
+      "status": "todo"
+    },
+    {
+      "name": "松前町",
+      "slug": "masaki",
+      "status": "todo"
+    },
+    {
+      "name": "砥部町",
+      "slug": "tobe",
+      "status": "todo"
+    },
+    {
+      "name": "内子町",
+      "slug": "uchiko",
+      "status": "todo"
+    },
+    {
+      "name": "伊方町",
+      "slug": "ikata",
+      "status": "todo"
+    },
+    {
+      "name": "松野町",
+      "slug": "matsuno",
+      "status": "todo"
+    },
+    {
+      "name": "鬼北町",
+      "slug": "kihoku",
+      "status": "todo"
+    },
+    {
+      "name": "愛南町",
+      "slug": "ainan",
+      "status": "todo"
+    }
+  ]
+}
