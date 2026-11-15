@@ -1,0 +1,141 @@
+{
+  "pref": "岡山県",
+  "prefSlug": "okayama",
+  "cities": [
+    {
+      "name": "岡山市",
+      "slug": "okayama-shi",
+      "status": "done"
+    },
+    {
+      "name": "倉敷市",
+      "slug": "kurashiki",
+      "status": "todo"
+    },
+    {
+      "name": "津山市",
+      "slug": "tsuyama",
+      "status": "todo"
+    },
+    {
+      "name": "玉野市",
+      "slug": "tamano",
+      "status": "done"
+    },
+    {
+      "name": "笠岡市",
+      "slug": "kasaoka",
+      "status": "done"
+    },
+    {
+      "name": "井原市",
+      "slug": "ibara",
+      "status": "done"
+    },
+    {
+      "name": "総社市",
+      "slug": "soja",
+      "status": "done"
+    },
+    {
+      "name": "高梁市",
+      "slug": "takahashi",
+      "status": "done"
+    },
+    {
+      "name": "新見市",
+      "slug": "niimi",
+      "status": "done"
+    },
+    {
+      "name": "備前市",
+      "slug": "bizen",
+      "status": "done"
+    },
+    {
+      "name": "瀬戸内市",
+      "slug": "setouchi",
+      "status": "todo"
+    },
+    {
+      "name": "赤磐市",
+      "slug": "akaiwa",
+      "status": "todo"
+    },
+    {
+      "name": "真庭市",
+      "slug": "maniwa",
+      "status": "todo"
+    },
+    {
+      "name": "美作市",
+      "slug": "mimasaka",
+      "status": "todo"
+    },
+    {
+      "name": "浅口市",
+      "slug": "asakuchi",
+      "status": "todo"
+    },
+    {
+      "name": "和気町",
+      "slug": "wake",
+      "status": "todo"
+    },
+    {
+      "name": "早島町",
+      "slug": "hayashima",
+      "status": "todo"
+    },
+    {
+      "name": "里庄町",
+      "slug": "satosho",
+      "status": "todo"
+    },
+    {
+      "name": "矢掛町",
+      "slug": "yakage",
+      "status": "todo"
+    },
+    {
+      "name": "新庄村",
+      "slug": "shinjo",
+      "status": "todo"
+    },
+    {
+      "name": "鏡野町",
+      "slug": "kagamino",
+      "status": "todo"
+    },
+    {
+      "name": "勝央町",
+      "slug": "shoo",
+      "status": "todo"
+    },
+    {
+      "name": "奈義町",
+      "slug": "nagi",
+      "status": "todo"
+    },
+    {
+      "name": "西粟倉村",
+      "slug": "nishiawakura",
+      "status": "todo"
+    },
+    {
+      "name": "久米南町",
+      "slug": "kumenan",
+      "status": "todo"
+    },
+    {
+      "name": "美咲町",
+      "slug": "misaki",
+      "status": "todo"
+    },
+    {
+      "name": "吉備中央町",
+      "slug": "kibichuo",
+      "status": "todo"
+    }
+  ]
+}
