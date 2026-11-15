@@ -5,127 +5,127 @@
     {
       "name": "宇都宮市",
       "slug": "utsunomiya",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "足利市",
       "slug": "ashikaga",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "栃木市",
       "slug": "tochigi-shi",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "佐野市",
       "slug": "sano",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "鹿沼市",
       "slug": "kanuma",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "日光市",
       "slug": "nikko",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "小山市",
       "slug": "oyama",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "真岡市",
       "slug": "moka",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "大田原市",
       "slug": "otawara",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "矢板市",
       "slug": "yaita",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "那須塩原市",
       "slug": "nasushiobara",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "さくら市",
       "slug": "sakura",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "那須烏山市",
       "slug": "nasukarasuyama",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "下野市",
       "slug": "shimotsuke",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "上三川町",
       "slug": "kaminokawa",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "益子町",
       "slug": "mashiko",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "茂木町",
       "slug": "motegi",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "市貝町",
       "slug": "ichikai",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "芳賀町",
       "slug": "haga",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "壬生町",
       "slug": "mibu",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "野木町",
       "slug": "nogi",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "塩谷町",
       "slug": "shioya",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "高根沢町",
       "slug": "takanezawa",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "那須町",
       "slug": "nasu",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "那珂川町",
       "slug": "nakagawa",
-      "status": "todo"
+      "status": "done"
     }
   ]
 }
