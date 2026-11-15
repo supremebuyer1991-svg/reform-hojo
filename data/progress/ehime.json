@@ -55,52 +55,52 @@
     {
       "name": "東温市",
       "slug": "toon",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "上島町",
       "slug": "kamijima",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "久万高原町",
       "slug": "kumakogen",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "松前町",
       "slug": "masaki",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "砥部町",
       "slug": "tobe",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "内子町",
       "slug": "uchiko",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "伊方町",
       "slug": "ikata",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "松野町",
       "slug": "matsuno",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "鬼北町",
       "slug": "kihoku",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "愛南町",
       "slug": "ainan",
-      "status": "todo"
+      "status": "done"
     }
   ]
 }
