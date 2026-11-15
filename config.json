@@ -5,15 +5,63 @@
   "affiliates": {
     "_memo": "広告リンクの設定。書き方は README.md の「広告リンクの設定」。url が空のサービスは、サイトに出ません。",
     "general": [
-      { "name": "リショップナビ", "url": "", "impUrl": "", "label": "", "note": "" },
-      { "name": "ハピすむ", "url": "", "impUrl": "", "label": "", "note": "" }
+      {
+        "name": "リショップナビ",
+        "url": "",
+        "impUrl": "",
+        "label": "",
+        "note": ""
+      },
+      {
+        "name": "ハピすむ",
+        "url": "",
+        "impUrl": "",
+        "label": "",
+        "note": ""
+      }
     ],
-    "yane": { "name": "外壁塗装セレクトナビ", "url": "", "impUrl": "", "label": "", "note": "" },
-    "mado": { "name": "", "url": "", "impUrl": "", "label": "", "note": "" },
-    "kyuto": { "name": "", "url": "", "impUrl": "", "label": "", "note": "" },
-    "taiyo": { "name": "", "url": "", "impUrl": "", "label": "", "note": "" },
-    "taishin": { "name": "", "url": "", "impUrl": "", "label": "", "note": "" },
-    "mizu": { "name": "", "url": "", "impUrl": "", "label": "", "note": "" }
+    "yane": {
+      "name": "外壁塗装セレクトナビ",
+      "url": "",
+      "impUrl": "",
+      "label": "",
+      "note": ""
+    },
+    "mado": {
+      "name": "",
+      "url": "",
+      "impUrl": "",
+      "label": "",
+      "note": ""
+    },
+    "kyuto": {
+      "name": "",
+      "url": "",
+      "impUrl": "",
+      "label": "",
+      "note": ""
+    },
+    "taiyo": {
+      "name": "タイナビ",
+      "url": "https://px.a8.net/svt/ejp?a8mat=4BGLS5+8RJS62+2AG2+5ZEMQ",
+      "impUrl": "https://www14.a8.net/0.gif?a8mat=4BGLS5+8RJS62+2AG2+5ZEMQ",
+      "label": "",
+      "note": "A8.net 太陽光発電の一括無料見積り【タイナビ】（2026-11-15 提携）"
+    },
+    "taishin": {
+      "name": "",
+      "url": "",
+      "impUrl": "",
+      "label": "",
+      "note": ""
+    },
+    "mizu": {
+      "name": "",
+      "url": "",
+      "impUrl": "",
+      "label": "",
+      "note": ""
+    }
   },
   "fiscalYear": "auto",
   "operator": {
