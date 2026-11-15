@@ -8,7 +8,7 @@ const path = require('path');
 const ROOT = __dirname;
 const DIST = path.join(ROOT, 'dist');
 const readJson = (f) => JSON.parse(fs.readFileSync(f, 'utf8'));
-const config = readJson(path.join(ROOT, 'config.json'));
+const config = readJson(process.env.CONFIG || path.join(ROOT, 'config.json')); // CONFIG=別のファイル node build.js で、設定を差し替えて試せる
 const national = readJson(path.join(ROOT, 'data', 'national.json'));
 const progress = readJson(path.join(ROOT, 'data', 'progress.json'));
 
@@ -87,7 +87,123 @@ const kuniSrc = (p) => path.join(ROOT, 'src', 'kuni', `${p.slug}.html`);
 // 国の制度ページ：src/kuni/<slug>.html があればそれを使い、無くても national.json に summary と source があればデータから自動で作る
 const hasKuniPage = (p) => !!p.slug && (fs.existsSync(kuniSrc(p)) || !!(p.summary && p.source));
 const kuniHref = (p) => (hasKuniPage(p) ? `/kuni/${p.slug}/` : null);
-const affHref = () => config.affiliateUrl || '#mitsumori';
+// ---- 広告（見積もりサービスへのリンク） ----
+// config.json の affiliates に、枠ごとにサービスを書く。枠は general（全般）と工事ID（mado / kyuto / taiyo / taishin / mizu / yane）。
+// 1つの枠に2つ書くときは配列にする（1つ目が主のボタン）。工事の枠が空なら general のサービスを出し、general も空なら広告は何も出ない。
+// 書き方は README.md の「広告リンクの設定」。
+const AFF_KIND = { general: 'リフォーム全般', mado: '窓・断熱', kyuto: '給湯器・エコキュート', taiyo: '太陽光・蓄電池', taishin: '耐震', mizu: 'お風呂・トイレ・キッチン', yane: '外壁塗装・屋根' };
+const AFF_ALIAS = { gaiheki: 'yane', tosou: 'yane', reform: 'general', all: 'general' };
+const AFF = (() => {
+  const out = {};
+  const okUrl = (u) => /^https?:\/\/[^\s"'<>]+$/.test(u);
+  const unAmp = (u) => String(u || '').trim().replace(/&amp;/g, '&');
+  for (const [k0, v] of Object.entries(config.affiliates || {})) {
+    if (k0.startsWith('_')) continue; // 「_」で始まる項目はメモ
+    const slot = AFF_ALIAS[k0] || k0;
+    if (!AFF_KIND[slot]) { warnings.push(`config.json: affiliates に知らない枠「${k0}」があります（使える枠：${Object.keys(AFF_KIND).join(' / ')}）`); continue; }
+    for (const o of Array.isArray(v) ? v : [v]) {
+      if (!o || typeof o !== 'object') continue;
+      let url = unAmp(o.url); let impUrl = unAmp(o.impUrl);
+      // code：ASPの広告コード（HTML）をそのまま貼った場合。リンク先と、1ピクセルの画像のアドレスを取り出す。
+      const code = String(o.code || '');
+      if (code && !url) url = unAmp((code.match(/<a\b[^>]*?\bhref\s*=\s*["']([^"']+)["']/i) || [])[1]);
+      if (code && !impUrl) impUrl = unAmp(((code.match(/<img\b[^>]*>/gi) || []).filter((t) => /width\s*=\s*["']?1["'\s>]/i.test(t) && /height\s*=\s*["']?1["'\s>]/i.test(t)).map((t) => (t.match(/\bsrc\s*=\s*["']([^"']+)["']/i) || [])[1])[0]) || '');
+      if (!url) continue; // まだ貼っていない枠
+      if (!okUrl(url)) { warnings.push(`config.json: affiliates.${k0} の url が https:// で始まるアドレスではないため、使いませんでした`); continue; }
+      if (impUrl && !okUrl(impUrl)) { warnings.push(`config.json: affiliates.${k0} の impUrl が正しいアドレスではないため、使いませんでした`); impUrl = ''; }
+      (out[slot] = out[slot] || []).push({ slot, url, impUrl, name: String(o.name || '').trim(), label: String(o.label || '').trim(), note: String(o.note || '').trim() });
+    }
+  }
+  // 前の書き方（affiliateUrl にアドレスを1つ）も、そのまま使える
+  if (!out.general && /^https?:\/\//.test(config.affiliateUrl || '')) out.general = [{ slot: 'general', url: config.affiliateUrl.trim(), impUrl: '', name: '', label: '', note: '' }];
+  return out;
+})();
+const affOffers = (slot) => (AFF[slot] && AFF[slot].length ? AFF[slot] : AFF.general || []);
+// 工事IDの並びから、専用のサービスがある最初の枠をえらぶ（無ければ全般）
+const slotFor = (cats) => (cats || []).find((id) => AFF[id] && AFF[id].length) || 'general';
+// 広告のリンク。data-aff（どの枠のサービスか）と data-pos（ページのどこか）は、あとでクリックを数えたくなったときの目印。
+const affA = (o, pos, cls, inner) => `<a class="${cls}" href="${esc(o.url)}" target="_blank" rel="sponsored nofollow noopener" data-aff="${o.slot}" data-pos="${pos}"${o.impUrl ? ` data-imp="${esc(o.impUrl)}"` : ''}>${inner}</a>`;
+const affTo = (o) => `<p class="aff-to">${o.name ? `提携先：<b>${esc(o.name)}</b>` : '外部の見積もりサービス'}<i>（別のタブで開きます）</i>${o.note ? `<span>${esc(o.note)}</span>` : ''}</p>`;
+const PR_TAG = '<span class="pr">広告・PR</span>';
+const MITSU_SLUG = 'mitsumori-service';
+const MITSU_GUIDE = fs.existsSync(path.join(ROOT, 'src', 'guide', `${MITSU_SLUG}.html`)) ? `/guide/${MITSU_SLUG}/` : '';
+const CTA_TIPS = ['見積もりの依頼は無料（外部のサービスが開きます）', '最初に「補助金を使いたい」と伝える', '工事の前に申請する制度は、交付決定まで契約・着工しない'];
+
+// ページの終わりのほうに置く、見積もりの案内（広告）。サービスが設定されていなければ何も出さない。
+function ctaBlock(heading, button, opt) {
+  const o2 = opt || {};
+  const [a, b] = affOffers(o2.slot || 'general');
+  if (!a) return '';
+  return `<section id="mitsumori" class="cta" aria-labelledby="h-cta">
+<div class="l">${PR_TAG}
+<h2 id="h-cta">${heading}</h2>
+<ul class="checks">${(o2.tips || CTA_TIPS).map((t) => `<li>${svgCheck('var(--accent)')}<span>${esc(t)}</span></li>`).join('')}</ul></div>
+<div class="r">${affA(a, 'end', 'btn-shu', `${esc(a.label || button)} ${svgArrow}`)}
+${affTo(a)}
+${b && b.name ? affA(b, 'end2', 'btn-sub', `${esc(b.label || `${b.name}でも見積もりを頼む`)}<span class="pr-in">PR</span>`) : ''}
+${MITSU_GUIDE && !o2.self ? `<a class="cta-how" href="${MITSU_GUIDE}">一括見積もりのしくみと、頼む前の注意</a>` : ''}</div>
+</section>`;
+}
+// その制度たちから、見積もりについて言えること（すべてデータから。progs は受付が終わっていない制度）
+// subject: 「◯◯の制度のうち」の◯◯ / tell: 業者に伝える言葉（「◯◯を使いたい」） / cat: 工事を1つに決めているページならその工事
+function quoteAdvice(progs, subject, tell, cat) {
+  const bef = progs.filter((p) => p.timing === 'before');
+  const aft = progs.filter((p) => p.timing === 'after');
+  const needQ = bef.filter((p) => (p.docs || []).some((d) => /見積/.test(d)));
+  // 「業者の条件は書かれていません」のような書き方の制度は、条件ありに数えない
+  const con = progs.filter((p) => p.contractor && !/書かれていません|記載(は|が)?(なし|ありません|なく)|(条件|制限|指定)(は|が)?(なし|ありません|ない)|問いません|問わない|どの業者でも/.test(p.contractor));
+  const tellText = cat ? '市区町村の補助金' : `${tell}の補助金`;
+  const title = needQ.length ? '申請の前に、見積書をそろえる' : bef.length ? '契約・着工の前に、見積もりと申請を' : aft.length ? '対象の工事・機種かを、見積もりで確かめる' : '対象の工事かを、見積もりで確かめる';
+  const bar = needQ.length ? '申請に見積書が要る制度があります' : bef.length ? '契約・着工の前に、まず見積もり' : aft.length ? '対象の工事・機種かを見積もりで確認' : '';
+  const lines = [];
+  if (bef.length) lines.push(`${subject}の制度のうち${bef.length}件は、工事の前に申請が必要です。${needQ.length ? `そのうち${needQ.length}件は、申請に出す書類に見積書が入っています。` : ''}交付決定の前に契約や着工をすると、対象外になります。`);
+  else if (aft.length) lines.push(`${subject}の制度のうち${aft.length}件は、工事（設置）が終わってから申請します。対象の機種・工事かどうかは、契約の前に確かめておきましょう。`);
+  if (cat && cat.id === 'taishin') lines.push('耐震の補助は、耐震診断から始まるのがふつうです。改修工事の見積もりは、診断の結果が出てから頼みましょう。');
+  if (con.length) lines.push(`${con.length}件は、頼める業者に条件があります（各制度の「業者の条件」）。見積もりを頼む会社が条件に合うかを、先に確かめてください。`);
+  lines.push(`見積もりを頼むときに「${tellText}を使いたい」と伝えると、対象の工事かどうかを確かめやすくなります。`);
+  const tips = [CTA_TIPS[0], `最初に「${tellText}を使いたい」と伝える`, bef.length ? CTA_TIPS[2] : aft.length ? '対象の機種・工事かを、契約の前に確かめる' : '頼める業者に条件がないか、制度の欄で確かめる'];
+  return { title, bar, lines, tips, hero: needQ.length ? '申請の前に、無料で見積もりを頼む' : '無料で見積もりを頼む' };
+}
+// 要点のすぐ下に置く「次にすること」（文はデータから。ボタンだけが広告）
+function nextBox(adv, slot, pos) {
+  const o = affOffers(slot)[0];
+  if (!o) return '';
+  return `<aside class="next" aria-label="次にすること（広告のリンクをふくみます）"><div class="next-tx"><p class="next-k">次にすること</p><p class="next-t">${esc(adv.title)}</p><ul>${adv.lines.map((t) => `<li>${esc(t)}</li>`).join('')}</ul></div>
+<div class="next-btn">${PR_TAG}${affA(o, pos, 'btn-shu', `${esc(o.label || '無料で見積もりを頼む')} ${svgArrow}`)}${affTo(o)}</div></aside>`;
+}
+// 市区町村ページの「工事から探す」の、工事ごとの欄の下。その工事に合うサービスがあればそれを、無ければ全般のサービスを出す。
+const PANEL_BTN = { mado: '窓・断熱の見積もりを無料で頼む', kyuto: '給湯器の見積もりを無料で頼む', taiyo: '太陽光・蓄電池の見積もりを無料で頼む', taishin: '耐震の工事の見積もりを無料で頼む', mizu: '水まわりの見積もりを無料で頼む', yane: '外壁・屋根の見積もりを無料で頼む' };
+function panelFoot(cat, liveIn, cityName) {
+  const bef = liveIn.filter((p) => p.timing === 'before');
+  const aft = liveIn.filter((p) => p.timing === 'after');
+  const needQ = bef.filter((p) => (p.docs || []).some((d) => /見積/.test(d)));
+  const qn = (p) => `「${p.name}」`;
+  const o = affOffers(cat.id)[0];
+  const msg = cat.id === 'taishin' && liveIn.length ? '耐震の補助は、耐震診断から始まるのがふつうです。改修工事の見積もりは、診断の結果が出てから頼みましょう。'
+    : needQ.length ? `${qn(needQ[0])}は工事の前に申請し、申請の書類に見積書が入っています。契約・着工の前に、見積書をそろえましょう。`
+      : bef.length ? `${qn(bef[0])}は、工事の前に申請が必要です。契約・着工の前に、見積もりをとって申請しましょう。`
+        : aft.length ? `${qn(aft[0])}は、工事（設置）のあとに申請します。対象の機種・工事かどうかを、見積もりのときに確かめましょう。`
+          : !liveIn.length && natActive().some((p) => p.cats.includes(cat.id)) ? '国の制度は、登録された事業者が申請します。見積もりのときに、登録事業者かどうかを確かめましょう。'
+            : liveIn.length ? `自分の家の工事が対象になるかは、見積もりのときに「${cityName}の補助金を使いたい」と伝えて確かめましょう。`
+              : o ? `${cityName}の制度が見つかっていない工事でも、見積もりは無料で頼めます。` : '自分の家の工事が対象になるかは、契約の前に、窓口や見積もりをとる業者に確かめましょう。';
+  return `<div class="result-foot"><span>${esc(msg)}</span>${o ? `<span class="rf-a"><span class="pr">PR</span>${affA(o, `panel-${cat.id}`, 'rf-btn', `${esc(o.label || (o.slot === cat.id ? PANEL_BTN[cat.id] : 'リフォームの見積もりを無料で頼む'))} →`)}</span>` : ''}</div>`;
+}
+// スマホの画面の下に出る細い帯（少し読み進めてから出る。閉じられる。ページの終わりの案内が見えている間は隠れる）
+const SBAR_JS = "(function(){var b=document.getElementById('sbar');if(!b)return;try{if(sessionStorage.getItem('sbar')==='x'){b.parentNode.removeChild(b);return}}catch(e){}var c=document.getElementById('mitsumori'),n=false;function u(){b.classList.toggle('on',window.pageYOffset>700&&!n)}if(c&&'IntersectionObserver' in window)new IntersectionObserver(function(e){n=e[0].isIntersecting;u()}).observe(c);window.addEventListener('scroll',u,{passive:true});u();b.querySelector('button').addEventListener('click',function(){b.parentNode.removeChild(b);document.body.classList.remove('has-sbar');try{sessionStorage.setItem('sbar','x')}catch(e){}})})();";
+function stickyBar(slot, text) {
+  const o = affOffers(slot)[0];
+  if (!o) return '';
+  return `<div id="sbar" class="sbar" role="complementary" aria-label="見積もりの案内（広告）"><p><span class="pr">PR</span><span>${esc(text || '補助金を使うなら、契約の前に見積もり')}</span></p>${affA(o, 'bar', 'btn-shu', esc(o.label || '無料で見積もり'))}<button type="button" aria-label="この案内を閉じる">×</button></div>
+<script>${SBAR_JS}</script>`;
+}
+// 記事に差し込む、案内しているサービスの一覧（{{SERVICES}}）。順位はつけず、設定に書いた順に並べる。
+function servicesHtml() {
+  const seen = new Map();
+  for (const slot of Object.keys(AFF_KIND)) for (const o of AFF[slot] || []) { if (!seen.has(o.url)) seen.set(o.url, { o, slots: [] }); seen.get(o.url).slots.push(slot); }
+  if (!seen.size) return '<p>いまは、当サイトから案内している見積もりサービスはありません。案内を始めるときは、ここにサービスの名前を載せます。</p>';
+  return `<ul class="svc">${[...seen.values()].map(({ o, slots }) => `<li><p class="svc-h"><b>${esc(o.name || '見積もりサービス')}</b>${PR_TAG}</p><p class="svc-k">当サイトで案内している場面：${slots.map((s) => AFF_KIND[s]).join('、')}</p>${o.note ? `<p>${esc(o.note)}</p>` : ''}${affA(o, 'list', 'btn-line', `${esc(o.label || `${o.name || '公式サイト'}で見積もりを頼む`)} ${svgArrow}`)}</li>`).join('')}</ul>
+<p class="small muted">並び順は、順位やおすすめの順ではありません。サービスの内容・対応している地域・利用の条件は、それぞれの公式サイトでお確かめください。</p>`;
+}
 // 出典が公式（自治体・国）かどうか。データに sourceOfficial があればそれを優先する。
 const isOfficialUrl = (u) => { try { const h = new URL(u).hostname; return /\.(lg|go)\.jp$/.test(h) || /(^|\.)(city|town|vill|pref|metro)\.[a-z0-9.-]+\.jp$/.test(h); } catch (e) { return false; } };
 const isOfficial = (p) => (p.sourceOfficial != null ? !!p.sourceOfficial : isOfficialUrl(p.source));
@@ -193,7 +309,13 @@ const pageLd = ({ type, url, title, description, modified, published, extra }) =
 }, modified ? { dateModified: modified } : {}, published ? { datePublished: published } : {}, extra || {});
 
 // ---- 共通の外枠 ----
-function layout({ title, description, canonical, body, graph, noindex, hasCta, ogType }) {
+function layout({ title, description, canonical, body, graph, noindex, hasCta, ogType, slot, barText }) {
+  // 見積もりの案内（#mitsumori）が本文にあるページだけ、ヘッダーのボタンと、スマホの下の帯を出す
+  const cta = !!hasCta && body.includes('id="mitsumori"');
+  // 下の帯は、slot か barText を渡したページ（市区町村・都道府県×工事・国の制度・記事）だけ。トップや都道府県の一覧には出さない。
+  const bar = cta && (slot !== undefined || barText !== undefined) ? stickyBar(slot || 'general', barText) : '';
+  // 広告の表示回数を数えるための1ピクセル画像（A8.net など）。同じ広告は1ページに1回だけ。
+  const imps = [...new Set([...(body + bar).matchAll(/ data-imp="([^"]+)"/g)].map((m) => m[1]))];
   const ld = graph ? { '@context': 'https://schema.org', '@graph': [...baseGraph(), ...graph] } : null;
   return `<!doctype html>
 <html lang="ja">
@@ -225,30 +347,21 @@ ${config.googleSiteVerification ? `<meta name="google-site-verification" content
 <style>${CSS}</style>
 ${ld ? `<script type="application/ld+json">${JSON.stringify(ld).replace(/</g, '\\u003c')}</script>` : ''}
 </head>
-<body>
+<body${bar ? ' class="has-sbar"' : ''}>
 <header class="site-head"><div class="wrap">
 <a class="logo" href="/"><span class="logo-mark"><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg></span></span><span class="logo-text"><b>${esc(config.siteName)}</b><small>市区町村の補助金を、工事ごとにかんたん検索</small></span></a>
-${hasCta ? '<a class="btn-shu" href="#mitsumori">無料見積もり</a>' : '<a class="btn-head" href="/#h-pref">地域から探す</a>'}
+${cta ? '<a class="btn-shu" href="#mitsumori">無料見積もり<span class="pr-in">PR</span></a>' : '<a class="btn-head" href="/#h-pref">地域から探す</a>'}
 </div></header>
 ${body}
 <footer class="site-foot"><div class="wrap">
 <b>${esc(config.siteName)}</b>
 <p>金額・期間は変わることがあるため、申請前に必ず公式情報をご確認ください。</p>
-<p>当サイトはアフィリエイト広告（PR）を利用しています。</p>
+<p>当サイトはアフィリエイト広告（PR）を利用しています。「PR」「広告」と表示したリンクから見積もりの申し込みなどがあると、運営者に報酬が支払われることがあります。補助金の情報は、広告と関係なく掲載しています（<a href="/disclaimer/">広告について</a>）。</p>
 <nav class="foot-nav" aria-label="サイトの案内"><a href="/">トップ</a><a href="/#h-pref">都道府県から探す</a><a href="/kuni/">国の補助金</a><a href="/guide/">補助金の基礎知識</a><a href="/koushin/">更新履歴</a><a href="/about/">運営者情報</a><a href="/policy/">編集方針・情報の調べ方</a><a href="/disclaimer/">免責事項・広告について</a><a href="/privacy/">プライバシーポリシー</a><a href="/contact/">お問い合わせ</a></nav>
 </div></footer>
+${bar}${imps.length ? `<div class="imp" aria-hidden="true">${imps.map((u) => `<img src="${u}" width="1" height="1" alt="">`).join('')}</div>` : ''}
 </body>
 </html>`;
-}
-
-function ctaBlock(heading, button) {
-  return `<section id="mitsumori" class="cta" aria-labelledby="h-cta">
-<div class="l"><span class="pr">PR</span>
-<h2 id="h-cta">${heading}</h2>
-<ul class="checks"><li>${svgCheck('var(--accent)')}<span>補助金が使えるかも一緒に相談できる</span></li><li>${svgCheck('var(--accent)')}<span>複数社を比べて適正価格がわかる</span></li><li>${svgCheck('var(--accent)')}<span>断っても費用は0円</span></li></ul></div>
-<div class="r"><a class="btn-shu" href="${esc(affHref())}" rel="sponsored nofollow noopener">${button} ${svgArrow}</a>
-${config.affiliateUrl ? '' : '<p class="small muted" style="text-align:center">[アフィリエイトリンク未設定]</p>'}</div>
-</section>`;
 }
 
 // ---- 制度の状態 ----
@@ -415,7 +528,7 @@ function cityPage(city, ctx) {
     const nEndCat = inCat.filter((p) => stText(p).key === 'ended').length;
     const head = catHead(city.programs, c);
     const note = inCat.length ? `${city.name}の制度は${inCat.length}件${nOpenCat ? `（受付中${nOpenCat}件）` : nEndCat === inCat.length ? '（受付は終了）' : ''}。${words.length ? `対象に書かれている設備・工事：${words.join('、')}` : ''}` : '';
-    return { c, cityRows, prefRows, kuniRows, sum, cityNone, head, note };
+    return { c, cityRows, prefRows, kuniRows, sum, cityNone, head, note, foot: panelFoot(c, inCat.filter((p) => stText(p).key !== 'ended'), city.name) };
   });
   const first = (panels.find((x) => x.cityRows.length) || panels[0]).c.id;
   const catButtons = panels.map((x) => `<a class="cat" href="#${x.c.id}" data-cat="${x.c.id}"><span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="${x.c.icon}"/></svg></span><span class="tx"><b>${esc(x.c.name)}</b><small>${esc(x.sum)}</small></span><svg class="ck" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></a>`).join('');
@@ -425,7 +538,7 @@ ${x.note ? `<p class="result-sum">${esc(x.note)}</p>` : ''}
 ${x.prefRows.length ? `<div class="result-col"><div class="col-head"><span class="badge-city">${esc(city.pref.slice(-1))}</span>${esc(city.pref)}の制度</div>${rowsHtml(x.prefRows, '')}</div>` : ''}
 <div class="result-col"><div class="col-head"><span class="badge-kuni">国</span>国の制度（全国共通）</div>${rowsHtml(x.kuniRows, 'このページに掲載している国の制度には、該当するものがありません。')}</div></div>
 ${(() => { const g = guidesFor(ctx, x.c.id, 2); const pc = ctx.prefCatPages.has(`${city.prefSlug}/${x.c.id}`); return g.length || pc ? `<div class="result-guide"><span class="small muted" style="font-weight:700">あわせて見る</span>${g.map((y) => `<a href="${y.url}">${guideLabel(y)}</a>`).join('')}${pc ? `<a href="/${city.prefSlug}/${x.c.id}/">${esc(city.pref)}の市区町村で${esc(x.c.short)}の補助金を見比べる</a>` : ''}</div>` : ''; })()}
-<div class="result-foot"><span>自分の家の工事が対象になるかは、見積もりのときに確認できます。</span><a href="#mitsumori">無料の見積もりで確認する →</a></div></div>`).join('\n');
+${x.foot}</div>`).join('\n');
 
   // となりの市・同じ都道府県の市（Googleに出しているページだけにリンクする）
   const samePref = ctx.cities.filter((c) => c.prefSlug === city.prefSlug && indexable(c));
@@ -526,6 +639,7 @@ ${(() => { const g = guidesFor(ctx, x.c.id, 2); const pc = ctx.prefCatPages.has(
   const stale = (new Date(TODAY) - new Date(city.checked)) / 86400000 > 150;
   const history = (city.history || []).slice().sort((a, b) => (a.date < b.date ? 1 : -1));
 
+  const adv = quoteAdvice(live, city.name, city.name);
   const body = `<div class="hero"><div class="wrap">
 <div class="crumbs">${crumbHtml(crumbs)}${PR_NOTE}</div>
 <div class="hero-row"><div class="hero-main">
@@ -533,7 +647,7 @@ ${(() => { const g = guidesFor(ctx, x.c.id, 2); const pc = ctx.prefCatPages.has(
 <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:16px;padding-top:4px"><span class="small muted" style="font-weight:700;letter-spacing:.08em">${CFY}（${fyEra(cfy)}）版 ／ ${kind}と国の制度を1ページに</span>
 <h1><span style="display:block">${esc(city.name)}の</span><span class="ib">リフォーム${term1}・</span><span class="ib">${term2}まとめ<span class="yr">${CFY}</span></span></h1>
 <p style="color:var(--ink2);max-width:520px">${city.kana ? `${esc(city.name)}（${esc(city.kana)}）。` : ''}${esc(lead)}${city.lead ? esc(city.lead) : ''}</p></div></div>
-<div class="btn-row"><a class="btn-ink" href="#sagasu">やりたい工事から調べる</a><a class="btn-line" href="#mitsumori">補助金が使えるか無料で見積もり ${svgArrow}</a></div>
+<div class="btn-row"><a class="btn-ink" href="#sagasu">やりたい工事から調べる</a>${affOffers('general').length ? `<a class="btn-line" href="#mitsumori">${adv.hero} ${svgArrow}</a>` : ''}</div>
 </div>
 <div class="ledger">${stamp(city.checked)}<p class="small muted" style="font-weight:700;margin:0 96px 14px 0;letter-spacing:.06em">${esc(city.name)}のあらまし</p>
 <dl><div><dt>${kind}の制度</dt><span class="dots" aria-hidden="true"></span><dd>${n}<small>件</small></dd></div>
@@ -546,6 +660,7 @@ ${oldFy ? `<p class="small" style="color:var(--shu-d);font-weight:700">このペ
 <main class="wrap">
 ${points.length ? `<section id="youten" aria-labelledby="h-youten">${secHead('h-youten', `${esc(city.name)}のリフォーム${term}の要点`, `${era}・${timeTag(city.checked)}時点`)}
 <ul class="sum">${points.map((t) => `<li>${esc(t)}</li>`).join('')}</ul>
+${live.length ? nextBox(adv, 'general', 'mid') : ''}
 </section>` : ''}
 
 <section id="sagasu" aria-labelledby="h-sagasu">${secHead('h-sagasu', `${esc(city.name)}の${term1}を工事から探す`, '工事を押すと、使える制度が下に出ます')}
@@ -577,11 +692,11 @@ ${natList()}
 
 <section aria-labelledby="h-flow">${secHead('h-flow', '申請の流れ', '見積もりから入金まで')}
 ${timed.length ? `<ul class="dots-list">${timed.map((p) => `<li><b>${esc(p.name)}</b>：${esc(timingText(p))}</li>`).join('')}</ul>` : ''}
-<ol class="steps"><li><span class="no">1</span><b>見積もりをとる</b><span class="small muted">対象の工事か確認</span></li><li><span class="no">2</span><b>申請する</b><span class="small muted">工事の前か後かは制度しだい</span></li><li><span class="no">3</span><b>交付決定</b><span class="small muted">通知が届く</span></li><li><span class="no">4</span><b>工事</b><span class="small muted">写真を残しておく</span></li><li><span class="no">5</span><b>報告・入金</b><span class="small muted">完了報告のあと振込</span></li></ol>
+<ol class="steps"><li><span class="no">1</span><b>見積もりをとる</b><span class="small muted">対象の工事か確認${affOffers('general').length ? '（<a href="#mitsumori">見積もりの案内へ</a>）' : ''}</span></li><li><span class="no">2</span><b>申請する</b><span class="small muted">工事の前か後かは制度しだい</span></li><li><span class="no">3</span><b>交付決定</b><span class="small muted">通知が届く</span></li><li><span class="no">4</span><b>工事</b><span class="small muted">写真を残しておく</span></li><li><span class="no">5</span><b>報告・入金</b><span class="small muted">完了報告のあと振込</span></li></ol>
 ${guidesGeneral(ctx).length ? `<div class="links"><span class="muted" style="font-size:15px">申請の前に読む：</span>${guideLinks(guidesGeneral(ctx))}</div>` : ''}
 </section>
 
-${ctaBlock(`<span class="ib">${esc(city.name)}対応のリフォーム会社に</span><span class="ib">まとめて無料で見積もり</span>`, '無料で見積もりをとる')}
+${ctaBlock(`<span class="ib">${esc(city.name)}の補助金を使う工事の</span><span class="ib">見積もりを無料で頼む</span>`, '無料で見積もりを頼む', { tips: adv.tips })}
 
 <section aria-labelledby="h-faq">${secHead('h-faq', `${esc(city.name)}の補助金でよくある質問`)}
 ${faqHtml(faq)}
@@ -627,7 +742,7 @@ ${others.length ? `<div class="links">${others.map(nb).join('')}</div>` : ''}
     Object.assign(crumbLd(crumbs), { '@id': `${SITE}${url}#crumbs` }),
     { '@type': 'FAQPage', '@id': `${SITE}${url}#faq`, url: SITE + url, inLanguage: 'ja', isPartOf: { '@id': `${SITE}${url}#page` }, mainEntity: faq.map((x) => ({ '@type': 'Question', name: x.q, acceptedAnswer: { '@type': 'Answer', text: x.a } })) }
   ];
-  write(`${city.prefSlug}/${city.slug}/index.html`, layout({ title, description, canonical: url, body, graph, noindex: thin, hasCta: true }));
+  write(`${city.prefSlug}/${city.slug}/index.html`, layout({ title, description, canonical: url, body, graph, noindex: thin, hasCta: true, barText: adv.bar }));
   return thin ? null : { url, lastmod: contentDate(city) };
 }
 
@@ -666,7 +781,7 @@ ${natList()}
 </section>
 ${ctx.guides.length ? `<section aria-labelledby="h-guide">${secHead('h-guide', '補助金を使う前に知っておきたいこと', '<a href="/guide/">基礎知識の一覧</a>')}
 <div class="links">${guideLinks([...guidesGeneral(ctx, 3), ...cats.flatMap((c) => guidesFor(ctx, c.id, 1))].filter((g, i, a) => a.indexOf(g) === i).slice(0, 8))}</div></section>` : ''}
-${ctaBlock(`<span class="ib">${esc(pref.name)}対応のリフォーム会社に</span><span class="ib">まとめて無料で見積もり</span>`, '無料で見積もりをとる')}
+${ctaBlock(`<span class="ib">${esc(pref.name)}の補助金を使う工事の</span><span class="ib">見積もりを無料で頼む</span>`, '無料で見積もりを頼む')}
 </main>`;
   const ok = live.length > 0 || prefProgs.length > 0;
   const graph = [pageLd({ type: 'CollectionPage', url, title, description, modified: lastmod, extra: { breadcrumb: { '@id': `${SITE}${url}#crumbs` } } }), Object.assign(crumbLd(crumbs), { '@id': `${SITE}${url}#crumbs` })];
@@ -717,6 +832,7 @@ function prefCatPage(pref, cat, ctx) {
     tops.length ? { q: `${pref.name}の${cat.t}の${term1}は、いくらですか？`, a: `市区町村によってちがいます。たとえば、${tops.map((r) => `${r.c.name}の「${r.p.name}」は${r.p.amountLabel}`).join('、')}です。金額は、工事の内容や世帯の条件で変わります。` } : null,
     bef || aft ? { q: `${pref.name}の${cat.t}の${term1}は、工事のあとでも申請できますか？`, a: `制度によってちがいます。受付が終わっていない制度のうち、工事の前に申請するものが${bef}件、工事（設置）が終わってから申請するものが${aft}件です。工事の前に申請する制度は、先に契約や着工をすると対象外になります。` } : null
   ].filter(Boolean);
+  const adv = quoteAdvice(liveRows.map((r) => r.p), `${pref.name}の${cat.t}`, 'お住まいの市区町村', cat);
   const title = `${pref.name}の${cat.t}の${term}【${FY_LABEL}】市区町村別`;
   const description = `${pref.name}で${cat.t}に使える${term}を、市区町村ごとに金額・締切・申請の時期・受付状況で見比べられる一覧（${fyEra(FY)}）。${d.cityCount}市区町村・${d.rows.length}制度、受付中${nOpen}件。公式の出典つき。${jdate(lastmod)}更新。`;
   const body = `<div class="hero"><div class="wrap"><div class="crumbs">${crumbHtml(crumbs)}${PR_NOTE}</div>
@@ -726,6 +842,7 @@ function prefCatPage(pref, cat, ctx) {
 <section id="youten" aria-labelledby="h-youten">${secHead('h-youten', `${esc(pref.name)}の${esc(cat.t)}の${term1}の要点`, `${fyEra(FY)}・${timeTag(lastmod)}時点`)}
 <ul class="sum">${points.map((t) => `<li>${esc(t)}</li>`).join('')}</ul>
 <div class="links"><span class="muted" style="font-size:15px">制度がある市区町村：</span>${citiesWith.map((c) => `<a class="nb" href="${cityUrl(c)}#${cat.id}"><i aria-hidden="true"></i>${esc(c.name)}</a>`).join('')}</div>
+${liveRows.length ? nextBox(adv, cat.id, 'mid') : ''}
 </section>
 <section aria-labelledby="h-list">${secHead('h-list', `市区町村ごとの${esc(cat.t)}の${term1}`, '市区町村名を押すと、くわしい条件が見られます')}
 <ul class="nat">${d.rows.map(({ c, p }) => `<li><span style="flex:1 1 300px;min-width:0;display:flex;flex-direction:column;gap:2px"><a class="serif" style="font-size:22px;line-height:1.5" href="${cityUrl(c)}#${cat.id}">${esc(c.name)}</a><span style="font-size:16px;color:var(--ink2)">${esc(p.name)}</span><span class="small muted">${esc([statusOf(p, c.checked).text, timingText(p), p.period && isDate(p.period.end) && statusOf(p, c.checked).key !== 'ended' ? `締切 ${jdate(p.period.end)}` : '', `${jdate(c.checked)}確認`].filter(Boolean).join('　／　'))}</span></span><span class="mid">${esc(p.amountLabel)}</span></li>`).join('')}</ul>
@@ -737,7 +854,7 @@ ${kuni.length ? `<section aria-labelledby="h-kuni">${secHead('h-kuni', `${esc(ca
 <ul class="nat">${kuni.map((p) => `<li><span style="flex:1 1 300px;min-width:0;display:flex;flex-direction:column;gap:2px">${kuniHref(p) ? `<a class="serif" style="font-size:22px;line-height:1.5" href="${kuniHref(p)}">${esc(p.name)}</a>` : `<span class="serif" style="font-size:22px;line-height:1.5">${esc(p.name)}</span>`}<span style="font-size:16px;color:var(--ink2)">${esc(p.target)}</span></span><span class="mid">${esc(p.maxLabel)}</span></li>`).join('')}</ul></section>` : ''}
 ${catGuides.length ? `<section aria-labelledby="h-guide">${secHead('h-guide', `${esc(cat.h)}の補助金の基礎知識`)}
 <ul class="grid">${catGuides.map((g) => `<li class="card"><a class="t" href="${g.url}">${esc(g.meta.title)}</a><span style="color:var(--ink2);font-size:16px">${esc(g.meta.description)}</span></li>`).join('')}</ul></section>` : ''}
-${ctaBlock(`<span class="ib">${esc(pref.name)}対応のリフォーム会社に</span><span class="ib">まとめて無料で見積もり</span>`, '無料で見積もりをとる')}
+${ctaBlock(`<span class="ib">${esc(cat.t)}の</span><span class="ib">見積もりを無料で頼む</span>`, '無料で見積もりを頼む', { slot: cat.id, tips: adv.tips })}
 <section aria-labelledby="h-faq">${secHead('h-faq', `${esc(pref.name)}の${esc(cat.t)}の${term1}でよくある質問`)}
 ${faqHtml(faq)}
 </section>
@@ -746,7 +863,7 @@ ${faqHtml(faq)}
 </main>`;
   const graph = [pageLd({ type: 'CollectionPage', url, title, description, modified: lastmod, extra: { breadcrumb: { '@id': `${SITE}${url}#crumbs` } } }), Object.assign(crumbLd(crumbs), { '@id': `${SITE}${url}#crumbs` }),
     { '@type': 'FAQPage', '@id': `${SITE}${url}#faq`, url: SITE + url, inLanguage: 'ja', isPartOf: { '@id': `${SITE}${url}#page` }, mainEntity: faq.map((x) => ({ '@type': 'Question', name: x.q, acceptedAnswer: { '@type': 'Answer', text: x.a } })) }];
-  write(`${pref.slug}/${cat.id}/index.html`, layout({ title, description, canonical: url, body, graph, hasCta: true }));
+  write(`${pref.slug}/${cat.id}/index.html`, layout({ title, description, canonical: url, body, graph, hasCta: true, slot: cat.id, barText: adv.bar }));
   return { url, lastmod };
 }
 
@@ -768,7 +885,9 @@ function kuniPage(p, ctx) {
 <div class="links">${ctx.livePrefs.map((x) => `<a class="nb" href="/${x.slug}/"><i aria-hidden="true"></i>${esc(x.name)} →</a>`).join('')}<a class="nb" href="/#h-pref"><i aria-hidden="true"></i>都道府県の一覧 →</a></div></section>
 ${related.length ? `<section aria-labelledby="h-guide">${secHead('h-guide', 'あわせて読みたい基礎知識')}
 <div class="links">${guideLinks(related)}</div></section>` : ''}`;
-  const cta = ctaBlock(ended ? '<span class="ib">いま使える補助金を、</span><span class="ib">見積もりのときに無料で相談</span>' : '<span class="ib">締め切りに間に合う業者を、</span><span class="ib">まとめて無料で探す</span>', '見積もりをとる');
+  // 国の制度は、登録された事業者が申請する（3制度とも。各ページの「申請の流れ」に書いてある内容）
+  const kSlot = slotFor(p.cats);
+  const cta = ctaBlock(ended ? '<span class="ib">いま使える補助金を、</span><span class="ib">見積もりのときに確かめる</span>' : `<span class="ib">${esc(p.name)}を使う工事の</span><span class="ib">見積もりを無料で頼む</span>`, '無料で見積もりを頼む', { slot: kSlot, tips: ended ? null : ['見積もりの依頼は無料（外部のサービスが開きます）', `最初に「${p.name}を使いたい」と伝える`, '契約の前に、その会社が登録事業者かどうかを確かめる'] });
   let inner;
   if (fs.existsSync(kuniSrc(p))) {
     inner = fs.readFileSync(kuniSrc(p), 'utf8')
@@ -800,7 +919,7 @@ ${areas}
     Object.assign({ '@type': 'Article', '@id': `${SITE}${url}#page`, headline: title, description, inLanguage: 'ja', mainEntityOfPage: SITE + url, datePublished: p.published || national.checked, dateModified: lastmod, author: AUTHOR(), publisher: { '@id': ORG_ID }, isPartOf: { '@id': WEB_ID } }, OG_IMAGE ? { image: OG_IMAGE } : {}),
     crumbLd(crumbs)
   ];
-  write(`kuni/${p.slug}/index.html`, layout({ title, description, canonical: url, body: inner, graph, hasCta: true, ogType: 'article' }));
+  write(`kuni/${p.slug}/index.html`, layout({ title, description, canonical: url, body: inner, graph, hasCta: true, ogType: 'article', slot: kSlot, barText: ended ? '' : '契約の前に、登録事業者かを確認' }));
   return { url, lastmod };
 }
 function kuniIndex(ctx) {
@@ -857,7 +976,7 @@ ${ctx.guides.length > 6 ? `<div class="links">${guideLinks(ctx.guides.slice(6))}
 <section aria-labelledby="h-about">${secHead('h-about', 'このサイトについて')}
 <ul class="dots-list"><li>市区町村の補助金は、自治体の公式ページを最優先に調べています。制度ごとに出典と確認日を載せ、公式ページでの確認がまだの情報は区別して表示しています。</li><li>制度が見つからなかった市区町村は、その旨を都道府県のページに書いています。</li><li>金額や期間は変わることがあります。申請の前に、必ず市区町村の窓口でご確認ください。</li></ul>
 <div class="links"><a class="nb" href="/policy/"><i aria-hidden="true"></i>編集方針・情報の調べ方 →</a><a class="nb" href="/about/"><i aria-hidden="true"></i>運営者情報 →</a></div></section>
-${ctaBlock('<span class="ib">お住まいの地域のリフォーム会社に</span><span class="ib">まとめて無料で見積もり</span>', '無料で見積もりをとる')}
+${ctaBlock('<span class="ib">補助金を使う工事の</span><span class="ib">見積もりを無料で頼む</span>', '無料で見積もりを頼む')}
 </main>`;
   write('index.html', layout({ title, description, canonical: '/', body, graph: [pageLd({ url: '/', title, description, modified: lastmod })], hasCta: true }));
   write('cities.json', JSON.stringify(live.map((c) => ({ n: c.name, k: c.kana || '', p: c.pref, u: cityUrl(c) }))));
@@ -960,6 +1079,7 @@ function staticPages() {
 //   {{FIELD:項目名|見出し}} … その項目（contractor / docs / combo / lastYear）が書かれている制度の例
 //   {{TIMING:工事ID}} … 「工事の前に申請」「あとに申請」の件数（工事IDを省くと全体）
 //   {{NAMECOUNT}} … 制度の正式名に「補助」「助成」などの言葉が使われている件数の表
+//   {{SERVICES}} … config.json の affiliates に書いた見積もりサービスの一覧（広告。何も書いていなければ「いまはありません」と出る）
 function loadGuides() {
   const dir = path.join(ROOT, 'src', 'guide');
   if (!fs.existsSync(dir)) return [];
@@ -1078,6 +1198,7 @@ ${exList(ex.items, fn)}`)}`;
     const rows = [['「補助」がつく制度', cnt(/補助/)], ['「助成」がつく制度', cnt(/助成/)], ['「支援」がつく制度（補助・助成がつかないもの）', all.filter((p) => /支援/.test(p.name) && !/補助|助成/.test(p.name)).length], ['「給付」「奨励」がつく制度', all.filter((p) => /給付|奨励/.test(p.name) && !/補助|助成/.test(p.name)).length]].filter((r) => r[1]);
     return `<div class="tbl tight"><table><caption>当サイトに掲載している${all.length}件の制度の、正式名に使われている言葉（${jdate(maxDate(ctx.cities.map((c) => c.checked)))}時点）</caption><thead><tr><th>正式名の言葉</th><th class="r">件数</th></tr></thead><tbody>${rows.map((r) => `<tr><td>${r[0]}</td><td class="r">${r[1]}件</td></tr>`).join('')}</tbody></table></div>`;
   }
+  if (kind === 'SERVICES') return servicesHtml();
   errors.push(`${at}: 知らない差し込み {{${kind}}} があります`);
   return '';
 }
@@ -1117,8 +1238,11 @@ function guidePage(g, ctx) {
     .map((x, i) => ({ x, i, s: (x.meta.cats || []).filter((c) => cats.includes(c)).length * 2 + (x.meta.kuni || []).filter((k) => (meta.kuni || []).includes(k)).length + (x.meta.general && !cats.length ? 1 : 0) }))
     .sort((a, b) => b.s - a.s || a.i - b.i).slice(0, 4).map((r) => r.x);
   const op = config.operator || {};
+  // 広告の枠：記事の工事（cats）に合うサービスがあればそれ、無ければ全般
+  const gSlot = meta.aff || slotFor(cats);
+  const gOffer = affOffers(gSlot)[0];
   // 記事の途中の道しるべ（h2 が3つ以上ある記事の、まん中の見出しの前）
-  const waypoint = `<aside class="wp" aria-label="お住まいの市区町村の補助金を調べる"><div class="wp-in"><div class="wp-tx">${gIcon('pin', 30, 2)}<p><b>お住まいの市区町村では、いくら出る？</b><span>金額・条件・窓口は市区町村ごとにちがいます。</span></p></div><div class="wp-btn"><a class="wp-a" href="#h-sagasu">市区町村の補助金を調べる${svgArrow}</a><a class="wp-b" href="#mitsumori">無料で見積もりを相談する<span class="wp-pr">PR</span></a></div></div></aside>`;
+  const waypoint = `<aside class="wp" aria-label="お住まいの市区町村の補助金を調べる"><div class="wp-in"><div class="wp-tx">${gIcon('pin', 30, 2)}<p><b>お住まいの市区町村では、いくら出る？</b><span>金額・条件・窓口は市区町村ごとにちがいます。</span></p></div><div class="wp-btn"><a class="wp-a" href="#h-sagasu">市区町村の補助金を調べる${svgArrow}</a>${gOffer ? affA(gOffer, 'guide-mid', 'wp-b', `${esc(gOffer.label || '無料で見積もりを頼む')}<span class="wp-pr">PR</span>`) : ''}</div></div></aside>`;
   const n = g.toc.length;
   const content = n >= 3 ? g.html.replace(`<h2 id="s${Math.floor(n / 2) + 1}">`, (m) => `${waypoint}\n${m}`) : g.html;
   const points = meta.points || [];
@@ -1136,7 +1260,7 @@ ${cats.length ? prefCatLinks(ctx, cats) : ''}
 ${prefLinks(ctx)}
 ${myKuni.length ? `<div class="links"><span class="muted" style="font-size:15px">国の制度：</span>${myKuni.map((p) => `<a class="nb" href="/kuni/${p.slug}/"><i aria-hidden="true"></i>${esc(p.name)}${natEnded(p) ? '<small>受付終了</small>' : ''} →</a>`).join('')}<a class="nb" href="/kuni/"><i aria-hidden="true"></i>国の補助金の一覧 →</a></div>` : '<div class="links"><a class="nb" href="/kuni/"><i aria-hidden="true"></i>国の補助金の一覧 →</a></div>'}
 </section>
-${ctaBlock('<span class="ib">補助金が使えるかどうかも、</span><span class="ib">見積もりのときに無料で相談</span>', '無料で見積もりをとる')}
+${ctaBlock('<span class="ib">補助金を使いたいと伝えて、</span><span class="ib">見積もりを無料で頼む</span>', '無料で見積もりを頼む', { slot: gSlot, self: g.slug === MITSU_SLUG })}
 ${related.length ? `<section aria-labelledby="h-rel">${secHead('h-rel', 'あわせて読みたい', '<a href="/guide/">基礎知識の一覧</a>')}
 <ul class="g-grid">${related.map((x) => gCard(x, ctx)).join('')}</ul></section>` : ''}
 <section aria-labelledby="h-src">${secHead('h-src', 'この記事について')}
@@ -1151,7 +1275,7 @@ ${(meta.sources || []).length ? `<div class="sub"><span class="small muted" styl
       OG_IMAGE ? { image: OG_IMAGE } : {}, (meta.sources || []).length ? { citation: meta.sources.map((x) => x.url) } : {}),
     crumbLd(crumbs)
   ];
-  write(`guide/${g.slug}/index.html`, layout({ title, description: meta.description, canonical: url, body, graph, hasCta: true, ogType: 'article' }));
+  write(`guide/${g.slug}/index.html`, layout({ title, description: meta.description, canonical: url, body, graph, hasCta: true, ogType: 'article', slot: gSlot }));
   return { url, lastmod };
 }
 function guideIndex(ctx) {

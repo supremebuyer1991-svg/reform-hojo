@@ -2,6 +2,19 @@
   "siteName": "リフォーム補助金ナビ",
   "siteUrl": "https://reform-hojo.com",
   "affiliateUrl": "",
+  "affiliates": {
+    "_memo": "広告リンクの設定。書き方は README.md の「広告リンクの設定」。url が空のサービスは、サイトに出ません。",
+    "general": [
+      { "name": "リショップナビ", "url": "", "impUrl": "", "label": "", "note": "" },
+      { "name": "ハピすむ", "url": "", "impUrl": "", "label": "", "note": "" }
+    ],
+    "yane": { "name": "外壁塗装セレクトナビ", "url": "", "impUrl": "", "label": "", "note": "" },
+    "mado": { "name": "", "url": "", "impUrl": "", "label": "", "note": "" },
+    "kyuto": { "name": "", "url": "", "impUrl": "", "label": "", "note": "" },
+    "taiyo": { "name": "", "url": "", "impUrl": "", "label": "", "note": "" },
+    "taishin": { "name": "", "url": "", "impUrl": "", "label": "", "note": "" },
+    "mizu": { "name": "", "url": "", "impUrl": "", "label": "", "note": "" }
+  },
   "fiscalYear": "auto",
   "operator": {
     "name": "ほじょナビ管理人",

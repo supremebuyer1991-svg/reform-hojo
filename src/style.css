@@ -394,3 +394,46 @@ a.pm-go:hover{background:#fff}
 .tbl tr.me{background:var(--paper)}
 .tbl tr.me th{font-weight:900}
 .tbl .st-open,.tbl .st-check,.tbl .st-end{white-space:nowrap}
+
+/* ---- 広告（見積もりサービスへのリンク）。「PR」「広告」の表示をかならず近くに置く ---- */
+.pr-in{font-size:11px;font-weight:700;border:1px solid currentColor;border-radius:3px;padding:0 5px;letter-spacing:.08em;line-height:1.5;opacity:.9}
+.aff-to{margin:0;font-size:13px;line-height:1.6;color:var(--muted);text-align:center}
+.aff-to b{color:var(--ink2)}
+.aff-to span{display:block}
+.aff-to i{font-style:normal;display:inline-block}
+.btn-sub{display:flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:6px 14px;border-radius:4px;border:1.5px solid var(--line2);background:#fff;font-size:15px;font-weight:700;text-decoration:none;text-align:center;line-height:1.4}
+.cta .r a.btn-sub{min-height:48px;font-size:15px;box-shadow:none}
+.cta .r a.cta-how{min-height:44px;font-size:14px;box-shadow:none;display:flex;align-items:center;justify-content:center;color:var(--muted)}
+.cta .r .btn-shu{text-align:center;line-height:1.4;padding:8px 16px}
+.result-foot{padding:12px 22px;gap:8px 20px}
+.result-foot>span:first-child{flex:1 1 320px;min-width:0}
+.rf-a{display:inline-flex;align-items:center;gap:10px}
+.rf-a .pr{align-self:center;font-size:11px;padding:0 6px}
+.result-foot a.rf-btn{min-height:44px;padding:4px 14px;border-radius:4px;background:#fff;border:1.5px solid var(--shu);text-decoration:none;line-height:1.4}
+/* 要点の下の「次にすること」 */
+.next{margin-top:16px;background:var(--shu-bg);border:1px solid #E8C0B6;border-radius:6px;padding:18px 22px;display:flex;flex-wrap:wrap;align-items:center;gap:16px 32px}
+.next-tx{flex:999 1 380px;min-width:0;display:flex;flex-direction:column;gap:6px}
+.next-k{margin:0;font-size:13px;font-weight:900;letter-spacing:.12em;color:var(--shu-d)}
+.next-t{margin:0;font-family:var(--serif);font-weight:800;font-size:clamp(20px,2.6vw,24px);line-height:1.5}
+.next-tx ul{margin:4px 0 0;padding-left:1.3em;display:flex;flex-direction:column;gap:4px;font-size:15.5px;color:var(--ink2);line-height:1.75}
+.next-btn{flex:1 1 260px;min-width:0;display:flex;flex-direction:column;gap:8px}
+.next-btn .btn-shu{min-height:58px;font-size:17px;text-align:center;line-height:1.4;padding:8px 16px;box-shadow:0 3px 0 var(--shu-d)}
+/* スマホの下の帯（広い画面では出さない） */
+.sbar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;align-items:center;gap:10px;padding:8px 8px calc(8px + env(safe-area-inset-bottom)) 14px;background:#fff;border-top:2px solid var(--ink);box-shadow:0 -4px 14px rgba(23,33,43,.12);transform:translateY(110%);visibility:hidden;transition:transform .25s,visibility .25s}
+.sbar.on{transform:none;visibility:visible}
+.sbar p{flex:1;min-width:0;margin:0;display:flex;align-items:center;gap:8px;font-size:13.5px;font-weight:700;line-height:1.4}
+.sbar .pr{align-self:center;flex:none;font-size:10.5px;padding:0 5px}
+.sbar .btn-shu{flex:none;min-height:44px;padding:0 14px;font-size:15px;white-space:nowrap}
+.sbar button{flex:none;width:36px;height:44px;border:0;background:none;color:var(--muted);font-size:22px;line-height:1;cursor:pointer}
+@media (max-width:759px){.has-sbar .site-foot .wrap{padding-bottom:110px}}
+@media (min-width:760px){.sbar{display:none}}
+@media (prefers-reduced-motion:reduce){.sbar{transition:none}}
+.imp{position:absolute;width:1px;height:1px;overflow:hidden}
+.imp img{display:block;width:1px;height:1px;border:0}
+/* 記事の中の、案内しているサービスの一覧 */
+.svc{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px}
+.guide .svc li{background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px 18px;display:flex;flex-direction:column;gap:8px}
+.svc-h{margin:0;display:flex;flex-wrap:wrap;align-items:center;gap:10px;font-size:19px}
+.svc-h .pr{align-self:center}
+.svc-k{margin:0;font-size:14px;color:var(--muted)}
+.svc .btn-line{align-self:flex-start;min-height:50px;font-size:16px}
