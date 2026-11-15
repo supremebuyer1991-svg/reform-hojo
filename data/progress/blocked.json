@@ -3818,27 +3818,6 @@
     },
     {
       "pref": "okayama",
-      "city": "倉敷市",
-      "what": "居住誘導区域空家等改修補助のページ",
-      "url": "https://www.city.kurashiki.okayama.jp/kurashi/sumai/1006343/1013283/1006344.html",
-      "date": "2026-11-15"
-    },
-    {
-      "pref": "okayama",
-      "city": "倉敷市",
-      "what": "太陽光などの補助のページ",
-      "url": "https://www.city.kurashiki.okayama.jp/cn-taiyoukou/",
-      "date": "2026-11-15"
-    },
-    {
-      "pref": "okayama",
-      "city": "倉敷市",
-      "what": "電気自動車等導入促進補助（V2H）のページ",
-      "url": "https://www.city.kurashiki.okayama.jp/kurashi/kankyo/1011736/1003554/1024166/1024174.html",
-      "date": "2026-11-15"
-    },
-    {
-      "pref": "okayama",
       "city": "津山市",
       "what": "公式サイト（本文がスクリプト読み込みで取得できない）",
       "url": "https://www.city.tsuyama.lg.jp/",
@@ -3954,6 +3933,160 @@
       "city": "岡山県",
       "what": "木造住宅耐震化のページ",
       "url": "https://www.pref.okayama.lg.jp/page/detail-100997.html",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "okayama",
+      "city": "倉敷市",
+      "what": "創エネ・脱炭素住宅促進補助金 交付要綱PDF",
+      "url": "https://www.city.kurashiki.okayama.jp/_res/projects/default_project/_page_/001/024/166/r8_souene_youkou_2.pdf",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "okayama",
+      "city": "倉敷市",
+      "what": "空き家改修補助 交付要綱PDF",
+      "url": "https://www.city.kurashiki.okayama.jp/_res/projects/default_project/_page_/001/024/781/kaisyu.youkou.pdf",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "okayama",
+      "city": "倉敷市",
+      "what": "木造住宅耐震改修 提出書類一覧PDF",
+      "url": "https://www.city.kurashiki.okayama.jp/_res/projects/default_project/_page_/001/006/391/r8_kaisyuu_teisyutsusyorui.pdf",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "okayama",
+      "city": "鏡野町",
+      "what": "住宅リフォーム事業費補助金 要綱（RTF）",
+      "url": "https://www.town.kagamino.lg.jp/uploaded/attachment/10606.rtf",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "okayama",
+      "city": "和気町",
+      "what": "建築物耐震診断等事業費補助金 交付要綱（RTF）",
+      "url": "https://www.town.wake.lg.jp/material/files/group/1/taisinnyoukou.rtf",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "okayama",
+      "city": "赤磐市",
+      "what": "空き家改修費補助金 交付要綱（Word）",
+      "url": "https://www.city.akaiwa.lg.jp/material/files/group/5/R8youkou.docx",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "okayama",
+      "city": "新庄村",
+      "what": "家庭の省・創・畜エネ設備・EV導入支援事業（村のサイト全体が開けない）",
+      "url": "http://www.vill.shinjo.okayama.jp/index.php?id=2112",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "okayama",
+      "city": "新庄村",
+      "what": "支援制度（定住促進）",
+      "url": "http://www.vill.shinjo.okayama.jp/index.php?id=106",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "okayama",
+      "city": "吉備中央町",
+      "what": "令和8年度 各種助成制度等一覧PDF",
+      "url": "https://www.town.kibichuo.lg.jp/uploaded/life/19937_53116_misc.pdf",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "okayama",
+      "city": "吉備中央町",
+      "what": "令和8年度 住宅耐震化緊急促進アクションプログラムPDF",
+      "url": "https://www.town.kibichuo.lg.jp/uploaded/life/19993_53276_misc.pdf",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "okayama",
+      "city": "吉備中央町",
+      "what": "住宅リフォーム事業費補助金 交付要綱PDF",
+      "url": "https://www.town.kibichuo.lg.jp/uploaded/attachment/1777.pdf",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "okayama",
+      "city": "真庭市",
+      "what": "新婚さんバックアップ事業補助金",
+      "url": "https://kodomo.city.maniwa.okayama.jp/24021.html",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "okayama",
+      "city": "美作市",
+      "what": "省エネ家電導入支援事業補助金の募集ページ",
+      "url": "https://www.city.mimasaka.lg.jp/boshu/8652.html",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "okayama",
+      "city": "西粟倉村",
+      "what": "低炭素なむらづくり推進施設設置補助金 別表第1PDF（表が読めない）",
+      "url": "https://www.vill.nishiawakura.okayama.jp/wp/wp-content/uploads/2026/06/fed4f3ccc9c1a37abdad930992d7d1bb.pdf",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "okayama",
+      "city": "里庄町",
+      "what": "耐震診断等募集について（robotsで拒否・町のサイト全般）",
+      "url": "https://www.town.satosho.okayama.jp/soshiki/5/11826.html",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "okayama",
+      "city": "里庄町",
+      "what": "令和8年度 移住・定住のための空き家リフォーム支援事業補助金",
+      "url": "https://www.town.satosho.okayama.jp/soshiki/15/8644.html",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "okayama",
+      "city": "里庄町",
+      "what": "制度ガイドブック（令和8年4月発行）PDF",
+      "url": "https://www.town.satosho.okayama.jp/uploaded/attachment/10680.pdf",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "okayama",
+      "city": "浅口市",
+      "what": "木造住宅耐震化チラシPDF",
+      "url": "https://www.city.asakuchi.lg.jp/uploaded/attachment/12356.pdf",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "okayama",
+      "city": "浅口市",
+      "what": "空き家利活用事業補助金チラシPDF",
+      "url": "https://www.city.asakuchi.lg.jp/uploaded/attachment/12864.pdf",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "okayama",
+      "city": "矢掛町",
+      "what": "耐震改修促進計画（令和8年3月改定）PDF",
+      "url": "https://www.town.yakage.okayama.jp/files/%E7%9F%A2%E6%8E%9B%E7%94%BA%E8%80%90%E9%9C%87%E6%94%B9%E4%BF%AE%E4%BF%83%E9%80%B2%E8%A8%88%E7%94%BB%EF%BC%88%E4%BB%A4%E5%92%8C%EF%BC%98%E5%B9%B4%EF%BC%93%E6%9C%88%E6%94%B9%E5%AE%9A%EF%BC%89.pdf",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "okayama",
+      "city": "岡山県",
+      "what": "耐震診断・耐震改修に関する補助制度",
+      "url": "https://www.pref.okayama.lg.jp/page/detail-116632.html",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "okayama",
+      "city": "岡山県",
+      "what": "家庭向け省エネ補助の市町村一覧",
+      "url": "https://www.pref.okayama.lg.jp/page/1040258.html",
       "date": "2026-11-15"
     }
   ]

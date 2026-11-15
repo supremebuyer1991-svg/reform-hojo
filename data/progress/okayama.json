@@ -10,12 +10,12 @@
     {
       "name": "倉敷市",
       "slug": "kurashiki",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "津山市",
       "slug": "tsuyama",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "玉野市",
@@ -55,37 +55,37 @@
     {
       "name": "瀬戸内市",
       "slug": "setouchi",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "赤磐市",
       "slug": "akaiwa",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "真庭市",
       "slug": "maniwa",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "美作市",
       "slug": "mimasaka",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "浅口市",
       "slug": "asakuchi",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "和気町",
       "slug": "wake",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "早島町",
       "slug": "hayashima",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "里庄町",
@@ -95,7 +95,7 @@
     {
       "name": "矢掛町",
       "slug": "yakage",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "新庄村",
@@ -105,37 +105,37 @@
     {
       "name": "鏡野町",
       "slug": "kagamino",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "勝央町",
       "slug": "shoo",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "奈義町",
       "slug": "nagi",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "西粟倉村",
       "slug": "nishiawakura",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "久米南町",
       "slug": "kumenan",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "美咲町",
       "slug": "misaki",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "吉備中央町",
       "slug": "kibichuo",
-      "status": "todo"
+      "status": "done"
     }
   ]
 }
