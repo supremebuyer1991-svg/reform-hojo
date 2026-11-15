@@ -1,0 +1,231 @@
+{
+  "pref": "熊本県",
+  "prefSlug": "kumamoto",
+  "cities": [
+    {
+      "name": "熊本市",
+      "slug": "kumamoto-shi",
+      "status": "done"
+    },
+    {
+      "name": "八代市",
+      "slug": "yatsushiro",
+      "status": "done"
+    },
+    {
+      "name": "人吉市",
+      "slug": "hitoyoshi",
+      "status": "todo"
+    },
+    {
+      "name": "荒尾市",
+      "slug": "arao",
+      "status": "todo"
+    },
+    {
+      "name": "水俣市",
+      "slug": "minamata",
+      "status": "todo"
+    },
+    {
+      "name": "玉名市",
+      "slug": "tamana",
+      "status": "done"
+    },
+    {
+      "name": "山鹿市",
+      "slug": "yamaga",
+      "status": "done"
+    },
+    {
+      "name": "菊池市",
+      "slug": "kikuchi",
+      "status": "done"
+    },
+    {
+      "name": "宇土市",
+      "slug": "uto",
+      "status": "done"
+    },
+    {
+      "name": "上天草市",
+      "slug": "kamiamakusa",
+      "status": "done"
+    },
+    {
+      "name": "宇城市",
+      "slug": "uki",
+      "status": "done"
+    },
+    {
+      "name": "阿蘇市",
+      "slug": "aso",
+      "status": "done"
+    },
+    {
+      "name": "天草市",
+      "slug": "amakusa",
+      "status": "done"
+    },
+    {
+      "name": "合志市",
+      "slug": "koshi",
+      "status": "done"
+    },
+    {
+      "name": "美里町",
+      "slug": "misato",
+      "status": "done"
+    },
+    {
+      "name": "玉東町",
+      "slug": "gyokuto",
+      "status": "done"
+    },
+    {
+      "name": "南関町",
+      "slug": "nankan",
+      "status": "done"
+    },
+    {
+      "name": "長洲町",
+      "slug": "nagasu",
+      "status": "done"
+    },
+    {
+      "name": "和水町",
+      "slug": "nagomi",
+      "status": "done"
+    },
+    {
+      "name": "大津町",
+      "slug": "ozu",
+      "status": "done"
+    },
+    {
+      "name": "菊陽町",
+      "slug": "kikuyo",
+      "status": "done"
+    },
+    {
+      "name": "南小国町",
+      "slug": "minamioguni",
+      "status": "done"
+    },
+    {
+      "name": "小国町",
+      "slug": "oguni",
+      "status": "todo"
+    },
+    {
+      "name": "産山村",
+      "slug": "ubuyama",
+      "status": "todo"
+    },
+    {
+      "name": "高森町",
+      "slug": "takamori",
+      "status": "todo"
+    },
+    {
+      "name": "西原村",
+      "slug": "nishihara",
+      "status": "todo"
+    },
+    {
+      "name": "南阿蘇村",
+      "slug": "minamiaso",
+      "status": "todo"
+    },
+    {
+      "name": "御船町",
+      "slug": "mifune",
+      "status": "done"
+    },
+    {
+      "name": "嘉島町",
+      "slug": "kashima",
+      "status": "done"
+    },
+    {
+      "name": "益城町",
+      "slug": "mashiki",
+      "status": "done"
+    },
+    {
+      "name": "甲佐町",
+      "slug": "kosa",
+      "status": "done"
+    },
+    {
+      "name": "山都町",
+      "slug": "yamato",
+      "status": "done"
+    },
+    {
+      "name": "氷川町",
+      "slug": "hikawa",
+      "status": "done"
+    },
+    {
+      "name": "芦北町",
+      "slug": "ashikita",
+      "status": "done"
+    },
+    {
+      "name": "津奈木町",
+      "slug": "tsunagi",
+      "status": "done"
+    },
+    {
+      "name": "錦町",
+      "slug": "nishiki",
+      "status": "todo"
+    },
+    {
+      "name": "多良木町",
+      "slug": "taragi",
+      "status": "todo"
+    },
+    {
+      "name": "湯前町",
+      "slug": "yunomae",
+      "status": "done"
+    },
+    {
+      "name": "水上村",
+      "slug": "mizukami",
+      "status": "todo"
+    },
+    {
+      "name": "相良村",
+      "slug": "sagara",
+      "status": "todo"
+    },
+    {
+      "name": "五木村",
+      "slug": "itsuki",
+      "status": "done"
+    },
+    {
+      "name": "山江村",
+      "slug": "yamae",
+      "status": "done"
+    },
+    {
+      "name": "球磨村",
+      "slug": "kuma",
+      "status": "todo"
+    },
+    {
+      "name": "あさぎり町",
+      "slug": "asagiri",
+      "status": "done"
+    },
+    {
+      "name": "苓北町",
+      "slug": "reihoku",
+      "status": "done"
+    }
+  ]
+}
