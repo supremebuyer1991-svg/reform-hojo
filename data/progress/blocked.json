@@ -4546,20 +4546,6 @@
     },
     {
       "pref": "kagoshima",
-      "city": "いちき串木野市",
-      "what": "住宅リフォーム事業補助金（サイト全般でリダイレクト）",
-      "url": "http://www.city.ichikikushikino.lg.jp/tokei3/kurashi/machizukuri/jutaku.html",
-      "date": "2026-11-15"
-    },
-    {
-      "pref": "kagoshima",
-      "city": "いちき串木野市",
-      "what": "木造住宅の耐震診断・耐震改修工事補助金",
-      "url": "http://www.city.ichikikushikino.lg.jp/tokei3/kurashi/machizukuri/documents/20170401.html",
-      "date": "2026-11-15"
-    },
-    {
-      "pref": "kagoshima",
       "city": "姶良市",
       "what": "木造住宅耐震診断・耐震改修工事補助制度",
       "url": "http://www.city.aira.lg.jp/kenchiku/kurashi/sumai/jutaku/taishinhojo.html",
@@ -4584,13 +4570,6 @@
       "city": "鹿児島県",
       "what": "住宅の耐震化について（リダイレクトのくり返し）",
       "url": "http://www.pref.kagoshima.jp/ah14/kurashi-kankyo/sumai/taishin.html",
-      "date": "2026-11-15"
-    },
-    {
-      "pref": "kagoshima",
-      "city": "阿久根市",
-      "what": "公式サイト（robotsで拒否）",
-      "url": "https://city.akune.kagoshima.jp/",
       "date": "2026-11-15"
     },
     {
@@ -4717,13 +4696,6 @@
       "city": "和泊町",
       "what": "住宅関係の一覧ページ",
       "url": "https://www.town.wadomari.lg.jp/soumu/kurashi/jutaku/index.html",
-      "date": "2026-11-15"
-    },
-    {
-      "pref": "kagoshima",
-      "city": "いちき串木野市",
-      "what": "広報おしらせ版 令和8年9月7日号PDF",
-      "url": "http://www.city.ichikikushikino.lg.jp/seisaku4/koho/documents/r80907oshiraseban.pdf",
       "date": "2026-11-15"
     },
     {
@@ -4927,6 +4899,153 @@
       "city": "愛南町",
       "what": "補助・助成ガイドブック（令和8年度版・PDF）",
       "url": "https://www.town.ainan.ehime.jp/kurashi/tetsuduki/sumai/josei/files/08guidebook.pdf",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "kagoshima",
+      "city": "いちき串木野市",
+      "what": "木造住宅耐震診断補助金 交付要綱PDF",
+      "url": "http://www.city.ichikikushikino.lg.jp/tokei3/kurashi/machizukuri/documents/documents/taishinshindan-youkou_1.pdf",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "kagoshima",
+      "city": "いちき串木野市",
+      "what": "木造住宅耐震改修工事補助金 交付要綱PDF",
+      "url": "http://www.city.ichikikushikino.lg.jp/tokei3/kurashi/machizukuri/documents/documents/taishinkaisyu-youkou.pdf",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "kagoshima",
+      "city": "いちき串木野市",
+      "what": "住宅リフォーム事業補助金 様式PDF",
+      "url": "http://www.city.ichikikushikino.lg.jp/tokei3/kurashi/machizukuri/documents/reformhojokinsyosiki.pdf",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "kagoshima",
+      "city": "南種子町",
+      "what": "公式サイト全体（httpとhttpsのリダイレクトのくり返し）",
+      "url": "http://www.town.minamitane.kagoshima.jp/industry/etc/ijyuteijyusokushinhojyo.html",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "kagoshima",
+      "city": "三島村",
+      "what": "公式サイトのトップと例規集（住宅・環境保全）",
+      "url": "https://mishimamura.com/reiki_int/reiki_taikei/r_taikei_10_02.html",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "kagoshima",
+      "city": "和泊町",
+      "what": "空き家候補募集",
+      "url": "http://www.town.wadomari.lg.jp/doboku/kurashi/jutaku/akiya/koho.html",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "kagoshima",
+      "city": "和泊町",
+      "what": "地球温暖化対策",
+      "url": "https://www.town.wadomari.lg.jp/kikaku/wadomaricho/shisaku/chikyuondankataisaku.html",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "ehime",
+      "city": "西予市",
+      "what": "応援ナビ（補助金の一覧）",
+      "url": "https://www.city.seiyo.ehime.jp/ouen_navi.html",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "ehime",
+      "city": "西予市",
+      "what": "住まい・生活の様式ダウンロード",
+      "url": "https://www.city.seiyo.ehime.jp/download/sumai_seikatu/index.html",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "nagasaki",
+      "city": "長崎県",
+      "what": "長崎県耐震・安心住まいづくり支援事業 令和8年度PDF",
+      "url": "https://www.pref.nagasaki.jp/fs/4/8/6/5/9/_/R8__________________.pdf",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "nagasaki",
+      "city": "長崎県",
+      "what": "長崎県危険ブロック塀除却支援事業 令和8年度PDF",
+      "url": "https://www.pref.nagasaki.jp/fs/1/0/8/9/4/_/R8_____________.pdf",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "nagasaki",
+      "city": "長崎市",
+      "what": "補助対象となる主な対象工種PDF",
+      "url": "https://www.city.nagasaki.lg.jp/uploaded/attachment/57689.pdf",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "nagasaki",
+      "city": "長崎市",
+      "what": "快適住まいづくり支援費補助金 申請に必要な書類PDF",
+      "url": "https://www.city.nagasaki.lg.jp/uploaded/attachment/58300.pdf",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "nagasaki",
+      "city": "佐世保市",
+      "what": "移住サポートサイト",
+      "url": "https://www.city.sasebo.lg.jp/99life/",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "nagasaki",
+      "city": "島原市",
+      "what": "住宅性能向上リフォーム支援事業補助金 例規",
+      "url": "https://www.city.shimabara.lg.jp/reiki/H427902500062/H427902500062_j.html",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "nagasaki",
+      "city": "諫早市",
+      "what": "安全・安心住まいづくり支援事業（耐震）",
+      "url": "https://www.city.isahaya.nagasaki.jp/soshiki/64/43448.html",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "nagasaki",
+      "city": "諫早市",
+      "what": "省エネ家電購入支援事業補助金",
+      "url": "https://www.city.isahaya.nagasaki.jp/soshiki/38/44284.html",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "nagasaki",
+      "city": "諫早市",
+      "what": "小長井地域新生活支援補助金",
+      "url": "https://www.city.isahaya.nagasaki.jp/soshiki/37/1062.html",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "nagasaki",
+      "city": "諫早市",
+      "what": "太陽光発電導入支援事業 申請の手引きPDF",
+      "url": "https://www.city.isahaya.nagasaki.jp/uploaded/attachment/26301.pdf",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "nagasaki",
+      "city": "諫早市",
+      "what": "3世代同居・近居促進事業 対象工事表・書類一覧PDF",
+      "url": "https://www.city.isahaya.nagasaki.jp/uploaded/attachment/19806.pdf",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "nagasaki",
+      "city": "諫早市",
+      "what": "住宅性能向上リフレッシュ事業 チェックリストPDF",
+      "url": "https://www.city.isahaya.nagasaki.jp/uploaded/attachment/26731.pdf",
       "date": "2026-11-15"
     }
   ]

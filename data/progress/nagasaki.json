@@ -1,0 +1,111 @@
+{
+  "pref": "長崎県",
+  "prefSlug": "nagasaki",
+  "cities": [
+    {
+      "name": "長崎市",
+      "slug": "nagasaki-shi",
+      "status": "done"
+    },
+    {
+      "name": "佐世保市",
+      "slug": "sasebo",
+      "status": "done"
+    },
+    {
+      "name": "島原市",
+      "slug": "shimabara",
+      "status": "done"
+    },
+    {
+      "name": "諫早市",
+      "slug": "isahaya",
+      "status": "done"
+    },
+    {
+      "name": "大村市",
+      "slug": "omura",
+      "status": "todo"
+    },
+    {
+      "name": "平戸市",
+      "slug": "hirado",
+      "status": "todo"
+    },
+    {
+      "name": "松浦市",
+      "slug": "matsuura",
+      "status": "todo"
+    },
+    {
+      "name": "対馬市",
+      "slug": "tsushima",
+      "status": "todo"
+    },
+    {
+      "name": "壱岐市",
+      "slug": "iki",
+      "status": "todo"
+    },
+    {
+      "name": "五島市",
+      "slug": "goto",
+      "status": "todo"
+    },
+    {
+      "name": "西海市",
+      "slug": "saikai",
+      "status": "todo"
+    },
+    {
+      "name": "雲仙市",
+      "slug": "unzen",
+      "status": "todo"
+    },
+    {
+      "name": "南島原市",
+      "slug": "minamishimabara",
+      "status": "todo"
+    },
+    {
+      "name": "長与町",
+      "slug": "nagayo",
+      "status": "todo"
+    },
+    {
+      "name": "時津町",
+      "slug": "togitsu",
+      "status": "todo"
+    },
+    {
+      "name": "東彼杵町",
+      "slug": "higashisonogi",
+      "status": "todo"
+    },
+    {
+      "name": "川棚町",
+      "slug": "kawatana",
+      "status": "todo"
+    },
+    {
+      "name": "波佐見町",
+      "slug": "hasami",
+      "status": "todo"
+    },
+    {
+      "name": "小値賀町",
+      "slug": "ojika",
+      "status": "todo"
+    },
+    {
+      "name": "佐々町",
+      "slug": "saza",
+      "status": "todo"
+    },
+    {
+      "name": "新上五島町",
+      "slug": "shinkamigoto",
+      "status": "todo"
+    }
+  ]
+}
