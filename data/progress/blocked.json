@@ -4042,20 +4042,6 @@
     },
     {
       "pref": "okayama",
-      "city": "里庄町",
-      "what": "令和8年度 移住・定住のための空き家リフォーム支援事業補助金",
-      "url": "https://www.town.satosho.okayama.jp/soshiki/15/8644.html",
-      "date": "2026-11-15"
-    },
-    {
-      "pref": "okayama",
-      "city": "里庄町",
-      "what": "制度ガイドブック（令和8年4月発行）PDF",
-      "url": "https://www.town.satosho.okayama.jp/uploaded/attachment/10680.pdf",
-      "date": "2026-11-15"
-    },
-    {
-      "pref": "okayama",
       "city": "浅口市",
       "what": "木造住宅耐震化チラシPDF",
       "url": "https://www.city.asakuchi.lg.jp/uploaded/attachment/12356.pdf",
@@ -4087,6 +4073,167 @@
       "city": "岡山県",
       "what": "家庭向け省エネ補助の市町村一覧",
       "url": "https://www.pref.okayama.lg.jp/page/1040258.html",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "okayama",
+      "city": "里庄町",
+      "what": "住宅耐震化促進アクションプログラム",
+      "url": "https://www.town.satosho.okayama.jp/soshiki/5/9558.html",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "okayama",
+      "city": "新庄村",
+      "what": "空き家情報（空家対策事業補助金）",
+      "url": "http://www.vill.shinjo.okayama.jp/index.php?id=100",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "mie",
+      "city": "三重県",
+      "what": "空き家リフォームの市町窓口一覧",
+      "url": "https://www.pref.mie.lg.jp/JUTAKU/HP/m0169100069.htm",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "mie",
+      "city": "三重県",
+      "what": "木造住宅の耐震化補助制度",
+      "url": "https://www.pref.mie.lg.jp/JUTAKU/HP/35909031376.htm",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "mie",
+      "city": "津市",
+      "what": "耐震補強計画事業補助金 概要PDF",
+      "url": "https://www.info.city.tsu.mie.jp/_res/projects/default_project/_page_/001/001/978/keikaku8-1.pdf",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "mie",
+      "city": "津市",
+      "what": "耐震シェルター設置事業補助金 概要PDF",
+      "url": "https://www.info.city.tsu.mie.jp/_res/projects/default_project/_page_/001/001/978/syeruta8-1-1.pdf",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "mie",
+      "city": "津市",
+      "what": "美杉地域の空き家補助 制度説明PDF（文字が読めない）",
+      "url": "https://www.info.city.tsu.mie.jp/_res/projects/default_project/_page_/001/008/331/hiojokinseido.pdf",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "mie",
+      "city": "松阪市",
+      "what": "木造住宅耐震補強事業費補助金 交付要綱PDF",
+      "url": "https://www.city.matsusaka.mie.jp/uploaded/attachment/105877.pdf",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "mie",
+      "city": "松阪市",
+      "what": "脱炭素化住宅等促進補助金 チラシPDF",
+      "url": "https://www.city.matsusaka.mie.jp/uploaded/attachment/103373.pdf",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "mie",
+      "city": "四日市市",
+      "what": "スマートシティ補助金の予算執行状況",
+      "url": "https://yk-datsutanso-portal.com/application/list/",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "mie",
+      "city": "伊勢市",
+      "what": "無料耐震診断のページ",
+      "url": "https://www.city.ise.mie.jp/bousai_kyukyu/bousai/hojo/1004977.html",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "mie",
+      "city": "伊勢市",
+      "what": "木造住宅の耐震化支援制度PDF",
+      "url": "https://www.city.ise.mie.jp/_res/projects/default_project/_page_/001/013/783/taisinnsheruta-touseihinnitirann.pdf",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "mie",
+      "city": "伊勢市",
+      "what": "耐震工事・空家改修の要綱（例規集、リダイレクトのくり返し）",
+      "url": "http://reikisyu.city.ise.mie.jp/ise/reiki_honbun/r329RG00001118.html",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "mie",
+      "city": "伊賀市",
+      "what": "木造住宅耐震補強事業 事業の概要PDF",
+      "url": "https://www.city.iga.lg.jp/cmsfiles/contents/0000006/6527/jigyounogaiyou2.pdf",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "mie",
+      "city": "伊賀市",
+      "what": "太陽光発電設備等設置費補助金 交付要綱PDF",
+      "url": "https://www.city.iga.lg.jp/cmsfiles/contents/0000011/11985/20260601youkou.pdf",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "mie",
+      "city": "紀北町",
+      "what": "令和8年度 住宅リフォーム補助金のお知らせ（未掲載の制度）",
+      "url": "https://www.town.mie-kihoku.lg.jp/2026/06/05/21810/",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "mie",
+      "city": "紀北町",
+      "what": "空き家改修補助金（新URL、robotsで拒否）",
+      "url": "https://town.mie-kihoku.lg.jp/kakuka/kikaku/kikakukakari/akiyabank/3943.html",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "mie",
+      "city": "尾鷲市",
+      "what": "木造住宅耐震等補助PDF（金額の記載あり）",
+      "url": "https://www.city.owase.lg.jp/cmsfiles/contents/0000011/11820/mokuzoujyuutakutaisinnhojyo.pdf",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "mie",
+      "city": "尾鷲市",
+      "what": "空き家バンク利用促進助成金制度",
+      "url": "https://www.city.owase.lg.jp/0000012896.html",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "mie",
+      "city": "度会町",
+      "what": "太陽光 交付要綱PDF（画像のみ）",
+      "url": "https://www.town.watarai.lg.jp/cmsfiles/contents/0000003/3315/koufuyoukou.pdf",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "mie",
+      "city": "大紀町",
+      "what": "太陽光 交付要綱（Word）",
+      "url": "https://www.town.taiki.mie.jp/material/files/group/9/youkou.docx",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "mie",
+      "city": "熊野市",
+      "what": "太陽光補助 交付要綱PDF",
+      "url": "https://www.city.kumano.lg.jp/assets/images/content/content_20260707_114349.pdf",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "mie",
+      "city": "熊野市",
+      "what": "熊野材を利用した住宅の補助",
+      "url": "https://www.city.kumano.lg.jp/life/?content=2824",
       "date": "2026-11-15"
     }
   ]

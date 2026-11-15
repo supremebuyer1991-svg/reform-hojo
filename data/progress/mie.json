@@ -1,0 +1,151 @@
+{
+  "pref": "三重県",
+  "prefSlug": "mie",
+  "cities": [
+    {
+      "name": "津市",
+      "slug": "tsu",
+      "status": "done"
+    },
+    {
+      "name": "四日市市",
+      "slug": "yokkaichi",
+      "status": "done"
+    },
+    {
+      "name": "伊勢市",
+      "slug": "ise",
+      "status": "done"
+    },
+    {
+      "name": "松阪市",
+      "slug": "matsusaka",
+      "status": "done"
+    },
+    {
+      "name": "桑名市",
+      "slug": "kuwana",
+      "status": "done"
+    },
+    {
+      "name": "鈴鹿市",
+      "slug": "suzuka",
+      "status": "done"
+    },
+    {
+      "name": "名張市",
+      "slug": "nabari",
+      "status": "done"
+    },
+    {
+      "name": "尾鷲市",
+      "slug": "owase",
+      "status": "done"
+    },
+    {
+      "name": "亀山市",
+      "slug": "kameyama",
+      "status": "done"
+    },
+    {
+      "name": "鳥羽市",
+      "slug": "toba",
+      "status": "done"
+    },
+    {
+      "name": "熊野市",
+      "slug": "kumano",
+      "status": "done"
+    },
+    {
+      "name": "いなべ市",
+      "slug": "inabe",
+      "status": "done"
+    },
+    {
+      "name": "志摩市",
+      "slug": "shima",
+      "status": "done"
+    },
+    {
+      "name": "伊賀市",
+      "slug": "iga",
+      "status": "done"
+    },
+    {
+      "name": "木曽岬町",
+      "slug": "kisosaki",
+      "status": "done"
+    },
+    {
+      "name": "東員町",
+      "slug": "toin",
+      "status": "done"
+    },
+    {
+      "name": "菰野町",
+      "slug": "komono",
+      "status": "done"
+    },
+    {
+      "name": "朝日町",
+      "slug": "asahi",
+      "status": "done"
+    },
+    {
+      "name": "川越町",
+      "slug": "kawagoe",
+      "status": "done"
+    },
+    {
+      "name": "多気町",
+      "slug": "taki",
+      "status": "done"
+    },
+    {
+      "name": "明和町",
+      "slug": "meiwa",
+      "status": "done"
+    },
+    {
+      "name": "大台町",
+      "slug": "odai",
+      "status": "done"
+    },
+    {
+      "name": "玉城町",
+      "slug": "tamaki",
+      "status": "done"
+    },
+    {
+      "name": "度会町",
+      "slug": "watarai",
+      "status": "done"
+    },
+    {
+      "name": "大紀町",
+      "slug": "taiki",
+      "status": "done"
+    },
+    {
+      "name": "南伊勢町",
+      "slug": "minamiise",
+      "status": "done"
+    },
+    {
+      "name": "紀北町",
+      "slug": "kihoku",
+      "status": "done"
+    },
+    {
+      "name": "御浜町",
+      "slug": "mihama",
+      "status": "done"
+    },
+    {
+      "name": "紀宝町",
+      "slug": "kiho",
+      "status": "done"
+    }
+  ]
+}
