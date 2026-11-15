@@ -348,7 +348,7 @@ ${config.googleSiteVerification ? `<meta name="google-site-verification" content
 ${ld ? `<script type="application/ld+json">${JSON.stringify(ld).replace(/</g, '\\u003c')}</script>` : ''}
 </head>
 <body${bar ? ' class="has-sbar"' : ''}>
-<header class="site-head"><div class="wrap">
+${/ data-aff="/.test(body + bar) || cta ? '<p class="pr-top"><span class="wrap">このページには広告（PR）が含まれています。<a href="/disclaimer/">くわしく</a></span></p>\n' : ''}<header class="site-head"><div class="wrap">
 <a class="logo" href="/"><span class="logo-mark"><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg></span></span><span class="logo-text"><b>${esc(config.siteName)}</b><small>市区町村の補助金を、工事ごとにかんたん検索</small></span></a>
 ${cta ? '<a class="btn-shu" href="#mitsumori">無料見積もり<span class="pr-in">PR</span></a>' : '<a class="btn-head" href="/#h-pref">地域から探す</a>'}
 </div></header>

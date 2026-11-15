@@ -437,3 +437,6 @@ a.pm-go:hover{background:#fff}
 .svc-h .pr{align-self:center}
 .svc-k{margin:0;font-size:14px;color:var(--muted)}
 .svc .btn-line{align-self:flex-start;min-height:50px;font-size:16px}
+
+.pr-top{margin:0;background:#EDEBE5;color:#4A5560;font-size:12px;line-height:1.6;padding:3px 0;text-align:center}
+.pr-top a{color:inherit;margin-left:.5em}
