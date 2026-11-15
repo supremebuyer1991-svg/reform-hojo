@@ -124,7 +124,7 @@ const slotFor = (cats) => (cats || []).find((id) => AFF[id] && AFF[id].length) |
 // 広告のリンク。data-aff（どの枠のサービスか）と data-pos（ページのどこか）は、あとでクリックを数えたくなったときの目印。
 const affA = (o, pos, cls, inner) => `<a class="${cls}" href="${esc(o.url)}" target="_blank" rel="sponsored nofollow noopener" data-aff="${o.slot}" data-pos="${pos}"${o.impUrl ? ` data-imp="${esc(o.impUrl)}"` : ''}>${inner}</a>`;
 const affTo = (o) => `<p class="aff-to">${o.name ? `提携先：<b>${esc(o.name)}</b>` : '外部の見積もりサービス'}<i>（別のタブで開きます）</i>${o.note ? `<span>${esc(o.note)}</span>` : ''}</p>`;
-const PR_TAG = '<span class="pr">広告・PR</span>';
+const PR_TAG = ''; // 小さなPR表示はページ上部の帯とフッターにまとめた（2026-11-15 運営者の判断）
 const MITSU_SLUG = 'mitsumori-service';
 const MITSU_GUIDE = fs.existsSync(path.join(ROOT, 'src', 'guide', `${MITSU_SLUG}.html`)) ? `/guide/${MITSU_SLUG}/` : '';
 const CTA_TIPS = ['見積もりの依頼は無料（外部のサービスが開きます）', '最初に「補助金を使いたい」と伝える', '工事の前に申請する制度は、交付決定まで契約・着工しない'];
@@ -140,7 +140,7 @@ function ctaBlock(heading, button, opt) {
 <ul class="checks">${(o2.tips || CTA_TIPS).map((t) => `<li>${svgCheck('var(--accent)')}<span>${esc(t)}</span></li>`).join('')}</ul></div>
 <div class="r">${affA(a, 'end', 'btn-shu', `${esc(a.label || button)} ${svgArrow}`)}
 ${affTo(a)}
-${b && b.name ? affA(b, 'end2', 'btn-sub', `${esc(b.label || `${b.name}でも見積もりを頼む`)}<span class="pr-in">PR</span>`) : ''}
+${b && b.name ? affA(b, 'end2', 'btn-sub', `${esc(b.label || `${b.name}でも見積もりを頼む`)}`) : ''}
 ${MITSU_GUIDE && !o2.self ? `<a class="cta-how" href="${MITSU_GUIDE}">一括見積もりのしくみと、頼む前の注意</a>` : ''}</div>
 </section>`;
 }
@@ -186,14 +186,14 @@ function panelFoot(cat, liveIn, cityName) {
           : !liveIn.length && natActive().some((p) => p.cats.includes(cat.id)) ? '国の制度は、登録された事業者が申請します。見積もりのときに、登録事業者かどうかを確かめましょう。'
             : liveIn.length ? `自分の家の工事が対象になるかは、見積もりのときに「${cityName}の補助金を使いたい」と伝えて確かめましょう。`
               : o ? `${cityName}の制度が見つかっていない工事でも、見積もりは無料で頼めます。` : '自分の家の工事が対象になるかは、契約の前に、窓口や見積もりをとる業者に確かめましょう。';
-  return `<div class="result-foot"><span>${esc(msg)}</span>${o ? `<span class="rf-a"><span class="pr">PR</span>${affA(o, `panel-${cat.id}`, 'rf-btn', `${esc(o.label || (o.slot === cat.id ? PANEL_BTN[cat.id] : 'リフォームの見積もりを無料で頼む'))} →`)}</span>` : ''}</div>`;
+  return `<div class="result-foot"><span>${esc(msg)}</span>${o ? `<span class="rf-a">${affA(o, `panel-${cat.id}`, 'rf-btn', `${esc(o.label || (o.slot === cat.id ? PANEL_BTN[cat.id] : 'リフォームの見積もりを無料で頼む'))} →`)}</span>` : ''}</div>`;
 }
 // スマホの画面の下に出る細い帯（少し読み進めてから出る。閉じられる。ページの終わりの案内が見えている間は隠れる）
 const SBAR_JS = "(function(){var b=document.getElementById('sbar');if(!b)return;try{if(sessionStorage.getItem('sbar')==='x'){b.parentNode.removeChild(b);return}}catch(e){}var c=document.getElementById('mitsumori'),n=false;function u(){b.classList.toggle('on',window.pageYOffset>700&&!n)}if(c&&'IntersectionObserver' in window)new IntersectionObserver(function(e){n=e[0].isIntersecting;u()}).observe(c);window.addEventListener('scroll',u,{passive:true});u();b.querySelector('button').addEventListener('click',function(){b.parentNode.removeChild(b);document.body.classList.remove('has-sbar');try{sessionStorage.setItem('sbar','x')}catch(e){}})})();";
 function stickyBar(slot, text) {
   const o = affOffers(slot)[0];
   if (!o) return '';
-  return `<div id="sbar" class="sbar" role="complementary" aria-label="見積もりの案内（広告）"><p><span class="pr">PR</span><span>${esc(text || '補助金を使うなら、契約の前に見積もり')}</span></p>${affA(o, 'bar', 'btn-shu', esc(o.label || '無料で見積もり'))}<button type="button" aria-label="この案内を閉じる">×</button></div>
+  return `<div id="sbar" class="sbar" role="complementary" aria-label="見積もりの案内（広告）"><p><span>${esc(text || '補助金を使うなら、契約の前に見積もり')}</span></p>${affA(o, 'bar', 'btn-shu', esc(o.label || '無料で見積もり'))}<button type="button" aria-label="この案内を閉じる">×</button></div>
 <script>${SBAR_JS}</script>`;
 }
 // 記事に差し込む、案内しているサービスの一覧（{{SERVICES}}）。順位はつけず、設定に書いた順に並べる。
@@ -350,13 +350,13 @@ ${ld ? `<script type="application/ld+json">${JSON.stringify(ld).replace(/</g, '\
 <body${bar ? ' class="has-sbar"' : ''}>
 ${/ data-aff="/.test(body + bar) || cta ? '<p class="pr-top"><span class="wrap">このページには広告（PR）が含まれています。<a href="/disclaimer/">くわしく</a></span></p>\n' : ''}<header class="site-head"><div class="wrap">
 <a class="logo" href="/"><span class="logo-mark"><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg></span></span><span class="logo-text"><b>${esc(config.siteName)}</b><small>市区町村の補助金を、工事ごとにかんたん検索</small></span></a>
-${cta ? '<a class="btn-shu" href="#mitsumori">無料見積もり<span class="pr-in">PR</span></a>' : '<a class="btn-head" href="/#h-pref">地域から探す</a>'}
+${cta ? '<a class="btn-shu" href="#mitsumori">無料見積もり</a>' : '<a class="btn-head" href="/#h-pref">地域から探す</a>'}
 </div></header>
 ${body}
 <footer class="site-foot"><div class="wrap">
 <b>${esc(config.siteName)}</b>
 <p>金額・期間は変わることがあるため、申請前に必ず公式情報をご確認ください。</p>
-<p>当サイトはアフィリエイト広告（PR）を利用しています。「PR」「広告」と表示したリンクから見積もりの申し込みなどがあると、運営者に報酬が支払われることがあります。補助金の情報は、広告と関係なく掲載しています（<a href="/disclaimer/">広告について</a>）。</p>
+<p>当サイトはアフィリエイト広告（PR）を利用しています。見積もりの案内などのリンクから見積もりの申し込みなどがあると、運営者に報酬が支払われることがあります。補助金の情報は、広告と関係なく掲載しています（<a href="/disclaimer/">広告について</a>）。</p>
 <nav class="foot-nav" aria-label="サイトの案内"><a href="/">トップ</a><a href="/#h-pref">都道府県から探す</a><a href="/kuni/">国の補助金</a><a href="/guide/">補助金の基礎知識</a><a href="/koushin/">更新履歴</a><a href="/about/">運営者情報</a><a href="/policy/">編集方針・情報の調べ方</a><a href="/disclaimer/">免責事項・広告について</a><a href="/privacy/">プライバシーポリシー</a><a href="/contact/">お問い合わせ</a></nav>
 </div></footer>
 ${bar}${imps.length ? `<div class="imp" aria-hidden="true">${imps.map((u) => `<img src="${u}" width="1" height="1" alt="">`).join('')}</div>` : ''}
@@ -1242,7 +1242,7 @@ function guidePage(g, ctx) {
   const gSlot = meta.aff || slotFor(cats);
   const gOffer = affOffers(gSlot)[0];
   // 記事の途中の道しるべ（h2 が3つ以上ある記事の、まん中の見出しの前）
-  const waypoint = `<aside class="wp" aria-label="お住まいの市区町村の補助金を調べる"><div class="wp-in"><div class="wp-tx">${gIcon('pin', 30, 2)}<p><b>お住まいの市区町村では、いくら出る？</b><span>金額・条件・窓口は市区町村ごとにちがいます。</span></p></div><div class="wp-btn"><a class="wp-a" href="#h-sagasu">市区町村の補助金を調べる${svgArrow}</a>${gOffer ? affA(gOffer, 'guide-mid', 'wp-b', `${esc(gOffer.label || '無料で見積もりを頼む')}<span class="wp-pr">PR</span>`) : ''}</div></div></aside>`;
+  const waypoint = `<aside class="wp" aria-label="お住まいの市区町村の補助金を調べる"><div class="wp-in"><div class="wp-tx">${gIcon('pin', 30, 2)}<p><b>お住まいの市区町村では、いくら出る？</b><span>金額・条件・窓口は市区町村ごとにちがいます。</span></p></div><div class="wp-btn"><a class="wp-a" href="#h-sagasu">市区町村の補助金を調べる${svgArrow}</a>${gOffer ? affA(gOffer, 'guide-mid', 'wp-b', `${esc(gOffer.label || '無料で見積もりを頼む')}`) : ''}</div></div></aside>`;
   const n = g.toc.length;
   const content = n >= 3 ? g.html.replace(`<h2 id="s${Math.floor(n / 2) + 1}">`, (m) => `${waypoint}\n${m}`) : g.html;
   const points = meta.points || [];
