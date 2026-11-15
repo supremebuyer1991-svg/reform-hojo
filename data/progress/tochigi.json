@@ -1,0 +1,131 @@
+{
+  "pref": "栃木県",
+  "prefSlug": "tochigi",
+  "cities": [
+    {
+      "name": "宇都宮市",
+      "slug": "utsunomiya",
+      "status": "todo"
+    },
+    {
+      "name": "足利市",
+      "slug": "ashikaga",
+      "status": "todo"
+    },
+    {
+      "name": "栃木市",
+      "slug": "tochigi-shi",
+      "status": "todo"
+    },
+    {
+      "name": "佐野市",
+      "slug": "sano",
+      "status": "todo"
+    },
+    {
+      "name": "鹿沼市",
+      "slug": "kanuma",
+      "status": "todo"
+    },
+    {
+      "name": "日光市",
+      "slug": "nikko",
+      "status": "todo"
+    },
+    {
+      "name": "小山市",
+      "slug": "oyama",
+      "status": "todo"
+    },
+    {
+      "name": "真岡市",
+      "slug": "moka",
+      "status": "todo"
+    },
+    {
+      "name": "大田原市",
+      "slug": "otawara",
+      "status": "todo"
+    },
+    {
+      "name": "矢板市",
+      "slug": "yaita",
+      "status": "todo"
+    },
+    {
+      "name": "那須塩原市",
+      "slug": "nasushiobara",
+      "status": "todo"
+    },
+    {
+      "name": "さくら市",
+      "slug": "sakura",
+      "status": "todo"
+    },
+    {
+      "name": "那須烏山市",
+      "slug": "nasukarasuyama",
+      "status": "todo"
+    },
+    {
+      "name": "下野市",
+      "slug": "shimotsuke",
+      "status": "todo"
+    },
+    {
+      "name": "上三川町",
+      "slug": "kaminokawa",
+      "status": "todo"
+    },
+    {
+      "name": "益子町",
+      "slug": "mashiko",
+      "status": "todo"
+    },
+    {
+      "name": "茂木町",
+      "slug": "motegi",
+      "status": "todo"
+    },
+    {
+      "name": "市貝町",
+      "slug": "ichikai",
+      "status": "todo"
+    },
+    {
+      "name": "芳賀町",
+      "slug": "haga",
+      "status": "todo"
+    },
+    {
+      "name": "壬生町",
+      "slug": "mibu",
+      "status": "todo"
+    },
+    {
+      "name": "野木町",
+      "slug": "nogi",
+      "status": "todo"
+    },
+    {
+      "name": "塩谷町",
+      "slug": "shioya",
+      "status": "todo"
+    },
+    {
+      "name": "高根沢町",
+      "slug": "takanezawa",
+      "status": "todo"
+    },
+    {
+      "name": "那須町",
+      "slug": "nasu",
+      "status": "todo"
+    },
+    {
+      "name": "那珂川町",
+      "slug": "nakagawa",
+      "status": "todo"
+    }
+  ]
+}
