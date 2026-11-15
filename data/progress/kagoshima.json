@@ -1,0 +1,221 @@
+{
+  "pref": "鹿児島県",
+  "prefSlug": "kagoshima",
+  "cities": [
+    {
+      "name": "鹿児島市",
+      "slug": "kagoshima-shi",
+      "status": "done"
+    },
+    {
+      "name": "鹿屋市",
+      "slug": "kanoya",
+      "status": "done"
+    },
+    {
+      "name": "枕崎市",
+      "slug": "makurazaki",
+      "status": "done"
+    },
+    {
+      "name": "阿久根市",
+      "slug": "akune",
+      "status": "todo"
+    },
+    {
+      "name": "出水市",
+      "slug": "izumi",
+      "status": "done"
+    },
+    {
+      "name": "指宿市",
+      "slug": "ibusuki",
+      "status": "done"
+    },
+    {
+      "name": "西之表市",
+      "slug": "nishinoomote",
+      "status": "done"
+    },
+    {
+      "name": "垂水市",
+      "slug": "tarumizu",
+      "status": "done"
+    },
+    {
+      "name": "薩摩川内市",
+      "slug": "satsumasendai",
+      "status": "done"
+    },
+    {
+      "name": "日置市",
+      "slug": "hioki",
+      "status": "done"
+    },
+    {
+      "name": "曽於市",
+      "slug": "soo",
+      "status": "done"
+    },
+    {
+      "name": "霧島市",
+      "slug": "kirishima",
+      "status": "done"
+    },
+    {
+      "name": "いちき串木野市",
+      "slug": "ichikikushikino",
+      "status": "todo"
+    },
+    {
+      "name": "南さつま市",
+      "slug": "minamisatsuma",
+      "status": "done"
+    },
+    {
+      "name": "志布志市",
+      "slug": "shibushi",
+      "status": "done"
+    },
+    {
+      "name": "奄美市",
+      "slug": "amami",
+      "status": "done"
+    },
+    {
+      "name": "南九州市",
+      "slug": "minamikyushu",
+      "status": "done"
+    },
+    {
+      "name": "伊佐市",
+      "slug": "isa",
+      "status": "done"
+    },
+    {
+      "name": "姶良市",
+      "slug": "aira",
+      "status": "done"
+    },
+    {
+      "name": "三島村",
+      "slug": "mishima",
+      "status": "todo"
+    },
+    {
+      "name": "十島村",
+      "slug": "toshima",
+      "status": "done"
+    },
+    {
+      "name": "さつま町",
+      "slug": "satsuma",
+      "status": "done"
+    },
+    {
+      "name": "長島町",
+      "slug": "nagashima",
+      "status": "done"
+    },
+    {
+      "name": "湧水町",
+      "slug": "yusui",
+      "status": "done"
+    },
+    {
+      "name": "大崎町",
+      "slug": "osaki",
+      "status": "done"
+    },
+    {
+      "name": "東串良町",
+      "slug": "higashikushira",
+      "status": "done"
+    },
+    {
+      "name": "錦江町",
+      "slug": "kinko",
+      "status": "done"
+    },
+    {
+      "name": "南大隅町",
+      "slug": "minamiosumi",
+      "status": "done"
+    },
+    {
+      "name": "肝付町",
+      "slug": "kimotsuki",
+      "status": "done"
+    },
+    {
+      "name": "中種子町",
+      "slug": "nakatane",
+      "status": "done"
+    },
+    {
+      "name": "南種子町",
+      "slug": "minamitane",
+      "status": "todo"
+    },
+    {
+      "name": "屋久島町",
+      "slug": "yakushima",
+      "status": "done"
+    },
+    {
+      "name": "大和村",
+      "slug": "yamato",
+      "status": "done"
+    },
+    {
+      "name": "宇検村",
+      "slug": "uken",
+      "status": "done"
+    },
+    {
+      "name": "瀬戸内町",
+      "slug": "setouchi",
+      "status": "done"
+    },
+    {
+      "name": "龍郷町",
+      "slug": "tatsugo",
+      "status": "done"
+    },
+    {
+      "name": "喜界町",
+      "slug": "kikai",
+      "status": "done"
+    },
+    {
+      "name": "徳之島町",
+      "slug": "tokunoshima",
+      "status": "done"
+    },
+    {
+      "name": "天城町",
+      "slug": "amagi",
+      "status": "done"
+    },
+    {
+      "name": "伊仙町",
+      "slug": "isen",
+      "status": "done"
+    },
+    {
+      "name": "和泊町",
+      "slug": "wadomari",
+      "status": "todo"
+    },
+    {
+      "name": "知名町",
+      "slug": "china",
+      "status": "done"
+    },
+    {
+      "name": "与論町",
+      "slug": "yoron",
+      "status": "done"
+    }
+  ]
+}

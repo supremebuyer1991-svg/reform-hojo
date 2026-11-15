@@ -115,27 +115,27 @@
     {
       "name": "小国町",
       "slug": "oguni",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "産山村",
       "slug": "ubuyama",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "高森町",
       "slug": "takamori",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "西原村",
       "slug": "nishihara",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "南阿蘇村",
       "slug": "minamiaso",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "御船町",
@@ -180,12 +180,12 @@
     {
       "name": "錦町",
       "slug": "nishiki",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "多良木町",
       "slug": "taragi",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "湯前町",
@@ -195,12 +195,12 @@
     {
       "name": "水上村",
       "slug": "mizukami",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "相良村",
       "slug": "sagara",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "五木村",
@@ -215,7 +215,7 @@
     {
       "name": "球磨村",
       "slug": "kuma",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "あさぎり町",
