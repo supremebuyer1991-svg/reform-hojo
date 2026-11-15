@@ -380,12 +380,12 @@
     {
       "name": "飯綱町",
       "slug": "iizuna",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "栄村",
       "slug": "sakae",
-      "status": "todo"
+      "status": "done"
     }
   ]
 }

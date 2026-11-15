@@ -1,0 +1,216 @@
+{
+  "pref": "岐阜県",
+  "prefSlug": "gifu",
+  "cities": [
+    {
+      "name": "岐阜市",
+      "slug": "gifu-shi",
+      "status": "done"
+    },
+    {
+      "name": "大垣市",
+      "slug": "ogaki",
+      "status": "done"
+    },
+    {
+      "name": "高山市",
+      "slug": "takayama",
+      "status": "done"
+    },
+    {
+      "name": "多治見市",
+      "slug": "tajimi",
+      "status": "done"
+    },
+    {
+      "name": "関市",
+      "slug": "seki",
+      "status": "done"
+    },
+    {
+      "name": "中津川市",
+      "slug": "nakatsugawa",
+      "status": "done"
+    },
+    {
+      "name": "美濃市",
+      "slug": "mino",
+      "status": "done"
+    },
+    {
+      "name": "瑞浪市",
+      "slug": "mizunami",
+      "status": "done"
+    },
+    {
+      "name": "羽島市",
+      "slug": "hashima",
+      "status": "todo"
+    },
+    {
+      "name": "恵那市",
+      "slug": "ena",
+      "status": "todo"
+    },
+    {
+      "name": "美濃加茂市",
+      "slug": "minokamo",
+      "status": "todo"
+    },
+    {
+      "name": "土岐市",
+      "slug": "toki",
+      "status": "todo"
+    },
+    {
+      "name": "各務原市",
+      "slug": "kakamigahara",
+      "status": "todo"
+    },
+    {
+      "name": "可児市",
+      "slug": "kani",
+      "status": "todo"
+    },
+    {
+      "name": "山県市",
+      "slug": "yamagata",
+      "status": "todo"
+    },
+    {
+      "name": "瑞穂市",
+      "slug": "mizuho",
+      "status": "todo"
+    },
+    {
+      "name": "飛騨市",
+      "slug": "hida",
+      "status": "todo"
+    },
+    {
+      "name": "本巣市",
+      "slug": "motosu",
+      "status": "todo"
+    },
+    {
+      "name": "郡上市",
+      "slug": "gujo",
+      "status": "todo"
+    },
+    {
+      "name": "下呂市",
+      "slug": "gero",
+      "status": "todo"
+    },
+    {
+      "name": "海津市",
+      "slug": "kaizu",
+      "status": "todo"
+    },
+    {
+      "name": "岐南町",
+      "slug": "ginan",
+      "status": "todo"
+    },
+    {
+      "name": "笠松町",
+      "slug": "kasamatsu",
+      "status": "todo"
+    },
+    {
+      "name": "養老町",
+      "slug": "yoro",
+      "status": "todo"
+    },
+    {
+      "name": "垂井町",
+      "slug": "tarui",
+      "status": "todo"
+    },
+    {
+      "name": "関ケ原町",
+      "slug": "sekigahara",
+      "status": "todo"
+    },
+    {
+      "name": "神戸町",
+      "slug": "godo",
+      "status": "todo"
+    },
+    {
+      "name": "輪之内町",
+      "slug": "wanouchi",
+      "status": "todo"
+    },
+    {
+      "name": "安八町",
+      "slug": "anpachi",
+      "status": "todo"
+    },
+    {
+      "name": "揖斐川町",
+      "slug": "ibigawa",
+      "status": "todo"
+    },
+    {
+      "name": "大野町",
+      "slug": "ono",
+      "status": "todo"
+    },
+    {
+      "name": "池田町",
+      "slug": "ikeda",
+      "status": "todo"
+    },
+    {
+      "name": "北方町",
+      "slug": "kitagata",
+      "status": "todo"
+    },
+    {
+      "name": "坂祝町",
+      "slug": "sakahogi",
+      "status": "todo"
+    },
+    {
+      "name": "富加町",
+      "slug": "tomika",
+      "status": "todo"
+    },
+    {
+      "name": "川辺町",
+      "slug": "kawabe",
+      "status": "todo"
+    },
+    {
+      "name": "七宗町",
+      "slug": "hichiso",
+      "status": "todo"
+    },
+    {
+      "name": "八百津町",
+      "slug": "yaotsu",
+      "status": "todo"
+    },
+    {
+      "name": "白川町",
+      "slug": "shirakawa-cho",
+      "status": "todo"
+    },
+    {
+      "name": "東白川村",
+      "slug": "higashishirakawa",
+      "status": "todo"
+    },
+    {
+      "name": "御嵩町",
+      "slug": "mitake",
+      "status": "todo"
+    },
+    {
+      "name": "白川村",
+      "slug": "shirakawa-mura",
+      "status": "todo"
+    }
+  ]
+}

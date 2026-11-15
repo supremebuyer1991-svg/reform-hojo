@@ -3367,6 +3367,118 @@
       "what": "住宅を改修するには（福祉の案内）",
       "url": "https://www.town.shinano.lg.jp/docs/840.html",
       "date": "2026-11-15"
+    },
+    {
+      "pref": "nagano",
+      "city": "栄村",
+      "what": "村公式サイト「住まい」一覧（httpsからhttpへの転送で取得できない）",
+      "url": "http://www.vill.sakae.nagano.jp/kurashi/sumai/",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "nagano",
+      "city": "栄村",
+      "what": "栄村住宅リフォーム支援事業補助金のご案内",
+      "url": "http://www.vill.sakae.nagano.jp/docs/2062.html",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "nagano",
+      "city": "栄村",
+      "what": "栄村克雪住宅普及促進事業補助金のご案内",
+      "url": "http://www.vill.sakae.nagano.jp/docs/2063.html",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "nagano",
+      "city": "栄村",
+      "what": "住宅用照明LED化支援事業補助金",
+      "url": "http://www.vill.sakae.nagano.jp/docs/3071.html",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "nagano",
+      "city": "飯綱町",
+      "what": "令和８年度 住宅の耐震診断及び耐震改修補助の受付終了について",
+      "url": "https://www.town.iizuna.nagano.jp/docs/11189.html",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "gifu",
+      "city": "大垣市",
+      "what": "木造住宅耐震補助制度のご案内（チラシPDF、補助額が読み取れず）",
+      "url": "https://www.city.ogaki.lg.jp/cmsfiles/contents/0000050/50149/taishin_chirashi_R8.pdf",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "gifu",
+      "city": "多治見市",
+      "what": "耐震化促進事業に関するお知らせ（受付状況）",
+      "url": "https://www.city.tajimi.lg.jp/kurashi_tetsuduzuki/machizukuri/1005830/1005851/1010196.html",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "gifu",
+      "city": "多治見市",
+      "what": "耐震シェルター・防災ベッド整備費補助事業",
+      "url": "https://www.city.tajimi.lg.jp/kurashi_tetsuduzuki/machizukuri/1005830/1005851/1005862/1005869.html",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "gifu",
+      "city": "多治見市",
+      "what": "東濃5市共通木造住宅耐震補強工事費助成制度利用マニュアル（PDF）",
+      "url": "https://www.city.tajimi.lg.jp/_res/projects/default_project/_page_/001/005/866/tounoumanyuaru.pdf",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "gifu",
+      "city": "多治見市",
+      "what": "住宅用新エネルギーシステム 令和8年度手続きガイド（PDF）",
+      "url": "https://www.city.tajimi.lg.jp/_res/projects/default_project/_page_/001/005/423/2026guide.pdf",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "gifu",
+      "city": "多治見市",
+      "what": "空き家再生補助金リーフレット（PDF）",
+      "url": "https://www.city.tajimi.lg.jp/_res/projects/default_project/_page_/001/006/149/leaflet-ver1.10.pdf",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "gifu",
+      "city": "中津川市",
+      "what": "住宅リフォーム補助のご案内（robotsで拒否）",
+      "url": "https://www.city.nakatsugawa.lg.jp/soshikikarasagasu/kenchikujuutakuka/1/1/2069.html",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "gifu",
+      "city": "中津川市",
+      "what": "建築物等耐震化促進事業（robotsで拒否）",
+      "url": "https://www.city.nakatsugawa.lg.jp/soshikikarasagasu/kenchikujuutakuka/1/1/2067.html",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "gifu",
+      "city": "中津川市",
+      "what": "ゼロカーボンシティ推進事業補助制度（robotsで拒否）",
+      "url": "https://www.city.nakatsugawa.lg.jp/soshikikarasagasu/kankyoka/3/1/2/2130.html",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "gifu",
+      "city": "中津川市",
+      "what": "空き家に住もう応援事業補助金（robotsで拒否）",
+      "url": "https://www.city.nakatsugawa.lg.jp/soshikikarasagasu/tiikidukurikyodoka/4/2/38700.html",
+      "date": "2026-11-15"
+    },
+    {
+      "pref": "gifu",
+      "city": "美濃市",
+      "what": "歴史的町並み整備事業補助金（補助内容の画像・要綱RTFが読めず）",
+      "url": "https://www.city.mino.gifu.jp/docs/2147517.html",
+      "date": "2026-11-15"
     }
   ]
 }
