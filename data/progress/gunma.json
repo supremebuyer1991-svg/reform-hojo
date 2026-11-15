@@ -1,0 +1,181 @@
+{
+  "pref": "群馬県",
+  "prefSlug": "gunma",
+  "cities": [
+    {
+      "name": "前橋市",
+      "slug": "maebashi",
+      "status": "done"
+    },
+    {
+      "name": "高崎市",
+      "slug": "takasaki",
+      "status": "done"
+    },
+    {
+      "name": "桐生市",
+      "slug": "kiryu",
+      "status": "done"
+    },
+    {
+      "name": "伊勢崎市",
+      "slug": "isesaki",
+      "status": "done"
+    },
+    {
+      "name": "太田市",
+      "slug": "ota",
+      "status": "done"
+    },
+    {
+      "name": "沼田市",
+      "slug": "numata",
+      "status": "done"
+    },
+    {
+      "name": "館林市",
+      "slug": "tatebayashi",
+      "status": "done"
+    },
+    {
+      "name": "渋川市",
+      "slug": "shibukawa",
+      "status": "done"
+    },
+    {
+      "name": "藤岡市",
+      "slug": "fujioka",
+      "status": "done"
+    },
+    {
+      "name": "富岡市",
+      "slug": "tomioka",
+      "status": "done"
+    },
+    {
+      "name": "安中市",
+      "slug": "annaka",
+      "status": "done"
+    },
+    {
+      "name": "みどり市",
+      "slug": "midori",
+      "status": "done"
+    },
+    {
+      "name": "榛東村",
+      "slug": "shinto",
+      "status": "done"
+    },
+    {
+      "name": "吉岡町",
+      "slug": "yoshioka",
+      "status": "done"
+    },
+    {
+      "name": "上野村",
+      "slug": "ueno",
+      "status": "done"
+    },
+    {
+      "name": "神流町",
+      "slug": "kanna",
+      "status": "done"
+    },
+    {
+      "name": "下仁田町",
+      "slug": "shimonita",
+      "status": "done"
+    },
+    {
+      "name": "南牧村",
+      "slug": "nanmoku",
+      "status": "done"
+    },
+    {
+      "name": "甘楽町",
+      "slug": "kanra",
+      "status": "done"
+    },
+    {
+      "name": "中之条町",
+      "slug": "nakanojo",
+      "status": "done"
+    },
+    {
+      "name": "長野原町",
+      "slug": "naganohara",
+      "status": "done"
+    },
+    {
+      "name": "嬬恋村",
+      "slug": "tsumagoi",
+      "status": "done"
+    },
+    {
+      "name": "草津町",
+      "slug": "kusatsu",
+      "status": "done"
+    },
+    {
+      "name": "高山村",
+      "slug": "takayama",
+      "status": "done"
+    },
+    {
+      "name": "東吾妻町",
+      "slug": "higashiagatsuma",
+      "status": "done"
+    },
+    {
+      "name": "片品村",
+      "slug": "katashina",
+      "status": "done"
+    },
+    {
+      "name": "川場村",
+      "slug": "kawaba",
+      "status": "done"
+    },
+    {
+      "name": "昭和村",
+      "slug": "showa",
+      "status": "done"
+    },
+    {
+      "name": "みなかみ町",
+      "slug": "minakami",
+      "status": "done"
+    },
+    {
+      "name": "玉村町",
+      "slug": "tamamura",
+      "status": "done"
+    },
+    {
+      "name": "板倉町",
+      "slug": "itakura",
+      "status": "done"
+    },
+    {
+      "name": "明和町",
+      "slug": "meiwa",
+      "status": "done"
+    },
+    {
+      "name": "千代田町",
+      "slug": "chiyoda",
+      "status": "done"
+    },
+    {
+      "name": "大泉町",
+      "slug": "oizumi",
+      "status": "done"
+    },
+    {
+      "name": "邑楽町",
+      "slug": "ora",
+      "status": "done"
+    }
+  ]
+}
