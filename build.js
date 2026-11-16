@@ -121,6 +121,11 @@ const AFF = (() => {
 const affOffers = (slot) => (AFF[slot] && AFF[slot].length ? AFF[slot] : AFF.general || []);
 // 工事IDの並びから、専用のサービスがある最初の枠をえらぶ（無ければ全般）
 const slotFor = (cats) => (cats || []).find((id) => AFF[id] && AFF[id].length) || 'general';
+// Google アナリティクス（GA4）。config.json の ga4Id が空なら何も入れない。
+// 広告リンク（data-aff 付き）が押されたら affiliate_click イベントを送る（aff=枠、pos=ページ内の場所）。
+const GA_TAG = /^G-[A-Z0-9]+$/.test(config.ga4Id || '') ? `<script async src="https://www.googletagmanager.com/gtag/js?id=${config.ga4Id}"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','${config.ga4Id}');
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[data-aff]');if(!a)return;gtag('event','affiliate_click',{aff:a.getAttribute('data-aff'),pos:a.getAttribute('data-pos'),link_text:(a.textContent||'').trim().slice(0,80),transport_type:'beacon'});},true);</script>` : '';
 // 広告のリンク。data-aff（どの枠のサービスか）と data-pos（ページのどこか）は、あとでクリックを数えたくなったときの目印。
 const affA = (o, pos, cls, inner) => `<a class="${cls}" href="${esc(o.url)}" target="_blank" rel="sponsored nofollow noopener" data-aff="${o.slot}" data-pos="${pos}"${o.impUrl ? ` data-imp="${esc(o.impUrl)}"` : ''}>${inner}</a>`;
 const affTo = (o) => `<p class="aff-to">${o.name ? `提携先：<b>${esc(o.name)}</b>` : '外部の見積もりサービス'}<i>（別のタブで開きます）</i>${o.note ? `<span>${esc(o.note)}</span>` : ''}</p>`;
@@ -346,6 +351,7 @@ ${config.googleSiteVerification ? `<meta name="google-site-verification" content
 <noscript><link rel="stylesheet" href="${FONT_URL}"></noscript>
 <style>${CSS}</style>
 ${ld ? `<script type="application/ld+json">${JSON.stringify(ld).replace(/</g, '\\u003c')}</script>` : ''}
+${GA_TAG}
 </head>
 <body${bar ? ' class="has-sbar"' : ''}>
 ${/ data-aff="/.test(body + bar) || cta ? '<p class="pr-top"><span class="wrap">このページには広告（PR）が含まれています。<a href="/disclaimer/">くわしく</a></span></p>\n' : ''}<header class="site-head"><div class="wrap">
