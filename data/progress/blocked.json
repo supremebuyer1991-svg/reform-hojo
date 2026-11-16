@@ -5173,6 +5173,111 @@
       "what": "空き家バンクのページ",
       "url": "https://www.city.minamishimabara.lg.jp/kiji0037240/index.html",
       "date": "2026-11-16"
+    },
+    {
+      "pref": "kagoshima",
+      "city": "南種子町",
+      "what": "移住定住促進補助金のページ（httpsとhttpの転送がくり返され取得できず）",
+      "url": "http://www.town.minamitane.kagoshima.jp/industry/etc/ijyuteijyusokushinhojyo.html",
+      "date": "2026-11-16"
+    },
+    {
+      "pref": "kagoshima",
+      "city": "南種子町",
+      "what": "建設課のページ",
+      "url": "http://www.town.minamitane.kagoshima.jp/townofficeinfo/affair/kensetsu.html",
+      "date": "2026-11-16"
+    },
+    {
+      "pref": "kagoshima",
+      "city": "南種子町",
+      "what": "耐震改修促進計画のページ",
+      "url": "http://www.town.minamitane.kagoshima.jp/publicize/3/13.html",
+      "date": "2026-11-16"
+    },
+    {
+      "pref": "nagasaki",
+      "city": "時津町",
+      "what": "子育て応援住宅リフォームの制度ページ",
+      "url": "https://www.town.togitsu.nagasaki.jp/soshikikarasagasu/toshiseibika/juutaku/9068.html",
+      "date": "2026-11-16"
+    },
+    {
+      "pref": "nagasaki",
+      "city": "長与町",
+      "what": "太陽光補助の申請の手引き（PDF）",
+      "url": "https://webtown.nagayo.jp/kiji0034870/3_4870_up_gdcaripr.pdf",
+      "date": "2026-11-16"
+    },
+    {
+      "pref": "nagasaki",
+      "city": "川棚町",
+      "what": "安全・安心住まいづくり支援事業のPDF",
+      "url": "https://www.kawatana.jp/item/36db93fda9e063375199cfc738a137fd_2.pdf",
+      "date": "2026-11-16"
+    },
+    {
+      "pref": "nagasaki",
+      "city": "川棚町",
+      "what": "空き家改修等事業費補助金の交付要綱（PDF）",
+      "url": "https://www.kawatana.jp/item/88d789c4a4632e570b64fc386eb713a6.pdf",
+      "date": "2026-11-16"
+    },
+    {
+      "pref": "nagasaki",
+      "city": "川棚町",
+      "what": "親子でスマイル住宅支援事業補助金交付要綱",
+      "url": "https://www.kawatana.jp/reiki/act/hist/hist110001458.htm",
+      "date": "2026-11-16"
+    },
+    {
+      "pref": "nagasaki",
+      "city": "波佐見町",
+      "what": "住宅性能向上リフォーム支援事業の手引き（.doc）",
+      "url": "https://www.town.hasami.lg.jp/kiji0031015/3_1015_1_rihxo-mu.doc",
+      "date": "2026-11-16"
+    },
+    {
+      "pref": "nagasaki",
+      "city": "波佐見町",
+      "what": "住宅性能向上リフォームの別表第1（PDF）",
+      "url": "https://www.town.hasami.lg.jp/kiji0031015/3_1015_25_beppyou1.pdf",
+      "date": "2026-11-16"
+    },
+    {
+      "pref": "nagasaki",
+      "city": "波佐見町",
+      "what": "住宅性能向上リフォームのチェックシート（PDF）",
+      "url": "https://www.town.hasami.lg.jp/kiji0031015/3_1015_6_reform_sien_03.pdf",
+      "date": "2026-11-16"
+    },
+    {
+      "pref": "nagasaki",
+      "city": "波佐見町",
+      "what": "定住奨励金のページ",
+      "url": "https://www.town.hasami.lg.jp/machi/kurashi/5/2/1192.html",
+      "date": "2026-11-16"
+    },
+    {
+      "pref": "nagasaki",
+      "city": "東彼杵町",
+      "what": "空き家活用促進奨励金のページ",
+      "url": "https://www.town.higashisonogi.lg.jp/lifescene/4/hikkoshi_sumai_sumai/927.html",
+      "date": "2026-11-16"
+    },
+    {
+      "pref": "nagasaki",
+      "city": "新上五島町",
+      "what": "太陽光発電設備設置補助金のページ",
+      "url": "https://official.shinkamigoto.net/goto_kurashi_full.php?eid=07258&bn=2&r=1&wcid=i00005x2",
+      "date": "2026-11-16"
+    },
+    {
+      "pref": "nagasaki",
+      "city": "新上五島町",
+      "what": "耐震・安心住まいづくり案内（PDF）",
+      "url": "https://official.shinkamigoto.net/cmd/dlfile.php?entryname=benri&entryid=00709&fileid=00000022&disp=inline",
+      "date": "2026-11-16"
     }
   ]
 }

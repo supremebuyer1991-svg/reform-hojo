@@ -70,42 +70,42 @@
     {
       "name": "長与町",
       "slug": "nagayo",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "時津町",
       "slug": "togitsu",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "東彼杵町",
       "slug": "higashisonogi",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "川棚町",
       "slug": "kawatana",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "波佐見町",
       "slug": "hasami",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "小値賀町",
       "slug": "ojika",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "佐々町",
       "slug": "saza",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "新上五島町",
       "slug": "shinkamigoto",
-      "status": "todo"
+      "status": "done"
     }
   ]
 }
