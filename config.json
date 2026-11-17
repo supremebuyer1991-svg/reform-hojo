@@ -6,6 +6,13 @@
     "_memo": "広告リンクの設定。書き方は README.md の「広告リンクの設定」。url が空のサービスは、サイトに出ません。",
     "general": [
       {
+        "name": "Re:est",
+        "url": "https://px.a8.net/svt/ejp?a8mat=4BGLS5+AEHP22+5UT6+5YJRM",
+        "impUrl": "https://www12.a8.net/0.gif?a8mat=4BGLS5+AEHP22+5UT6+5YJRM",
+        "label": "後悔しない業者選びなら！リフォーム簡単見積もりサイト【Re:est】",
+        "note": "A8.net Re:est（ニッカホーム、2026-11-17 提携）。ニッカホームの対象外エリアからの申込は否認。リショップナビ／ハピすむが通ったら、そちらを1つ目に"
+      },
+      {
         "name": "リショップナビ",
         "url": "",
         "impUrl": "",

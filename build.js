@@ -197,7 +197,8 @@ function panelFoot(cat, liveIn, cityName) {
 const SBAR_JS = "(function(){var b=document.getElementById('sbar');if(!b)return;try{if(sessionStorage.getItem('sbar')==='x'){b.parentNode.removeChild(b);return}}catch(e){}var c=document.getElementById('mitsumori'),n=false;function u(){b.classList.toggle('on',window.pageYOffset>700&&!n)}if(c&&'IntersectionObserver' in window)new IntersectionObserver(function(e){n=e[0].isIntersecting;u()}).observe(c);window.addEventListener('scroll',u,{passive:true});u();b.querySelector('button').addEventListener('click',function(){b.parentNode.removeChild(b);document.body.classList.remove('has-sbar');try{sessionStorage.setItem('sbar','x')}catch(e){}})})();";
 function stickyBar(slot, text) {
   const o = affOffers(slot)[0];
-  if (!o) return '';
+  // 素材の文言を変えられない広告（label が長い）は、スマホの細い帯に収まらないので帯を出さない
+  if (!o || (o.label && o.label.length > 20)) return '';
   return `<div id="sbar" class="sbar" role="complementary" aria-label="見積もりの案内（広告）"><p><span>${esc(text || '補助金を使うなら、契約の前に見積もり')}</span></p>${affA(o, 'bar', 'btn-shu', esc(o.label || '無料で見積もり'))}<button type="button" aria-label="この案内を閉じる">×</button></div>
 <script>${SBAR_JS}</script>`;
 }
