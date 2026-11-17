@@ -1,0 +1,19 @@
+{
+  "pref": "沖縄県",
+  "prefSlug": "okinawa",
+  "name": "今帰仁村",
+  "slug": "nakijin",
+  "kana": "なきじんそん",
+  "checked": "2026-11-17",
+  "programs": [],
+  "neighbors": [
+    "名護市",
+    "本部町"
+  ],
+  "history": [
+    {
+      "date": "2026-11-17",
+      "note": "ページを公開しました。"
+    }
+  ]
+}

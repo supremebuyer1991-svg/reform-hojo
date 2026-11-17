@@ -5341,6 +5341,118 @@
       "what": "住宅リフォーム助成 申請手続きガイド（PDF）",
       "url": "https://www.city.uruma.lg.jp/documents/10871/101jyutakuriformsinseitetudukigaide.pdf",
       "date": "2026-11-17"
+    },
+    {
+      "pref": "okinawa",
+      "city": "大宜味村",
+      "what": "村の公式サイト（トップページ。住宅関係の補助制度の確認用）",
+      "url": "https://www.vill.ogimi.okinawa.jp/",
+      "date": "2026-11-17"
+    },
+    {
+      "pref": "okinawa",
+      "city": "東村",
+      "what": "村の公式サイト（トップページ。住宅関係の補助制度の確認用）",
+      "url": "https://www.vill.higashi.okinawa.jp/",
+      "date": "2026-11-17"
+    },
+    {
+      "pref": "okinawa",
+      "city": "今帰仁村",
+      "what": "村公式サイト全体（robots.txtで取得不可。住宅関係の補助制度を確認できず）",
+      "url": "https://www.nakijin.jp/pagtop/kakuka/kensetsuka/4/index.html",
+      "date": "2026-11-17"
+    },
+    {
+      "pref": "okinawa",
+      "city": "今帰仁村",
+      "what": "沖縄振興特定事業推進費市町村補助金のページ",
+      "url": "https://www.nakijin.jp/pagtop/kakuka/kikakuzaisei/2/5116.html",
+      "date": "2026-11-17"
+    },
+    {
+      "pref": "okinawa",
+      "city": "本部町",
+      "what": "空き家再生支援事業補助金 チラシPDF",
+      "url": "https://www.town.motobu.okinawa.jp/doc/2026041400034/file_contents/saisei.pdf",
+      "date": "2026-11-17"
+    },
+    {
+      "pref": "okinawa",
+      "city": "本部町",
+      "what": "合併処理浄化槽設置整備事業費補助金 提出書類一覧PDF",
+      "url": "https://www.town.motobu.okinawa.jp/doc/2025052300029/file_contents/teisyutu.pdf",
+      "date": "2026-11-17"
+    },
+    {
+      "pref": "okinawa",
+      "city": "本部町",
+      "what": "合併処理浄化槽設置整備事業費補助金 申請の注意事項PDF",
+      "url": "https://www.town.motobu.okinawa.jp/doc/2025052300029/file_contents/sinnseichuuijikou.pdf",
+      "date": "2026-11-17"
+    },
+    {
+      "pref": "okinawa",
+      "city": "本部町",
+      "what": "本部町住宅改修費給付事業実施要綱（例規集。リダイレクトで取得不可）",
+      "url": "http://www.reiki.town.motobu.okinawa.jp/reiki_honbun/q916RG00000566.html",
+      "date": "2026-11-17"
+    },
+    {
+      "pref": "okinawa",
+      "city": "伊江村",
+      "what": "伊江村緊急経済対策住宅リフォーム支援事業補助金（制度のページ）",
+      "url": "https://www.iejima.org/document/2021071200012/",
+      "date": "2026-11-17"
+    },
+    {
+      "pref": "okinawa",
+      "city": "伊江村",
+      "what": "循環型社会形成交付金（浄化槽設置）について",
+      "url": "https://www.iejima.org/document/2026030600018/",
+      "date": "2026-11-17"
+    },
+    {
+      "pref": "okinawa",
+      "city": "南城市",
+      "what": "三世代同近居支援補助金 交付要綱PDF",
+      "url": "https://www.city.nanjo.okinawa.jp/userfiles/files/R6youkou.pdf",
+      "date": "2026-11-17"
+    },
+    {
+      "pref": "okinawa",
+      "city": "南城市",
+      "what": "知念地域 移住定住支援補助金 交付要綱PDF",
+      "url": "https://www.city.nanjo.okinawa.jp/userfiles/files/250331kouhuyoukou.pdf",
+      "date": "2026-11-17"
+    },
+    {
+      "pref": "okinawa",
+      "city": "南城市",
+      "what": "知念地域 移住定住支援補助金 チラシPDF",
+      "url": "https://www.city.nanjo.okinawa.jp/userfiles/files/2025chirashi.pdf",
+      "date": "2026-11-17"
+    },
+    {
+      "pref": "okinawa",
+      "city": "南城市",
+      "what": "下水道接続工事補助金 申請手順PDF",
+      "url": "https://www.city.nanjo.okinawa.jp/userfiles/files/tejun.pdf",
+      "date": "2026-11-17"
+    },
+    {
+      "pref": "okinawa",
+      "city": "国頭村",
+      "what": "空き家バンク 実施要綱PDF",
+      "url": "http://www.vill.kunigami.okinawa.jp/kunigami-village/wp-content/uploads/2024/07/vacant_house_bank01.pdf",
+      "date": "2026-11-17"
+    },
+    {
+      "pref": "okinawa",
+      "city": "国頭村",
+      "what": "空き家バンク ご利用ガイド",
+      "url": "https://www.vill.kunigami.okinawa.jp/vacant_house_bank/riyouguide/",
+      "date": "2026-11-17"
     }
   ]
 }
