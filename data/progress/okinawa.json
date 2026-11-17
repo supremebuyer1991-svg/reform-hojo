@@ -1,0 +1,211 @@
+{
+  "pref": "沖縄県",
+  "prefSlug": "okinawa",
+  "cities": [
+    {
+      "name": "那覇市",
+      "slug": "naha",
+      "status": "done"
+    },
+    {
+      "name": "宜野湾市",
+      "slug": "ginowan",
+      "status": "done"
+    },
+    {
+      "name": "石垣市",
+      "slug": "ishigaki",
+      "status": "done"
+    },
+    {
+      "name": "浦添市",
+      "slug": "urasoe",
+      "status": "done"
+    },
+    {
+      "name": "名護市",
+      "slug": "nago",
+      "status": "done"
+    },
+    {
+      "name": "糸満市",
+      "slug": "itoman",
+      "status": "done"
+    },
+    {
+      "name": "沖縄市",
+      "slug": "okinawa-shi",
+      "status": "done"
+    },
+    {
+      "name": "豊見城市",
+      "slug": "tomigusuku",
+      "status": "done"
+    },
+    {
+      "name": "うるま市",
+      "slug": "uruma",
+      "status": "done"
+    },
+    {
+      "name": "宮古島市",
+      "slug": "miyakojima",
+      "status": "done"
+    },
+    {
+      "name": "南城市",
+      "slug": "nanjo",
+      "status": "todo"
+    },
+    {
+      "name": "国頭村",
+      "slug": "kunigami",
+      "status": "todo"
+    },
+    {
+      "name": "大宜味村",
+      "slug": "ogimi",
+      "status": "todo"
+    },
+    {
+      "name": "東村",
+      "slug": "higashi",
+      "status": "todo"
+    },
+    {
+      "name": "今帰仁村",
+      "slug": "nakijin",
+      "status": "todo"
+    },
+    {
+      "name": "本部町",
+      "slug": "motobu",
+      "status": "todo"
+    },
+    {
+      "name": "恩納村",
+      "slug": "onna",
+      "status": "todo"
+    },
+    {
+      "name": "宜野座村",
+      "slug": "ginoza",
+      "status": "todo"
+    },
+    {
+      "name": "金武町",
+      "slug": "kin",
+      "status": "todo"
+    },
+    {
+      "name": "伊江村",
+      "slug": "ie",
+      "status": "todo"
+    },
+    {
+      "name": "読谷村",
+      "slug": "yomitan",
+      "status": "todo"
+    },
+    {
+      "name": "嘉手納町",
+      "slug": "kadena",
+      "status": "todo"
+    },
+    {
+      "name": "北谷町",
+      "slug": "chatan",
+      "status": "todo"
+    },
+    {
+      "name": "北中城村",
+      "slug": "kitanakagusuku",
+      "status": "todo"
+    },
+    {
+      "name": "中城村",
+      "slug": "nakagusuku",
+      "status": "todo"
+    },
+    {
+      "name": "西原町",
+      "slug": "nishihara",
+      "status": "todo"
+    },
+    {
+      "name": "与那原町",
+      "slug": "yonabaru",
+      "status": "todo"
+    },
+    {
+      "name": "南風原町",
+      "slug": "haebaru",
+      "status": "todo"
+    },
+    {
+      "name": "渡嘉敷村",
+      "slug": "tokashiki",
+      "status": "todo"
+    },
+    {
+      "name": "座間味村",
+      "slug": "zamami",
+      "status": "todo"
+    },
+    {
+      "name": "粟国村",
+      "slug": "aguni",
+      "status": "todo"
+    },
+    {
+      "name": "渡名喜村",
+      "slug": "tonaki",
+      "status": "todo"
+    },
+    {
+      "name": "南大東村",
+      "slug": "minamidaito",
+      "status": "todo"
+    },
+    {
+      "name": "北大東村",
+      "slug": "kitadaito",
+      "status": "todo"
+    },
+    {
+      "name": "伊平屋村",
+      "slug": "iheya",
+      "status": "todo"
+    },
+    {
+      "name": "伊是名村",
+      "slug": "izena",
+      "status": "todo"
+    },
+    {
+      "name": "久米島町",
+      "slug": "kumejima",
+      "status": "todo"
+    },
+    {
+      "name": "八重瀬町",
+      "slug": "yaese",
+      "status": "todo"
+    },
+    {
+      "name": "多良間村",
+      "slug": "tarama",
+      "status": "todo"
+    },
+    {
+      "name": "竹富町",
+      "slug": "taketomi",
+      "status": "todo"
+    },
+    {
+      "name": "与那国町",
+      "slug": "yonaguni",
+      "status": "todo"
+    }
+  ]
+}

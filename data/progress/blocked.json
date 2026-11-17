@@ -5278,6 +5278,69 @@
       "what": "耐震・安心住まいづくり案内（PDF）",
       "url": "https://official.shinkamigoto.net/cmd/dlfile.php?entryname=benri&entryid=00709&fileid=00000022&disp=inline",
       "date": "2026-11-16"
+    },
+    {
+      "pref": "kagoshima",
+      "city": "南種子町",
+      "what": "建設課のページ（https→httpの転送で開けない）",
+      "url": "http://www.town.minamitane.kagoshima.jp/townofficeinfo/affair/kensetsu.html",
+      "date": "2026-11-17"
+    },
+    {
+      "pref": "kagoshima",
+      "city": "南種子町",
+      "what": "移住定住促進補助金のページ（https→httpの転送で開けない）",
+      "url": "http://www.town.minamitane.kagoshima.jp/industry/etc/ijyuteijyusokushinhojyo.html",
+      "date": "2026-11-17"
+    },
+    {
+      "pref": "okinawa",
+      "city": "宜野湾市",
+      "what": "民間住宅の耐震診断・改修等補助のページ",
+      "url": "https://www.city.ginowan.lg.jp/soshiki/kensetsu/kenchikushido/1/1/2/1426.html",
+      "date": "2026-11-17"
+    },
+    {
+      "pref": "okinawa",
+      "city": "石垣市",
+      "what": "令和8年度住宅用太陽光発電システム設置補助金のページ",
+      "url": "https://www.city.ishigaki.okinawa.jp/soshiki/kankyo/4/7683.html",
+      "date": "2026-11-17"
+    },
+    {
+      "pref": "okinawa",
+      "city": "浦添市",
+      "what": "重度身体障がい者住宅改造費助成事業のページ",
+      "url": "https://www.city.urasoe.lg.jp/doc/609e8cfa3d59ae2434c0144b/",
+      "date": "2026-11-17"
+    },
+    {
+      "pref": "okinawa",
+      "city": "浦添市",
+      "what": "景観まちづくり助成の規程（例規集）",
+      "url": "http://www1.g-reiki.net/urasoe/reiki_honbun/q908RG00000763.html",
+      "date": "2026-11-17"
+    },
+    {
+      "pref": "okinawa",
+      "city": "糸満市",
+      "what": "住宅リフォーム支援事業の交付要綱（PDF）",
+      "url": "https://www.city.itoman.lg.jp/uploaded/life/38391_82380_misc.pdf",
+      "date": "2026-11-17"
+    },
+    {
+      "pref": "okinawa",
+      "city": "豊見城市",
+      "what": "補助金一覧「生活・環境・安全」のページ",
+      "url": "https://www.city.tomigusuku.lg.jp/kurashi_tetsuzuki/service_madoguchi/4/7_2/index.html",
+      "date": "2026-11-17"
+    },
+    {
+      "pref": "okinawa",
+      "city": "うるま市",
+      "what": "住宅リフォーム助成 申請手続きガイド（PDF）",
+      "url": "https://www.city.uruma.lg.jp/documents/10871/101jyutakuriformsinseitetudukigaide.pdf",
+      "date": "2026-11-17"
     }
   ]
 }
