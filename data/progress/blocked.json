@@ -5565,6 +5565,181 @@
       "what": "移住定住促進補助金のページ（httpとhttpsのリダイレクトのくり返し・再試行）",
       "url": "http://www.town.minamitane.kagoshima.jp/industry/etc/ijyuteijyusokushinhojyo.html",
       "date": "2026-11-18"
+    },
+    {
+      "pref": "kagoshima",
+      "city": "南種子町",
+      "what": "公式サイトのトップページ（httpとhttpsのリダイレクトのくり返し）",
+      "url": "http://www.town.minamitane.kagoshima.jp/",
+      "date": "2026-11-18"
+    },
+    {
+      "pref": "kagoshima",
+      "city": "南種子町",
+      "what": "その他行政情報",
+      "url": "http://www.town.minamitane.kagoshima.jp/industry/etc.html",
+      "date": "2026-11-18"
+    },
+    {
+      "pref": "okinawa",
+      "city": "竹富町",
+      "what": "令和8年度 住宅リフォーム支援事業補助金の公募",
+      "url": "https://www.town.taketomi.lg.jp/topics/taketomireform/",
+      "date": "2026-11-18"
+    },
+    {
+      "pref": "okinawa",
+      "city": "竹富町",
+      "what": "合併処理浄化槽設置整備事業補助金の交付",
+      "url": "https://www.town.taketomi.lg.jp/topics/1782955399/",
+      "date": "2026-11-18"
+    },
+    {
+      "pref": "okinawa",
+      "city": "竹富町",
+      "what": "合併処理浄化槽設置整備事業補助金 申請期間の延長",
+      "url": "https://www.town.taketomi.lg.jp/topics/1788143600/",
+      "date": "2026-11-18"
+    },
+    {
+      "pref": "okinawa",
+      "city": "久米島町",
+      "what": "空き家改修補助（令和7年度版のページ）",
+      "url": "https://www.town.kumejima.okinawa.jp/docs/2025052100018/",
+      "date": "2026-11-18"
+    },
+    {
+      "pref": "okinawa",
+      "city": "久米島町",
+      "what": "空き家活用促進補助金",
+      "url": "http://www.town.kumejima.okinawa.jp/docs/2020051300049/",
+      "date": "2026-11-18"
+    },
+    {
+      "pref": "okinawa",
+      "city": "久米島町",
+      "what": "景観形成助成金（令和8年度）",
+      "url": "https://www.town.kumejima.okinawa.jp/docs/2026032500057/",
+      "date": "2026-11-18"
+    },
+    {
+      "pref": "okinawa",
+      "city": "渡名喜村",
+      "what": "暮らしの情報（httpとhttpsのリダイレクトのくり返し）",
+      "url": "http://www.vill.tonaki.okinawa.jp/menuIndex.jsp?id=57465&menuid=12280&funcid=28",
+      "date": "2026-11-18"
+    },
+    {
+      "pref": "okinawa",
+      "city": "渡名喜村",
+      "what": "高齢者・介護",
+      "url": "http://www.vill.tonaki.okinawa.jp/sp/detail.jsp?id=57521&menuid=12294&funcid=1",
+      "date": "2026-11-18"
+    },
+    {
+      "pref": "okinawa",
+      "city": "渡名喜村",
+      "what": "定住促進空家活用住宅修繕工事の特記仕様書（PDF）",
+      "url": "http://www.vill.tonaki.okinawa.jp/UserFiles/File/soumu/R7_%E7%A9%BA%E5%AE%B6%E5%B7%A5%E4%BA%8B/%EF%BC%91_%E7%89%B9%E8%A8%98%E4%BB%95%E6%A7%98%E6%9B%B8.pdf",
+      "date": "2026-11-18"
+    },
+    {
+      "pref": "okinawa",
+      "city": "渡名喜村",
+      "what": "給付金のページ（wwwなし・robots.txtで取得禁止）",
+      "url": "https://vill.tonaki.okinawa.jp/detail.jsp?editMode=&funcid=2&id=104282&select=&type=TopicsTopPage",
+      "date": "2026-11-18"
+    },
+    {
+      "pref": "okinawa",
+      "city": "南大東村",
+      "what": "空き家活用の一覧",
+      "url": "https://www.vill.minamidaito.okinawa.jp/life/1/4/22/",
+      "date": "2026-11-18"
+    },
+    {
+      "pref": "okinawa",
+      "city": "南大東村",
+      "what": "耐震補助の一覧",
+      "url": "https://www.vill.minamidaito.okinawa.jp/life/1/4/21/",
+      "date": "2026-11-18"
+    },
+    {
+      "pref": "okinawa",
+      "city": "南大東村",
+      "what": "し尿・浄化槽の一覧",
+      "url": "https://www.vill.minamidaito.okinawa.jp/life/1/6/32/",
+      "date": "2026-11-18"
+    },
+    {
+      "pref": "okinawa",
+      "city": "南大東村",
+      "what": "障がい者手帳・福祉サービスの一覧",
+      "url": "https://www.vill.minamidaito.okinawa.jp/life/2/11/59/",
+      "date": "2026-11-18"
+    },
+    {
+      "pref": "okinawa",
+      "city": "南大東村",
+      "what": "支援・助成の一覧",
+      "url": "https://www.vill.minamidaito.okinawa.jp/life/sub/7/",
+      "date": "2026-11-18"
+    },
+    {
+      "pref": "okinawa",
+      "city": "南大東村",
+      "what": "介護保険で使えるサービス",
+      "url": "https://www.vill.minamidaito.okinawa.jp/site/navi/956.html",
+      "date": "2026-11-18"
+    },
+    {
+      "pref": "okinawa",
+      "city": "北大東村",
+      "what": "サイトマップ",
+      "url": "https://vill.kitadaito.okinawa.jp/sitemap.html",
+      "date": "2026-11-18"
+    },
+    {
+      "pref": "okinawa",
+      "city": "北大東村",
+      "what": "障害福祉サービス",
+      "url": "https://vill.kitadaito.okinawa.jp/mokuteki/iryou_fukushi/shougai_fukushi/shougai_fukushiservice.html",
+      "date": "2026-11-18"
+    },
+    {
+      "pref": "okinawa",
+      "city": "北大東村",
+      "what": "過疎地域持続的発展計画",
+      "url": "https://vill.kitadaito.okinawa.jp/docs/2026091500012/",
+      "date": "2026-11-18"
+    },
+    {
+      "pref": "okinawa",
+      "city": "多良間村",
+      "what": "医療・福祉の助成一覧PDF（画像だけで読めない）",
+      "url": "https://www.vill.tarama.okinawa.jp/common/uploads/230418_sienjigyo.pdf",
+      "date": "2026-11-18"
+    },
+    {
+      "pref": "okinawa",
+      "city": "伊平屋村",
+      "what": "「補助金」の一覧ページ",
+      "url": "https://www.vill.iheya.okinawa.jp/life/1/31/138/",
+      "date": "2026-11-18"
+    },
+    {
+      "pref": "okinawa",
+      "city": "伊平屋村",
+      "what": "「障がい福祉サービスの利用」のページ",
+      "url": "https://www.vill.iheya.okinawa.jp/life/2/14/68/",
+      "date": "2026-11-18"
+    },
+    {
+      "pref": "okinawa",
+      "city": "伊是名村",
+      "what": "住民福祉課のページ（メンテナンス中）",
+      "url": "https://vill.izena.okinawa.jp/soshiki/jyumin/",
+      "date": "2026-11-18"
     }
   ]
 }
