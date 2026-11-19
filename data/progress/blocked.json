@@ -5740,6 +5740,153 @@
       "what": "住民福祉課のページ（メンテナンス中）",
       "url": "https://vill.izena.okinawa.jp/soshiki/jyumin/",
       "date": "2026-11-18"
+    },
+    {
+      "pref": "kagoshima",
+      "city": "南種子町",
+      "what": "移住定住促進補助金のページ（http/httpsのリダイレクトがくり返される）",
+      "url": "http://www.town.minamitane.kagoshima.jp/industry/etc/ijyuteijyusokushinhojyo.html",
+      "date": "2026-11-19"
+    },
+    {
+      "pref": "kagoshima",
+      "city": "南種子町",
+      "what": "町トップページ（開く許可が下りない）",
+      "url": "https://www.town.minamitane.kagoshima.jp/",
+      "date": "2026-11-19"
+    },
+    {
+      "pref": "kagoshima",
+      "city": "南種子町",
+      "what": "県「住宅の耐震化について」（http/httpsのリダイレクトがくり返される）",
+      "url": "http://www.pref.kagoshima.jp/ah14/kurashi-kankyo/sumai/taishin.html",
+      "date": "2026-11-19"
+    },
+    {
+      "pref": "okinawa",
+      "city": "与那国町",
+      "what": "与那国町高齢者等住宅改造費助成事業実施要綱（例規集の本文）",
+      "url": "https://www.town.yonaguni.okinawa.jp/reiki_int/reiki_honbun/q954RG00000497.html",
+      "date": "2026-11-19"
+    },
+    {
+      "pref": "okinawa",
+      "city": "与那国町",
+      "what": "令和8年度一般会計当初予算PDF（文字を読み取れない）",
+      "url": "https://www.town.yonaguni.okinawa.jp/docs/2026040200031/file_contents/file_202642417143_1.pdf",
+      "date": "2026-11-19"
+    },
+    {
+      "pref": "okinawa",
+      "city": "与那国町",
+      "what": "沖縄県住宅ストック活用市町村支援事業のページ（サイト側のエラー）",
+      "url": "https://www.pref.okinawa.jp/machizukuri/jutakutochi/1012281/1012298/1012287.html",
+      "date": "2026-11-19"
+    },
+    {
+      "pref": "aomori",
+      "city": "青森市",
+      "what": "住宅用自家消費型太陽光発電設備等導入支援事業費補助金のページ",
+      "url": "https://www.city.aomori.aomori.jp/kurashi_kankyo/kankyo/1002031/1010801.html",
+      "date": "2026-11-19"
+    },
+    {
+      "pref": "aomori",
+      "city": "青森市",
+      "what": "地球温暖化対策実行計画推進事業補助金のページ",
+      "url": "https://www.city.aomori.aomori.jp/kurashi_kankyo/kankyo/1002031/1008434.html",
+      "date": "2026-11-19"
+    },
+    {
+      "pref": "aomori",
+      "city": "青森市",
+      "what": "太陽光補助の手引き（docx、中身を読み取れず）",
+      "url": "https://www.city.aomori.aomori.jp/_res/projects/default_project/_page_/001/010/801/tebiki.docx",
+      "date": "2026-11-19"
+    },
+    {
+      "pref": "aomori",
+      "city": "弘前市",
+      "what": "住宅用自家消費型太陽光発電設備等導入支援事業費補助金のページ",
+      "url": "https://www.city.hirosaki.aomori.jp/kurashi/sumai/taiyoukou-hojyo.html",
+      "date": "2026-11-19"
+    },
+    {
+      "pref": "aomori",
+      "city": "弘前市",
+      "what": "既存住宅断熱改修事業費補助金のページ",
+      "url": "https://www.city.hirosaki.aomori.jp/kurashi/sumai/dannetsuhojyo.html",
+      "date": "2026-11-19"
+    },
+    {
+      "pref": "aomori",
+      "city": "弘前市",
+      "what": "空き家活用リフォーム事業費補助金のページ",
+      "url": "https://www.city.hirosaki.aomori.jp/kurashi/akiya/2025-0313-1412-45.html",
+      "date": "2026-11-19"
+    },
+    {
+      "pref": "aomori",
+      "city": "青森県",
+      "what": "住宅用太陽光・蓄電池補助の事務局サイト",
+      "url": "https://aomori-taiyoko.pref.aomori.lg.jp/",
+      "date": "2026-11-19"
+    },
+    {
+      "pref": "aomori",
+      "city": "青森県",
+      "what": "住宅用太陽光補助 市町村別の募集状況",
+      "url": "https://aomori-taiyoko.pref.aomori.lg.jp/residential/status/",
+      "date": "2026-11-19"
+    },
+    {
+      "pref": "aomori",
+      "city": "八戸市",
+      "what": "住宅の応急修理（令和7年青森県東方沖地震）",
+      "url": "https://www.city.hachinohe.aomori.jp/kurashi_tetsuzuki/sumai_kotsu_jougesuido/jutaku/25013.html",
+      "date": "2026-11-19"
+    },
+    {
+      "pref": "aomori",
+      "city": "八戸市",
+      "what": "ブロック塀などの安全対策工事費補助",
+      "url": "https://www.city.hachinohe.aomori.jp/kurashi_tetsuzuki/sumai_kotsu_jougesuido/jutaku/5/8880.html",
+      "date": "2026-11-19"
+    },
+    {
+      "pref": "aomori",
+      "city": "八戸市",
+      "what": "木造住宅耐震改修リーフレット（PDF・文字を読み取れず）",
+      "url": "https://www.city.hachinohe.aomori.jp/material/files/group/63/2026_taishinkaishuu_leaflet.pdf",
+      "date": "2026-11-19"
+    },
+    {
+      "pref": "aomori",
+      "city": "黒石市",
+      "what": "水洗便所改造資金貸付（利子補給）",
+      "url": "http://www.city.kuroishi.aomori.jp/kurashi/suidou/gesui_yusi.html",
+      "date": "2026-11-19"
+    },
+    {
+      "pref": "aomori",
+      "city": "黒石市",
+      "what": "空き家利活用事業補助金交付要綱（例規集）",
+      "url": "https://www1.g-reiki.net/city.kuroishi/reiki_honbun/c005RG00000317.html",
+      "date": "2026-11-19"
+    },
+    {
+      "pref": "aomori",
+      "city": "黒石市",
+      "what": "空き家利活用事業補助金交付要綱（PDF・文字を読み取れず）",
+      "url": "https://www.city.kuroishi.aomori.jp/sangyou/shien/files/akiyarikatuyouyoukou.pdf",
+      "date": "2026-11-19"
+    },
+    {
+      "pref": "aomori",
+      "city": "十和田市",
+      "what": "「住まい」カテゴリの一覧ページ",
+      "url": "https://www.city.towada.lg.jp/kurashi/seikatsu/sumai/index.html",
+      "date": "2026-11-19"
     }
   ]
 }

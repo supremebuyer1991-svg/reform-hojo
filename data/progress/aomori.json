@@ -1,0 +1,206 @@
+{
+  "pref": "青森県",
+  "prefSlug": "aomori",
+  "cities": [
+    {
+      "name": "青森市",
+      "slug": "aomori-shi",
+      "status": "done"
+    },
+    {
+      "name": "弘前市",
+      "slug": "hirosaki",
+      "status": "done"
+    },
+    {
+      "name": "八戸市",
+      "slug": "hachinohe",
+      "status": "done"
+    },
+    {
+      "name": "黒石市",
+      "slug": "kuroishi",
+      "status": "done"
+    },
+    {
+      "name": "五所川原市",
+      "slug": "goshogawara",
+      "status": "done"
+    },
+    {
+      "name": "十和田市",
+      "slug": "towada",
+      "status": "done"
+    },
+    {
+      "name": "三沢市",
+      "slug": "misawa",
+      "status": "done"
+    },
+    {
+      "name": "むつ市",
+      "slug": "mutsu",
+      "status": "done"
+    },
+    {
+      "name": "つがる市",
+      "slug": "tsugaru",
+      "status": "todo"
+    },
+    {
+      "name": "平川市",
+      "slug": "hirakawa",
+      "status": "todo"
+    },
+    {
+      "name": "平内町",
+      "slug": "hiranai",
+      "status": "todo"
+    },
+    {
+      "name": "今別町",
+      "slug": "imabetsu",
+      "status": "todo"
+    },
+    {
+      "name": "蓬田村",
+      "slug": "yomogita",
+      "status": "todo"
+    },
+    {
+      "name": "外ヶ浜町",
+      "slug": "sotogahama",
+      "status": "todo"
+    },
+    {
+      "name": "鰺ヶ沢町",
+      "slug": "ajigasawa",
+      "status": "todo"
+    },
+    {
+      "name": "深浦町",
+      "slug": "fukaura",
+      "status": "todo"
+    },
+    {
+      "name": "西目屋村",
+      "slug": "nishimeya",
+      "status": "todo"
+    },
+    {
+      "name": "藤崎町",
+      "slug": "fujisaki",
+      "status": "todo"
+    },
+    {
+      "name": "大鰐町",
+      "slug": "owani",
+      "status": "todo"
+    },
+    {
+      "name": "田舎館村",
+      "slug": "inakadate",
+      "status": "todo"
+    },
+    {
+      "name": "板柳町",
+      "slug": "itayanagi",
+      "status": "todo"
+    },
+    {
+      "name": "鶴田町",
+      "slug": "tsuruta",
+      "status": "todo"
+    },
+    {
+      "name": "中泊町",
+      "slug": "nakadomari",
+      "status": "todo"
+    },
+    {
+      "name": "野辺地町",
+      "slug": "noheji",
+      "status": "todo"
+    },
+    {
+      "name": "七戸町",
+      "slug": "shichinohe",
+      "status": "todo"
+    },
+    {
+      "name": "六戸町",
+      "slug": "rokunohe",
+      "status": "todo"
+    },
+    {
+      "name": "横浜町",
+      "slug": "yokohama",
+      "status": "todo"
+    },
+    {
+      "name": "東北町",
+      "slug": "tohoku",
+      "status": "todo"
+    },
+    {
+      "name": "六ヶ所村",
+      "slug": "rokkasho",
+      "status": "todo"
+    },
+    {
+      "name": "おいらせ町",
+      "slug": "oirase",
+      "status": "todo"
+    },
+    {
+      "name": "大間町",
+      "slug": "oma",
+      "status": "todo"
+    },
+    {
+      "name": "東通村",
+      "slug": "higashidori",
+      "status": "todo"
+    },
+    {
+      "name": "風間浦村",
+      "slug": "kazamaura",
+      "status": "todo"
+    },
+    {
+      "name": "佐井村",
+      "slug": "sai",
+      "status": "todo"
+    },
+    {
+      "name": "三戸町",
+      "slug": "sannohe",
+      "status": "todo"
+    },
+    {
+      "name": "五戸町",
+      "slug": "gonohe",
+      "status": "todo"
+    },
+    {
+      "name": "田子町",
+      "slug": "takko",
+      "status": "todo"
+    },
+    {
+      "name": "南部町",
+      "slug": "nanbu",
+      "status": "todo"
+    },
+    {
+      "name": "階上町",
+      "slug": "hashikami",
+      "status": "todo"
+    },
+    {
+      "name": "新郷村",
+      "slug": "shingo",
+      "status": "todo"
+    }
+  ]
+}
