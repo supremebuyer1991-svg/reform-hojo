@@ -145,52 +145,52 @@
     {
       "name": "六ヶ所村",
       "slug": "rokkasho",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "おいらせ町",
       "slug": "oirase",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "大間町",
       "slug": "oma",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "東通村",
       "slug": "higashidori",
-      "status": "todo"
+      "status": "recheck"
     },
     {
       "name": "風間浦村",
       "slug": "kazamaura",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "佐井村",
       "slug": "sai",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "三戸町",
       "slug": "sannohe",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "五戸町",
       "slug": "gonohe",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "田子町",
       "slug": "takko",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "南部町",
       "slug": "nanbu",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "階上町",
