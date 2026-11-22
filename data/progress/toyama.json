@@ -1,0 +1,81 @@
+{
+  "pref": "富山県",
+  "prefSlug": "toyama",
+  "cities": [
+    {
+      "name": "富山市",
+      "slug": "toyama-shi",
+      "status": "done"
+    },
+    {
+      "name": "高岡市",
+      "slug": "takaoka",
+      "status": "todo"
+    },
+    {
+      "name": "魚津市",
+      "slug": "uozu",
+      "status": "done"
+    },
+    {
+      "name": "氷見市",
+      "slug": "himi",
+      "status": "todo"
+    },
+    {
+      "name": "滑川市",
+      "slug": "namerikawa",
+      "status": "todo"
+    },
+    {
+      "name": "黒部市",
+      "slug": "kurobe",
+      "status": "todo"
+    },
+    {
+      "name": "砺波市",
+      "slug": "tonami",
+      "status": "todo"
+    },
+    {
+      "name": "小矢部市",
+      "slug": "oyabe",
+      "status": "todo"
+    },
+    {
+      "name": "南砺市",
+      "slug": "nanto",
+      "status": "todo"
+    },
+    {
+      "name": "射水市",
+      "slug": "imizu",
+      "status": "done"
+    },
+    {
+      "name": "舟橋村",
+      "slug": "funahashi",
+      "status": "todo"
+    },
+    {
+      "name": "上市町",
+      "slug": "kamiichi",
+      "status": "todo"
+    },
+    {
+      "name": "立山町",
+      "slug": "tateyama",
+      "status": "todo"
+    },
+    {
+      "name": "入善町",
+      "slug": "nyuzen",
+      "status": "todo"
+    },
+    {
+      "name": "朝日町",
+      "slug": "asahi",
+      "status": "todo"
+    }
+  ]
+}

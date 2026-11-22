@@ -1,0 +1,101 @@
+{
+  "pref": "石川県",
+  "prefSlug": "ishikawa",
+  "cities": [
+    {
+      "name": "金沢市",
+      "slug": "kanazawa",
+      "status": "done"
+    },
+    {
+      "name": "七尾市",
+      "slug": "nanao",
+      "status": "todo"
+    },
+    {
+      "name": "小松市",
+      "slug": "komatsu",
+      "status": "done"
+    },
+    {
+      "name": "輪島市",
+      "slug": "wajima",
+      "status": "todo"
+    },
+    {
+      "name": "珠洲市",
+      "slug": "suzu",
+      "status": "todo"
+    },
+    {
+      "name": "加賀市",
+      "slug": "kaga",
+      "status": "done"
+    },
+    {
+      "name": "羽咋市",
+      "slug": "hakui",
+      "status": "todo"
+    },
+    {
+      "name": "かほく市",
+      "slug": "kahoku",
+      "status": "todo"
+    },
+    {
+      "name": "白山市",
+      "slug": "hakusan",
+      "status": "done"
+    },
+    {
+      "name": "能美市",
+      "slug": "nomi",
+      "status": "todo"
+    },
+    {
+      "name": "野々市市",
+      "slug": "nonoichi",
+      "status": "todo"
+    },
+    {
+      "name": "川北町",
+      "slug": "kawakita",
+      "status": "todo"
+    },
+    {
+      "name": "津幡町",
+      "slug": "tsubata",
+      "status": "todo"
+    },
+    {
+      "name": "内灘町",
+      "slug": "uchinada",
+      "status": "todo"
+    },
+    {
+      "name": "志賀町",
+      "slug": "shika",
+      "status": "todo"
+    },
+    {
+      "name": "宝達志水町",
+      "slug": "hodatsushimizu",
+      "status": "todo"
+    },
+    {
+      "name": "中能登町",
+      "slug": "nakanoto",
+      "status": "todo"
+    },
+    {
+      "name": "穴水町",
+      "slug": "anamizu",
+      "status": "todo"
+    },
+    {
+      "name": "能登町",
+      "slug": "noto",
+      "status": "todo"
+    }
+  ]
+}
