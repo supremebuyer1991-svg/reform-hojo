@@ -1,0 +1,101 @@
+{
+  "pref": "鳥取県",
+  "prefSlug": "tottori",
+  "cities": [
+    {
+      "name": "鳥取市",
+      "slug": "tottori-shi",
+      "status": "done"
+    },
+    {
+      "name": "米子市",
+      "slug": "yonago",
+      "status": "done"
+    },
+    {
+      "name": "倉吉市",
+      "slug": "kurayoshi",
+      "status": "todo"
+    },
+    {
+      "name": "境港市",
+      "slug": "sakaiminato",
+      "status": "todo"
+    },
+    {
+      "name": "岩美町",
+      "slug": "iwami",
+      "status": "todo"
+    },
+    {
+      "name": "若桜町",
+      "slug": "wakasa",
+      "status": "todo"
+    },
+    {
+      "name": "智頭町",
+      "slug": "chizu",
+      "status": "todo"
+    },
+    {
+      "name": "八頭町",
+      "slug": "yazu",
+      "status": "todo"
+    },
+    {
+      "name": "三朝町",
+      "slug": "misasa",
+      "status": "todo"
+    },
+    {
+      "name": "湯梨浜町",
+      "slug": "yurihama",
+      "status": "todo"
+    },
+    {
+      "name": "琴浦町",
+      "slug": "kotoura",
+      "status": "todo"
+    },
+    {
+      "name": "北栄町",
+      "slug": "hokuei",
+      "status": "todo"
+    },
+    {
+      "name": "日吉津村",
+      "slug": "hiezu",
+      "status": "todo"
+    },
+    {
+      "name": "大山町",
+      "slug": "daisen",
+      "status": "todo"
+    },
+    {
+      "name": "南部町",
+      "slug": "nanbu",
+      "status": "todo"
+    },
+    {
+      "name": "伯耆町",
+      "slug": "hoki",
+      "status": "todo"
+    },
+    {
+      "name": "日南町",
+      "slug": "nichinan",
+      "status": "todo"
+    },
+    {
+      "name": "日野町",
+      "slug": "hino",
+      "status": "todo"
+    },
+    {
+      "name": "江府町",
+      "slug": "kofu",
+      "status": "todo"
+    }
+  ]
+}

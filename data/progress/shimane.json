@@ -1,0 +1,101 @@
+{
+  "pref": "島根県",
+  "prefSlug": "shimane",
+  "cities": [
+    {
+      "name": "松江市",
+      "slug": "matsue",
+      "status": "done"
+    },
+    {
+      "name": "浜田市",
+      "slug": "hamada",
+      "status": "todo"
+    },
+    {
+      "name": "出雲市",
+      "slug": "izumo",
+      "status": "todo"
+    },
+    {
+      "name": "益田市",
+      "slug": "masuda",
+      "status": "todo"
+    },
+    {
+      "name": "大田市",
+      "slug": "oda",
+      "status": "todo"
+    },
+    {
+      "name": "安来市",
+      "slug": "yasugi",
+      "status": "todo"
+    },
+    {
+      "name": "江津市",
+      "slug": "gotsu",
+      "status": "todo"
+    },
+    {
+      "name": "雲南市",
+      "slug": "unnan",
+      "status": "done"
+    },
+    {
+      "name": "奥出雲町",
+      "slug": "okuizumo",
+      "status": "todo"
+    },
+    {
+      "name": "飯南町",
+      "slug": "iinan",
+      "status": "todo"
+    },
+    {
+      "name": "川本町",
+      "slug": "kawamoto",
+      "status": "todo"
+    },
+    {
+      "name": "美郷町",
+      "slug": "misato",
+      "status": "todo"
+    },
+    {
+      "name": "邑南町",
+      "slug": "onan",
+      "status": "todo"
+    },
+    {
+      "name": "津和野町",
+      "slug": "tsuwano",
+      "status": "todo"
+    },
+    {
+      "name": "吉賀町",
+      "slug": "yoshika",
+      "status": "todo"
+    },
+    {
+      "name": "海士町",
+      "slug": "ama",
+      "status": "todo"
+    },
+    {
+      "name": "西ノ島町",
+      "slug": "nishinoshima",
+      "status": "todo"
+    },
+    {
+      "name": "知夫村",
+      "slug": "chibu",
+      "status": "todo"
+    },
+    {
+      "name": "隠岐の島町",
+      "slug": "okinoshima",
+      "status": "todo"
+    }
+  ]
+}

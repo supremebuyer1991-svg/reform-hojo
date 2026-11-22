@@ -1,0 +1,106 @@
+{
+  "pref": "佐賀県",
+  "prefSlug": "saga",
+  "cities": [
+    {
+      "name": "佐賀市",
+      "slug": "saga-shi",
+      "status": "done"
+    },
+    {
+      "name": "唐津市",
+      "slug": "karatsu",
+      "status": "todo"
+    },
+    {
+      "name": "鳥栖市",
+      "slug": "tosu",
+      "status": "done"
+    },
+    {
+      "name": "多久市",
+      "slug": "taku",
+      "status": "done"
+    },
+    {
+      "name": "伊万里市",
+      "slug": "imari",
+      "status": "todo"
+    },
+    {
+      "name": "武雄市",
+      "slug": "takeo",
+      "status": "todo"
+    },
+    {
+      "name": "鹿島市",
+      "slug": "kashima",
+      "status": "todo"
+    },
+    {
+      "name": "小城市",
+      "slug": "ogi",
+      "status": "done"
+    },
+    {
+      "name": "嬉野市",
+      "slug": "ureshino",
+      "status": "todo"
+    },
+    {
+      "name": "神埼市",
+      "slug": "kanzaki",
+      "status": "todo"
+    },
+    {
+      "name": "吉野ヶ里町",
+      "slug": "yoshinogari",
+      "status": "todo"
+    },
+    {
+      "name": "基山町",
+      "slug": "kiyama",
+      "status": "done"
+    },
+    {
+      "name": "上峰町",
+      "slug": "kamimine",
+      "status": "todo"
+    },
+    {
+      "name": "みやき町",
+      "slug": "miyaki",
+      "status": "todo"
+    },
+    {
+      "name": "玄海町",
+      "slug": "genkai",
+      "status": "todo"
+    },
+    {
+      "name": "有田町",
+      "slug": "arita",
+      "status": "todo"
+    },
+    {
+      "name": "大町町",
+      "slug": "omachi",
+      "status": "todo"
+    },
+    {
+      "name": "江北町",
+      "slug": "kohoku",
+      "status": "todo"
+    },
+    {
+      "name": "白石町",
+      "slug": "shiroishi",
+      "status": "todo"
+    },
+    {
+      "name": "太良町",
+      "slug": "tara",
+      "status": "todo"
+    }
+  ]
+}
