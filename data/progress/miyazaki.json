@@ -1,0 +1,136 @@
+{
+  "pref": "宮崎県",
+  "prefSlug": "miyazaki",
+  "cities": [
+    {
+      "name": "宮崎市",
+      "slug": "miyazaki-shi",
+      "status": "todo"
+    },
+    {
+      "name": "都城市",
+      "slug": "miyakonojo",
+      "status": "todo"
+    },
+    {
+      "name": "延岡市",
+      "slug": "nobeoka",
+      "status": "todo"
+    },
+    {
+      "name": "日南市",
+      "slug": "nichinan",
+      "status": "todo"
+    },
+    {
+      "name": "小林市",
+      "slug": "kobayashi",
+      "status": "todo"
+    },
+    {
+      "name": "日向市",
+      "slug": "hyuga",
+      "status": "todo"
+    },
+    {
+      "name": "串間市",
+      "slug": "kushima",
+      "status": "todo"
+    },
+    {
+      "name": "西都市",
+      "slug": "saito",
+      "status": "todo"
+    },
+    {
+      "name": "えびの市",
+      "slug": "ebino",
+      "status": "todo"
+    },
+    {
+      "name": "三股町",
+      "slug": "mimata",
+      "status": "todo"
+    },
+    {
+      "name": "高原町",
+      "slug": "takaharu",
+      "status": "todo"
+    },
+    {
+      "name": "国富町",
+      "slug": "kunitomi",
+      "status": "todo"
+    },
+    {
+      "name": "綾町",
+      "slug": "aya",
+      "status": "todo"
+    },
+    {
+      "name": "高鍋町",
+      "slug": "takanabe",
+      "status": "todo"
+    },
+    {
+      "name": "新富町",
+      "slug": "shintomi",
+      "status": "todo"
+    },
+    {
+      "name": "西米良村",
+      "slug": "nishimera",
+      "status": "todo"
+    },
+    {
+      "name": "木城町",
+      "slug": "kijo",
+      "status": "todo"
+    },
+    {
+      "name": "川南町",
+      "slug": "kawaminami",
+      "status": "todo"
+    },
+    {
+      "name": "都農町",
+      "slug": "tsuno",
+      "status": "todo"
+    },
+    {
+      "name": "門川町",
+      "slug": "kadogawa",
+      "status": "todo"
+    },
+    {
+      "name": "諸塚村",
+      "slug": "morotsuka",
+      "status": "todo"
+    },
+    {
+      "name": "椎葉村",
+      "slug": "shiiba",
+      "status": "todo"
+    },
+    {
+      "name": "美郷町",
+      "slug": "misato",
+      "status": "todo"
+    },
+    {
+      "name": "高千穂町",
+      "slug": "takachiho",
+      "status": "todo"
+    },
+    {
+      "name": "日之影町",
+      "slug": "hinokage",
+      "status": "todo"
+    },
+    {
+      "name": "五ヶ瀬町",
+      "slug": "gokase",
+      "status": "todo"
+    }
+  ]
+}

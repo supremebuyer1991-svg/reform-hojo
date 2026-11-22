@@ -1,0 +1,96 @@
+{
+  "pref": "大分県",
+  "prefSlug": "oita",
+  "cities": [
+    {
+      "name": "大分市",
+      "slug": "oita-shi",
+      "status": "done"
+    },
+    {
+      "name": "別府市",
+      "slug": "beppu",
+      "status": "done"
+    },
+    {
+      "name": "中津市",
+      "slug": "nakatsu",
+      "status": "done"
+    },
+    {
+      "name": "日田市",
+      "slug": "hita",
+      "status": "done"
+    },
+    {
+      "name": "佐伯市",
+      "slug": "saiki",
+      "status": "done"
+    },
+    {
+      "name": "臼杵市",
+      "slug": "usuki",
+      "status": "done"
+    },
+    {
+      "name": "津久見市",
+      "slug": "tsukumi",
+      "status": "done"
+    },
+    {
+      "name": "竹田市",
+      "slug": "taketa",
+      "status": "done"
+    },
+    {
+      "name": "豊後高田市",
+      "slug": "bungotakada",
+      "status": "done"
+    },
+    {
+      "name": "杵築市",
+      "slug": "kitsuki",
+      "status": "todo"
+    },
+    {
+      "name": "宇佐市",
+      "slug": "usa",
+      "status": "todo"
+    },
+    {
+      "name": "豊後大野市",
+      "slug": "bungo-ono",
+      "status": "todo"
+    },
+    {
+      "name": "由布市",
+      "slug": "yufu",
+      "status": "todo"
+    },
+    {
+      "name": "国東市",
+      "slug": "kunisaki",
+      "status": "todo"
+    },
+    {
+      "name": "姫島村",
+      "slug": "himeshima",
+      "status": "todo"
+    },
+    {
+      "name": "日出町",
+      "slug": "hiji",
+      "status": "todo"
+    },
+    {
+      "name": "九重町",
+      "slug": "kokonoe",
+      "status": "todo"
+    },
+    {
+      "name": "玖珠町",
+      "slug": "kusu",
+      "status": "todo"
+    }
+  ]
+}
