@@ -1,0 +1,301 @@
+{
+  "pref": "福島県",
+  "prefSlug": "fukushima",
+  "cities": [
+    {
+      "name": "福島市",
+      "slug": "fukushima-shi",
+      "status": "done"
+    },
+    {
+      "name": "会津若松市",
+      "slug": "aizuwakamatsu",
+      "status": "done"
+    },
+    {
+      "name": "郡山市",
+      "slug": "koriyama",
+      "status": "done"
+    },
+    {
+      "name": "いわき市",
+      "slug": "iwaki",
+      "status": "done"
+    },
+    {
+      "name": "白河市",
+      "slug": "shirakawa",
+      "status": "done"
+    },
+    {
+      "name": "須賀川市",
+      "slug": "sukagawa",
+      "status": "done"
+    },
+    {
+      "name": "喜多方市",
+      "slug": "kitakata",
+      "status": "done"
+    },
+    {
+      "name": "相馬市",
+      "slug": "soma",
+      "status": "done"
+    },
+    {
+      "name": "二本松市",
+      "slug": "nihonmatsu",
+      "status": "done"
+    },
+    {
+      "name": "田村市",
+      "slug": "tamura",
+      "status": "done"
+    },
+    {
+      "name": "南相馬市",
+      "slug": "minamisoma",
+      "status": "done"
+    },
+    {
+      "name": "伊達市",
+      "slug": "date",
+      "status": "done"
+    },
+    {
+      "name": "本宮市",
+      "slug": "motomiya",
+      "status": "done"
+    },
+    {
+      "name": "桑折町",
+      "slug": "koori",
+      "status": "done"
+    },
+    {
+      "name": "国見町",
+      "slug": "kunimi",
+      "status": "done"
+    },
+    {
+      "name": "川俣町",
+      "slug": "kawamata",
+      "status": "done"
+    },
+    {
+      "name": "大玉村",
+      "slug": "otama",
+      "status": "done"
+    },
+    {
+      "name": "鏡石町",
+      "slug": "kagamiishi",
+      "status": "done"
+    },
+    {
+      "name": "天栄村",
+      "slug": "tenei",
+      "status": "done"
+    },
+    {
+      "name": "下郷町",
+      "slug": "shimogo",
+      "status": "done"
+    },
+    {
+      "name": "檜枝岐村",
+      "slug": "hinoemata",
+      "status": "done"
+    },
+    {
+      "name": "只見町",
+      "slug": "tadami",
+      "status": "done"
+    },
+    {
+      "name": "南会津町",
+      "slug": "minamiaizu",
+      "status": "done"
+    },
+    {
+      "name": "北塩原村",
+      "slug": "kitashiobara",
+      "status": "done"
+    },
+    {
+      "name": "西会津町",
+      "slug": "nishiaizu",
+      "status": "done"
+    },
+    {
+      "name": "磐梯町",
+      "slug": "bandai",
+      "status": "done"
+    },
+    {
+      "name": "猪苗代町",
+      "slug": "inawashiro",
+      "status": "done"
+    },
+    {
+      "name": "会津坂下町",
+      "slug": "aizubange",
+      "status": "done"
+    },
+    {
+      "name": "湯川村",
+      "slug": "yugawa",
+      "status": "done"
+    },
+    {
+      "name": "柳津町",
+      "slug": "yanaizu",
+      "status": "done"
+    },
+    {
+      "name": "三島町",
+      "slug": "mishima",
+      "status": "done"
+    },
+    {
+      "name": "金山町",
+      "slug": "kaneyama",
+      "status": "done"
+    },
+    {
+      "name": "昭和村",
+      "slug": "showa",
+      "status": "todo"
+    },
+    {
+      "name": "会津美里町",
+      "slug": "aizumisato",
+      "status": "done"
+    },
+    {
+      "name": "西郷村",
+      "slug": "nishigo",
+      "status": "done"
+    },
+    {
+      "name": "泉崎村",
+      "slug": "izumizaki",
+      "status": "done"
+    },
+    {
+      "name": "中島村",
+      "slug": "nakajima",
+      "status": "todo"
+    },
+    {
+      "name": "矢吹町",
+      "slug": "yabuki",
+      "status": "todo"
+    },
+    {
+      "name": "棚倉町",
+      "slug": "tanagura",
+      "status": "done"
+    },
+    {
+      "name": "矢祭町",
+      "slug": "yamatsuri",
+      "status": "done"
+    },
+    {
+      "name": "塙町",
+      "slug": "hanawa",
+      "status": "done"
+    },
+    {
+      "name": "鮫川村",
+      "slug": "samegawa",
+      "status": "done"
+    },
+    {
+      "name": "石川町",
+      "slug": "ishikawa",
+      "status": "done"
+    },
+    {
+      "name": "玉川村",
+      "slug": "tamakawa",
+      "status": "done"
+    },
+    {
+      "name": "平田村",
+      "slug": "hirata",
+      "status": "done"
+    },
+    {
+      "name": "浅川町",
+      "slug": "asakawa",
+      "status": "done"
+    },
+    {
+      "name": "古殿町",
+      "slug": "furudono",
+      "status": "done"
+    },
+    {
+      "name": "三春町",
+      "slug": "miharu",
+      "status": "done"
+    },
+    {
+      "name": "小野町",
+      "slug": "ono",
+      "status": "done"
+    },
+    {
+      "name": "広野町",
+      "slug": "hirono",
+      "status": "done"
+    },
+    {
+      "name": "楢葉町",
+      "slug": "naraha",
+      "status": "done"
+    },
+    {
+      "name": "富岡町",
+      "slug": "tomioka",
+      "status": "done"
+    },
+    {
+      "name": "川内村",
+      "slug": "kawauchi",
+      "status": "done"
+    },
+    {
+      "name": "大熊町",
+      "slug": "okuma",
+      "status": "done"
+    },
+    {
+      "name": "双葉町",
+      "slug": "futaba",
+      "status": "done"
+    },
+    {
+      "name": "浪江町",
+      "slug": "namie",
+      "status": "done"
+    },
+    {
+      "name": "葛尾村",
+      "slug": "katsurao",
+      "status": "done"
+    },
+    {
+      "name": "新地町",
+      "slug": "shinchi",
+      "status": "done"
+    },
+    {
+      "name": "飯舘村",
+      "slug": "iitate",
+      "status": "done"
+    }
+  ]
+}
