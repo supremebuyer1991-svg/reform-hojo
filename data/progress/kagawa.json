@@ -1,0 +1,91 @@
+{
+  "pref": "香川県",
+  "prefSlug": "kagawa",
+  "cities": [
+    {
+      "name": "高松市",
+      "slug": "takamatsu",
+      "status": "done"
+    },
+    {
+      "name": "丸亀市",
+      "slug": "marugame",
+      "status": "done"
+    },
+    {
+      "name": "坂出市",
+      "slug": "sakaide",
+      "status": "done"
+    },
+    {
+      "name": "善通寺市",
+      "slug": "zentsuji",
+      "status": "done"
+    },
+    {
+      "name": "観音寺市",
+      "slug": "kanonji",
+      "status": "done"
+    },
+    {
+      "name": "さぬき市",
+      "slug": "sanuki",
+      "status": "done"
+    },
+    {
+      "name": "東かがわ市",
+      "slug": "higashikagawa",
+      "status": "done"
+    },
+    {
+      "name": "三豊市",
+      "slug": "mitoyo",
+      "status": "done"
+    },
+    {
+      "name": "土庄町",
+      "slug": "tonosho",
+      "status": "todo"
+    },
+    {
+      "name": "小豆島町",
+      "slug": "shodoshima",
+      "status": "todo"
+    },
+    {
+      "name": "三木町",
+      "slug": "miki",
+      "status": "todo"
+    },
+    {
+      "name": "直島町",
+      "slug": "naoshima",
+      "status": "todo"
+    },
+    {
+      "name": "宇多津町",
+      "slug": "utazu",
+      "status": "todo"
+    },
+    {
+      "name": "綾川町",
+      "slug": "ayagawa",
+      "status": "todo"
+    },
+    {
+      "name": "琴平町",
+      "slug": "kotohira",
+      "status": "todo"
+    },
+    {
+      "name": "多度津町",
+      "slug": "tadotsu",
+      "status": "todo"
+    },
+    {
+      "name": "まんのう町",
+      "slug": "manno",
+      "status": "todo"
+    }
+  ]
+}
