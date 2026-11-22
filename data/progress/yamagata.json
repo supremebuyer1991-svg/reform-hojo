@@ -1,0 +1,181 @@
+{
+  "pref": "山形県",
+  "prefSlug": "yamagata",
+  "cities": [
+    {
+      "name": "山形市",
+      "slug": "yamagata-shi",
+      "status": "todo"
+    },
+    {
+      "name": "米沢市",
+      "slug": "yonezawa",
+      "status": "todo"
+    },
+    {
+      "name": "鶴岡市",
+      "slug": "tsuruoka",
+      "status": "done"
+    },
+    {
+      "name": "酒田市",
+      "slug": "sakata",
+      "status": "todo"
+    },
+    {
+      "name": "新庄市",
+      "slug": "shinjo",
+      "status": "todo"
+    },
+    {
+      "name": "寒河江市",
+      "slug": "sagae",
+      "status": "todo"
+    },
+    {
+      "name": "上山市",
+      "slug": "kaminoyama",
+      "status": "todo"
+    },
+    {
+      "name": "村山市",
+      "slug": "murayama",
+      "status": "todo"
+    },
+    {
+      "name": "長井市",
+      "slug": "nagai",
+      "status": "todo"
+    },
+    {
+      "name": "天童市",
+      "slug": "tendo",
+      "status": "todo"
+    },
+    {
+      "name": "東根市",
+      "slug": "higashine",
+      "status": "todo"
+    },
+    {
+      "name": "尾花沢市",
+      "slug": "obanazawa",
+      "status": "todo"
+    },
+    {
+      "name": "南陽市",
+      "slug": "nanyo",
+      "status": "todo"
+    },
+    {
+      "name": "山辺町",
+      "slug": "yamanobe",
+      "status": "todo"
+    },
+    {
+      "name": "中山町",
+      "slug": "nakayama",
+      "status": "todo"
+    },
+    {
+      "name": "河北町",
+      "slug": "kahoku",
+      "status": "todo"
+    },
+    {
+      "name": "西川町",
+      "slug": "nishikawa",
+      "status": "todo"
+    },
+    {
+      "name": "朝日町",
+      "slug": "asahi",
+      "status": "todo"
+    },
+    {
+      "name": "大江町",
+      "slug": "oe",
+      "status": "todo"
+    },
+    {
+      "name": "大石田町",
+      "slug": "oishida",
+      "status": "todo"
+    },
+    {
+      "name": "金山町",
+      "slug": "kaneyama",
+      "status": "todo"
+    },
+    {
+      "name": "最上町",
+      "slug": "mogami",
+      "status": "todo"
+    },
+    {
+      "name": "舟形町",
+      "slug": "funagata",
+      "status": "todo"
+    },
+    {
+      "name": "真室川町",
+      "slug": "mamurogawa",
+      "status": "todo"
+    },
+    {
+      "name": "大蔵村",
+      "slug": "okura",
+      "status": "todo"
+    },
+    {
+      "name": "鮭川村",
+      "slug": "sakegawa",
+      "status": "todo"
+    },
+    {
+      "name": "戸沢村",
+      "slug": "tozawa",
+      "status": "todo"
+    },
+    {
+      "name": "高畠町",
+      "slug": "takahata",
+      "status": "todo"
+    },
+    {
+      "name": "川西町",
+      "slug": "kawanishi",
+      "status": "todo"
+    },
+    {
+      "name": "小国町",
+      "slug": "oguni",
+      "status": "todo"
+    },
+    {
+      "name": "白鷹町",
+      "slug": "shirataka",
+      "status": "todo"
+    },
+    {
+      "name": "飯豊町",
+      "slug": "iide",
+      "status": "todo"
+    },
+    {
+      "name": "三川町",
+      "slug": "mikawa",
+      "status": "todo"
+    },
+    {
+      "name": "庄内町",
+      "slug": "shonai",
+      "status": "todo"
+    },
+    {
+      "name": "遊佐町",
+      "slug": "yuza",
+      "status": "todo"
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "pref": "秋田県",
+  "prefSlug": "akita",
+  "cities": [
+    {
+      "name": "秋田市",
+      "slug": "akita-shi",
+      "status": "done"
+    },
+    {
+      "name": "能代市",
+      "slug": "noshiro",
+      "status": "todo"
+    },
+    {
+      "name": "横手市",
+      "slug": "yokote",
+      "status": "todo"
+    },
+    {
+      "name": "大館市",
+      "slug": "odate",
+      "status": "todo"
+    },
+    {
+      "name": "男鹿市",
+      "slug": "oga",
+      "status": "todo"
+    },
+    {
+      "name": "湯沢市",
+      "slug": "yuzawa",
+      "status": "todo"
+    },
+    {
+      "name": "鹿角市",
+      "slug": "kazuno",
+      "status": "todo"
+    },
+    {
+      "name": "由利本荘市",
+      "slug": "yurihonjo",
+      "status": "todo"
+    },
+    {
+      "name": "潟上市",
+      "slug": "katagami",
+      "status": "todo"
+    },
+    {
+      "name": "大仙市",
+      "slug": "daisen",
+      "status": "todo"
+    },
+    {
+      "name": "北秋田市",
+      "slug": "kitaakita",
+      "status": "todo"
+    },
+    {
+      "name": "にかほ市",
+      "slug": "nikaho",
+      "status": "todo"
+    },
+    {
+      "name": "仙北市",
+      "slug": "semboku",
+      "status": "todo"
+    },
+    {
+      "name": "小坂町",
+      "slug": "kosaka",
+      "status": "todo"
+    },
+    {
+      "name": "上小阿仁村",
+      "slug": "kamikoani",
+      "status": "todo"
+    },
+    {
+      "name": "藤里町",
+      "slug": "fujisato",
+      "status": "todo"
+    },
+    {
+      "name": "三種町",
+      "slug": "mitane",
+      "status": "todo"
+    },
+    {
+      "name": "八峰町",
+      "slug": "happo",
+      "status": "todo"
+    },
+    {
+      "name": "五城目町",
+      "slug": "gojome",
+      "status": "todo"
+    },
+    {
+      "name": "八郎潟町",
+      "slug": "hachirogata",
+      "status": "todo"
+    },
+    {
+      "name": "井川町",
+      "slug": "ikawa",
+      "status": "todo"
+    },
+    {
+      "name": "大潟村",
+      "slug": "ogata",
+      "status": "todo"
+    },
+    {
+      "name": "美郷町",
+      "slug": "misato",
+      "status": "todo"
+    },
+    {
+      "name": "羽後町",
+      "slug": "ugo",
+      "status": "todo"
+    },
+    {
+      "name": "東成瀬村",
+      "slug": "higashinaruse",
+      "status": "todo"
+    }
+  ]
+}
