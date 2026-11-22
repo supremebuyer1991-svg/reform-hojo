@@ -160,7 +160,7 @@
     {
       "name": "東通村",
       "slug": "higashidori",
-      "status": "recheck"
+      "status": "done"
     },
     {
       "name": "風間浦村",
@@ -195,12 +195,12 @@
     {
       "name": "階上町",
       "slug": "hashikami",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "新郷村",
       "slug": "shingo",
-      "status": "todo"
+      "status": "done"
     }
   ]
 }

@@ -1,0 +1,171 @@
+{
+  "pref": "岩手県",
+  "prefSlug": "iwate",
+  "cities": [
+    {
+      "name": "盛岡市",
+      "slug": "morioka",
+      "status": "done"
+    },
+    {
+      "name": "宮古市",
+      "slug": "miyako",
+      "status": "done"
+    },
+    {
+      "name": "大船渡市",
+      "slug": "ofunato",
+      "status": "done"
+    },
+    {
+      "name": "花巻市",
+      "slug": "hanamaki",
+      "status": "done"
+    },
+    {
+      "name": "北上市",
+      "slug": "kitakami",
+      "status": "done"
+    },
+    {
+      "name": "久慈市",
+      "slug": "kuji",
+      "status": "done"
+    },
+    {
+      "name": "遠野市",
+      "slug": "tono",
+      "status": "done"
+    },
+    {
+      "name": "一関市",
+      "slug": "ichinoseki",
+      "status": "todo"
+    },
+    {
+      "name": "陸前高田市",
+      "slug": "rikuzentakata",
+      "status": "todo"
+    },
+    {
+      "name": "釜石市",
+      "slug": "kamaishi",
+      "status": "todo"
+    },
+    {
+      "name": "二戸市",
+      "slug": "ninohe",
+      "status": "todo"
+    },
+    {
+      "name": "八幡平市",
+      "slug": "hachimantai",
+      "status": "todo"
+    },
+    {
+      "name": "奥州市",
+      "slug": "oshu",
+      "status": "todo"
+    },
+    {
+      "name": "滝沢市",
+      "slug": "takizawa",
+      "status": "todo"
+    },
+    {
+      "name": "雫石町",
+      "slug": "shizukuishi",
+      "status": "todo"
+    },
+    {
+      "name": "葛巻町",
+      "slug": "kuzumaki",
+      "status": "todo"
+    },
+    {
+      "name": "岩手町",
+      "slug": "iwate-machi",
+      "status": "todo"
+    },
+    {
+      "name": "紫波町",
+      "slug": "shiwa",
+      "status": "todo"
+    },
+    {
+      "name": "矢巾町",
+      "slug": "yahaba",
+      "status": "todo"
+    },
+    {
+      "name": "西和賀町",
+      "slug": "nishiwaga",
+      "status": "todo"
+    },
+    {
+      "name": "金ケ崎町",
+      "slug": "kanegasaki",
+      "status": "todo"
+    },
+    {
+      "name": "平泉町",
+      "slug": "hiraizumi",
+      "status": "todo"
+    },
+    {
+      "name": "住田町",
+      "slug": "sumita",
+      "status": "todo"
+    },
+    {
+      "name": "大槌町",
+      "slug": "otsuchi",
+      "status": "todo"
+    },
+    {
+      "name": "山田町",
+      "slug": "yamada",
+      "status": "todo"
+    },
+    {
+      "name": "岩泉町",
+      "slug": "iwaizumi",
+      "status": "todo"
+    },
+    {
+      "name": "田野畑村",
+      "slug": "tanohata",
+      "status": "todo"
+    },
+    {
+      "name": "普代村",
+      "slug": "fudai",
+      "status": "todo"
+    },
+    {
+      "name": "軽米町",
+      "slug": "karumai",
+      "status": "todo"
+    },
+    {
+      "name": "野田村",
+      "slug": "noda",
+      "status": "todo"
+    },
+    {
+      "name": "九戸村",
+      "slug": "kunohe",
+      "status": "todo"
+    },
+    {
+      "name": "洋野町",
+      "slug": "hirono",
+      "status": "todo"
+    },
+    {
+      "name": "一戸町",
+      "slug": "ichinohe",
+      "status": "todo"
+    }
+  ]
+}
