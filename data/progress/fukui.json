@@ -1,0 +1,91 @@
+{
+  "pref": "福井県",
+  "prefSlug": "fukui",
+  "cities": [
+    {
+      "name": "福井市",
+      "slug": "fukui-shi",
+      "status": "done"
+    },
+    {
+      "name": "敦賀市",
+      "slug": "tsuruga",
+      "status": "todo"
+    },
+    {
+      "name": "小浜市",
+      "slug": "obama",
+      "status": "todo"
+    },
+    {
+      "name": "大野市",
+      "slug": "ono",
+      "status": "done"
+    },
+    {
+      "name": "勝山市",
+      "slug": "katsuyama",
+      "status": "todo"
+    },
+    {
+      "name": "鯖江市",
+      "slug": "sabae",
+      "status": "done"
+    },
+    {
+      "name": "あわら市",
+      "slug": "awara",
+      "status": "todo"
+    },
+    {
+      "name": "越前市",
+      "slug": "echizen-shi",
+      "status": "todo"
+    },
+    {
+      "name": "坂井市",
+      "slug": "sakai",
+      "status": "todo"
+    },
+    {
+      "name": "永平寺町",
+      "slug": "eiheiji",
+      "status": "todo"
+    },
+    {
+      "name": "池田町",
+      "slug": "ikeda",
+      "status": "todo"
+    },
+    {
+      "name": "南越前町",
+      "slug": "minamiechizen",
+      "status": "todo"
+    },
+    {
+      "name": "越前町",
+      "slug": "echizen-cho",
+      "status": "todo"
+    },
+    {
+      "name": "美浜町",
+      "slug": "mihama",
+      "status": "todo"
+    },
+    {
+      "name": "高浜町",
+      "slug": "takahama",
+      "status": "todo"
+    },
+    {
+      "name": "おおい町",
+      "slug": "oi",
+      "status": "todo"
+    },
+    {
+      "name": "若狭町",
+      "slug": "wakasa",
+      "status": "todo"
+    }
+  ]
+}
