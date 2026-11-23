@@ -70,27 +70,27 @@
     {
       "name": "国東市",
       "slug": "kunisaki",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "姫島村",
       "slug": "himeshima",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "日出町",
       "slug": "hiji",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "九重町",
       "slug": "kokonoe",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "玖珠町",
       "slug": "kusu",
-      "status": "todo"
+      "status": "done"
     }
   ]
 }
