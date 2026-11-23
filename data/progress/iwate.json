@@ -140,32 +140,32 @@
     {
       "name": "普代村",
       "slug": "fudai",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "軽米町",
       "slug": "karumai",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "野田村",
       "slug": "noda",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "九戸村",
       "slug": "kunohe",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "洋野町",
       "slug": "hirono",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "一戸町",
       "slug": "ichinohe",
-      "status": "todo"
+      "status": "done"
     }
   ]
 }
