@@ -50,52 +50,52 @@
     {
       "name": "能美市",
       "slug": "nomi",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "野々市市",
       "slug": "nonoichi",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "川北町",
       "slug": "kawakita",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "津幡町",
       "slug": "tsubata",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "内灘町",
       "slug": "uchinada",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "志賀町",
       "slug": "shika",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "宝達志水町",
       "slug": "hodatsushimizu",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "中能登町",
       "slug": "nakanoto",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "穴水町",
       "slug": "anamizu",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "能登町",
       "slug": "noto",
-      "status": "todo"
+      "status": "done"
     }
   ]
 }
