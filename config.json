@@ -10,7 +10,7 @@
         "url": "https://px.a8.net/svt/ejp?a8mat=4BGLS5+AEHP22+5UT6+5YJRM",
         "impUrl": "https://www12.a8.net/0.gif?a8mat=4BGLS5+AEHP22+5UT6+5YJRM",
         "label": "後悔しない業者選びなら！リフォーム簡単見積もりサイト【Re:est】",
-        "note": "A8.net Re:est（ニッカホーム、2026-11-17 提携）。ニッカホームの対象外エリアからの申込は否認。リショップナビ／ハピすむが通ったら、そちらを1つ目に"
+        "note": ""
       },
       {
         "name": "リショップナビ",
@@ -32,7 +32,7 @@
       "url": "https://px.a8.net/svt/ejp?a8mat=4BGJFY+EMWNX6+46CI+HVFKY",
       "impUrl": "https://www12.a8.net/0.gif?a8mat=4BGJFY+EMWNX6+46CI+HVFKY",
       "label": "全国の優良塗装店から外壁塗装の一括見積もりが無料で出来る【外壁塗装セレクトナビ】",
-      "note": "A8.net 外壁塗装セレクトナビ（2026-11-16 提携確認）。自由テキスト素材がないため、ボタン文言は素材の文言のまま"
+      "note": ""
     },
     "mado": {
       "name": "",
@@ -46,14 +46,14 @@
       "url": "https://px.a8.net/svt/ejp?a8mat=4BGLS5+8KEKWQ+3EMG+5MFLEA",
       "impUrl": "https://www15.a8.net/0.gif?a8mat=4BGLS5+8KEKWQ+3EMG+5MFLEA",
       "label": "最短即日で給湯器の修理交換【お湯出ない.com】",
-      "note": "A8.net 給湯器修理交換専門【お湯が出ない.com】（2026-11-16 提携）。Cools が通ったら主をCoolsに。ボタン文言は素材のまま"
+      "note": ""
     },
     "taiyo": {
       "name": "タイナビ",
       "url": "https://px.a8.net/svt/ejp?a8mat=4BGLS5+8RJS62+2AG2+5ZEMQ",
       "impUrl": "https://www14.a8.net/0.gif?a8mat=4BGLS5+8RJS62+2AG2+5ZEMQ",
       "label": "",
-      "note": "A8.net 太陽光発電の一括無料見積り【タイナビ】（2026-11-15 提携）"
+      "note": ""
     },
     "taishin": {
       "name": "",
@@ -68,7 +68,13 @@
       "impUrl": "",
       "label": "",
       "note": ""
-    }
+    },
+    "_notes": [
+      "general/Re:est: A8.net Re:est（ニッカホーム、2026-11-17 提携）。ニッカホームの対象外エリアからの申込は否認。リショップナビ／ハピすむが通ったら、そちらを1つ目に",
+      "yane/外壁塗装セレクトナビ: A8.net 外壁塗装セレクトナビ（2026-11-16 提携確認）。自由テキスト素材がないため、ボタン文言は素材の文言のまま",
+      "kyuto/お湯が出ない.com: A8.net 給湯器修理交換専門【お湯が出ない.com】（2026-11-16 提携）。Cools が通ったら主をCoolsに。ボタン文言は素材のまま",
+      "taiyo/タイナビ: A8.net 太陽光発電の一括無料見積り【タイナビ】（2026-11-15 提携）"
+    ]
   },
   "fiscalYear": "auto",
   "operator": {
