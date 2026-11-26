@@ -596,3 +596,9 @@ a.gk:hover{background:var(--tint)}
 }
 /* スマホでは「あらまし」の箱を出さず、すぐ下の「ひと目でわかる」一覧を1画面目に近づける（件数・時点は一覧に同じ内容がある） */
 @media (max-width:759px){.hero-row .ledger{display:none}.hero.has-town .wrap{padding-bottom:6px}}
+.gl-rest{margin-top:8px}
+.gl-rest>summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;min-height:44px;border:1px solid var(--line2);border-radius:6px;background:#fff;font-weight:700;color:var(--ai,#1C4E6B)}
+.gl-rest>summary::-webkit-details-marker{display:none}
+.gl-rest>summary::after{content:"▼";font-size:11px}
+.gl-rest[open]>summary::after{content:"▲"}
+.gl-rest[open]>summary{margin-bottom:8px}

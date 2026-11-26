@@ -697,14 +697,15 @@ ${x.foot}</div>`).join('\n');
     const cs = CATS.filter((c) => p.cats.includes(c.id));
     const tm = p.timing === 'before' ? '工事の前に申請' : p.timing === 'after' ? '工事のあとに申請' : '';
     return `<li class="gp${stText(p).key === 'ended' ? ' is-end' : ''}">${pic(cs.length ? cs[0].id : 'shinsei', 72, 48, 'gp-pic')}<div class="gp-tx"><span class="gp-meta">${glBadge(p)}${tm ? `<span class="gp-tm ${p.timing}">${tm}</span>` : ''}</span><a class="gp-n" href="#p-${esc(p.id)}">${esc(p.name)}</a>${glAmt(p)}${cs.length ? `<span class="gp-c">${cs.map((c) => glName(c.id).replace(/<[^>]+>/g, '')).join('／')}</span>` : ''}</div><span class="gp-go" aria-hidden="true">くわしく<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg></span></li>`;
-  }).join('');
+  });
+  const GL_SHOW = 5; // 最初に見せる件数。残りは「もっと見る」で開く
   const glStat = (label, num, cls) => `<div${cls ? ` class="${cls}"` : ''}><dt>${label}</dt><dd>${num}<small>件</small></dd></div>`;
   const glance = `<section id="ichiran" class="gl" aria-labelledby="h-ichiran">${secHead('h-ichiran', `ひと目でわかる ${esc(city.name)}の補助金`, `${era}・${timeTag(city.checked)}時点`)}
 <dl class="gl-cnt">${glStat(`${kind}の制度`, n, 'all')}${n ? glStat('受付中', cnt.open, 'open') : ''}${cnt.soon ? glStat('これから受付', cnt.soon) : ''}${cnt.check ? glStat(oldFy ? '確認中' : '要確認', cnt.check) : ''}${cnt.ended ? glStat('受付終了', cnt.ended, 'end') : ''}</dl>
 <div class="gl-kinds"><h3>どんな工事に出る？</h3><p class="gl-lg"><b class="gk-c">${kind}</b>${esc(city.name)}の制度${prefProgs.length ? `<b class="gk-p">${esc(prefKind)}</b>${esc(city.pref)}の制度` : ''}<b class="gk-k">国</b>国の制度</p>
 <ul class="gl-chips">${glChips}</ul></div>
 ${n ? `<div class="gl-progs"><h3>${esc(city.name)}の制度 ${n}件<small>受付中のもの・金額の大きいものから</small></h3>
-<ul class="gl-list">${glCards}</ul></div>` : `<p class="gl-zero">${esc(city.name)}独自の制度は、${timeTag(city.checked)}の時点では見つかっていません。下の国の制度は${esc(city.name)}でも使えます。</p>`}
+<ul class="gl-list">${glCards.slice(0, GL_SHOW).join('')}</ul>${glCards.length > GL_SHOW ? `<details class="gl-rest"><summary>もっと見る（残り${glCards.length - GL_SHOW}件）</summary><ul class="gl-list">${glCards.slice(GL_SHOW).join('')}</ul></details>` : ''}</div>` : `<p class="gl-zero">${esc(city.name)}独自の制度は、${timeTag(city.checked)}の時点では見つかっていません。下の国の制度は${esc(city.name)}でも使えます。</p>`}
 <div class="gl-more">${prefProgs.length ? `<a href="#ken"><span class="badge-city">${esc(prefKind)}</span><span>${esc(city.pref)}の制度<b>${prefProgs.length}件</b>も使えます</span>${svgArrow}</a>` : ''}${natOn.length ? `<a href="#kuni"><span class="badge-kuni">国</span><span>国の制度<b>${natOn.length}件</b>も使えます${natMax ? `<small>最大${natMax}万円・全国共通</small>` : ''}</span>${svgArrow}</a>` : ''}</div>
 </section>`;
 
