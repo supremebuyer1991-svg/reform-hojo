@@ -594,3 +594,5 @@ a.gk:hover{background:var(--tint)}
 .gp-meta .st-open,.gp-meta .st-end,.gp-meta .st-check,.gp-tm,.gp-as,.gp-c,.gp-go{font-size:13.5px}
 .gl-more{gap:10px}
 }
+/* スマホでは「あらまし」の箱を出さず、すぐ下の「ひと目でわかる」一覧を1画面目に近づける（件数・時点は一覧に同じ内容がある） */
+@media (max-width:759px){.hero-row .ledger{display:none}.hero.has-town .wrap{padding-bottom:6px}}
