@@ -160,22 +160,22 @@
     {
       "name": "飯豊町",
       "slug": "iide",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "三川町",
       "slug": "mikawa",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "庄内町",
       "slug": "shonai",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "遊佐町",
       "slug": "yuza",
-      "status": "todo"
+      "status": "done"
     }
   ]
 }
