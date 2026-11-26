@@ -26,6 +26,16 @@
       if (history.replaceState) history.replaceState(null, '', '#' + id);
     });
   });
+  // 先頭の「ひと目でわかる」欄の工事ボタン：その工事に切り替えてから、結果の場所まで動かす
+  [].forEach.call(document.querySelectorAll('[data-jump]'), function (a) {
+    a.addEventListener('click', function (e) {
+      var id = a.getAttribute('data-jump');
+      if (!show(id)) return;
+      e.preventDefault();
+      if (history.replaceState) history.replaceState(null, '', '#' + id);
+      document.getElementById(id).scrollIntoView();
+    });
+  });
   function fromHash() { return show(location.hash.slice(1)); }
   if (!fromHash()) show(box.getAttribute('data-first'));
   window.addEventListener('hashchange', fromHash);

@@ -51,6 +51,8 @@ const CAT_WORDS = {
 };
 for (const c of CATS) Object.assign(c, CAT_WORDS[c.id]);
 const CAT_IDS = CATS.map((c) => c.id);
+// 「ひと目でわかる」欄で使う短い名前
+const GL_NAMES = { mado: '窓・断熱', kyuto: '給湯器', taiyo: '太陽光・蓄電池', taishin: '耐震', mizu: '水まわり', yane: '屋根・外壁' };
 const REGIONS = [
   ['北海道・東北', ['hokkaido', 'aomori', 'iwate', 'miyagi', 'akita', 'yamagata', 'fukushima']],
   ['関東', ['ibaraki', 'tochigi', 'gunma', 'saitama', 'chiba', 'tokyo', 'kanagawa']],
@@ -628,9 +630,6 @@ ${x.foot}</div>`).join('\n');
   // このページの要点（すべてこの市区町村のデータから作る。データが無い項目は出さない）
   const points = [];
   if (n) {
-    const cnt = { open: 0, soon: 0, check: 0, ended: 0 };
-    for (const p of city.programs) cnt[stText(p).key]++;
-    points.push(`${city.name}が行っているリフォーム向けの制度は${n}件。${[cnt.open ? `受付中が${cnt.open}件` : '', cnt.soon ? `これから受付が始まるものが${cnt.soon}件` : '', cnt.check ? `受付状況を確認中のものが${cnt.check}件` : '', cnt.ended ? `${CFY}の受付を終えたものが${cnt.ended}件` : ''].filter(Boolean).join('、')}です。`);
     const top = live.filter((p) => p.maxNumber).sort((a, b) => b.maxNumber - a.maxNumber)[0];
     if (top) points.push(`金額がいちばん大きいのは${qn(top)}（${top.amountLabel}）。`);
     const ends = live.filter((p) => p.period && isDate(p.period.end) && p.period.end >= TODAY).sort((a, b) => (a.period.end < b.period.end ? -1 : 1));
@@ -663,6 +662,52 @@ ${x.foot}</div>`).join('\n');
   const stale = (new Date(TODAY) - new Date(city.checked)) / 86400000 > 150;
   const history = (city.history || []).slice().sort((a, b) => (a.date < b.date ? 1 : -1));
 
+  // ひと目でわかる一覧（ページの先頭。件数・工事の種類・制度ごとの金額と受付状況。すべてこの市区町村のデータから作る）
+  const cnt = { open: 0, soon: 0, check: 0, ended: 0 };
+  for (const p of city.programs) cnt[stText(p).key]++;
+  const prefKind = city.pref.slice(-1);
+  const natOn = natActive();
+  const natIn = (id) => natOn.some((p) => p.cats.includes(id) || (p.extraCats && p.extraCats[id]));
+  const glMizu = /バリアフリー|手すり|段差|住宅改造/.test(catText(city.programs, CATS.find((c) => c.id === 'mizu')));
+  const glName = (id) => (id === 'mizu' && glMizu ? '<span class="ib">水まわり・</span><span class="ib">バリアフリー</span>' : GL_NAMES[id]);
+  const glChips = CATS.map((c) => {
+    const mine = city.programs.filter((p) => p.cats.includes(c.id));
+    const mineLive = mine.filter((p) => stText(p).key !== 'ended').length;
+    const hasPref = prefProgs.some((p) => p.cats.includes(c.id));
+    const hasNat = natIn(c.id);
+    const marks = [mine.length ? `<b class="gk-c">${kind} ${mineLive ? `${mineLive}件` : '終了'}</b>` : '', hasPref ? `<b class="gk-p">${esc(prefKind)}</b>` : '', hasNat ? '<b class="gk-k">国</b>' : ''].join('');
+    const inner = `${pic(c.id, 72, 48, 'gk-pic')}<span class="gk-n">${glName(c.id)}</span><span class="gk-m">${marks || '<i>掲載なし</i>'}</span>`;
+    return marks ? `<li><a class="gk${mine.length ? ' has' : ''}" href="#${c.id}" data-jump="${c.id}">${inner}</a></li>` : `<li><span class="gk none">${inner}</span></li>`;
+  }).join('');
+  const glAmt = (p) => {
+    const m = /^(.+?)（(.+)）$/.exec(p.amountLabel || '');
+    const main = m ? m[1] : (p.amountLabel || '');
+    const big = (t) => esc(t).replace(/([0-9][0-9,.]*)(?=万|千|円)/g, '<b>$1</b>');
+    return main ? `<span class="gp-a">${big(main)}</span>${m ? `<span class="gp-as">（${esc(m[2])}）</span>` : ''}` : '<span class="gp-a is-none">金額は公式ページで確認</span>';
+  };
+  const glBadge = (p) => {
+    const st = stText(p);
+    if (st.key === 'open') return st.html;
+    if (st.key === 'ended') return '<span class="st-end">受付終了</span>';
+    if (st.key === 'soon') return st.html;
+    return `<span class="st-check">${/要確認/.test(st.text) ? '要確認' : '確認中'}</span>`;
+  };
+  const glList = city.programs.slice().sort((a, b) => stRank[stText(a).key] - stRank[stText(b).key] || (b.maxNumber || 0) - (a.maxNumber || 0));
+  const glCards = glList.map((p) => {
+    const cs = CATS.filter((c) => p.cats.includes(c.id));
+    const tm = p.timing === 'before' ? '工事の前に申請' : p.timing === 'after' ? '工事のあとに申請' : '';
+    return `<li class="gp${stText(p).key === 'ended' ? ' is-end' : ''}">${pic(cs.length ? cs[0].id : 'shinsei', 72, 48, 'gp-pic')}<div class="gp-tx"><span class="gp-meta">${glBadge(p)}${tm ? `<span class="gp-tm ${p.timing}">${tm}</span>` : ''}</span><a class="gp-n" href="#p-${esc(p.id)}">${esc(p.name)}</a>${glAmt(p)}${cs.length ? `<span class="gp-c">${cs.map((c) => glName(c.id).replace(/<[^>]+>/g, '')).join('／')}</span>` : ''}</div><span class="gp-go" aria-hidden="true">くわしく<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg></span></li>`;
+  }).join('');
+  const glStat = (label, num, cls) => `<div${cls ? ` class="${cls}"` : ''}><dt>${label}</dt><dd>${num}<small>件</small></dd></div>`;
+  const glance = `<section id="ichiran" class="gl" aria-labelledby="h-ichiran">${secHead('h-ichiran', `ひと目でわかる ${esc(city.name)}の補助金`, `${era}・${timeTag(city.checked)}時点`)}
+<dl class="gl-cnt">${glStat(`${kind}の制度`, n, 'all')}${n ? glStat('受付中', cnt.open, 'open') : ''}${cnt.soon ? glStat('これから受付', cnt.soon) : ''}${cnt.check ? glStat(oldFy ? '確認中' : '要確認', cnt.check) : ''}${cnt.ended ? glStat('受付終了', cnt.ended, 'end') : ''}</dl>
+<div class="gl-kinds"><h3>どんな工事に出る？</h3><p class="gl-lg"><b class="gk-c">${kind}</b>${esc(city.name)}の制度${prefProgs.length ? `<b class="gk-p">${esc(prefKind)}</b>${esc(city.pref)}の制度` : ''}<b class="gk-k">国</b>国の制度</p>
+<ul class="gl-chips">${glChips}</ul></div>
+${n ? `<div class="gl-progs"><h3>${esc(city.name)}の制度 ${n}件<small>受付中のもの・金額の大きいものから</small></h3>
+<ul class="gl-list">${glCards}</ul></div>` : `<p class="gl-zero">${esc(city.name)}独自の制度は、${timeTag(city.checked)}の時点では見つかっていません。下の国の制度は${esc(city.name)}でも使えます。</p>`}
+<div class="gl-more">${prefProgs.length ? `<a href="#ken"><span class="badge-city">${esc(prefKind)}</span><span>${esc(city.pref)}の制度<b>${prefProgs.length}件</b>も使えます</span>${svgArrow}</a>` : ''}${natOn.length ? `<a href="#kuni"><span class="badge-kuni">国</span><span>国の制度<b>${natOn.length}件</b>も使えます${natMax ? `<small>最大${natMax}万円・全国共通</small>` : ''}</span>${svgArrow}</a>` : ''}</div>
+</section>`;
+
   const adv = quoteAdvice(live, city.name, city.name);
   const body = `<div class="hero has-town"><div class="wrap">
 <div class="crumbs">${crumbHtml(crumbs)}${PR_NOTE}</div>
@@ -682,8 +727,10 @@ ${oldFy ? `<p class="small" style="color:var(--shu-d);font-weight:700">このペ
 </div></div>${art.townStrip(`${city.prefSlug}/${city.slug}`)}</div>
 
 <main class="wrap">
-${points.length ? `<section id="youten" aria-labelledby="h-youten">${secHead('h-youten', `${esc(city.name)}のリフォーム${term}の要点`, `${era}・${timeTag(city.checked)}時点`)}
-<ul class="sum">${points.map((t) => `<li>${esc(t)}</li>`).join('')}</ul>
+${glance}
+
+${points.length || live.length ? `<section id="youten" aria-labelledby="h-youten">${secHead('h-youten', `${esc(city.name)}のリフォーム${term}の要点`, `${era}・${timeTag(city.checked)}時点`)}
+${points.length ? `<ul class="sum">${points.map((t) => `<li>${esc(t)}</li>`).join('')}</ul>` : ''}
 ${live.length ? nextBox(adv, 'general', 'mid') : ''}
 </section>` : ''}
 
