@@ -85,52 +85,52 @@
     {
       "name": "木城町",
       "slug": "kijo",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "川南町",
       "slug": "kawaminami",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "都農町",
       "slug": "tsuno",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "門川町",
       "slug": "kadogawa",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "諸塚村",
       "slug": "morotsuka",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "椎葉村",
       "slug": "shiiba",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "美郷町",
       "slug": "misato",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "高千穂町",
       "slug": "takachiho",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "日之影町",
       "slug": "hinokage",
-      "status": "todo"
+      "status": "done"
     },
     {
       "name": "五ヶ瀬町",
       "slug": "gokase",
-      "status": "todo"
+      "status": "done"
     }
   ]
 }
