@@ -1,0 +1,65 @@
+{
+  "pref": "秋田県",
+  "prefSlug": "akita",
+  "name": "藤里町",
+  "slug": "fujisato",
+  "kana": "ふじさとまち",
+  "checked": "2026-11-29",
+  "programs": [
+    {
+      "id": "jutaku-reform",
+      "name": "藤里町住宅リフォーム支援事業",
+      "status": "check",
+      "statusLabel": "令和8年度の内容・受付状況 [要確認]",
+      "summary": "藤里町は「令和８年度藤里町住宅リフォーム支援事業について」というページを町のホームページに出しています。補助の額・対象の工事・申し込みの期間は、町のページで確かめられていません [要確認]。",
+      "amountLabel": "[要確認]",
+      "maxNumber": null,
+      "details": [
+        {
+          "k": "補助額",
+          "v": "[要確認]"
+        },
+        {
+          "k": "申請期間",
+          "v": "[要確認]"
+        },
+        {
+          "k": "窓口",
+          "v": "藤里町役場 [要確認]"
+        }
+      ],
+      "cats": [
+        "yane",
+        "mizu",
+        "mado"
+      ],
+      "source": "https://www.town.fujisato.akita.jp/town/soshiki/c54/zyutaku/sonotazyutaku/2866",
+      "sourceName": "藤里町ホームページ「令和８年度藤里町住宅リフォーム支援事業について」"
+    }
+  ],
+  "noCityNote": {},
+  "neighbors": [
+    "能代市",
+    "大館市",
+    "北秋田市",
+    "八峰町",
+    {
+      "name": "深浦町",
+      "prefSlug": "aomori"
+    },
+    {
+      "name": "鰺ヶ沢町",
+      "prefSlug": "aomori"
+    },
+    {
+      "name": "西目屋村",
+      "prefSlug": "aomori"
+    }
+  ],
+  "history": [
+    {
+      "date": "2026-11-29",
+      "note": "ページを公開しました。"
+    }
+  ]
+}
